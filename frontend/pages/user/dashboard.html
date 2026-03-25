@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="dashboard-navbar">
+  <div class="logo">SkilllCertify</div>
+  <div class="nav-actions">
+    <a href="../courses/browse-courses.html" class="nav-link">Browse Courses</a>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+</header>
+
+<!-- ================= DASHBOARD MAIN ================= -->
+<main class="dashboard">
+
+  <!-- ================= WELCOME ================= -->
+  <section class="card welcome-card">
+    <h2>Welcome back, <span id="userName">Learner</span> 👋</h2>
+    <p class="muted">
+      Continue your learning journey and move closer to your verified certificate.
+    </p>
+  </section>
+
+  <!-- ================= PROFILE ================= -->
+  <section class="card profile-card">
+    <h3>My Profile</h3>
+    <div class="profile-grid">
+      <p><strong>Email</strong><span id="userEmail">Loading...</span></p>
+      <p><strong>Account Status</strong><span class="status-active">Active</span></p>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats">
+    <div class="stat-box">
+      <h4>Enrolled Courses</h4>
+      <span id="courseCount">0</span>
+    </div>
+
+    <div class="stat-box">
+      <h4>Completed Lessons</h4>
+      <span id="lessonCount">0</span>
+    </div>
+
+    <div class="stat-box">
+      <h4>Certificates</h4>
+      <span id="certificateCount">0</span>
+    </div>
+
+    <div class="stat-box">
+      <h4>Learning Status</h4>
+      <span class="status-active">Active</span>
+    </div>
+  </section>
+
+  <!-- ================= CURRENT COURSE ================= -->
+  <section class="card">
+    <h3>Continue Learning</h3>
+
+    <div class="course-progress-box">
+      <div>
+        <h4 id="currentCourse">No active course</h4>
+        <p class="muted">
+          Pick up where you left off and continue your learning.
+        </p>
+      </div>
+
+      <div class="progress-wrapper">
+        <div class="progress-bar">
+          <div class="progress-fill" id="courseProgress" style="width:0%"></div>
+        </div>
+        <small id="progressText">0% completed</small>
+      </div>
+    </div>
+
+    <a
+      href="../courses/browse-courses.html"
+      class="primary-btn"
+      id="continueBtn"
+    >
+      Start / Continue Course
+    </a>
+  </section>
+
+  <!-- ================= MY COURSES ================= -->
+  <section class="card">
+    <h3>My Courses</h3>
+
+    <div id="courseList" class="course-list">
+      <p class="muted">You are not enrolled in any course yet.</p>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATION ================= -->
+  <section class="card">
+    <h3>Certificates & Verification</h3>
+
+    <ul class="info-list">
+      <li>✔ Certificates are admin-approved</li>
+      <li>✔ Publicly verifiable using QR & ID</li>
+      <li>✔ Lifetime validity</li>
+      <li>✔ Trusted by employers</li>
+    </ul>
+
+    <p class="muted">
+      Complete all modules and pass final assessment to unlock your certificate.
+    </p>
+  </section>
+
+  <!-- ================= QUICK ACTIONS ================= -->
+  <section class="card quick-actions">
+    <h3>Quick Actions</h3>
+
+    <div class="action-grid">
+      <a href="../courses/browse-courses.html" class="action-box">
+        📚 Browse Courses
+      </a>
+
+      <a href="../user/certificates.html" class="action-box">
+        🏆 View Certificates
+      </a>
+
+      <a href="../user/profile.html" class="action-box">
+        👤 Edit Profile
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="../../js/core/guards.js"></script>
+<script src="../../js/user/dashboard.js"></script>
+
+</body>
+</html>

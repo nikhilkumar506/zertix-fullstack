@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Week 2 – HTML Deep Dive | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Course CSS -->
+  <link rel="stylesheet" href="../../../assets/css/frontend-course.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <h2 class="logo">SkilllCertify</h2>
+    <a href="../../user/dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="course-hero">
+  <div class="container">
+    <span class="week-badge">Week 2</span>
+    <h1>HTML Deep Dive</h1>
+    <p>
+      Learn how to structure real-world websites using HTML elements,
+      forms, tables, media, and semantic tags.
+    </p>
+
+    <div class="progress-box">
+      <span>Course Progress</span>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 32%"></div>
+      </div>
+      <small>Week 2 of 6</small>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<main class="course-container">
+
+<!-- ================= SECTION 1 ================= -->
+<section class="content-card">
+  <h2>1. HTML Headings & Paragraphs</h2>
+    <p><strong>HTML Headings and Paragraphs</strong></p>
+
+<p>HTML headings are used to define titles and subtitles on a web page. They help structure the content in a clear and organized manner.</p>
+
+<p>HTML provides six levels of headings, starting from h1 to h6, where h1 represents the most important heading and h6 represents the least important heading.</p>
+
+<p>Headings are important for both users and search engines because they improve readability and search engine optimization.</p>
+
+<p>Each heading level should be used in a logical order to maintain a proper content hierarchy on the page.</p>
+
+<p>HTML paragraphs are used to display blocks of text. The paragraph tag automatically adds space before and after the content.</p>
+
+<p>The p tag is one of the most commonly used HTML elements for writing readable and structured text content.</p>
+
+<p>Paragraphs help break long text into smaller, easy-to-read sections, improving the user experience.</p>
+
+<p>Unlike headings, paragraphs are used for normal descriptive content and explanations.</p>
+
+<p>HTML does not allow text formatting logic inside headings and paragraphs; styling is handled separately using CSS.</p>
+
+<p>Headings define the structure of the page, while paragraphs provide detailed information under those headings.</p>
+
+<p>Using proper headings and paragraphs makes web pages more accessible, professional, and easier to maintain.</p>
+
+<p>In summary, headings organize the content structure, and paragraphs present detailed information in a clean and readable format.</p>
+  <p>
+    Headings define the structure of a web page.
+    There are <strong>six levels</strong> of headings.
+  </p>
+
+  <pre class="code-box">
+&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;
+&lt;h3&gt;Sub Section&lt;/h3&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+  </pre>
+
+  <div class="info-box">
+    ✅ Best Practice:
+    Use only one <strong>&lt;h1&gt;</strong> per page.
+  </div>
+</section>
+
+<!-- ================= SECTION 2 ================= -->
+<section class="content-card">
+  <h2>2. Links & Images</h2>
+    <p><strong>HTML Links and Images</strong></p>
+
+<p>HTML links are used to connect one web page to another or to link different resources on the Internet.</p>
+
+<p>The anchor tag is used to create links in HTML and uses the href attribute to specify the destination URL.</p>
+
+<p>Links allow users to navigate between pages, websites, documents, and different sections of the same page.</p>
+
+<p>HTML supports both internal links, which connect pages within the same website, and external links, which point to other websites.</p>
+
+<p>The target attribute is used with links to control how the linked page opens, such as opening in a new tab.</p>
+
+<p>HTML images are used to display visual content on a web page to enhance user experience and understanding.</p>
+
+<p>The img tag is used to embed images in HTML and requires the src attribute to specify the image path.</p>
+
+<p>The alt attribute provides alternative text for images and is important for accessibility and search engines.</p>
+
+<p>Images can be loaded from local folders or from external URLs on the Internet.</p>
+
+<p>HTML images do not require a closing tag and are considered self-closing elements.</p>
+
+<p>Links and images often work together, such as when an image is used as a clickable link.</p>
+
+<p>Using links and images correctly makes web pages more interactive, accessible, and visually appealing.</p>
+
+<p>In summary, links enable navigation across web resources, and images provide visual representation of content.</p>
+  <p>
+    Links connect pages, images make content engaging.
+  </p>
+
+  <pre class="code-box">
+&lt;a href="https://google.com"&gt;Visit Google&lt;/a&gt;
+
+&lt;img src="image.jpg" alt="Description"&gt;
+  </pre>
+
+  <ul>
+    <li><code>href</code> → destination</li>
+    <li><code>alt</code> → accessibility & SEO</li>
+  </ul>
+</section>
+
+<!-- ================= SECTION 3 ================= -->
+<section class="content-card">
+  <h2>3. Lists (Ordered & Unordered)</h2>
+    <p><strong>HTML Lists: Ordered and Unordered</strong></p>
+
+<p>HTML lists are used to group related items together in a structured and readable format.</p>
+
+<p>Lists help present information clearly, especially when displaying steps, options, or collections of items.</p>
+
+<p>An unordered list is used when the order of items does not matter.</p>
+
+<p>The unordered list is created using the ul tag, and each list item is defined using the li tag.</p>
+
+<p>Unordered lists usually display items with bullet points by default.</p>
+
+<p>An ordered list is used when the sequence of items is important.</p>
+
+<p>The ordered list is created using the ol tag, and each list item is defined using the li tag.</p>
+
+<p>Ordered lists usually display items with numbers or letters by default.</p>
+
+<p>HTML allows lists to be nested, meaning a list can be placed inside another list.</p>
+
+<p>Lists are commonly used for menus, instructions, navigation links, and content outlines.</p>
+
+<p>Both ordered and unordered lists help improve content readability and page structure.</p>
+
+<p>Lists can be styled using CSS to change bullet styles, numbering, spacing, and layout.</p>
+
+<p>In summary, unordered lists are used for non-sequential items, while ordered lists are used for step-by-step or ranked information.</p>
+  <pre class="code-box">
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install VS Code&lt;/li&gt;
+  &lt;li&gt;Create Project&lt;/li&gt;
+&lt;/ol&gt;
+  </pre>
+
+  <p>
+    Lists are commonly used for menus, features, steps.
+  </p>
+</section>
+
+<!-- ================= SECTION 4 ================= -->
+<section class="content-card">
+  <h2>4. Tables</h2>
+    <p><strong>HTML Tables</strong></p>
+
+<p>HTML tables are used to display data in rows and columns in an organized and structured manner.</p>
+
+<p>Tables are useful when presenting tabular data such as schedules, reports, comparisons, or records.</p>
+
+<p>The table tag is used to create a table in HTML.</p>
+
+<p>Each table row is defined using the tr tag.</p>
+
+<p>Table headers are defined using the th tag and are usually displayed in bold and centered by default.</p>
+
+<p>Table data cells are defined using the td tag and contain the actual data.</p>
+
+<p>Tables can include a caption to describe the table content using the caption tag.</p>
+
+<p>HTML tables support proper structure using thead, tbody, and tfoot tags for better readability and accessibility.</p>
+
+<p>Tables help users easily scan and understand large amounts of structured data.</p>
+
+<p>Tables should be used only for data representation and not for page layout.</p>
+
+<p>Table borders, spacing, and appearance are controlled using CSS rather than HTML attributes.</p>
+
+<p>Well-structured tables improve accessibility and make data easier to understand.</p>
+
+<p>In summary, HTML tables provide a clear way to organize and present data using rows and columns.</p>
+  <pre class="code-box">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Role&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Rahul&lt;/td&gt;
+    &lt;td&gt;Developer&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+  </pre>
+
+  <div class="info-box">
+    📌 Tables are best for structured data,
+    not page layouts.
+  </div>
+</section>
+
+<!-- ================= SECTION 5 ================= -->
+<section class="content-card">
+  <h2>5. Forms & Inputs</h2>
+    <p><strong>HTML Forms and Input Elements</strong></p>
+
+<p>HTML forms are used to collect data from users and send that data to a server for processing.</p>
+
+<p>Forms play a critical role in web applications because they enable user interaction such as login, registration, feedback, search, and data submission.</p>
+
+<p>The form tag is the container that holds all form-related elements like input fields, buttons, labels, and selection controls.</p>
+
+<p>The action attribute of the form defines where the form data will be sent after submission.</p>
+
+<p>The method attribute specifies how the data is sent, commonly using GET or POST methods.</p>
+
+<p>The GET method sends data through the URL and is mainly used for non-sensitive data.</p>
+
+<p>The POST method sends data securely in the request body and is used for sensitive information like passwords.</p>
+
+<p>Input elements are the most important components inside a form and allow users to enter data.</p>
+
+<p>The input tag is a self-closing tag and its behavior depends on the value of the type attribute.</p>
+
+<p>The text input type is used to collect single-line textual information such as name or username.</p>
+
+<p>The password input type hides user-entered characters for security purposes.</p>
+
+<p>The email input type is used to collect email addresses and provides basic validation in modern browsers.</p>
+
+<p>The number input type allows users to enter numeric values only.</p>
+
+<p>The tel input type is used for telephone numbers and enables mobile-friendly keyboards.</p>
+
+<p>The date input type allows users to select a date using a date picker.</p>
+
+<p>The radio input type allows users to select only one option from a group of choices.</p>
+
+<p>Radio buttons must share the same name attribute to behave as a single group.</p>
+
+<p>The checkbox input type allows users to select multiple options at the same time.</p>
+
+<p>The submit input type is used to send the form data to the server.</p>
+
+<p>The reset input type clears all form fields and resets them to default values.</p>
+
+<p>The button input type creates a clickable button that can be controlled using JavaScript.</p>
+
+<p>The placeholder attribute provides a hint to users about what data should be entered in the field.</p>
+
+<p>The required attribute ensures that a form field must be filled before submission.</p>
+
+<p>The readonly attribute makes an input field non-editable while still allowing it to be submitted.</p>
+
+<p>The disabled attribute prevents user interaction and excludes the field from form submission.</p>
+
+<p>The name attribute is essential because it identifies the form data when it is sent to the server.</p>
+
+<p>The value attribute defines the default or submitted value of an input field.</p>
+
+<p>The label tag is used to describe input fields and improves accessibility.</p>
+
+<p>Associating labels with inputs makes forms easier to use, especially for screen readers.</p>
+
+<p>The textarea tag is used to collect multi-line text such as comments or messages.</p>
+
+<p>The select tag is used to create a dropdown list of options.</p>
+
+<p>The option tag defines individual choices inside a select element.</p>
+
+<p>The form element can include validation rules that run before data is submitted.</p>
+
+<p>Client-side validation improves user experience by catching errors early.</p>
+
+<p>Forms can be styled using CSS to improve layout, spacing, and visual appearance.</p>
+
+<p>JavaScript is often used with forms to validate data, handle submissions, and show error messages.</p>
+
+<p>In frontend development, forms act as the main bridge between the user interface and backend systems.</p>
+
+<p>Properly designed forms improve usability, accessibility, and data accuracy.</p>
+
+<p>In summary, HTML forms collect user input, input elements capture data, and together they enable interaction between users and web applications.</p>
+  <p>
+    Forms collect user data and send it to servers.
+  </p>
+
+  <pre class="code-box">
+&lt;form&gt;
+  &lt;input type="text" placeholder="Name"&gt;
+  &lt;input type="email"&gt;
+  &lt;input type="password"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+  </pre>
+
+  <ul>
+    <li>text, email, password</li>
+    <li>checkbox, radio</li>
+    <li>submit button</li>
+  </ul>
+</section>
+
+<!-- ================= SECTION 6 ================= -->
+<section class="content-card">
+  <h2>6. Semantic HTML</h2>
+    <p><strong>Semantic HTML</strong></p>
+
+<p>Semantic HTML refers to the use of HTML elements that clearly describe their meaning and purpose to both browsers and developers.</p>
+
+<p>Semantic elements provide information about the type of content they contain, making the structure of a web page more understandable.</p>
+
+<p>Unlike non-semantic elements such as div and span, semantic elements convey meaning about the content inside them.</p>
+
+<p>Common semantic HTML elements include header, nav, main, section, article, aside, and footer.</p>
+
+<p>The header element represents introductory content such as logos, headings, or navigation links.</p>
+
+<p>The nav element is used to define a block of navigation links.</p>
+
+<p>The main element represents the primary content of the document and should be unique on each page.</p>
+
+<p>The section element is used to group related content with a common theme.</p>
+
+<p>The article element represents independent, self-contained content that can stand alone.</p>
+
+<p>The aside element is used for secondary or related content such as sidebars or advertisements.</p>
+
+<p>The footer element represents footer content such as copyright information, links, or author details.</p>
+
+<p>Semantic HTML improves accessibility by helping screen readers understand page structure.</p>
+
+<p>Search engines use semantic elements to better understand and index web content.</p>
+
+<p>Using semantic HTML improves code readability and maintainability for developers.</p>
+
+<p>Semantic elements help create a logical content hierarchy on a web page.</p>
+
+<p>Semantic HTML plays an important role in modern frontend development.</p>
+
+<p>Replacing excessive div tags with semantic elements results in cleaner and more meaningful markup.</p>
+
+<p>Semantic HTML supports better SEO, accessibility, and performance.</p>
+
+<p>In summary, semantic HTML uses meaningful tags to describe content structure, making web pages more accessible and easier to understand.</p>
+  <p>
+    Semantic elements give meaning to content.
+  </p>
+
+  <ul>
+    <li>&lt;header&gt;</li>
+    <li>&lt;nav&gt;</li>
+    <li>&lt;section&gt;</li>
+    <li>&lt;article&gt;</li>
+    <li>&lt;footer&gt;</li>
+  </ul>
+
+  <div class="info-box">
+    🔥 Semantic HTML improves SEO & accessibility.
+  </div>
+</section>
+
+
+<!-- ================= QUIZ 2 ================= -->
+
+  <div class="quiz-question">
+   <section class="content-card quiz-card">
+  <h2>Quiz : HTML Core Elements</h2>
+
+  <!-- Q1 -->
+  <div class="quiz-question">
+    <p>1. Which heading tag is the most important?</p>
+    <label><input type="radio" name="q1"> h6</label>
+    <label><input type="radio" name="q1"> h4</label>
+    <label><input type="radio" name="q1"> h1</label>
+    <label><input type="radio" name="q1"> h3</label>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-question">
+    <p>2. Which tag is used for normal text paragraphs?</p>
+    <label><input type="radio" name="q2"> span</label>
+    <label><input type="radio" name="q2"> p</label>
+    <label><input type="radio" name="q2"> h2</label>
+    <label><input type="radio" name="q2"> div</label>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-question">
+    <p>3. Which tag is used to create a hyperlink?</p>
+    <label><input type="radio" name="q3"> link</label>
+    <label><input type="radio" name="q3"> a</label>
+    <label><input type="radio" name="q3"> href</label>
+    <label><input type="radio" name="q3"> url</label>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-question">
+    <p>4. Which attribute defines the link destination?</p>
+    <label><input type="radio" name="q4"> src</label>
+    <label><input type="radio" name="q4"> target</label>
+    <label><input type="radio" name="q4"> href</label>
+    <label><input type="radio" name="q4"> alt</label>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-question">
+    <p>5. Which tag is used to display images?</p>
+    <label><input type="radio" name="q5"> image</label>
+    <label><input type="radio" name="q5"> pic</label>
+    <label><input type="radio" name="q5"> img</label>
+    <label><input type="radio" name="q5"> src</label>
+  </div>
+
+  <!-- Q6 -->
+  <div class="quiz-question">
+    <p>6. Which attribute provides alternate text for images?</p>
+    <label><input type="radio" name="q6"> title</label>
+    <label><input type="radio" name="q6"> src</label>
+    <label><input type="radio" name="q6"> alt</label>
+    <label><input type="radio" name="q6"> link</label>
+  </div>
+
+  <!-- Q7 -->
+  <div class="quiz-question">
+    <p>7. Which list is used when order matters?</p>
+    <label><input type="radio" name="q7"> ul</label>
+    <label><input type="radio" name="q7"> ol</label>
+    <label><input type="radio" name="q7"> li</label>
+    <label><input type="radio" name="q7"> dl</label>
+  </div>
+
+  <!-- Q8 -->
+  <div class="quiz-question">
+    <p>8. Which tag defines list items?</p>
+    <label><input type="radio" name="q8"> ul</label>
+    <label><input type="radio" name="q8"> ol</label>
+    <label><input type="radio" name="q8"> li</label>
+    <label><input type="radio" name="q8"> list</label>
+  </div>
+
+  <!-- Q9 -->
+  <div class="quiz-question">
+    <p>9. Which tag creates a table?</p>
+    <label><input type="radio" name="q9"> tr</label>
+    <label><input type="radio" name="q9"> td</label>
+    <label><input type="radio" name="q9"> table</label>
+    <label><input type="radio" name="q9"> th</label>
+  </div>
+
+  <!-- Q10 -->
+  <div class="quiz-question">
+    <p>10. Which tag defines table headers?</p>
+    <label><input type="radio" name="q10"> tr</label>
+    <label><input type="radio" name="q10"> td</label>
+    <label><input type="radio" name="q10"> th</label>
+    <label><input type="radio" name="q10"> thead</label>
+  </div>
+
+  <!-- Q11 -->
+  <div class="quiz-question">
+    <p>11. Which tag is used to collect user input?</p>
+    <label><input type="radio" name="q11"> form</label>
+    <label><input type="radio" name="q11"> input</label>
+    <label><input type="radio" name="q11"> field</label>
+    <label><input type="radio" name="q11"> label</label>
+  </div>
+
+  <!-- Q12 -->
+  <div class="quiz-question">
+    <p>12. Which input type hides user text?</p>
+    <label><input type="radio" name="q12"> text</label>
+    <label><input type="radio" name="q12"> hidden</label>
+    <label><input type="radio" name="q12"> password</label>
+    <label><input type="radio" name="q12"> secure</label>
+  </div>
+
+  <!-- Q13 -->
+  <div class="quiz-question">
+    <p>13. Which attribute makes input mandatory?</p>
+    <label><input type="radio" name="q13"> readonly</label>
+    <label><input type="radio" name="q13"> disabled</label>
+    <label><input type="radio" name="q13"> required</label>
+    <label><input type="radio" name="q13"> checked</label>
+  </div>
+
+  <!-- Q14 -->
+  <div class="quiz-question">
+    <p>14. Which tag is semantic?</p>
+    <label><input type="radio" name="q14"> div</label>
+    <label><input type="radio" name="q14"> span</label>
+    <label><input type="radio" name="q14"> header</label>
+    <label><input type="radio" name="q14"> b</label>
+  </div>
+
+  <!-- Q15 -->
+  <div class="quiz-question">
+    <p>15. Which tag defines navigation links?</p>
+    <label><input type="radio" name="q15"> section</label>
+    <label><input type="radio" name="q15"> nav</label>
+    <label><input type="radio" name="q15"> article</label>
+    <label><input type="radio" name="q15"> aside</label>
+  </div>
+
+  <!-- Q16 -->
+  <div class="quiz-question">
+    <p>16. Which semantic tag holds main content?</p>
+    <label><input type="radio" name="q16"> header</label>
+    <label><input type="radio" name="q16"> footer</label>
+    <label><input type="radio" name="q16"> main</label>
+    <label><input type="radio" name="q16"> aside</label>
+  </div>
+
+  <!-- Q17 -->
+  <div class="quiz-question">
+    <p>17. Which tag is used for footer content?</p>
+    <label><input type="radio" name="q17"> bottom</label>
+    <label><input type="radio" name="q17"> footer</label>
+    <label><input type="radio" name="q17"> end</label>
+    <label><input type="radio" name="q17"> section</label>
+  </div>
+
+  <!-- Q18 -->
+  <div class="quiz-question">
+    <p>18. Which improves accessibility?</p>
+    <label><input type="radio" name="q18"> Non-semantic tags</label>
+    <label><input type="radio" name="q18"> Inline CSS</label>
+    <label><input type="radio" name="q18"> Semantic HTML</label>
+    <label><input type="radio" name="q18"> Large images</label>
+  </div>
+
+  <!-- Q19 -->
+  <div class="quiz-question">
+    <p>19. Which tag groups related content?</p>
+    <label><input type="radio" name="q19"> section</label>
+    <label><input type="radio" name="q19"> img</label>
+    <label><input type="radio" name="q19"> a</label>
+    <label><input type="radio" name="q19"> input</label>
+  </div>
+
+  <!-- Q20 -->
+  <div class="quiz-question">
+    <p>20. Semantic HTML mainly helps?</p>
+    <label><input type="radio" name="q20"> Styling</label>
+    <label><input type="radio" name="q20"> SEO & accessibility</label>
+    <label><input type="radio" name="q20"> Database speed</label>
+    <label><input type="radio" name="q20"> Server security</label>
+  </div>
+
+  <button type="button" class="primary-btn" id="submitQuizBtn">
+    Submit Quiz
+  </button>
+</section>
+  </div>
+
+ 
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section class="content-card">
+  <h2>📌 Week 2 Summary</h2>
+
+  <ul>
+    <li>HTML elements & structure</li>
+    <li>Links, images, lists</li>
+    <li>Forms & inputs</li>
+    <li>Semantic HTML</li>
+  </ul>
+
+  <div class="info-box">
+    ✅ You can now build structured HTML pages confidently.
+  </div>
+</section>
+
+<!-- ================= NEXT WEEK ================= -->
+<section class="next-week">
+  <h3>Week 2 Completed 🎉</h3>
+  <p>Next up: CSS Fundamentals & Styling</p>
+
+  <a href="week3.html" class="primary-btn">
+    Go to Week 3 →
+  </a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 SkilllCertify · Learn skills the right way</p>
+</footer>
+
+<!-- ================= QUIZ JS ================= -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("submitquizbtn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        alert("✅ Your Week 2 quiz has been recorded successfully!");
+      });
+    }
+  });
+</script>
+<script>
+  document.getElementById("submitQuizBtn").addEventListener("click", function () {
+    alert(
+      "Your quiz is recorded successfully.\n\nPlease continue your course. You will receive your certificate after completing the full course."
+    );
+  });
+</script>
+</body>
+</html>

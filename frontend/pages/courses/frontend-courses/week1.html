@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Week 1 – Web Foundations | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Course CSS -->
+  <link rel="stylesheet" href="../../../assets/css/frontend-course.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <h2 class="logo">SkilllCertify</h2>
+    <a href="../../user/dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<!-- ================= COURSE HEADER ================= -->
+<section class="course-hero">
+  <div class="container">
+    <span class="week-badge">Week 1</span>
+    <h1>Web Foundations</h1>
+    <p>
+      Build a strong foundation by understanding how the web, browsers,
+      servers, and markup languages actually work behind the scenes.
+    </p>
+
+    <div class="progress-box">
+      <span>Course Progress</span>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 16%"></div>
+      </div>
+      <small>Week 1 of 6</small>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<main class="course-container">
+
+<!-- ================= SECTION 1 ================= -->
+<section class="content-card">
+  <h2>1. Internet vs World Wide Web</h2>
+
+  <p>
+    The <strong>Internet</strong> is a massive global network of computers
+    connected using cables, satellites, and wireless signals.
+  </p>
+  <p><strong>Internet vs World Wide Web (WWW)</strong></p>
+
+<p>The Internet is a global network of interconnected computer networks that allows computers, servers, and devices worldwide to communicate and share data.</p>
+
+<p>The Internet acts as an infrastructure made up of hardware like routers, servers, cables, and software protocols such as TCP/IP. It provides the basic foundation for data transfer.</p>
+
+<p>The Internet itself does not provide information. Instead, it acts as a medium that enables multiple services such as email, file transfer, video conferencing, cloud computing, online gaming, and the World Wide Web.</p>
+
+<p>The World Wide Web (WWW) is a service that runs on the Internet. It is an information system consisting of interlinked web pages and websites that users access through web browsers.</p>
+
+<p>The World Wide Web uses technologies such as HTML for creating web pages, URLs for identifying resources, HTTP and HTTPS for communication, and web browsers to display content.</p>
+
+<p>The Internet can exist without the World Wide Web, but the World Wide Web cannot exist without the Internet. This means WWW is a subset of the Internet.</p>
+
+<p>The Internet focuses on data communication between devices, whereas the World Wide Web focuses on accessing and sharing information in the form of web pages.</p>
+
+<p>The Internet uses TCP/IP protocols to transfer data packets between devices, while the World Wide Web mainly uses HTTP and HTTPS protocols to access web content.</p>
+
+<p>An easy way to understand the difference is by analogy: the Internet is like a road system, and the World Wide Web is like vehicles traveling on those roads.</p>
+
+<p>The Internet was developed earlier, originating from ARPANET in the 1960s, while the World Wide Web was invented later in 1989 to simplify information sharing.</p>
+
+<p>In summary, the Internet is a global communication network, whereas the World Wide Web is a collection of interlinked documents accessed using the Internet.</p>
+
+  <p>
+    The <strong>World Wide Web (WWW)</strong> is a service that runs on top
+    of the internet. It allows users to access documents (web pages)
+    using browsers.
+  </p>
+
+  <ul>
+    <li>Internet = Network infrastructure</li>
+    <li>Web = Websites, web apps, URLs</li>
+  </ul>
+
+  <div class="info-box">
+    💡 Example:
+    <br>
+    Email, WhatsApp → Internet  
+    Google, Facebook → Web + Internet
+  </div>
+</section>
+
+<!-- ================= SECTION 2 ================= -->
+<section class="content-card">
+  <h2>2. How the Web Works (Request–Response)</h2>
+
+  <p>
+    When you type a website URL:
+  </p>
+  <p><strong>How the Web Works</strong></p>
+
+<p>The World Wide Web works on a client-server model where a user requests information and a server responds by providing that information.</p>
+
+<p>When a user enters a website address (URL) into a web browser, the browser acts as a client and sends a request to a web server.</p>
+
+<p>The browser first checks the Domain Name System (DNS) to convert the domain name into an IP address so that the correct server can be located.</p>
+
+<p>After obtaining the IP address, the browser sends an HTTP or HTTPS request to the web server asking for the required web page.</p>
+
+<p>The web server receives the request, processes it, and locates the requested resources such as HTML files, CSS files, JavaScript files, images, or data.</p>
+
+<p>If the request is valid, the server sends an HTTP response back to the browser containing the requested web page data.</p>
+
+<p>The data is transferred over the Internet in small packets using TCP/IP protocols to ensure reliable communication.</p>
+
+<p>Once the browser receives the response, it starts rendering the web page by interpreting HTML for structure, CSS for styling, and JavaScript for interactivity.</p>
+
+<p>The browser then displays the fully loaded web page on the user’s screen, allowing interaction such as clicking links or submitting forms.</p>
+
+<p>If the web page contains links, images, or scripts from other servers, the browser sends additional requests to load those resources.</p>
+
+<p>This entire process usually happens within a few seconds, making the web appear fast and seamless to users.</p>
+
+<p>In summary, the web works by sending requests from a client to a server, processing those requests, and delivering web content back to the client through the Internet.</p>
+
+  <ol>
+    <li>Browser sends request (HTTP)</li>
+    <li>Server processes request</li>
+    <li>Server sends response (HTML/CSS/JS)</li>
+    <li>Browser renders the page</li>
+  </ol>
+
+  <div class="info-box">
+    🔑 Key Term:  
+    HTTP = HyperText Transfer Protocol
+  </div>
+</section>
+
+<!-- ================= SECTION 3 ================= -->
+<section class="content-card">
+  <h2>3. How Browsers Work Internally</h2>
+    <p><strong>How a Browser Works Internally</strong></p>
+
+<p>A web browser is a software application that allows users to access, retrieve, and display web content from the Internet.</p>
+
+<p>When a user enters a URL into the browser, the browser begins by breaking the URL into components such as protocol, domain name, and resource path.</p>
+
+<p>The browser contacts the Domain Name System (DNS) to translate the domain name into an IP address of the web server.</p>
+
+<p>After obtaining the IP address, the browser establishes a connection with the web server using TCP and, in the case of HTTPS, performs a secure TLS handshake.</p>
+
+<p>The browser then sends an HTTP or HTTPS request to the server asking for the required web resources.</p>
+
+<p>Once the server responds, the browser receives the response data, which usually includes HTML, CSS, JavaScript, images, and other assets.</p>
+
+<p>The browser starts by parsing the HTML document to create a Document Object Model (DOM), which represents the structure of the web page.</p>
+
+<p>At the same time, CSS files are parsed to build the CSS Object Model (CSSOM), which defines the visual styling of the page.</p>
+
+<p>The browser combines the DOM and CSSOM to form a render tree, which contains only the elements that need to be displayed on the screen.</p>
+
+<p>The layout process then calculates the size and position of each element in the render tree based on the viewport size.</p>
+
+<p>After layout calculation, the browser paints pixels on the screen and displays the visible content to the user.</p>
+
+<p>JavaScript is executed by the browser’s JavaScript engine, which can modify the DOM and CSSOM dynamically.</p>
+
+<p>Whenever changes occur due to JavaScript or user interaction, the browser may reflow and repaint parts of the page.</p>
+
+<p>In summary, a browser works internally by fetching web resources, parsing and processing them, building render structures, and finally displaying interactive content to the user.</p>
+  <ul>
+    <li>HTML → DOM (Document Object Model)</li>
+    <li>CSS → CSSOM</li>
+    <li>DOM + CSSOM → Render Tree</li>
+    <li>JS → Interactivity</li>
+  </ul>
+
+  <p>
+    Browsers like Chrome use engines:
+  </p>
+
+  <ul>
+    <li>Blink → Rendering</li>
+    <li>V8 → JavaScript execution</li>
+  </ul>
+
+  <div class="info-box">
+    📌 Interview Line:
+    <br>
+    “Browser parses HTML, builds DOM, applies CSS, then executes JavaScript.”
+  </div>
+</section>
+
+<!-- ================= SECTION 4 ================= -->
+<section class="content-card">
+  <h2>4. Client vs Server Architecture</h2>
+    <p><strong>Client vs Server Architecture</strong></p>
+
+<p>Client–Server Architecture is a computing model where tasks and responsibilities are divided between two main components: the client and the server.</p>
+
+<p>The client is the user-facing part of an application. In web development, the client is usually a web browser that displays the user interface and handles user interactions.</p>
+
+<p>Frontend technologies such as HTML, CSS, and JavaScript run on the client side and are responsible for layout, design, animations, and user actions.</p>
+
+<p>The server is the backend part of the system that processes requests, applies business logic, accesses databases, and sends responses back to the client.</p>
+
+<p>When a user performs an action on the frontend, such as clicking a button or submitting a form, the client sends a request to the server.</p>
+
+<p>This request is usually sent using HTTP or HTTPS and contains information like form data, API parameters, or authentication tokens.</p>
+
+<p>The server receives the request, processes it using backend logic, and may interact with a database to fetch or store data.</p>
+
+<p>After processing, the server sends a response back to the client, usually in the form of HTML, JSON, or other data formats.</p>
+
+<p>The client then uses this response to update the user interface dynamically without reloading the entire page.</p>
+
+<p>In frontend development, the client focuses on user experience and presentation, while the server focuses on data processing and security.</p>
+
+<p>This separation of responsibilities makes applications scalable, maintainable, and easier to develop.</p>
+
+<p>A simple way to understand this is: the client asks for data, the server provides the data, and the client displays it to the user.</p>
+
+<p>In summary, Client–Server Architecture allows frontend and backend to work together efficiently by clearly dividing user interaction and data processing.</p>
+  <div class="two-col">
+    <div>
+      <h4>Client (Frontend)</h4>
+      <ul>
+        <li>Browser</li>
+        <li>HTML, CSS, JS</li>
+        <li>User interface</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Server (Backend)</h4>
+      <ul>
+        <li>Node.js / Java / Python</li>
+        <li>Business logic</li>
+        <li>Database</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Example:  
+    Login form → Client  
+    Password verification → Server
+  </p>
+</section>
+
+<!-- ================= SECTION 5 ================= -->
+<section class="content-card">
+  <h2>5. Markup Languages Explained</h2>
+    <p><strong>Markup Language</strong></p>
+
+<p>A markup language is a system used to structure, format, and describe the content of a document using predefined tags.</p>
+
+<p>In frontend development, markup languages are mainly used to define the structure and meaning of web content.</p>
+
+<p>Markup languages use tags enclosed in angle brackets to mark different parts of content such as headings, paragraphs, images, and links.</p>
+
+<p>HTML is the most commonly used markup language in frontend development and forms the backbone of every website.</p>
+
+<p>Markup languages do not perform logic or calculations; they only describe how content is organized.</p>
+
+<p>In a frontend course, markup languages are taught first because they provide the basic structure on which styling and interactivity are built.</p>
+
+<p>Each tag in a markup language has a specific purpose, such as defining text, grouping elements, or embedding media.</p>
+
+<p>Markup languages help browsers understand which content is important and how it should be displayed.</p>
+
+<p>Markup languages are different from programming languages because they do not include conditions, loops, or functions.</p>
+
+<p>In web development, markup languages work together with CSS and JavaScript to create complete user interfaces.</p>
+
+<p>HTML structures the content, CSS styles the content, and JavaScript adds behavior and interactivity.</p>
+
+<p>Using proper markup improves accessibility, search engine optimization, and maintainability of web pages.</p>
+
+<p>In summary, a markup language defines the structure and meaning of content, making it readable for both browsers and developers.</p>
+  <ul>
+    <li><strong>HTML</strong> – Page structure</li>
+    <li><strong>XML</strong> – Data storage & transfer</li>
+    <li><strong>XHTML</strong> – Strict HTML rules</li>
+  </ul>
+
+  <pre class="code-box">
+&lt;article&gt;
+  &lt;h1&gt;Title&lt;/h1&gt;
+  &lt;p&gt;Content&lt;/p&gt;
+&lt;/article&gt;
+  </pre>
+</section>
+
+<!-- ================= SECTION 6 ================= -->
+<section class="content-card">
+  <h2>6. HTML Document Structure</h2>
+
+  <pre class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  Content here
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+
+  <ul>
+    <li>DOCTYPE → Browser standards</li>
+    <li>Head → Metadata</li>
+    <li>Body → Visible content</li>
+  </ul>
+</section>
+
+<!-- ================= QUIZ 1 ================= -->
+
+
+  <!-- ================= QUIZ : Frontend Basics ================= -->
+
+<section class="content-card quiz-card">
+  <h2>Quiz – Frontend Fundamentals</h2>
+
+  <!-- Q1 -->
+  <div class="quiz-question">
+    <p>1. What is the Internet?</p>
+    <label><input type="radio" name="q1"> A collection of web pages</label>
+    <label><input type="radio" name="q1"> A global network of networks</label>
+    <label><input type="radio" name="q1"> A web browser</label>
+    <label><input type="radio" name="q1"> A programming language</label>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-question">
+    <p>2. What is the World Wide Web?</p>
+    <label><input type="radio" name="q2"> A physical network</label>
+    <label><input type="radio" name="q2"> A service running on the Internet</label>
+    <label><input type="radio" name="q2"> A database</label>
+    <label><input type="radio" name="q2"> An operating system</label>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-question">
+    <p>3. Which protocol is mainly used by the World Wide Web?</p>
+    <label><input type="radio" name="q3"> FTP</label>
+    <label><input type="radio" name="q3"> SMTP</label>
+    <label><input type="radio" name="q3"> HTTP/HTTPS</label>
+    <label><input type="radio" name="q3"> TCP only</label>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-question">
+    <p>4. Which component converts domain names into IP addresses?</p>
+    <label><input type="radio" name="q4"> Browser</label>
+    <label><input type="radio" name="q4"> Server</label>
+    <label><input type="radio" name="q4"> DNS</label>
+    <label><input type="radio" name="q4"> Router</label>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-question">
+    <p>5. In client-server architecture, who sends the request?</p>
+    <label><input type="radio" name="q5"> Server</label>
+    <label><input type="radio" name="q5"> Database</label>
+    <label><input type="radio" name="q5"> Client</label>
+    <label><input type="radio" name="q5"> Network cable</label>
+  </div>
+
+  <!-- Q6 -->
+  <div class="quiz-question">
+    <p>6. Which runs on the client side in frontend development?</p>
+    <label><input type="radio" name="q6"> Database</label>
+    <label><input type="radio" name="q6"> HTML, CSS, JavaScript</label>
+    <label><input type="radio" name="q6"> Server logic</label>
+    <label><input type="radio" name="q6"> API</label>
+  </div>
+
+  <!-- Q7 -->
+  <div class="quiz-question">
+    <p>7. What does a web browser do?</p>
+    <label><input type="radio" name="q7"> Stores data permanently</label>
+    <label><input type="radio" name="q7"> Displays and renders web pages</label>
+    <label><input type="radio" name="q7"> Manages servers</label>
+    <label><input type="radio" name="q7"> Controls hardware</label>
+  </div>
+
+  <!-- Q8 -->
+  <div class="quiz-question">
+    <p>8. What is DOM in browser working?</p>
+    <label><input type="radio" name="q8"> Database Object Model</label>
+    <label><input type="radio" name="q8"> Document Object Model</label>
+    <label><input type="radio" name="q8"> Design Object Module</label>
+    <label><input type="radio" name="q8"> Data Object Method</label>
+  </div>
+
+  <!-- Q9 -->
+  <div class="quiz-question">
+    <p>9. What is the main purpose of CSS?</p>
+    <label><input type="radio" name="q9"> Structure</label>
+    <label><input type="radio" name="q9"> Styling and layout</label>
+    <label><input type="radio" name="q9"> Logic</label>
+    <label><input type="radio" name="q9"> Database access</label>
+  </div>
+
+  <!-- Q10 -->
+  <div class="quiz-question">
+    <p>10. Which language adds interactivity to web pages?</p>
+    <label><input type="radio" name="q10"> HTML</label>
+    <label><input type="radio" name="q10"> CSS</label>
+    <label><input type="radio" name="q10"> JavaScript</label>
+    <label><input type="radio" name="q10"> SQL</label>
+  </div>
+
+  <!-- Q11 -->
+  <div class="quiz-question">
+    <p>11. What is a markup language?</p>
+    <label><input type="radio" name="q11"> A programming language</label>
+    <label><input type="radio" name="q11"> A language used to structure content</label>
+    <label><input type="radio" name="q11"> A database language</label>
+    <label><input type="radio" name="q11"> A styling language</label>
+  </div>
+
+  <!-- Q12 -->
+  <div class="quiz-question">
+    <p>12. HTML is best described as?</p>
+    <label><input type="radio" name="q12"> Programming language</label>
+    <label><input type="radio" name="q12"> Markup language</label>
+    <label><input type="radio" name="q12"> Scripting engine</label>
+    <label><input type="radio" name="q12"> Compiler</label>
+  </div>
+
+  <!-- Q13 -->
+  <div class="quiz-question">
+    <p>13. What happens after the browser receives HTML?</p>
+    <label><input type="radio" name="q13"> Stops execution</label>
+    <label><input type="radio" name="q13"> Creates DOM</label>
+    <label><input type="radio" name="q13"> Shuts down server</label>
+    <label><input type="radio" name="q13"> Deletes cache</label>
+  </div>
+
+  <!-- Q14 -->
+  <div class="quiz-question">
+    <p>14. Which is NOT a frontend responsibility?</p>
+    <label><input type="radio" name="q14"> UI design</label>
+    <label><input type="radio" name="q14"> User interaction</label>
+    <label><input type="radio" name="q14"> Database management</label>
+    <label><input type="radio" name="q14"> Page rendering</label>
+  </div>
+
+  <!-- Q15 -->
+  <div class="quiz-question">
+    <p>15. HTTPS is mainly used for?</p>
+    <label><input type="radio" name="q15"> Faster loading</label>
+    <label><input type="radio" name="q15"> Secure communication</label>
+    <label><input type="radio" name="q15"> Image compression</label>
+    <label><input type="radio" name="q15"> Styling pages</label>
+  </div>
+
+  <!-- Q16 -->
+  <div class="quiz-question">
+    <p>16. What is a URL?</p>
+    <label><input type="radio" name="q16"> Server name</label>
+    <label><input type="radio" name="q16"> Address of a web resource</label>
+    <label><input type="radio" name="q16"> Browser feature</label>
+    <label><input type="radio" name="q16"> Network cable</label>
+  </div>
+
+  <!-- Q17 -->
+  <div class="quiz-question">
+    <p>17. Client-server architecture improves?</p>
+    <label><input type="radio" name="q17"> Confusion</label>
+    <label><input type="radio" name="q17"> Scalability and maintenance</label>
+    <label><input type="radio" name="q17"> Hardware cost</label>
+    <label><input type="radio" name="q17"> Page size</label>
+  </div>
+
+  <!-- Q18 -->
+  <div class="quiz-question">
+    <p>18. Which runs business logic?</p>
+    <label><input type="radio" name="q18"> Client</label>
+    <label><input type="radio" name="q18"> Server</label>
+    <label><input type="radio" name="q18"> Browser UI</label>
+    <label><input type="radio" name="q18"> CSS</label>
+  </div>
+
+  <!-- Q19 -->
+  <div class="quiz-question">
+    <p>19. Which is required to access the WWW?</p>
+    <label><input type="radio" name="q19"> Database</label>
+    <label><input type="radio" name="q19"> Internet connection</label>
+    <label><input type="radio" name="q19"> Compiler</label>
+    <label><input type="radio" name="q19"> Text editor</label>
+  </div>
+
+  <!-- Q20 -->
+  <div class="quiz-question">
+    <p>20. Frontend mainly focuses on?</p>
+    <label><input type="radio" name="q20"> Server security</label>
+    <label><input type="radio" name="q20"> User experience and interface</label>
+    <label><input type="radio" name="q20"> Data storage</label>
+    <label><input type="radio" name="q20"> Network routing</label>
+  </div>
+
+  <button type="button" class="primary-btn" id="submitquizbtn">Submit Quiz</button>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section class="content-card">
+  <h2>📌 Week 1 Summary</h2>
+
+  <ul>
+    <li>Internet vs Web</li>
+    <li>Browser working</li>
+    <li>Client & Server</li>
+    <li>Markup languages</li>
+    <li>HTML structure</li>
+  </ul>
+
+  <div class="info-box">
+    ✅ You now understand how the web works at a foundational level.
+  </div>
+</section>
+
+<!-- ================= NEXT WEEK ================= -->
+<section class="next-week">
+  <h3>Week 1 Completed 🎉</h3>
+  <p>Next up: HTML Deep Dive (Elements, Forms, Semantic HTML)</p>
+
+  <a href="week2.html" class="primary-btn">
+    Go to Week 2 →
+  </a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 SkilllCertify · Learn skills the right way</p>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const quizBtn = document.getElementById("submitquizbtn");
+
+    if (quizBtn) {
+      quizBtn.addEventListener("click", () => {
+        alert("✅ Your quiz has been successfully recorded. Keep learning!");
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

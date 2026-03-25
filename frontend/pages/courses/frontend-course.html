@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Frontend Developer Course | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Course CSS -->
+  <link rel="stylesheet" href="../../assets/css/frontend-course.css" />
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <h2 class="logo">SkilllCertify</h2>
+  <span class="course-tag">Frontend Developer Program</span>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <h1>Frontend Developer Course</h1>
+  <p>
+    Master HTML, CSS & JavaScript with structured lessons, quizzes and projects.
+  </p>
+
+  <div class="hero-stats">
+    <div><strong>6+</strong><span>Modules</span></div>
+    <div><strong>30+</strong><span>Lessons</span></div>
+    <div><strong>3</strong><span>Quizzes</span></div>
+    <div><strong>1</strong><span>Final Exam</span></div>
+  </div>
+</section>
+
+<!-- ================= COURSE CONTENT ================= -->
+<main class="course-container">
+
+  <!-- ================= MODULE 1 ================= -->
+  <section class="module">
+    <h2>📘 Module 1: Web Foundations</h2>
+    <ul>
+      <li>What is Web & Internet</li>
+      <li>How Browsers Work</li>
+      <li>Client vs Server Architecture</li>
+      <li>Tools Setup (VS Code, Browser, Git Basics)</li>
+    </ul>
+
+    <p class="module-desc">
+      In this module, you’ll understand how the web works behind the scenes
+      and set up essential tools required for frontend development.
+    </p>
+  </section>
+
+  <!-- ================= MODULE 2 ================= -->
+  <section class="module">
+    <h2>📘 Module 2: HTML – Structure of Web</h2>
+    <ul>
+      <li>HTML Boilerplate</li>
+      <li>Headings & Paragraphs</li>
+      <li>Links & Images</li>
+      <li>Lists & Tables</li>
+      <li>Forms & Inputs</li>
+      <li>Semantic HTML (header, section, article, footer)</li>
+    </ul>
+
+    <pre class="code-block">
+&lt;header&gt;
+  &lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;section&gt;
+  &lt;p&gt;This is semantic HTML&lt;/p&gt;
+&lt;/section&gt;
+    </pre>
+
+    <!-- QUIZ -->
+    <div class="quiz-box">
+      <h3>🧠 Quiz 1: HTML Basics</h3>
+      <p>Which tag is used for semantic navigation?</p>
+      <button>div</button>
+      <button>span</button>
+      <button>nav</button>
+      <button>p</button>
+    </div>
+  </section>
+
+  <!-- ================= MODULE 3 ================= -->
+  <section class="module">
+    <h2>📘 Module 3: CSS – Design & Layout</h2>
+    <ul>
+      <li>CSS Syntax & Selectors</li>
+      <li>Colors, Units & Fonts</li>
+      <li>Box Model</li>
+      <li>Flexbox</li>
+      <li>Grid Layout</li>
+      <li>Responsive Design</li>
+      <li>Media Queries</li>
+      <li>Animations & Transitions</li>
+    </ul>
+
+    <pre class="code-block">
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    </pre>
+
+    <div class="quiz-box">
+      <h3>🧠 Quiz 2: CSS Concepts</h3>
+      <p>Which property is used to create flexible layouts?</p>
+      <button>position</button>
+      <button>float</button>
+      <button>flex</button>
+      <button>overflow</button>
+    </div>
+  </section>
+
+  <!-- ================= MODULE 4 ================= -->
+  <section class="module">
+    <h2>📘 Module 4: JavaScript Basics</h2>
+    <ul>
+      <li>Variables & Data Types</li>
+      <li>Operators</li>
+      <li>Conditions</li>
+      <li>Loops</li>
+      <li>Functions</li>
+      <li>Arrays & Objects</li>
+    </ul>
+
+    <pre class="code-block">
+function greet(name) {
+  return "Hello " + name;
+}
+    </pre>
+
+    <div class="quiz-box">
+      <h3>🧠 Quiz 3: JavaScript Basics</h3>
+      <p>Which keyword is used to declare a constant?</p>
+      <button>var</button>
+      <button>let</button>
+      <button>const</button>
+      <button>static</button>
+    </div>
+  </section>
+
+  <!-- ================= MODULE 5 ================= -->
+  <section class="module">
+    <h2>📘 Module 5: JavaScript DOM</h2>
+    <ul>
+      <li>DOM Tree</li>
+      <li>querySelector & querySelectorAll</li>
+      <li>Events</li>
+      <li>Form Handling</li>
+      <li>Validation</li>
+      <li>LocalStorage</li>
+    </ul>
+
+    <pre class="code-block">
+document.querySelector("button")
+  .addEventListener("click", () => {
+    alert("Clicked!");
+  });
+    </pre>
+  </section>
+
+  <!-- ================= MODULE 6 ================= -->
+  <section class="module">
+    <h2>📘 Module 6: Projects</h2>
+    <ul>
+      <li>Portfolio Website</li>
+      <li>Interactive Form</li>
+      <li>Mini JavaScript App (Todo / Calculator)</li>
+    </ul>
+
+    <p class="module-desc">
+      These projects will strengthen your real-world frontend development skills.
+    </p>
+  </section>
+
+  <!-- ================= FINAL ASSESSMENT ================= -->
+  <section class="final-box">
+    <h2>🎓 Final Assessment</h2>
+    <ul>
+      <li>MCQ-based Skill Test</li>
+      <li>Project Submission</li>
+      <li>Certificate Unlock</li>
+    </ul>
+
+    <button class="primary-btn">Start Final Assessment</button>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>© 2026 SkilllCertify · Learn Skills That Employers Trust</p>
+</footer>
+
+</body>
+</html>

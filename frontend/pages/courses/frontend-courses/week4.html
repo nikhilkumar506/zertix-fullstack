@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 4 – JavaScript DOM | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../../assets/css/frontend-course.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <h2 class="logo">SkilllCertify</h2>
+    <a href="../../user/dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="course-hero">
+  <div class="container">
+    <span class="week-badge">Week 4</span>
+    <h1>JavaScript DOM & Interactivity</h1>
+    <p>
+      Learn how to manipulate web pages dynamically using the Document Object Model (DOM),
+      handle user events, validate forms, and store data in the browser.
+    </p>
+
+    <div class="progress-box">
+      <span>Course Progress</span>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 66%"></div>
+      </div>
+      <small>Week 4 of 6</small>
+    </div>
+  </div>
+</section>
+
+<main class="course-container">
+
+<!-- SECTION 1 -->
+<section class="content-card">
+  <h2>1. What is DOM?</h2>
+    <section class="dom-section">
+    <p class="intro-text">
+        DOM stands for Document Object Model. It is a programming interface 
+        for web documents that represents the structure of an HTML or XML page 
+        as a tree of objects. The DOM allows programming languages like JavaScript 
+        to access, modify, and manipulate the content, structure, and styles of a webpage dynamically.
+    </p>
+
+    <p class="intro-text">
+        When a web page loads, the browser creates a DOM of the page. 
+        Every element, attribute, and piece of text becomes a node in this tree structure. 
+        Developers can interact with these nodes using JavaScript.
+    </p>
+
+    <div class="box-part">
+        <h3>1. DOM Structure</h3>
+        <p>
+            The DOM represents the document as a hierarchical tree structure. 
+            The top of the tree is the <strong>document</strong> object, followed by 
+            the <strong>html</strong> element, then <strong>head</strong> and <strong>body</strong>, 
+            and so on.
+        </p>
+        <ul>
+            <li>Document → Root of the webpage</li>
+            <li>Element Nodes → HTML tags like div, p, h1</li>
+            <li>Text Nodes → The actual text inside elements</li>
+            <li>Attribute Nodes → Attributes like class, id, src</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>2. Why DOM is Important</h3>
+        <p>
+            The DOM allows developers to:
+        </p>
+        <ul>
+            <li>Access HTML elements</li>
+            <li>Change content dynamically</li>
+            <li>Modify CSS styles</li>
+            <li>Add or remove elements</li>
+            <li>Handle events like clicks and form submissions</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>3. DOM Manipulation</h3>
+        <p>
+            Using JavaScript, developers can select elements using methods such as:
+        </p>
+        <ul>
+            <li><strong>getElementById()</strong></li>
+            <li><strong>getElementsByClassName()</strong></li>
+            <li><strong>querySelector()</strong></li>
+            <li><strong>querySelectorAll()</strong></li>
+        </ul>
+        <p>
+            After selecting elements, their content, attributes, and styles can be modified.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>4. DOM Events</h3>
+        <p>
+            The DOM supports event handling, which allows interaction between 
+            the user and the webpage. Common events include:
+        </p>
+        <ul>
+            <li>click</li>
+            <li>mouseover</li>
+            <li>keydown</li>
+            <li>submit</li>
+        </ul>
+    </div>
+
+    <div class="formula-box">
+        <p>
+            DOM = Structured representation of a webpage + JavaScript interaction
+        </p>
+        <p>
+            It enables dynamic, interactive, and responsive web applications.
+        </p>
+    </div>
+
+</section>
+
+  <p>
+    DOM stands for <strong>Document Object Model</strong>.
+    When a browser loads HTML, it converts it into a tree structure called the DOM.
+  </p>
+
+  <div class="info-box">
+    HTML → Parsed by browser → Converted into DOM Tree
+  </div>
+
+  <p>
+    Each HTML element becomes a JavaScript object.
+    This allows us to manipulate elements dynamically.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+document.body.style.background = "black";
+</pre>
+  </div>
+
+</section>
+
+<!-- SECTION 2 -->
+<!-- SECTION 2 -->
+<section class="content-card">
+  <h2>2. Selecting Elements (Deep Dive)</h2>
+
+  <p>
+    Before JavaScript can modify anything on a webpage, it must first 
+    <strong>select</strong> that element from the DOM.
+    Selecting elements is the foundation of DOM manipulation.
+  </p>
+
+  <div class="info-box">
+    Think of it like this:  
+    If HTML is a house, selecting elements is choosing which room you want to enter.
+  </div>
+
+  <h3>🔹 Why Selecting Elements is Important?</h3>
+
+  <ul class="styled-list">
+    <li>Change text content</li>
+    <li>Modify styles dynamically</li>
+    <li>Add animations</li>
+    <li>Attach event listeners</li>
+    <li>Validate forms</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>1️⃣ getElementById()</h3>
+
+  <p>
+    Used to select a single element using its unique <code>id</code>.
+    IDs must be unique inside an HTML document.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const heading = document.getElementById("title");
+heading.style.color = "blue";
+</pre>
+  </div>
+
+  <p>
+    ✔ Fast  
+    ✔ Direct  
+    ✔ Best for unique elements
+  </p>
+
+  <hr class="divider">
+
+  <h3>2️⃣ getElementsByClassName()</h3>
+
+  <p>
+    Used to select multiple elements that share the same class.
+    It returns an <strong>HTMLCollection</strong>.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const items = document.getElementsByClassName("box");
+
+for(let i = 0; i < items.length; i++){
+  items[i].style.background = "yellow";
+}
+</pre>
+  </div>
+
+  <div class="analogy-box">
+    HTMLCollection = Live collection  
+    It updates automatically when DOM changes.
+  </div>
+
+  <hr class="divider">
+
+  <h3>3️⃣ getElementsByTagName()</h3>
+
+  <p>
+    Selects elements by their tag name (like div, p, h1).
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const paragraphs = document.getElementsByTagName("p");
+</pre>
+  </div>
+
+  <p>
+    Returns HTMLCollection (multiple elements).
+  </p>
+
+  <hr class="divider">
+
+  <h3>4️⃣ querySelector() ⭐ (Modern & Most Used)</h3>
+
+  <p>
+    This method selects the <strong>first matching element</strong> using CSS selector syntax.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const title = document.querySelector("#title");
+const box = document.querySelector(".box");
+const btn = document.querySelector("button");
+</pre>
+  </div>
+
+  <p>
+    ✔ Uses CSS selector syntax  
+    ✔ Cleaner code  
+    ✔ Most recommended in modern development
+  </p>
+
+  <hr class="divider">
+
+  <h3>5️⃣ querySelectorAll()</h3>
+
+  <p>
+    Selects <strong>all matching elements</strong> using CSS selector.
+    Returns a <strong>NodeList</strong>.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const allBoxes = document.querySelectorAll(".box");
+
+allBoxes.forEach(function(element){
+  element.style.color = "green";
+});
+</pre>
+  </div>
+
+  <div class="info-box">
+    NodeList supports forEach()  
+    HTMLCollection does NOT support forEach() directly.
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔎 Advanced Selection Examples</h3>
+
+  <div class="code-wrapper">
+<pre>
+// Select input by type
+document.querySelector("input[type='email']");
+
+// Select child element
+document.querySelector(".card h2");
+
+// Select direct child
+document.querySelector("ul > li");
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🧠 Interview Questions (Very Important)</h3>
+
+  <ul class="styled-list">
+    <li>Difference between querySelector and getElementById?</li>
+    <li>What is NodeList?</li>
+    <li>What is HTMLCollection?</li>
+    <li>Which method is preferred in modern development?</li>
+    <li>Why is querySelector more flexible?</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>💡 Best Practice (Professional Tip)</h3>
+
+  <p>
+    Instead of writing:
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+document.querySelector("#title").style.color = "red";
+</pre>
+  </div>
+
+  <p>Do this:</p>
+
+  <div class="code-wrapper">
+<pre>
+const title = document.querySelector("#title");
+title.style.color = "red";
+</pre>
+  </div>
+
+  <p>
+    ✔ Cleaner  
+    ✔ More readable  
+    ✔ Easier to debug  
+  </p>
+
+</section>
+
+  <p>JavaScript allows you to select elements using:</p>
+
+  <ul class="styled-list">
+    <li>document.getElementById()</li>
+    <li>document.getElementsByClassName()</li>
+    <li>document.querySelector()</li>
+    <li>document.querySelectorAll()</li>
+  </ul>
+
+  <div class="code-wrapper">
+<pre>
+const btn = document.querySelector("#btn");
+btn.style.color = "red";
+</pre>
+  </div>
+
+</section>
+
+<!-- SECTION 3 --><!-- SECTION 3 -->
+<section class="content-card">
+  <h2>3. Event Handling (Complete Guide)</h2>
+
+  <p>
+    JavaScript becomes powerful when it reacts to <strong>user actions</strong>.
+    These actions are called <strong>events</strong>.
+  </p>
+
+  <div class="info-box">
+    Event = Something that happens  
+    Event Listener = Code that waits and responds
+  </div>
+
+  <h3>🔹 What is an Event?</h3>
+
+  <p>
+    An event is an action performed by the user or browser.
+  </p>
+
+  <ul class="styled-list">
+    <li>Clicking a button</li>
+    <li>Typing in input field</li>
+    <li>Submitting a form</li>
+    <li>Hovering over element</li>
+    <li>Scrolling page</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 addEventListener() (Modern Method)</h3>
+
+  <p>
+    The best way to handle events in modern JavaScript.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const button = document.querySelector("#btn");
+
+button.addEventListener("click", function(){
+  alert("Button Clicked!");
+});
+</pre>
+  </div>
+
+  <p>
+    Syntax:
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+element.addEventListener("eventName", functionName);
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Common Event Types</h3>
+
+  <div class="three-grid">
+    <div>
+      <h4>Mouse Events</h4>
+      <p>click, dblclick, mouseover</p>
+    </div>
+    <div>
+      <h4>Keyboard Events</h4>
+      <p>keydown, keyup</p>
+    </div>
+    <div>
+      <h4>Form Events</h4>
+      <p>submit, change</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Example: Changing Text on Click</h3>
+
+  <div class="code-wrapper">
+<pre>
+const heading = document.querySelector("#heading");
+
+heading.addEventListener("click", function(){
+  heading.textContent = "Text Changed!";
+});
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Using Named Functions</h3>
+
+  <p>
+    Instead of anonymous functions, you can define reusable functions.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+function showMessage(){
+  console.log("Button clicked!");
+}
+
+button.addEventListener("click", showMessage);
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Event Object</h3>
+
+  <p>
+    When an event occurs, JavaScript passes an <strong>event object</strong>.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+button.addEventListener("click", function(event){
+  console.log(event);
+});
+</pre>
+  </div>
+
+  <p>
+    Useful properties:
+  </p>
+
+  <ul class="styled-list">
+    <li>event.target</li>
+    <li>event.type</li>
+    <li>event.preventDefault()</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Prevent Default Behavior</h3>
+
+  <p>
+    Used mostly in forms.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Form submission prevented!");
+});
+</pre>
+  </div>
+
+  <div class="analogy-box">
+    Prevent Default = Stop browser’s automatic behavior
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Real World Example: Dark Mode Toggle</h3>
+
+  <div class="code-wrapper">
+<pre>
+const btn = document.querySelector("#darkBtn");
+
+btn.addEventListener("click", function(){
+  document.body.classList.toggle("dark-mode");
+});
+</pre>
+  </div>
+
+  <p>
+    This is how interactive websites are built.
+  </p>
+
+  <hr class="divider">
+
+  <h3>🧠 Interview Questions</h3>
+
+  <ul class="styled-list">
+    <li>Difference between onclick and addEventListener?</li>
+    <li>What is event bubbling?</li>
+    <li>What is event delegation?</li>
+    <li>What does preventDefault() do?</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>💡 Best Practices</h3>
+
+  <ul class="styled-list">
+    <li>Always select element before adding event</li>
+    <li>Use addEventListener instead of inline JS</li>
+    <li>Check if element exists before attaching event</li>
+  </ul>
+
+</section>
+
+
+  <p>
+    Events allow JavaScript to react to user actions like clicks, typing, and submitting forms.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const button = document.querySelector("button");
+
+button.addEventListener("click", function() {
+  alert("Button Clicked!");
+});
+</pre>
+  </div>
+
+  <div class="analogy-box">
+    Event = User action  
+    Event Listener = Code waiting for that action
+  </div>
+
+</section>
+
+<!-- SECTION 4 --><!-- SECTION 4 -->
+<section class="content-card">
+  <h2>4. Form Validation (Complete Guide)</h2>
+
+  <p>
+    Form validation ensures that users enter correct and required data
+    before submitting a form to the server.
+  </p>
+
+  <div class="info-box">
+    Validation = Checking user input before processing it.
+  </div>
+
+  <h3>🔹 Why Form Validation is Important?</h3>
+
+  <ul class="styled-list">
+    <li>Prevents empty submissions</li>
+    <li>Improves user experience</li>
+    <li>Prevents invalid data</li>
+    <li>Enhances security</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Basic Example: Required Field</h3>
+
+  <div class="code-wrapper">
+<pre>
+const email = document.querySelector("#email").value;
+
+if(email === ""){
+  alert("Email is required!");
+}
+</pre>
+  </div>
+
+  <p>
+    This checks if the user has entered any value.
+  </p>
+
+  <hr class="divider">
+
+  <h3>🔹 Prevent Form Submission</h3>
+
+  <p>
+    By default, forms reload the page after submission.
+    We use <strong>preventDefault()</strong> to stop this behavior.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const email = document.querySelector("#email").value;
+
+  if(email === ""){
+    alert("Email required!");
+  }
+});
+</pre>
+  </div>
+
+  <div class="analogy-box">
+    preventDefault() = Stop the browser from auto-submitting the form.
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Email Format Validation</h3>
+
+  <div class="code-wrapper">
+<pre>
+const email = document.querySelector("#email").value;
+
+if(!email.includes("@")){
+  alert("Enter valid email address");
+}
+</pre>
+  </div>
+
+  <p>
+    This ensures email contains “@”.
+  </p>
+
+  <hr class="divider">
+
+  <h3>🔹 Password Length Validation</h3>
+
+  <div class="code-wrapper">
+<pre>
+const password = document.querySelector("#password").value;
+
+if(password.length < 6){
+  alert("Password must be at least 6 characters");
+}
+</pre>
+  </div>
+
+  <p>
+    Always check password strength in real applications.
+  </p>
+
+  <hr class="divider">
+
+  <h3>🔹 Real World Example: Complete Validation</h3>
+
+  <div class="code-wrapper">
+<pre>
+const form = document.querySelector("#signupForm");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const email = document.querySelector("#email").value;
+  const password = document.querySelector("#password").value;
+
+  if(email === "" || password === ""){
+    alert("All fields are required");
+    return;
+  }
+
+  if(password.length < 6){
+    alert("Password must be at least 6 characters");
+    return;
+  }
+
+  alert("Form submitted successfully!");
+});
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Types of Validation</h3>
+
+  <div class="three-grid">
+    <div>
+      <h4>Client-Side</h4>
+      <p>Validation in browser using JavaScript</p>
+    </div>
+    <div>
+      <h4>Server-Side</h4>
+      <p>Validation in backend (Node, PHP, etc.)</p>
+    </div>
+    <div>
+      <h4>HTML Built-in</h4>
+      <p>Using required, minlength attributes</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 HTML Built-in Validation</h3>
+
+  <div class="code-wrapper">
+<pre>
+<input type="email" required>
+<input type="password" minlength="6">
+</pre>
+  </div>
+
+  <p>
+    Browsers automatically validate these attributes.
+  </p>
+
+  <hr class="divider">
+
+  <h3>🧠 Interview Questions</h3>
+
+  <ul class="styled-list">
+    <li>Difference between client-side and server-side validation?</li>
+    <li>Why is server-side validation mandatory?</li>
+    <li>What does preventDefault() do?</li>
+    <li>How to validate email format in JS?</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>💡 Best Practices</h3>
+
+  <ul class="styled-list">
+    <li>Always validate on both client & server</li>
+    <li>Never trust user input</li>
+    <li>Show clear error messages</li>
+    <li>Keep validation user-friendly</li>
+  </ul>
+
+</section>
+
+
+  <p>
+    Before submitting data, always validate user inputs.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+const email = document.querySelector("#email").value;
+
+if(email === ""){
+  alert("Email required");
+}
+</pre>
+  </div>
+
+  <p>
+    Validation improves:
+  </p>
+
+  <ul class="styled-list">
+    <li>Security</li>
+    <li>User Experience</li>
+    <li>Data Accuracy</li>
+  </ul>
+
+</section>
+
+
+<!-- SECTION 5 -->
+<section class="content-card">
+  <h2>5. LocalStorage (Complete Guide)</h2>
+
+  <p>
+    LocalStorage is a Web Storage API that allows you to store data 
+    directly inside the user's browser. The stored data remains even 
+    after the browser is closed and reopened.
+  </p>
+
+  <div class="info-box">
+    LocalStorage = Persistent storage inside the browser (5–10MB capacity)
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Why LocalStorage is Important?</h3>
+
+  <ul class="styled-list">
+    <li>Stores data without backend</li>
+    <li>Data persists after page refresh</li>
+    <li>Improves user experience</li>
+    <li>Reduces unnecessary API calls</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Basic Syntax</h3>
+
+  <div class="code-wrapper">
+<pre>
+// Store data
+localStorage.setItem("name", "Nikhil");
+
+// Get data
+const value = localStorage.getItem("name");
+
+// Remove single item
+localStorage.removeItem("name");
+
+// Clear all storage
+localStorage.clear();
+</pre>
+  </div>
+
+  <div class="analogy-box">
+    setItem() = Save data  
+    getItem() = Read data  
+    removeItem() = Delete specific data  
+    clear() = Delete everything
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Important Rule</h3>
+
+  <p>
+    LocalStorage stores data only in STRING format.
+  </p>
+
+  <div class="info-box">
+    If you store objects or arrays, you must convert them using JSON.
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Storing Objects (Using JSON)</h3>
+
+  <div class="code-wrapper">
+<pre>
+const user = {
+  name: "Nikhil",
+  age: 22
+};
+
+// Convert object to string
+localStorage.setItem("user", JSON.stringify(user));
+
+// Convert back to object
+const storedUser = JSON.parse(localStorage.getItem("user"));
+
+console.log(storedUser.name);
+</pre>
+  </div>
+
+  <p>
+    JSON.stringify() converts object → string  
+    JSON.parse() converts string → object
+  </p>
+
+  <hr class="divider">
+
+  <h3>🔹 Real World Example: Dark Mode Toggle</h3>
+
+  <div class="code-wrapper">
+<pre>
+const toggleBtn = document.querySelector("#themeBtn");
+
+toggleBtn.addEventListener("click", function(){
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// Load saved theme on page load
+window.addEventListener("load", function(){
+  const savedTheme = localStorage.getItem("theme");
+
+  if(savedTheme === "dark"){
+    document.body.classList.add("dark");
+  }
+});
+</pre>
+  </div>
+
+  <p>
+    This remembers user theme preference even after refresh.
+  </p>
+
+  <hr class="divider">
+
+  <h3>🔹 Real World Example: Save Form Data</h3>
+
+  <div class="code-wrapper">
+<pre>
+const input = document.querySelector("#username");
+
+// Save input
+input.addEventListener("input", function(){
+  localStorage.setItem("username", input.value);
+});
+
+// Load saved input
+window.addEventListener("load", function(){
+  const savedName = localStorage.getItem("username");
+  if(savedName){
+    input.value = savedName;
+  }
+});
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 LocalStorage vs SessionStorage</h3>
+
+  <div class="three-grid">
+    <div>
+      <h4>LocalStorage</h4>
+      <p>Data stays even after browser closes</p>
+    </div>
+    <div>
+      <h4>SessionStorage</h4>
+      <p>Data removed when tab closes</p>
+    </div>
+    <div>
+      <h4>Cookies</h4>
+      <p>Small data sent to server with requests</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🔹 Where LocalStorage is Used?</h3>
+
+  <ul class="styled-list">
+    <li>Saving login tokens (small apps)</li>
+    <li>Remembering theme preference</li>
+    <li>Storing cart items</li>
+    <li>Saving user settings</li>
+    <li>Temporary offline data</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Limitations</h3>
+
+  <ul class="styled-list">
+    <li>Only stores strings</li>
+    <li>Storage limit around 5MB</li>
+    <li>Not secure for sensitive data</li>
+    <li>Accessible via browser DevTools</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Security Warning ⚠</h3>
+
+  <div class="info-box">
+    Never store passwords or sensitive user data in LocalStorage.
+    It can be accessed using browser developer tools.
+  </div>
+
+  <hr class="divider">
+
+  <h3>🧠 Interview Questions</h3>
+
+  <ul class="styled-list">
+    <li>Difference between LocalStorage and SessionStorage?</li>
+    <li>Why LocalStorage stores only strings?</li>
+    <li>How to store objects in LocalStorage?</li>
+    <li>Is LocalStorage secure for JWT tokens?</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>💡 Best Practices</h3>
+
+  <ul class="styled-list">
+    <li>Always use JSON for complex data</li>
+    <li>Check if data exists before using it</li>
+    <li>Do not store sensitive information</li>
+    <li>Clear unused data regularly</li>
+  </ul>
+
+</section>
+
+  <p>
+    LocalStorage allows storing data inside the browser.
+  </p>
+
+  <div class="code-wrapper">
+<pre>
+localStorage.setItem("name", "Nikhil");
+const value = localStorage.getItem("name");
+</pre>
+  </div>
+
+  <p>
+    Used for:
+  </p>
+
+  <ul class="styled-list">
+    <li>Saving login tokens</li>
+    <li>Remembering theme preference</li>
+    <li>Storing cart data</li>
+  </ul>
+
+</section>
+
+<!-- QUIZ -->
+<section class="content-card quiz-card">
+  <h2>🧠 Quiz – Week 4</h2>
+
+  <div class="quiz-question">
+  <p>1. DOM stands for?</p>
+  <label><input type="radio" name="q1"> Data Object Model</label>
+  <label><input type="radio" name="q1"> Document Object Model</label>
+  <label><input type="radio" name="q1"> Digital Object Method</label>
+</div>
+
+<div class="quiz-question">
+  <p>2. Which method selects by CSS selector?</p>
+  <label><input type="radio" name="q2"> getElementById</label>
+  <label><input type="radio" name="q2"> querySelector</label>
+  <label><input type="radio" name="q2"> getElementsByTagName</label>
+</div>
+
+<div class="quiz-question">
+  <p>3. querySelectorAll() returns?</p>
+  <label><input type="radio" name="q3"> HTMLCollection</label>
+  <label><input type="radio" name="q3"> NodeList</label>
+  <label><input type="radio" name="q3"> Array</label>
+</div>
+
+<div class="quiz-question">
+  <p>4. Which method selects element by ID?</p>
+  <label><input type="radio" name="q4"> getElementById()</label>
+  <label><input type="radio" name="q4"> querySelectorAll()</label>
+  <label><input type="radio" name="q4"> getElementsByClassName()</label>
+</div>
+
+<div class="quiz-question">
+  <p>5. addEventListener() is used to?</p>
+  <label><input type="radio" name="q5"> Add styles</label>
+  <label><input type="radio" name="q5"> Attach event handler</label>
+  <label><input type="radio" name="q5"> Delete element</label>
+</div>
+
+<div class="quiz-question">
+  <p>6. Which event is triggered when button is clicked?</p>
+  <label><input type="radio" name="q6"> submit</label>
+  <label><input type="radio" name="q6"> click</label>
+  <label><input type="radio" name="q6"> keydown</label>
+</div>
+
+<div class="quiz-question">
+  <p>7. preventDefault() is used to?</p>
+  <label><input type="radio" name="q7"> Reload page</label>
+  <label><input type="radio" name="q7"> Stop default browser action</label>
+  <label><input type="radio" name="q7"> Delete form</label>
+</div>
+
+<div class="quiz-question">
+  <p>8. Which event is used for form submission?</p>
+  <label><input type="radio" name="q8"> submit</label>
+  <label><input type="radio" name="q8"> hover</label>
+  <label><input type="radio" name="q8"> change</label>
+</div>
+
+<div class="quiz-question">
+  <p>9. LocalStorage stores data as?</p>
+  <label><input type="radio" name="q9"> Objects</label>
+  <label><input type="radio" name="q9"> Strings</label>
+  <label><input type="radio" name="q9"> Arrays</label>
+</div>
+
+<div class="quiz-question">
+  <p>10. Which method saves data in LocalStorage?</p>
+  <label><input type="radio" name="q10"> saveItem()</label>
+  <label><input type="radio" name="q10"> setItem()</label>
+  <label><input type="radio" name="q10"> addItem()</label>
+</div>
+
+<div class="quiz-question">
+  <p>11. Which method retrieves data from LocalStorage?</p>
+  <label><input type="radio" name="q11"> getItem()</label>
+  <label><input type="radio" name="q11"> readItem()</label>
+  <label><input type="radio" name="q11"> fetchItem()</label>
+</div>
+
+<div class="quiz-question">
+  <p>12. To store object in LocalStorage we use?</p>
+  <label><input type="radio" name="q12"> JSON.parse()</label>
+  <label><input type="radio" name="q12"> JSON.stringify()</label>
+  <label><input type="radio" name="q12"> convert()</label>
+</div>
+
+<div class="quiz-question">
+  <p>13. Which event occurs when key is pressed?</p>
+  <label><input type="radio" name="q13"> keydown</label>
+  <label><input type="radio" name="q13"> scroll</label>
+  <label><input type="radio" name="q13"> submit</label>
+</div>
+
+<div class="quiz-question">
+  <p>14. HTMLCollection supports forEach()?</p>
+  <label><input type="radio" name="q14"> Yes</label>
+  <label><input type="radio" name="q14"> No</label>
+  <label><input type="radio" name="q14"> Sometimes</label>
+</div>
+
+<div class="quiz-question">
+  <p>15. NodeList supports forEach()?</p>
+  <label><input type="radio" name="q15"> Yes</label>
+  <label><input type="radio" name="q15"> No</label>
+  <label><input type="radio" name="q15"> Only in HTML5</label>
+</div>
+
+<div class="quiz-question">
+  <p>16. Which is best practice for adding events?</p>
+  <label><input type="radio" name="q16"> Inline onclick</label>
+  <label><input type="radio" name="q16"> addEventListener()</label>
+  <label><input type="radio" name="q16"> CSS hover</label>
+</div>
+
+<div class="quiz-question">
+  <p>17. Which property gets clicked element?</p>
+  <label><input type="radio" name="q17"> event.type</label>
+  <label><input type="radio" name="q17"> event.target</label>
+  <label><input type="radio" name="q17"> event.value</label>
+</div>
+
+<div class="quiz-question">
+  <p>18. Which method removes specific LocalStorage item?</p>
+  <label><input type="radio" name="q18"> removeItem()</label>
+  <label><input type="radio" name="q18"> deleteItem()</label>
+  <label><input type="radio" name="q18"> clear()</label>
+</div>
+
+<div class="quiz-question">
+  <p>19. If element not found, querySelector returns?</p>
+  <label><input type="radio" name="q19"> undefined</label>
+  <label><input type="radio" name="q19"> null</label>
+  <label><input type="radio" name="q19"> false</label>
+</div>
+
+<div class="quiz-question">
+  <p>20. Which validation improves security?</p>
+  <label><input type="radio" name="q20"> Client-side only</label>
+  <label><input type="radio" name="q20"> Server-side only</label>
+  <label><input type="radio" name="q20"> Both client and server-side</label>
+</div>
+
+
+  <button class="primary-btn" id="submitQuizBtn">
+    Submit Quiz
+  </button>
+</section>
+
+<!-- NEXT WEEK -->
+<section class="next-week">
+  <h3>Week 4 Completed 🎉</h3>
+  <p>Next: Projects & Mini Applications</p>
+
+  <a href="week5.html" class="primary-btn">
+    Go to Week 5 →
+  </a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 SkilllCertify · Build Real Frontend Skills</p>
+</footer>
+
+<script>
+document.getElementById("submitQuizBtn").addEventListener("click", function(){
+  alert("✅ Your Week 4 quiz has been recorded successfully!");
+});
+</script>
+
+</body>
+</html>

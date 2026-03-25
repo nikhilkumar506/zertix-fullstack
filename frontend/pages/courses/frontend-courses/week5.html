@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 5 – Frontend Projects | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../../assets/css/frontend-course.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <h2 class="logo">SkilllCertify</h2>
+    <a href="../../user/dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="course-hero">
+  <div class="container">
+    <span class="week-badge">Week 5</span>
+    <h1>Projects & Mini Applications</h1>
+    <p>
+      Apply everything you learned — HTML, CSS, JavaScript & DOM —
+      by building real-world frontend projects.
+    </p>
+
+    <div class="progress-box">
+      <span>Course Progress</span>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 83%"></div>
+      </div>
+      <small>Week 5 of 6</small>
+    </div>
+  </div>
+</section>
+
+<main class="course-container">
+
+<!-- PROJECT 1 -->
+<section class="content-card">
+  <h2>1️⃣ Portfolio Website</h2>
+
+  <p>
+    Every frontend developer must build a personal portfolio website.
+    This project demonstrates layout skills, semantic HTML structure,
+    responsiveness understanding, and clean design principles.
+  </p>
+
+  <p>
+    A portfolio is your digital identity. It helps recruiters understand
+    your technical skills, projects, and problem-solving ability.
+  </p>
+
+  <hr class="divider">
+
+  <h3>What to Include:</h3>
+
+  <ul class="styled-list">
+    <li>Hero Section</li>
+    <li>About Me Section</li>
+    <li>Skills Section</li>
+    <li>Projects Showcase</li>
+    <li>Contact Form</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Hero Section</h3>
+  <p>
+    The hero section is the first visible part of your website.
+    It should clearly introduce who you are and what you do.
+  </p>
+
+  <ul class="styled-list">
+    <li>Your Name</li>
+    <li>Professional Title</li>
+    <li>Short Tagline</li>
+    <li>Call-to-Action Button</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 About Me Section</h3>
+  <p>
+    This section describes your background, education, goals,
+    and technical journey. Keep it professional and concise.
+  </p>
+
+  <ul class="styled-list">
+    <li>Short Introduction</li>
+    <li>Education Details</li>
+    <li>Career Objective</li>
+    <li>Professional Strengths</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Skills Section</h3>
+  <p>
+    Display your technical stack clearly. Divide skills into
+    categories like Frontend, Backend, and Tools.
+  </p>
+
+  <ul class="styled-list">
+    <li>HTML, CSS, JavaScript</li>
+    <li>Frameworks (React, Bootstrap)</li>
+    <li>Backend (Node.js, MongoDB)</li>
+    <li>Version Control (Git & GitHub)</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Projects Showcase</h3>
+  <p>
+    This is the most important section. Add real projects with
+    descriptions, technologies used, and live demo links.
+  </p>
+
+  <ul class="styled-list">
+    <li>Project Title</li>
+    <li>Short Description</li>
+    <li>Technologies Used</li>
+    <li>GitHub Link</li>
+    <li>Live Demo Link</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔹 Contact Form</h3>
+  <p>
+    Add a contact form so recruiters can easily reach you.
+    Include proper input fields with validation.
+  </p>
+
+  <ul class="styled-list">
+    <li>Name Field</li>
+    <li>Email Field</li>
+    <li>Message Field</li>
+    <li>Submit Button</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🧠 Learning Outcome</h3>
+
+  <ul class="styled-list">
+    <li>Understanding semantic HTML</li>
+    <li>Section-based page structure</li>
+    <li>Navigation linking using IDs</li>
+    <li>Clean content organization</li>
+    <li>Professional web presentation</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>💡 Best Practices</h3>
+
+  <ul class="styled-list">
+    <li>Keep design minimal and clean</li>
+    <li>Make it fully responsive</li>
+    <li>Use proper heading hierarchy</li>
+    <li>Optimize images</li>
+    <li>Deploy it live (Netlify / Vercel)</li>
+  </ul>
+<div class="info-box">
+    💡 Goal: Use Flexbox or Grid for layout + Responsive design.
+  </div>
+</section>
+
+
+  
+</section>
+
+<section class="content-card">
+  <h2>2️⃣ Interactive Form (Real-Time Validation)</h2>
+
+  <p>
+    An interactive form improves user experience by validating inputs in real time
+    and providing instant feedback instead of waiting for submission errors.
+  </p>
+
+  <div class="info-box">
+    A professional frontend developer never submits invalid data.
+  </div>
+
+  <h3>🎯 Objectives of This Project</h3>
+  <ul class="styled-list">
+    <li>Capture user input</li>
+    <li>Validate fields in real-time</li>
+    <li>Show error messages dynamically</li>
+    <li>Prevent invalid submission</li>
+    <li>Display success message</li>
+  </ul>
+
+  <hr class="divider">
+
+  
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🧠 JavaScript Validation Logic</h3>
+
+  <div class="code-wrapper">
+<pre>
+const form = document.getElementById("signupForm");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  let isValid = true;
+
+  // Name Validation
+  if(name === ""){
+    document.getElementById("nameError").innerText = "Name is required";
+    isValid = false;
+  }
+
+  // Email Validation
+  if(!email.includes("@")){
+    document.getElementById("emailError").innerText = "Invalid email format";
+    isValid = false;
+  }
+
+  // Password Validation
+  if(password.length < 6){
+    document.getElementById("passwordError").innerText = "Password must be at least 6 characters";
+    isValid = false;
+  }
+
+  if(isValid){
+    alert("Form Submitted Successfully!");
+  }
+});
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>💎 Professional Enhancements</h3>
+
+  <ul class="styled-list">
+    <li>Real-time validation using input event</li>
+    <li>Password strength indicator</li>
+    <li>Disable submit button until valid</li>
+    <li>Loading state while submitting</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>🔒 Why Validation is Important?</h3>
+
+  <ul class="styled-list">
+    <li>Prevents bad data</li>
+    <li>Improves user experience</li>
+    <li>Reduces server load</li>
+    <li>Enhances security</li>
+  </ul>
+
+  <div class="analogy-box">
+    Client-side validation = First security checkpoint  
+    Server-side validation = Final security checkpoint
+  </div>
+
+</section>
+
+</section>
+
+<!-- PROJECT 3 -->
+<section class="content-card">
+  <h2>3️⃣ Todo App (Using LocalStorage)</h2>
+
+  <p>
+    In this project, you will build a simple task manager that stores tasks
+    inside the browser using <strong>LocalStorage</strong>.
+  </p>
+
+  <div class="info-box">
+    Data will remain saved even after page refresh.
+  </div>
+ 
+  <!-- Input field for new task -->
+ 
+</div>
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🧠 JavaScript Logic (With Comments)</h3>
+
+  <div class="code-wrapper">
+<pre>
+// Select important elements
+const taskInput = document.getElementById("taskInput");
+const addTaskBtn = document.getElementById("addTaskBtn");
+const taskList = document.getElementById("taskList");
+
+// Load tasks from LocalStorage when page loads
+document.addEventListener("DOMContentLoaded", loadTasks);
+
+// Add new task
+addTaskBtn.addEventListener("click", addTask);
+
+// Function to add task
+function addTask() {
+
+  // Get input value and remove extra spaces
+  const taskText = taskInput.value.trim();
+
+  // Prevent empty task
+  if(taskText === ""){
+    alert("Please enter a task");
+    return;
+  }
+
+  // Create task element
+  createTaskElement(taskText);
+
+  // Save task to LocalStorage
+  saveTask(taskText);
+
+  // Clear input field
+  taskInput.value = "";
+}
+
+// Create task in UI
+function createTaskElement(taskText){
+
+  const li = document.createElement("li");
+  li.textContent = taskText;
+
+  // Create delete button
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+
+  // Add delete functionality
+  deleteBtn.addEventListener("click", function(){
+    li.remove();
+    removeTask(taskText);
+  });
+
+  li.appendChild(deleteBtn);
+  taskList.appendChild(li);
+}
+
+// Save task in LocalStorage
+function saveTask(task){
+
+  // Get existing tasks
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  // Add new task
+  tasks.push(task);
+
+  // Store updated tasks
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+// Load tasks from LocalStorage
+function loadTasks(){
+
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  // Display all saved tasks
+  tasks.forEach(task => createTaskElement(task));
+}
+
+// Remove task from LocalStorage
+function removeTask(taskToRemove){
+
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  tasks = tasks.filter(task => task !== taskToRemove);
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🎯 Skills Practiced</h3>
+
+  <ul class="styled-list">
+    <li>DOM Selection</li>
+    <li>Event Handling</li>
+    <li>Dynamic Element Creation</li>
+    <li>LocalStorage CRUD</li>
+    <li>JSON Parsing & Stringifying</li>
+  </ul>
+
+  <div class="analogy-box">
+    Todo App = Real beginner-to-intermediate frontend project
+  </div>
+
+</section>
+
+<!-- PROJECT 4 -->
+<section class="content-card">
+  <h2>4️⃣ Calculator App (Using JavaScript)</h2>
+
+  <p>
+    In this project, you will build a working calculator using
+    JavaScript DOM manipulation and event handling.
+  </p>
+
+  <div class="info-box">
+    This project strengthens your understanding of events, conditions,
+    functions, and DOM updates.
+  </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <h3>🧠 JavaScript Logic (With Comments)</h3>
+
+  <div class="code-wrapper">
+<pre>
+// Select display input
+const display = document.getElementById("display");
+
+// Append number or operator to display
+function appendValue(value) {
+  display.value += value;
+}
+
+// Clear display
+function clearDisplay() {
+  display.value = "";
+}
+
+// Calculate result
+function calculateResult() {
+  try {
+    // eval evaluates mathematical expression
+    display.value = eval(display.value);
+  } catch (error) {
+    display.value = "Error";
+  }
+}
+</pre>
+  </div>
+
+  <hr class="divider">
+
+  <h3>🎯 What This Project Teaches</h3>
+
+  <ul class="styled-list">
+    <li>DOM Selection</li>
+    <li>Inline Event Handling</li>
+    <li>Functions</li>
+    <li>try-catch error handling</li>
+    <li>Mathematical logic execution</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h3>💎 Professional Improvements (Advanced Level)</h3>
+
+  <ul class="styled-list">
+    <li>Avoid using eval() (Security Risk)</li>
+    <li>Use event delegation</li>
+    <li>Add keyboard support</li>
+    <li>Add decimal support</li>
+    <li>Add history tracking</li>
+  </ul>
+
+  <div class="analogy-box">
+    Calculator App = Practice ground for real application logic.
+  </div>
+
+</section>
+
+
+<!-- BEST PRACTICES -->
+<section class="content-card">
+  <h2>💼 Professional Best Practices</h2>
+
+  <p>
+    A frontend developer is judged not just by knowledge,
+    but by code quality, structure, and project execution.
+  </p>
+
+  <hr class="divider">
+
+  <h3>🔥 Industry-Level Best Practices</h3>
+
+  <ul class="styled-list">
+    <li>Use semantic HTML</li>
+    <li>Follow consistent naming conventions</li>
+    <li>Keep CSS modular & reusable</li>
+    <li>Write clean and readable JavaScript</li>
+    <li>Always validate forms (client + server)</li>
+    <li>Optimize images and performance</li>
+    <li>Make responsive designs (mobile-first)</li>
+    <li>Use Flexbox & Grid properly</li>
+    <li>Separate concerns (HTML, CSS, JS)</li>
+    <li>Test on multiple browsers</li>
+  </ul>
+
+  <div class="info-box">
+    Clean Code + Real Projects = Strong Frontend Portfolio
+  </div>
+
+  <hr class="divider">
+
+  <h3>🚀 50 Frontend Project Ideas (Beginner → Advanced)</h3>
+
+  <div class="three-grid">
+
+    <div>
+      <h4>🔰 Beginner Level</h4>
+      <ul>
+        <li>1. Personal Portfolio</li>
+        <li>2. Landing Page</li>
+        <li>3. Responsive Navbar</li>
+        <li>4. Login Form</li>
+        <li>5. Registration Form</li>
+        <li>6. Calculator</li>
+        <li>7. Todo App</li>
+        <li>8. Weather UI</li>
+        <li>9. Digital Clock</li>
+        <li>10. Counter App</li>
+        <li>11. Modal Popup</li>
+        <li>12. Image Slider</li>
+        <li>13. Accordion FAQ</li>
+        <li>14. Product Card UI</li>
+        <li>15. Contact Form</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>⚡ Intermediate Level</h4>
+      <ul>
+        <li>16. Expense Tracker</li>
+        <li>17. Quiz App</li>
+        <li>18. Notes App</li>
+        <li>19. Theme Toggle (Dark Mode)</li>
+        <li>20. Shopping Cart UI</li>
+        <li>21. E-commerce Homepage</li>
+        <li>22. Blog Layout</li>
+        <li>23. Admin Dashboard UI</li>
+        <li>24. Chat UI</li>
+        <li>25. Kanban Board</li>
+        <li>26. Music Player UI</li>
+        <li>27. Countdown Timer</li>
+        <li>28. Password Generator</li>
+        <li>29. File Upload UI</li>
+        <li>30. Search Filter App</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>🚀 Advanced Level</h4>
+      <ul>
+        <li>31. Full E-commerce Frontend</li>
+        <li>32. Netflix Clone UI</li>
+        <li>33. Instagram Clone UI</li>
+        <li>34. YouTube Clone UI</li>
+        <li>35. Food Delivery UI</li>
+        <li>36. SaaS Landing Page</li>
+        <li>37. Real-time Chat UI</li>
+        <li>38. Portfolio Builder App</li>
+        <li>39. Multi-step Form</li>
+        <li>40. CRM Dashboard UI</li>
+        <li>41. Data Visualization Dashboard</li>
+        <li>42. Crypto Tracker UI</li>
+        <li>43. Job Portal UI</li>
+        <li>44. Online Course Platform UI</li>
+        <li>45. Banking Dashboard UI</li>
+        <li>46. Travel Booking UI</li>
+        <li>47. Real Estate Listing UI</li>
+        <li>48. Resume Builder</li>
+        <li>49. Social Media Dashboard</li>
+        <li>50. Full Frontend Certification Website</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <div class="analogy-box">
+    💡 The more real projects you build,
+    the stronger your frontend career becomes.
+  </div>
+
+</section>
+
+
+<!-- MINI CHALLENGE -->
+<section class="content-card quiz-card">
+  <h2>🧠 Mini Challenge</h2>
+<div class="quiz-question">
+  <p>1. Which project demonstrates LocalStorage usage?</p>
+  <label><input type="radio" name="q1"> Portfolio</label>
+  <label><input type="radio" name="q1"> Todo App</label>
+  <label><input type="radio" name="q1"> Navbar</label>
+</div>
+
+<div class="quiz-question">
+  <p>2. Which layout system is best for complex grids?</p>
+  <label><input type="radio" name="q2"> Float</label>
+  <label><input type="radio" name="q2"> Grid</label>
+  <label><input type="radio" name="q2"> Table</label>
+</div>
+
+<div class="quiz-question">
+  <p>3. What is the main goal of a Portfolio website?</p>
+  <label><input type="radio" name="q3"> Store database</label>
+  <label><input type="radio" name="q3"> Showcase skills & projects</label>
+  <label><input type="radio" name="q3"> Run backend server</label>
+</div>
+
+<div class="quiz-question">
+  <p>4. Which feature improves form UX?</p>
+  <label><input type="radio" name="q4"> Page reload</label>
+  <label><input type="radio" name="q4"> Real-time validation</label>
+  <label><input type="radio" name="q4"> Inline CSS only</label>
+</div>
+
+<div class="quiz-question">
+  <p>5. Which method stores data in LocalStorage?</p>
+  <label><input type="radio" name="q5"> saveItem()</label>
+  <label><input type="radio" name="q5"> setItem()</label>
+  <label><input type="radio" name="q5"> createItem()</label>
+</div>
+
+<div class="quiz-question">
+  <p>6. Which project uses DOM manipulation heavily?</p>
+  <label><input type="radio" name="q6"> Todo App</label>
+  <label><input type="radio" name="q6"> Static HTML Page</label>
+  <label><input type="radio" name="q6"> Image Banner</label>
+</div>
+
+<div class="quiz-question">
+  <p>7. Which feature keeps data after refresh?</p>
+  <label><input type="radio" name="q7"> Variables</label>
+  <label><input type="radio" name="q7"> LocalStorage</label>
+  <label><input type="radio" name="q7"> Alert</label>
+</div>
+
+<div class="quiz-question">
+  <p>8. Calculator app mainly uses?</p>
+  <label><input type="radio" name="q8"> CSS animation</label>
+  <label><input type="radio" name="q8"> Event handling & logic</label>
+  <label><input type="radio" name="q8"> Database</label>
+</div>
+
+<div class="quiz-question">
+  <p>9. Which improves project structure?</p>
+  <label><input type="radio" name="q9"> Inline JS everywhere</label>
+  <label><input type="radio" name="q9"> Modular code</label>
+  <label><input type="radio" name="q9"> No indentation</label>
+</div>
+
+<div class="quiz-question">
+  <p>10. Which is NOT a frontend project?</p>
+  <label><input type="radio" name="q10"> Portfolio</label>
+  <label><input type="radio" name="q10"> REST API server</label>
+  <label><input type="radio" name="q10"> Todo App</label>
+</div>
+
+<div class="quiz-question">
+  <p>11. Which is best practice?</p>
+  <label><input type="radio" name="q11"> Copy-paste code blindly</label>
+  <label><input type="radio" name="q11"> Write clean readable code</label>
+  <label><input type="radio" name="q11"> Avoid comments</label>
+</div>
+
+<div class="quiz-question">
+  <p>12. Which method retrieves LocalStorage data?</p>
+  <label><input type="radio" name="q12"> getItem()</label>
+  <label><input type="radio" name="q12"> fetch()</label>
+  <label><input type="radio" name="q12"> read()</label>
+</div>
+
+<div class="quiz-question">
+  <p>13. Which is important for responsive design?</p>
+  <label><input type="radio" name="q13"> Media Queries</label>
+  <label><input type="radio" name="q13"> Tables</label>
+  <label><input type="radio" name="q13"> Inline styles only</label>
+</div>
+
+<div class="quiz-question">
+  <p>14. Which app demonstrates CRUD operations?</p>
+  <label><input type="radio" name="q14"> Todo App</label>
+  <label><input type="radio" name="q14"> Static Landing Page</label>
+  <label><input type="radio" name="q14"> Logo Design</label>
+</div>
+
+<div class="quiz-question">
+  <p>15. Which is used to convert object to string for storage?</p>
+  <label><input type="radio" name="q15"> JSON.stringify()</label>
+  <label><input type="radio" name="q15"> JSON.parse()</label>
+  <label><input type="radio" name="q15"> toNumber()</label>
+</div>
+
+<div class="quiz-question">
+  <p>16. Which improves security in forms?</p>
+  <label><input type="radio" name="q16"> No validation</label>
+  <label><input type="radio" name="q16"> Client & server validation</label>
+  <label><input type="radio" name="q16"> CSS styling</label>
+</div>
+
+<div class="quiz-question">
+  <p>17. Which project is best for beginners?</p>
+  <label><input type="radio" name="q17"> Todo App</label>
+  <label><input type="radio" name="q17"> Banking System</label>
+  <label><input type="radio" name="q17"> Microservice Architecture</label>
+</div>
+
+<div class="quiz-question">
+  <p>18. Which tool improves layout alignment?</p>
+  <label><input type="radio" name="q18"> Flexbox</label>
+  <label><input type="radio" name="q18"> Float only</label>
+  <label><input type="radio" name="q18"> Table Layout</label>
+</div>
+
+<div class="quiz-question">
+  <p>19. Which makes project professional?</p>
+  <label><input type="radio" name="q19"> Hardcoded values everywhere</label>
+  <label><input type="radio" name="q19"> Clean structure & modular code</label>
+  <label><input type="radio" name="q19"> Random CSS</label>
+</div>
+
+<div class="quiz-question">
+  <p>20. What makes frontend developer job-ready?</p>
+  <label><input type="radio" name="q20"> Only theory</label>
+  <label><input type="radio" name="q20"> Real projects + clean code</label>
+  <label><input type="radio" name="q20"> Watching tutorials only</label>
+</div>
+
+
+  <button class="primary-btn" id="submitWeek5Quiz">
+    Submit Challenge
+  </button>
+</section>
+
+<!-- NEXT WEEK -->
+<section class="next-week">
+  <h3>Week 5 Completed 🚀</h3>
+  <p>Next: Final Assessment & Certificate Unlock</p>
+
+  <a href="week6.html" class="primary-btn">
+    Go to Week 6 →
+  </a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 SkilllCertify · Practice Makes Perfect</p>
+</footer>
+
+<script>
+document.getElementById("submitWeek5Quiz").addEventListener("click", function(){
+  alert("✅ Week 5 challenge recorded successfully!");
+});
+</script>
+
+</body>
+</html>

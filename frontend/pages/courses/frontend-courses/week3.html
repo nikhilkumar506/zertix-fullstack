@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Week 3 – CSS Fundamentals | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../../../assets/css/frontend-course.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <h2 class="logo">SkilllCertify</h2>
+    <a href="../../user/dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="course-hero">
+  <div class="container">
+    <span class="week-badge">Week 3</span>
+    <h1>CSS Fundamentals & Layout Systems</h1>
+    <p>
+      Learn how to design modern, responsive, and visually appealing websites
+      using CSS.
+    </p>
+
+    <div class="progress-box">
+      <span>Course Progress</span>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%"></div>
+      </div>
+      <small>Week 3 of 6</small>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<main class="course-container">
+
+<!-- ================= SECTION 1 ================= -->
+<section class="content-card">
+  <h2>1. What is CSS?</h2>
+<p>
+CSS stands for Cascading Style Sheets. It is a style sheet language used to control the visual presentation of HTML documents. While HTML is responsible for creating the structure of a webpage—such as headings, paragraphs, images, links, and tables—CSS is responsible for defining how those elements appear on the screen. In simple terms, HTML builds the structure of a house, and CSS decorates and designs that house by adding colors, layouts, spacing, and visual effects.
+
+The primary purpose of CSS is to separate content from design. This separation improves maintainability, readability, and scalability of web applications. Instead of writing styling code repeatedly inside HTML elements, developers can define styles in a separate CSS file and apply them across multiple pages. This makes websites easier to manage and update.
+
+CSS syntax consists of three main components: the selector, the property, and the value. The selector specifies which HTML element(s) the style will be applied to. The property defines what aspect of the element will be changed, such as color, font-size, margin, or background-color. The value specifies the setting for that property. For example: p { color: blue; } In this rule, "p" is the selector, "color" is the property, and "blue" is the value.
+
+There are three main ways to apply CSS to an HTML document. Inline CSS is written directly inside an HTML tag using the style attribute. Internal CSS is written inside a style tag within the head section of the HTML document. External CSS is written in a separate .css file and linked to the HTML document using the link tag. In professional web development, external CSS is the most recommended approach because it promotes clean code and reusability.
+
+The word “Cascading” in CSS refers to the priority system used when multiple style rules apply to the same element. The browser determines which rule to apply based on specificity, importance, and source order. Inline styles generally have higher priority than internal styles, and internal styles have higher priority than external styles. Specificity calculations and inheritance rules also play an important role in determining the final computed style of an element.
+
+Modern CSS provides advanced layout systems such as Flexbox and CSS Grid, which allow developers to create responsive and complex layouts efficiently. CSS also supports animations, transitions, media queries for responsive design, and custom properties (variables), making it a powerful tool for building professional, scalable, and visually appealing websites.
+</p>
+  <p>
+    CSS (Cascading Style Sheets) controls the visual appearance of web pages.
+  </p>
+
+  <pre class="code-box">
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+  </pre>
+
+  <div class="info-box">
+    CSS separates structure (HTML) from design.
+  </div>
+</section>
+
+<!-- ================= SECTION 2 ================= -->
+<section class="content-card">
+  <h2>2. CSS Selectors</h2>
+<p>
+CSS Selectors are patterns used to target and select HTML elements so that styles can be applied to them. In CSS, selectors play a fundamental role because without selectors, the browser would not know which elements should receive specific styling rules. A selector can target elements based on their tag name, class, id, attributes, relationship with other elements, or even their state (such as hover or focus). Understanding selectors is essential for writing efficient, maintainable, and scalable CSS.
+
+The most basic type of selector is the Element Selector. It targets all elements of a specific HTML tag. For example, the selector p will apply styles to all paragraph elements in the document. This type of selector is simple but not always precise if you want to style only specific elements.
+
+The ID Selector is used to target a single unique element. It is defined using the hash (#) symbol followed by the id name. For example, #header selects the element with id="header". Since IDs must be unique within a page, this selector has high specificity and should be used carefully to avoid conflicts.
+
+The Class Selector is one of the most commonly used selectors in modern web development. It is defined using a dot (.) followed by the class name. For example, .container selects all elements with class="container". Unlike IDs, classes can be reused on multiple elements, making them ideal for reusable styling patterns.
+
+The Universal Selector is represented by an asterisk (*). It selects all elements in the document. Although powerful, it should be used cautiously because it can impact performance if applied broadly.
+
+The Grouping Selector allows multiple selectors to share the same style rules. For example, h1, h2, h3 { color: blue; } applies the same style to multiple heading levels. This improves code efficiency and reduces repetition.
+
+The Descendant Selector targets elements that are inside another element. For example, div p selects all paragraph elements inside a div. This is useful for contextual styling.
+
+The Child Selector (>) targets only direct children of an element. For example, div > p selects only those paragraphs that are directly inside a div, not nested deeper.
+
+The Attribute Selector targets elements based on the presence or value of attributes. For example, input[type="text"] selects only text input fields. This is especially useful in form styling.
+
+Pseudo-class Selectors target elements based on their state. Examples include :hover, :focus, :active, and :nth-child(). These are commonly used for interactive effects and dynamic behavior without JavaScript.
+
+Pseudo-element Selectors allow styling specific parts of an element. Examples include ::before, ::after, ::first-letter, and ::first-line. These are used to insert decorative content or style specific portions of text.
+
+In addition to understanding types of selectors, it is important to understand Specificity. Specificity determines which selector takes precedence when multiple rules target the same element. ID selectors have higher specificity than class selectors, and class selectors have higher specificity than element selectors.
+
+Efficient use of selectors improves code readability, performance, and maintainability. In professional development, developers prefer class-based styling combined with proper structure and naming conventions to maintain scalable and modular CSS architecture.
+</p>
+  <ul>
+    <li>Element selector → <code>p {}</code></li>
+    <li>Class selector → <code>.box {}</code></li>
+    <li>ID selector → <code>#header {}</code></li>
+    <li>Descendant selector → <code>div p {}</code></li>
+  </ul>
+
+  <pre class="code-box">
+.box {
+  background: #fbbf24;
+  padding: 20px;
+}
+  </pre>
+</section>
+
+<!-- ================= SECTION 3 ================= -->
+<section class="content-card">
+  <h2>3. Box Model</h2>
+<section class="box-model-section">
+
+    <h2 class="section-title">CSS Box Model</h2>
+
+    <p class="intro-text">
+        The CSS Box Model is a fundamental concept in front-end development. 
+        Every HTML element is rendered as a rectangular box, and understanding 
+        how this box behaves is essential for creating structured and responsive layouts.
+    </p>
+
+    <p class="intro-text">
+        The total size of an element is calculated using four primary layers:
+        <strong>Content, Padding, Border, and Margin</strong>.
+        These layers together determine spacing, alignment, and layout behavior.
+    </p>
+
+    <div class="box-part">
+        <h3>1. Content Area</h3>
+        <p>
+            The content area is the innermost part of the box where text, images, 
+            or other media are displayed. By default, width and height properties 
+            apply only to this area.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>2. Padding</h3>
+        <p>
+            Padding creates internal spacing between the content and the border. 
+            It improves readability and provides visual breathing space inside elements.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>3. Border</h3>
+        <p>
+            The border surrounds the padding and content. It defines the visible 
+            boundary of an element and can be customized using width, style, and color properties.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>4. Margin</h3>
+        <p>
+            Margin is the outermost layer of the box. It creates space between 
+            elements and ensures proper layout structure.
+        </p>
+    </div>
+
+    <div class="formula-box">
+        <p><strong>Total Width =</strong> Content + Left/Right Padding + Left/Right Border + Left/Right Margin</p>
+        <p><strong>Total Height =</strong> Content + Top/Bottom Padding + Top/Bottom Border + Top/Bottom Margin</p>
+    </div>
+
+</section>
+
+  <p>
+    Every element in CSS follows the Box Model:
+  </p>
+
+  <ul>
+    <li>Content</li>
+    <li>Padding</li>
+    <li>Border</li>
+    <li>Margin</li>
+  </ul>
+
+  <div class="info-box">
+    🔥 Interview Question:
+    Explain CSS Box Model with example.
+  </div>
+</section>
+
+<!-- ================= SECTION 4 ================= -->
+<section class="content-card">
+  <h2>4. Flexbox (Modern Layout)</h2>
+<section class="flexbox-section">
+
+
+    <p class="intro-text">
+        Flexbox, also known as the Flexible Box Layout, is a modern CSS layout 
+        model designed to create responsive and efficient layouts. It allows 
+        developers to align and distribute space among items within a container 
+        even when their sizes are dynamic or unknown.
+    </p>
+
+    <p class="intro-text">
+        Unlike traditional layout methods such as floats or positioning, 
+        Flexbox provides better control over alignment, direction, and spacing. 
+        It works in one dimension at a time — either horizontally (row) or vertically (column).
+    </p>
+
+    <div class="box-part">
+        <h3>1. Flex Container</h3>
+        <p>
+            A Flex Container is the parent element that holds flex items. 
+            To activate Flexbox, you apply <strong>display: flex;</strong> 
+            to the parent element. Once enabled, all direct child elements 
+            automatically become flex items.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>2. Flex Items</h3>
+        <p>
+            Flex items are the direct children of a flex container. 
+            They can grow, shrink, or align themselves based on the 
+            container’s properties. Flex items automatically adjust 
+            their size to fit available space.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>3. Main Axis and Cross Axis</h3>
+        <p>
+            Flexbox operates using two axes:
+            <strong>Main Axis</strong> (primary direction defined by flex-direction)
+            and <strong>Cross Axis</strong> (perpendicular to the main axis).
+            Alignment and spacing are controlled based on these axes.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>4. Important Flex Container Properties</h3>
+        <p>
+            Some commonly used flex container properties include:
+        </p>
+        <ul>
+            <li><strong>flex-direction</strong> – Defines row, column, row-reverse, or column-reverse</li>
+            <li><strong>justify-content</strong> – Aligns items along the main axis</li>
+            <li><strong>align-items</strong> – Aligns items along the cross axis</li>
+            <li><strong>flex-wrap</strong> – Allows items to wrap onto multiple lines</li>
+            <li><strong>align-content</strong> – Controls spacing between multiple rows</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>5. Important Flex Item Properties</h3>
+        <p>
+            Flex items have their own properties for controlling size and alignment:
+        </p>
+        <ul>
+            <li><strong>flex-grow</strong> – Defines how much the item should grow</li>
+            <li><strong>flex-shrink</strong> – Defines how much the item should shrink</li>
+            <li><strong>flex-basis</strong> – Sets the initial size of the item</li>
+            <li><strong>align-self</strong> – Overrides alignment for a single item</li>
+        </ul>
+    </div>
+
+    <div class="formula-box">
+        <p>
+            <strong>display: flex;</strong> → Activates Flexbox on a container
+        </p>
+        <p>
+            Flexbox automatically manages spacing, alignment, and item sizing 
+            to create responsive and flexible layouts.
+        </p>
+    </div>
+
+</section>
+
+  <pre class="code-box">
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  </pre>
+
+  <ul>
+    <li>justify-content</li>
+    <li>align-items</li>
+    <li>flex-direction</li>
+  </ul>
+
+  <p>
+    Flexbox is used for navigation bars, cards, alignment.
+  </p>
+</section>
+
+<!-- ================= SECTION 5 ================= -->
+<section class="content-card">
+  <h2>5. CSS Grid</h2>
+    <section class="grid-section">
+
+
+    <p class="intro-text">
+        CSS Grid is a powerful two-dimensional layout system designed to handle 
+        both rows and columns simultaneously. It provides precise control over 
+        complex web layouts and makes it easier to build responsive designs 
+        without relying on floats or complicated positioning techniques.
+    </p>
+
+    <p class="intro-text">
+        Unlike Flexbox, which works in one dimension (row or column at a time), 
+        CSS Grid allows developers to control layout in both horizontal and 
+        vertical directions at the same time.
+    </p>
+
+    <div class="box-part">
+        <h3>1. Grid Container</h3>
+        <p>
+            A Grid Container is the parent element that holds grid items. 
+            To activate Grid layout, you apply <strong>display: grid;</strong> 
+            to the parent element. All direct child elements automatically 
+            become grid items.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>2. Grid Items</h3>
+        <p>
+            Grid items are the direct children of the grid container. 
+            They can be positioned precisely using row and column lines, 
+            and they can span across multiple rows or columns if required.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>3. Grid Lines</h3>
+        <p>
+            Grid lines are the dividing lines that make up the structure of the grid. 
+            Horizontal lines define rows, and vertical lines define columns. 
+            These lines help position grid items accurately within the layout.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>4. Important Grid Container Properties</h3>
+        <p>
+            Commonly used properties for grid containers include:
+        </p>
+        <ul>
+            <li><strong>grid-template-columns</strong> – Defines the number and size of columns</li>
+            <li><strong>grid-template-rows</strong> – Defines the number and size of rows</li>
+            <li><strong>gap</strong> – Adds space between rows and columns</li>
+            <li><strong>justify-items</strong> – Aligns items horizontally inside cells</li>
+            <li><strong>align-items</strong> – Aligns items vertically inside cells</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>5. Important Grid Item Properties</h3>
+        <p>
+            Grid items can control their placement using:
+        </p>
+        <ul>
+            <li><strong>grid-column</strong> – Defines column start and end position</li>
+            <li><strong>grid-row</strong> – Defines row start and end position</li>
+            <li><strong>grid-area</strong> – Assigns a named area for layout</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>6. Grid Template Areas</h3>
+        <p>
+            The <strong>grid-template-areas</strong> property allows developers 
+            to create visual layout structures by naming specific areas of the grid. 
+            This makes complex layouts easier to read and maintain.
+        </p>
+    </div>
+
+    <div class="formula-box">
+        <p>
+            <strong>display: grid;</strong> → Activates CSS Grid on a container
+        </p>
+        <p>
+            CSS Grid provides complete control over both rows and columns, 
+            making it ideal for building complex and structured page layouts.
+        </p>
+    </div>
+
+</section>
+
+  <pre class="code-box">
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+  </pre>
+
+  <p>
+    Grid is powerful for full-page layouts.
+  </p>
+</section>
+
+<!-- ================= SECTION 6 ================= -->
+<section class="content-card">
+  <h2>6. Responsive Design</h2>
+    <section class="responsive-section">
+    <p class="intro-text">
+        Responsive Design is an approach to web development that ensures a website 
+        looks and functions properly on all screen sizes and devices, including 
+        desktops, tablets, and mobile phones. It focuses on creating flexible layouts 
+        that automatically adjust according to the user's screen resolution.
+    </p>
+
+    <p class="intro-text">
+        Instead of creating separate websites for different devices, responsive design 
+        uses fluid grids, flexible images, and media queries to adapt the layout 
+        dynamically. This improves user experience and accessibility.
+    </p>
+
+    <div class="box-part">
+        <h3>1. Fluid Grid Layout</h3>
+        <p>
+            A fluid grid uses relative units like percentages (%) instead of fixed 
+            units like pixels (px). This allows elements to resize proportionally 
+            based on the screen width.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>2. Flexible Images</h3>
+        <p>
+            Images in responsive design automatically scale within their parent 
+            container. This is usually achieved using properties like 
+            <strong>max-width: 100%;</strong> so images do not overflow.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>3. Media Queries</h3>
+        <p>
+            Media queries allow developers to apply different CSS styles 
+            based on screen size, resolution, or device type. They help 
+            customize layout behavior for mobile, tablet, and desktop screens.
+        </p>
+        <ul>
+            <li><strong>@media (max-width: 768px)</strong> – Styles for tablets and small screens</li>
+            <li><strong>@media (max-width: 480px)</strong> – Styles for mobile devices</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>4. Mobile-First Approach</h3>
+        <p>
+            The mobile-first approach means designing for smaller screens first, 
+            then gradually adding styles for larger screens. This ensures better 
+            performance and improved usability on mobile devices.
+        </p>
+    </div>
+
+    <div class="box-part">
+        <h3>5. Responsive Typography</h3>
+        <p>
+            Responsive typography uses relative units such as <strong>em</strong>, 
+            <strong>rem</strong>, or <strong>vw</strong> so that text scales properly 
+            on different screen sizes.
+        </p>
+    </div>
+
+    <div class="formula-box">
+        <p>
+            Responsive Design = Flexible Layout + Media Queries + Relative Units
+        </p>
+        <p>
+            It ensures consistency, usability, and accessibility across all devices.
+        </p>
+    </div>
+
+</section>
+
+  <pre class="code-box">
+@media (max-width: 768px) {
+  body {
+    background: black;
+  }
+}
+  </pre>
+
+  <p>
+    Media queries allow websites to adapt to different screen sizes.
+  </p>
+</section>
+
+<!-- ================= SECTION 7 ================= -->
+<section class="content-card">
+  <h2>7. Animations & Transitions</h2>
+    <section class="animation-section">
+    <p class="intro-text">
+        Animations and Transitions in CSS are used to create visual effects 
+        that improve user experience and make web interfaces more interactive. 
+        They allow elements to change smoothly from one style to another instead 
+        of changing instantly.
+    </p>
+
+    <p class="intro-text">
+        Transitions are used for simple state changes, such as hover effects, 
+        while animations provide more complex control over movement, timing, 
+        and multiple stages of transformation.
+    </p>
+
+    <div class="box-part">
+        <h3>1. CSS Transitions</h3>
+        <p>
+            Transitions allow property changes to happen smoothly over a specified duration. 
+            They are commonly used for hover effects, button interactions, and color changes.
+        </p>
+        <ul>
+            <li><strong>transition-property</strong> – Specifies the CSS property to animate</li>
+            <li><strong>transition-duration</strong> – Defines how long the effect lasts</li>
+            <li><strong>transition-timing-function</strong> – Controls animation speed curve (ease, linear, ease-in-out)</li>
+            <li><strong>transition-delay</strong> – Adds delay before the animation starts</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>2. CSS Animations</h3>
+        <p>
+            Animations allow more advanced control compared to transitions. 
+            They use keyframes to define multiple stages of movement or style changes.
+        </p>
+        <ul>
+            <li><strong>@keyframes</strong> – Defines animation steps</li>
+            <li><strong>animation-name</strong> – Specifies the animation to use</li>
+            <li><strong>animation-duration</strong> – Sets how long the animation runs</li>
+            <li><strong>animation-iteration-count</strong> – Controls how many times it repeats</li>
+            <li><strong>animation-direction</strong> – Defines normal, reverse, or alternate motion</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>3. Timing Functions</h3>
+        <p>
+            Timing functions control the acceleration and deceleration of animations. 
+            Common values include:
+        </p>
+        <ul>
+            <li><strong>ease</strong> – Starts slow, speeds up, then slows down</li>
+            <li><strong>linear</strong> – Constant speed</li>
+            <li><strong>ease-in</strong> – Starts slow</li>
+            <li><strong>ease-out</strong> – Ends slow</li>
+            <li><strong>ease-in-out</strong> – Slow start and slow end</li>
+        </ul>
+    </div>
+
+    <div class="box-part">
+        <h3>4. Transform with Animation</h3>
+        <p>
+            Animations often use the <strong>transform</strong> property to create 
+            movement effects such as translate, rotate, scale, and skew. 
+            These transformations enhance visual engagement without affecting document flow.
+        </p>
+    </div>
+
+    <div class="formula-box">
+        <p>
+            Transition = Smooth change between two states
+        </p>
+        <p>
+            Animation = Multi-step movement defined using keyframes
+        </p>
+        <p>
+            Animations and transitions improve interactivity and create modern UI experiences.
+        </p>
+    </div>
+
+</section>
+
+  <pre class="code-box">
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+  </pre>
+
+  <p>
+    Animations improve user experience.
+  </p>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section class="content-card quiz-card">
+  <h2>🧠 Quiz – Week 3</h2>
+<div>
+ <p>1. What is the basic structure of an HTML document?</p>
+<label><input type="radio" name="q1"> &lt;html&gt;, &lt;head&gt;, &lt;body&gt;</label>
+<label><input type="radio" name="q1"> &lt;div&gt;, &lt;span&gt;, &lt;p&gt;</label>
+<label><input type="radio" name="q1"> &lt;section&gt;, &lt;article&gt;</label>
+<label><input type="radio" name="q1"> &lt;header&gt;, &lt;footer&gt;</label>
+
+<p>2. Which tag is used to create a hyperlink?</p>
+<label><input type="radio" name="q2"> &lt;link&gt;</label>
+<label><input type="radio" name="q2"> &lt;a&gt;</label>
+<label><input type="radio" name="q2"> &lt;href&gt;</label>
+<label><input type="radio" name="q2"> &lt;nav&gt;</label>
+
+<p>3. Which attribute is used inside the &lt;a&gt; tag to define the link destination?</p>
+<label><input type="radio" name="q3"> src</label>
+<label><input type="radio" name="q3"> href</label>
+<label><input type="radio" name="q3"> alt</label>
+<label><input type="radio" name="q3"> link</label>
+
+<p>4. Which tag is used to display an image?</p>
+<label><input type="radio" name="q4"> &lt;img&gt;</label>
+<label><input type="radio" name="q4"> &lt;image&gt;</label>
+<label><input type="radio" name="q4"> &lt;picture&gt;</label>
+<label><input type="radio" name="q4"> &lt;src&gt;</label>
+
+<p>5. Which attribute is required in the &lt;img&gt; tag?</p>
+<label><input type="radio" name="q5"> alt</label>
+<label><input type="radio" name="q5"> href</label>
+<label><input type="radio" name="q5"> action</label>
+<label><input type="radio" name="q5"> method</label>
+
+<p>6. Which tag creates an unordered list?</p>
+<label><input type="radio" name="q6"> &lt;ol&gt;</label>
+<label><input type="radio" name="q6"> &lt;ul&gt;</label>
+<label><input type="radio" name="q6"> &lt;li&gt;</label>
+<label><input type="radio" name="q6"> &lt;list&gt;</label>
+
+<p>7. Which tag creates an ordered list?</p>
+<label><input type="radio" name="q7"> &lt;ul&gt;</label>
+<label><input type="radio" name="q7"> &lt;li&gt;</label>
+<label><input type="radio" name="q7"> &lt;ol&gt;</label>
+<label><input type="radio" name="q7"> &lt;dl&gt;</label>
+
+<p>8. Which tag defines a list item?</p>
+<label><input type="radio" name="q8"> &lt;ul&gt;</label>
+<label><input type="radio" name="q8"> &lt;li&gt;</label>
+<label><input type="radio" name="q8"> &lt;ol&gt;</label>
+<label><input type="radio" name="q8"> &lt;item&gt;</label>
+
+<p>9. Which tag is used to create a form?</p>
+<label><input type="radio" name="q9"> &lt;input&gt;</label>
+<label><input type="radio" name="q9"> &lt;form&gt;</label>
+<label><input type="radio" name="q9"> &lt;label&gt;</label>
+<label><input type="radio" name="q9"> &lt;button&gt;</label>
+
+<p>10. Which attribute specifies where form data is sent?</p>
+<label><input type="radio" name="q10"> method</label>
+<label><input type="radio" name="q10"> action</label>
+<label><input type="radio" name="q10"> src</label>
+<label><input type="radio" name="q10"> href</label>
+
+<p>11. Which input type is used for passwords?</p>
+<label><input type="radio" name="q11"> text</label>
+<label><input type="radio" name="q11"> password</label>
+<label><input type="radio" name="q11"> email</label>
+<label><input type="radio" name="q11"> number</label>
+
+<p>12. Which input type allows selecting multiple options?</p>
+<label><input type="radio" name="q12"> radio</label>
+<label><input type="radio" name="q12"> checkbox</label>
+<label><input type="radio" name="q12"> text</label>
+<label><input type="radio" name="q12"> submit</label>
+
+<p>13. Which tag is used to group form controls?</p>
+<label><input type="radio" name="q13"> &lt;fieldset&gt;</label>
+<label><input type="radio" name="q13"> &lt;group&gt;</label>
+<label><input type="radio" name="q13"> &lt;section&gt;</label>
+<label><input type="radio" name="q13"> &lt;div&gt;</label>
+
+<p>14. Which semantic tag defines the header of a page?</p>
+<label><input type="radio" name="q14"> &lt;top&gt;</label>
+<label><input type="radio" name="q14"> &lt;header&gt;</label>
+<label><input type="radio" name="q14"> &lt;head&gt;</label>
+<label><input type="radio" name="q14"> &lt;title&gt;</label>
+
+<p>15. Which semantic tag defines the main content?</p>
+<label><input type="radio" name="q15"> &lt;section&gt;</label>
+<label><input type="radio" name="q15"> &lt;main&gt;</label>
+<label><input type="radio" name="q15"> &lt;div&gt;</label>
+<label><input type="radio" name="q15"> &lt;content&gt;</label>
+
+<p>16. Which tag defines navigation links?</p>
+<label><input type="radio" name="q16"> &lt;nav&gt;</label>
+<label><input type="radio" name="q16"> &lt;link&gt;</label>
+<label><input type="radio" name="q16"> &lt;menu&gt;</label>
+<label><input type="radio" name="q16"> &lt;a&gt;</label>
+
+<p>17. Which tag represents a self-contained article?</p>
+<label><input type="radio" name="q17"> &lt;article&gt;</label>
+<label><input type="radio" name="q17"> &lt;div&gt;</label>
+<label><input type="radio" name="q17"> &lt;span&gt;</label>
+<label><input type="radio" name="q17"> &lt;section&gt;</label>
+
+<p>18. Which tag is used for page footer content?</p>
+<label><input type="radio" name="q18"> &lt;bottom&gt;</label>
+<label><input type="radio" name="q18"> &lt;footer&gt;</label>
+<label><input type="radio" name="q18"> &lt;end&gt;</label>
+<label><input type="radio" name="q18"> &lt;section&gt;</label>
+
+<p>19. Which semantic tag is used to group related content?</p>
+<label><input type="radio" name="q19"> &lt;div&gt;</label>
+<label><input type="radio" name="q19"> &lt;section&gt;</label>
+<label><input type="radio" name="q19"> &lt;span&gt;</label>
+<label><input type="radio" name="q19"> &lt;group&gt;</label>
+
+<p>20. Semantic HTML mainly helps?</p>
+<label><input type="radio" name="q20"> Styling</label>
+<label><input type="radio" name="q20"> SEO & accessibility</label>
+<label><input type="radio" name="q20"> Database speed</label>
+<label><input type="radio" name="q20"> Server security</label>
+</div>
+  <button type="button" class="primary-btn" id="submitquizbtn">
+    Submit Quiz
+  </button>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section class="content-card">
+  <h2>📌 Week 3 Summary</h2>
+
+  <ul>
+    <li>CSS basics</li>
+    <li>Selectors</li>
+    <li>Box model</li>
+    <li>Flexbox</li>
+    <li>Grid</li>
+    <li>Responsive design</li>
+  </ul>
+
+  <div class="info-box">
+    🎯 You can now design modern responsive websites.
+  </div>
+</section>
+
+<!-- ================= NEXT WEEK ================= -->
+<section class="next-week">
+  <h3>Week 3 Completed 🎉</h3>
+  <p>Next: JavaScript Basics</p>
+
+  <a href="week4.html" class="primary-btn">
+    Go to Week 4 →
+  </a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 SkilllCertify · Learn skills the right way</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("submitquizbtn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        alert("✅ Your Week 3 quiz has been recorded successfully!");
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

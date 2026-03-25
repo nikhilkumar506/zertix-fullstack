@@ -1,0 +1,1568 @@
+/* =====================================================
+   CERTIFICATE INSPIRED DESIGN SYSTEM
+===================================================== */
+:root {
+  --royal-blue: #0f1b2d;
+  --royal-blue-light: #1e2f4f;
+  --gold: #d4af37;
+  --gold-soft: #f5e6b3;
+  --paper: #fdfdfb;
+  --ink: #0b1324;
+  --muted: #6b7280;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 26px;
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.12);
+  --shadow-heavy: 0 40px 120px rgba(15,27,45,.55);
+}
+
+/* =====================================================
+   RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top, #3a3684, #0f1b2d);
+  color: var(--paper);
+  line-height: 1.7;
+}
+
+/* =====================================================
+   NAVBAR (ROYAL)
+===================================================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 70px;
+  background: rgba(15,27,45,.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212,175,55,.25);
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+.logo span {
+  color: var(--paper);
+}
+
+.nav nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, var(--gold), #b8962e);
+  color: var(--ink);
+  padding: 14px 30px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  box-shadow: 0 12px 40px rgba(212,175,55,.45);
+}
+
+/* =====================================================
+   HERO (CERTIFICATE STAGE)
+===================================================== */
+.hero {
+  min-height: 95vh;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  padding: 110px 80px;
+  gap: 70px;
+}
+
+.hero-left h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.8rem;
+  line-height: 1.1;
+  color: var(--paper);
+}
+
+.hero-left h1 span {
+  color: var(--gold);
+}
+
+.hero-left p {
+  margin: 28px 0;
+  max-width: 520px;
+  color: var(--gold-soft);
+  font-size: 1.05rem;
+}
+
+/* ACTIONS */
+.hero-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--gold), #b8962e);
+  color: var(--ink);
+  padding: 20px 42px;
+  border-radius: var(--radius-lg);
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: .4px;
+  box-shadow: 0 30px 80px rgba(212,175,55,.45);
+}
+
+.secondary {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 20px 42px;
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* TRUST PROOF */
+.proof {
+  display: flex;
+  gap: 26px;
+  margin-top: 38px;
+  font-weight: 600;
+  color: var(--gold-soft);
+}
+
+/* =====================================================
+   CERTIFICATE HERO CARD (CRAZY PART)
+===================================================== */
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  width: 520px;
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow:
+    inset 0 0 0 3px var(--gold),
+    var(--shadow-heavy);
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+/* GOLD AURA */
+.glow {
+  position: absolute;
+  width: 620px;
+  height: 420px;
+  background:
+    radial-gradient(circle,
+      rgba(212,175,55,.55),
+      transparent 70%);
+  filter: blur(90px);
+  z-index: 1;
+}
+
+/* =====================================================
+   STATUS (EXCLUSIVE FEEL)
+===================================================== */
+.status {
+  background: linear-gradient(
+    to bottom,
+    #0f1b2d,
+    #0b1324
+  );
+  text-align: center;
+  padding: 140px 60px;
+}
+
+.status h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: var(--gold);
+}
+
+.status p {
+  margin: 22px auto 50px;
+  max-width: 680px;
+  color: var(--gold-soft);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.stats strong {
+  font-size: 2.4rem;
+  color: var(--paper);
+}
+
+.stats span {
+  display: block;
+  margin-top: 6px;
+  color: var(--gold-soft);
+}
+
+/* =====================================================
+   SECTIONS (PAPER STYLE)
+===================================================== */
+.section {
+  padding: 140px 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.section.light {
+  background: #f7f6f2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+/* CARDS */
+.process {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 40px;
+}
+
+.step {
+  background: var(--paper);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(212,175,55,.25);
+}
+
+/* =====================================================
+   CERTIFICATE SECTION
+===================================================== */
+.certificate-section {
+  background: linear-gradient(
+    to bottom,
+    #f2f205,
+    #f5f2e8
+  );
+  padding: 160px 0;
+}
+
+.certificate-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.certificate-info ul {
+  margin-top: 24px;
+  padding-left: 20px;
+}
+
+.certificate-display img {
+  width: 100%;
+  background: var(--paper);
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  box-shadow:
+    inset 0 0 0 3px var(--gold),
+    var(--shadow-heavy);
+}
+
+/* =====================================================
+   PRICING
+===================================================== */
+.cert-box {
+  max-width: 440px;
+  margin: auto;
+  background: var(--paper);
+  padding: 50px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid var(--gold);
+}
+
+/* =====================================================
+   FINAL CTA (ROYAL SEAL)
+===================================================== */
+.final {
+  background:
+    radial-gradient(circle at top,
+      #1e2f4f,
+      #0f1b2d);
+  text-align: center;
+  padding: 160px 60px;
+}
+
+.final h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: var(--gold);
+}
+
+.big {
+  display: inline-block;
+  margin-top: 34px;
+  background: linear-gradient(135deg, var(--gold), #b8962e);
+  color: var(--ink);
+  padding: 24px 56px;
+  border-radius: var(--radius-lg);
+  font-weight: 900;
+  letter-spacing: .5px;
+  box-shadow: 0 30px 90px rgba(212,175,55,.5);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.site-footer {
+  background: #0b1324;
+  color: var(--gold-soft);
+  text-align: center;
+  padding: 40px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 3rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .certificate-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* =====================================================
+   DEEP TRUST SECTION (NON-BASIC)
+===================================================== */
+.trust-deep {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #fdfcf8,
+    #f7f4ea
+  );
+  padding: 160px 0;
+  overflow: hidden;
+}
+
+/* GOLD ACCENT BACKGROUND */
+.trust-bg-accent {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(
+    circle,
+    rgba(212,175,55,.35),
+    transparent 70%
+  );
+  filter: blur(80px);
+}
+
+/* LAYOUT */
+.trust-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.trust-left h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  color: #0f1b2d;
+}
+
+.trust-left p {
+  margin: 22px 0 34px;
+  color: #4b5563;
+  max-width: 520px;
+  font-size: 1.05rem;
+}
+
+.trust-list {
+  list-style: none;
+}
+
+.trust-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.trust-list span {
+  color: #d4af37;
+  font-weight: 900;
+}
+
+/* RIGHT STATS (ROYAL CARDS) */
+.trust-right {
+  display: grid;
+  gap: 26px;
+}
+
+.trust-stat {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 36px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,.12);
+  border: 2px solid rgba(212,175,55,.35);
+  position: relative;
+}
+
+/* GOLD LINE */
+.trust-stat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    transparent
+  );
+  border-radius: 999px;
+}
+
+.trust-stat strong {
+  display: block;
+  font-size: 2.6rem;
+  color: #0f1b2d;
+  font-weight: 800;
+}
+
+.trust-stat span {
+  display: block;
+  margin-top: 6px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .trust-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .trust-list li {
+    justify-content: center;
+  }
+}
+/* =====================================================
+   TRUST CEREMONY SECTION (ANTI-EMPTY DESIGN)
+===================================================== */
+.trust-ceremony {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #fdfcf8,
+    #f3efe4
+  );
+  padding: 180px 0 220px;
+  overflow: hidden;
+}
+
+/* TOP GOLD DIVIDER */
+.ceremony-divider {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    transparent
+  );
+  border-radius: 999px;
+}
+
+/* LAYOUT */
+.ceremony-container {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 90px;
+  align-items: flex-start;
+}
+
+/* LEFT PANEL */
+.ceremony-left h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #0f1b2d;
+  line-height: 1.15;
+}
+
+.ceremony-left h2 span {
+  color: #b8962e;
+}
+
+.ceremony-badge {
+  display: inline-block;
+  background: rgba(212,175,55,.15);
+  color: #8a6b1f;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.ceremony-desc {
+  margin: 26px 0 46px;
+  max-width: 560px;
+  color: #4b5563;
+  font-size: 1.08rem;
+}
+
+/* FEATURE LIST */
+.ceremony-features {
+  display: grid;
+  gap: 30px;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 18px;
+}
+
+.feature .icon {
+  color: #d4af37;
+  font-size: 1.4rem;
+  margin-top: 4px;
+}
+
+.feature h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #0f1b2d;
+}
+
+.feature p {
+  color: #6b7280;
+}
+
+/* RIGHT PANEL */
+.ceremony-right {
+  position: relative;
+  display: grid;
+  gap: 30px;
+}
+
+/* STAT CARDS */
+.ceremony-card {
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 44px 36px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,.14);
+  border: 2px solid rgba(212,175,55,.35);
+  position: relative;
+}
+
+.primary-card {
+  transform: scale(1.05);
+  border-color: #d4af37;
+}
+
+.ceremony-card strong {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0f1b2d;
+}
+
+.ceremony-card span {
+  margin-top: 6px;
+  display: block;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* GOLD TOP LINE */
+.ceremony-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 22%;
+  right: 22%;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    transparent
+  );
+  border-radius: 999px;
+}
+
+/* BOTTOM SEAL */
+.ceremony-seal {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 40px;
+  border-radius: 999px;
+  background: rgba(15,27,45,.08);
+  border: 2px solid rgba(212,175,55,.4);
+  font-weight: 700;
+  color: #8a6b1f;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .ceremony-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+  }
+
+  .ceremony-right {
+    margin-top: 40px;
+  }
+}
+/* =====================================================
+   TRUST MANIFESTO SECTION (UPGRADED)
+===================================================== */
+.trust-manifesto {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #fdfcf8,
+    #f3efe4
+  );
+  padding: 180px 0;
+  overflow: hidden;
+}
+
+/* TOP GOLD DIVIDER */
+.manifesto-divider {
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    transparent
+  );
+  border-radius: 999px;
+}
+
+/* HEADER */
+.manifesto-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 100px;
+}
+
+.manifesto-tag {
+  display: inline-block;
+  background: rgba(212,175,55,.15);
+  color: #8a6b1f;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+.manifesto-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #0f1b2d;
+}
+
+.manifesto-header p {
+  margin-top: 20px;
+  color: #4b5563;
+  font-size: 1.08rem;
+}
+
+/* GRID */
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 50px;
+}
+
+/* CARDS */
+.manifesto-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 48px 42px;
+  position: relative;
+  box-shadow: 0 35px 90px rgba(0,0,0,.14);
+  border: 2px solid rgba(212,175,55,.35);
+}
+
+/* FEATURED CENTER CARD */
+.manifesto-card.featured {
+  transform: scale(1.05);
+  border-color: #d4af37;
+}
+
+/* CARD NUMBER */
+.card-mark {
+  position: absolute;
+  top: -22px;
+  left: 40px;
+  background: linear-gradient(135deg,#d4af37,#b8962e);
+  color: #0f1b2d;
+  font-weight: 900;
+  padding: 12px 20px;
+  border-radius: 999px;
+  box-shadow: 0 12px 40px rgba(212,175,55,.5);
+}
+
+/* CARD CONTENT */
+.manifesto-card h3 {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #0f1b2d;
+}
+
+.manifesto-card p {
+  margin: 18px 0 24px;
+  color: #6b7280;
+}
+
+.manifesto-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.manifesto-card li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #374151;
+  position: relative;
+  padding-left: 22px;
+}
+
+.manifesto-card li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .manifesto-header h2 {
+    font-size: 2.4rem;
+  }
+
+  .manifesto-card.featured {
+    transform: none;
+  }
+}
+/* =====================================================
+   ELIGIBILITY SECTION (PREMIUM & DENSE)
+===================================================== */
+.eligibility-section {
+  background: linear-gradient(
+    to bottom,
+    #fdfcf8,
+    #f4f0e6
+  );
+  padding: 160px 0;
+}
+
+.eligibility-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+.eligibility-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 90px;
+}
+
+.eligibility-tag {
+  display: inline-block;
+  background: rgba(212,175,55,.15);
+  color: #8a6b1f;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.eligibility-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  color: #0f1b2d;
+}
+
+.eligibility-header p {
+  margin-top: 18px;
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+/* GRID */
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* CARDS */
+.eligibility-card {
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 50px 46px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.14);
+  position: relative;
+}
+
+/* TITLE */
+.eligibility-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 26px;
+  color: #0f1b2d;
+}
+
+/* LIST */
+.eligibility-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.eligibility-card li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ICONS */
+.eligibility-card li::before {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+/* POSITIVE */
+.eligibility-card.positive {
+  border: 2px solid rgba(16,185,129,.35);
+}
+
+.eligibility-card.positive li::before {
+  content: "✔";
+  color: #10b981;
+}
+
+/* NEGATIVE */
+.eligibility-card.negative {
+  border: 2px solid rgba(239,68,68,.35);
+}
+
+.eligibility-card.negative li::before {
+  content: "✕";
+  color: #ef4444;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .eligibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eligibility-header h2 {
+    font-size: 2.2rem;
+  }
+}
+/* =====================================================
+   CERTIFICATION JOURNEY (ROYAL TIMELINE)
+===================================================== */
+.journey-section {
+  background: radial-gradient(
+    circle at top,
+    #1e2f4f,
+    #0f1b2d
+  );
+  padding: 180px 0;
+  color: #fdfdfb;
+}
+
+/* HEADER */
+.journey-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 120px;
+}
+
+.journey-tag {
+  display: inline-block;
+  background: rgba(212,175,55,.15);
+  color: #d4af37;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.journey-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.journey-header p {
+  margin-top: 18px;
+  color: #e5e7eb;
+  font-size: 1.05rem;
+}
+
+/* TIMELINE */
+.journey-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* CENTRAL GOLD LINE */
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #d4af37,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* STEPS */
+.journey-step {
+  position: relative;
+  width: 50%;
+  padding: 40px 30px;
+}
+
+.journey-step.left {
+  left: 0;
+  text-align: right;
+}
+
+.journey-step.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* STEP CONTENT */
+.step-content {
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  padding: 40px 36px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.45);
+  border: 1px solid rgba(212,175,55,.35);
+}
+
+/* NUMBER BADGE */
+.step-number {
+  display: inline-block;
+  background: linear-gradient(135deg,#d4af37,#b8962e);
+  color: #0f1b2d;
+  font-weight: 900;
+  padding: 10px 18px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 30px rgba(212,175,55,.6);
+}
+
+.step-content h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.step-content p {
+  color: #e5e7eb;
+  font-size: .98rem;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .journey-timeline::before {
+    left: 20px;
+  }
+
+  .journey-step,
+  .journey-step.left,
+  .journey-step.right {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 60px;
+  }
+}
+/* =====================================================
+   CERTIFICATE SHOWCASE – FIXED & PREMIUM
+===================================================== */
+.certificate-showcase-fixed {
+  background: linear-gradient(
+    to bottom,
+    #fdfcf8,
+    #f4f0e6
+  );
+  padding: 180px 0;
+}
+
+/* GRID */
+.showcase-fixed-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.fixed-tag {
+  display: inline-block;
+  background: rgba(212,175,55,.15);
+  color: #8a6b1f;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+}
+
+.showcase-fixed-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  color: #0f1b2d;
+}
+
+.showcase-fixed-content h2 span {
+  color: #b8962e;
+}
+
+.showcase-fixed-content p {
+  margin: 26px 0 36px;
+  max-width: 560px;
+  color: #4b5563;
+  font-size: 1.08rem;
+}
+
+/* FEATURES */
+.fixed-features {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.fixed-features div {
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  border-left: 4px solid #d4af37;
+}
+
+/* PROOF */
+.fixed-proof {
+  display: flex;
+  gap: 40px;
+}
+
+.fixed-proof strong {
+  font-size: 2.4rem;
+  color: #0f1b2d;
+}
+
+.fixed-proof span {
+  display: block;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* CERTIFICATE */
+.showcase-fixed-certificate {
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-royal-frame {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 30px;
+  border: 4px solid #d4af37;
+  box-shadow: 0 50px 140px rgba(15,27,45,.35);
+}
+
+.certificate-royal-frame img {
+  width: 100%;
+  border-radius: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .showcase-fixed-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .fixed-features {
+    grid-template-columns: 1fr;
+  }
+
+  .fixed-proof {
+    justify-content: center;
+  }
+}
+/* =====================================================
+   FAQ SECTION (PREMIUM ACCORDION)
+===================================================== */
+.faq-section {
+  background: linear-gradient(
+    to bottom,
+    #fdfcf8,
+    #f4f0e6
+  );
+  padding: 180px 0;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* HEADER */
+.faq-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 90px;
+}
+
+.faq-tag {
+  display: inline-block;
+  background: rgba(212,175,55,.15);
+  color: #8a6b1f;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.faq-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  color: #0f1b2d;
+}
+
+.faq-header p {
+  margin-top: 18px;
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+/* FAQ LIST */
+.faq-list {
+  display: grid;
+  gap: 22px;
+}
+
+/* ITEM */
+.faq-item {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 28px 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.12);
+  border: 2px solid rgba(212,175,55,.35);
+}
+
+/* QUESTION */
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0f1b2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* PLUS / MINUS */
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #d4af37;
+  transition: transform .3s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+  transform: rotate(180deg);
+}
+
+/* ANSWER */
+.faq-item p {
+  margin-top: 18px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .faq-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .faq-item {
+    padding: 24px;
+  }
+}
+/* =====================================================
+   AUTH (LOGIN / REGISTER)
+===================================================== */
+.auth-section {
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    #1e2f4f,
+    #0f1b2d
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.auth-container {
+  max-width: 1100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  background: rgba(255,255,255,.04);
+  border-radius: 36px;
+  padding: 70px;
+  box-shadow: 0 50px 150px rgba(0,0,0,.45);
+}
+
+/* LEFT */
+.auth-info {
+  color: #fdfdfb;
+}
+
+.auth-tag {
+  display: inline-block;
+  background: rgba(212,175,55,.15);
+  color: #d4af37;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+}
+
+.auth-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  line-height: 1.15;
+}
+
+.auth-info h2 span {
+  color: #d4af37;
+}
+
+.auth-info p {
+  margin: 24px 0 34px;
+  max-width: 420px;
+  color: #e5e7eb;
+}
+
+.auth-points {
+  list-style: none;
+}
+
+.auth-points li {
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 26px;
+}
+
+.auth-points li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+  font-weight: 900;
+}
+
+/* FORM */
+.auth-form-box {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 46px 42px;
+  box-shadow: 0 30px 90px rgba(0,0,0,.25);
+}
+
+.auth-form-box h3 {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  color: #0f1b2d;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: .95rem;
+}
+
+.auth-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: linear-gradient(135deg,#d4af37,#b8962e);
+  color: #0f1b2d;
+  padding: 16px;
+  border-radius: 14px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.auth-switch a {
+  color: #b8962e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .auth-info p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* =========================
+   COURSE GRID
+========================= */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.course-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+}
+
+.course-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffd166;
+}
+
+.course-card .muted {
+  color: #d0d6e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.course-meta {
+  display: flex;
+  gap: 16px;
+  margin: 14px 0;
+  font-size: 0.9rem;
+  color: #cfd8ff;
+}
+
+.course-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.course-card .instructor {
+  font-size: 0.85rem;
+  color: #b8c1ff;
+  margin-bottom: 18px;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #ffd166, #fca311);
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #ffe08a, #ffb703);
+  transform: scale(1.05);
+}
+/* ===== ENROLL MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  width: 360px;
+  padding: 30px;
+  border-radius: 18px;
+  background: #020617;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+  color: #fff;
+}
+
+.modal-box h3 {
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.modal-box .form-group {
+  margin-bottom: 14px;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.secondary-btn {
+  margin-left: 10px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+}

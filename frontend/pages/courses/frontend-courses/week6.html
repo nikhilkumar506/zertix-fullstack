@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 6 – Final Assessment | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../../assets/css/frontend-course.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <h2 class="logo">SkilllCertify</h2>
+    <a href="../../user/dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="course-hero">
+  <div class="container">
+    <span class="week-badge">Week 6</span>
+    <h1>Final Assessment & Certification</h1>
+    <p>
+      Demonstrate your frontend development skills through
+      a structured MCQ test and practical project submission.
+    </p>
+
+    <div class="progress-box">
+      <span>Course Completion</span>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 100%"></div>
+      </div>
+      <small>Final Week</small>
+    </div>
+  </div>
+</section>
+
+<main class="course-container">
+
+<!-- SECTION 2 -->
+<section class="content-card project-card">
+
+  <h2>💼 Practical Project Submission</h2>
+
+  <p>
+    Along with the MCQ assessment, you must submit one professional-level project.
+    Your submission will be reviewed before certificate approval.
+  </p>
+
+  <h3>Choose Any One Project:</h3>
+
+  <ul class="styled-list">
+    <li>Complete Portfolio Website</li>
+    <li>Advanced Todo App with LocalStorage</li>
+    <li>Multi-Step Form with Validation</li>
+    <li>Responsive E-commerce Homepage</li>
+  </ul>
+
+  <h3>Project Must Include:</h3>
+
+  <ul class="styled-list">
+    <li>Clean UI Design</li>
+    <li>Responsive Layout (Mobile + Desktop)</li>
+    <li>Proper Folder Structure</li>
+    <li>Commented JavaScript Code</li>
+    <li>Working DOM Manipulation</li>
+  </ul>
+
+  <hr>
+
+  <h3>📤 Submit Your Project</h3>
+
+  <form id="projectSubmissionForm" class="project-form">
+
+    <div class="form-group">
+      <label>Project Title</label>
+      <input type="text" placeholder="Enter your project name" required>
+    </div>
+    <div class="form-group">
+      <label>Upload Project ZIP File</label>
+      <input type="file" accept=".zip,.rar">
+    </div>
+
+    <div class="form-group">
+      <label>Upload Project Screenshots (Max 5)</label>
+      <input type="file" accept="image/*" multiple>
+      <small>You must upload homepage and main feature screenshots.</small>
+    </div>
+
+    <button type="submit" class="primary-btn">
+      Submit Project
+    </button>
+  </form><script>
+document.getElementById("projectSubmissionForm")
+  .addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("✅ Your project has been submitted successfully for review!");
+  });
+</script>
+
+</section>
+ <div class="info-box">
+    Passing Criteria: 60% minimum score required.
+  </div>
+ 
+
+<!-- FINAL QUIZ -->
+<!-- ================= HTML ================= -->
+<section></section>
+<div class="quiz-question">
+  <p>1. Which tag is semantic?</p>
+  <label><input type="radio" name="q1"> div</label>
+  <label><input type="radio" name="q1"> header</label>
+  <label><input type="radio" name="q1"> span</label>
+</div>
+
+<div class="quiz-question">
+  <p>2. What does &lt;section&gt; represent?</p>
+  <label><input type="radio" name="q2"> Inline text</label>
+  <label><input type="radio" name="q2"> Logical grouping of content</label>
+  <label><input type="radio" name="q2"> Image container</label>
+</div>
+
+<div class="quiz-question">
+  <p>3. Which improves accessibility?</p>
+  <label><input type="radio" name="q3"> Semantic tags</label>
+  <label><input type="radio" name="q3"> Inline CSS</label>
+  <label><input type="radio" name="q3"> Tables for layout</label>
+</div>
+
+<!-- ================= CSS ================= -->
+
+<div class="quiz-question">
+  <p>4. Flexbox is best for?</p>
+  <label><input type="radio" name="q4"> 2D Layout</label>
+  <label><input type="radio" name="q4"> 1D Layout</label>
+  <label><input type="radio" name="q4"> Database design</label>
+</div>
+
+<div class="quiz-question">
+  <p>5. Grid is best for?</p>
+  <label><input type="radio" name="q5"> 2D Layout</label>
+  <label><input type="radio" name="q5"> Inline styling</label>
+  <label><input type="radio" name="q5"> Event handling</label>
+</div>
+
+<div class="quiz-question">
+  <p>6. Which property aligns items in Flexbox?</p>
+  <label><input type="radio" name="q6"> justify-content</label>
+  <label><input type="radio" name="q6"> font-size</label>
+  <label><input type="radio" name="q6"> border</label>
+</div>
+
+<!-- ================= RESPONSIVE ================= -->
+
+<div class="quiz-question">
+  <p>7. Media queries are used for?</p>
+  <label><input type="radio" name="q7"> Layout changes</label>
+  <label><input type="radio" name="q7"> JS events</label>
+  <label><input type="radio" name="q7"> Storing data</label>
+</div>
+
+<div class="quiz-question">
+  <p>8. Mobile-first means?</p>
+  <label><input type="radio" name="q8"> Design desktop first</label>
+  <label><input type="radio" name="q8"> Design for mobile first</label>
+  <label><input type="radio" name="q8"> Ignore responsiveness</label>
+</div>
+
+<div class="quiz-question">
+  <p>9. Which unit is flexible?</p>
+  <label><input type="radio" name="q9"> px</label>
+  <label><input type="radio" name="q9"> rem</label>
+  <label><input type="radio" name="q9"> none</label>
+</div>
+
+<!-- ================= JS FUNDAMENTALS ================= -->
+
+<div class="quiz-question">
+  <p>10. Which is a JavaScript data type?</p>
+  <label><input type="radio" name="q10"> string</label>
+  <label><input type="radio" name="q10"> color</label>
+  <label><input type="radio" name="q10"> design</label>
+</div>
+
+<div class="quiz-question">
+  <p>11. Which is used for condition?</p>
+  <label><input type="radio" name="q11"> if</label>
+  <label><input type="radio" name="q11"> loop</label>
+  <label><input type="radio" name="q11"> css</label>
+</div>
+
+<div class="quiz-question">
+  <p>12. Which keyword declares variable?</p>
+  <label><input type="radio" name="q12"> let</label>
+  <label><input type="radio" name="q12"> style</label>
+  <label><input type="radio" name="q12"> layout</label>
+</div>
+
+<!-- ================= DOM ================= -->
+
+<div class="quiz-question">
+  <p>13. DOM allows us to?</p>
+  <label><input type="radio" name="q13"> Style database</label>
+  <label><input type="radio" name="q13"> Manipulate HTML</label>
+  <label><input type="radio" name="q13"> Compile CSS</label>
+</div>
+
+<div class="quiz-question">
+  <p>14. Which method selects by ID?</p>
+  <label><input type="radio" name="q14"> getElementById()</label>
+  <label><input type="radio" name="q14"> select()</label>
+  <label><input type="radio" name="q14"> getNode()</label>
+</div>
+
+<div class="quiz-question">
+  <p>15. Which event triggers on click?</p>
+  <label><input type="radio" name="q15"> hover</label>
+  <label><input type="radio" name="q15"> click</label>
+  <label><input type="radio" name="q15"> scroll</label>
+</div>
+
+<!-- ================= VALIDATION ================= -->
+
+<div class="quiz-question">
+  <p>16. preventDefault() does?</p>
+  <label><input type="radio" name="q16"> Stops default behavior</label>
+  <label><input type="radio" name="q16"> Reload page</label>
+  <label><input type="radio" name="q16"> Clear storage</label>
+</div>
+
+<div class="quiz-question">
+  <p>17. Validation improves?</p>
+  <label><input type="radio" name="q17"> Security</label>
+  <label><input type="radio" name="q17"> Design only</label>
+  <label><input type="radio" name="q17"> Font size</label>
+</div>
+
+<div class="quiz-question">
+  <p>18. Which checks password length?</p>
+  <label><input type="radio" name="q18"> password.length</label>
+  <label><input type="radio" name="q18"> password.size</label>
+  <label><input type="radio" name="q18"> password.count</label>
+</div>
+
+<!-- ================= LOCAL STORAGE ================= -->
+
+<div class="quiz-question">
+  <p>19. Which saves object?</p>
+  <label><input type="radio" name="q19"> JSON.stringify()</label>
+  <label><input type="radio" name="q19"> JSON.parse()</label>
+  <label><input type="radio" name="q19"> convert()</label>
+</div>
+
+<div class="quiz-question">
+  <p>20. Which retrieves item?</p>
+  <label><input type="radio" name="q20"> getItem()</label>
+  <label><input type="radio" name="q20"> setItem()</label>
+  <label><input type="radio" name="q20"> save()</label>
+</div>
+
+<div class="quiz-question">
+  <p>21. LocalStorage stores data as?</p>
+  <label><input type="radio" name="q21"> Objects</label>
+  <label><input type="radio" name="q21"> Strings</label>
+  <label><input type="radio" name="q21"> Arrays</label>
+</div>
+
+<!-- ================= PROJECT IMPLEMENTATION ================= -->
+
+<div class="quiz-question">
+  <p>22. Which improves project structure?</p>
+  <label><input type="radio" name="q22"> Modular code</label>
+  <label><input type="radio" name="q22"> Inline scripts everywhere</label>
+  <label><input type="radio" name="q22"> No indentation</label>
+</div>
+
+<div class="quiz-question">
+  <p>23. Portfolio shows?</p>
+  <label><input type="radio" name="q23"> Skills & Projects</label>
+  <label><input type="radio" name="q23"> Database tables</label>
+  <label><input type="radio" name="q23"> Backend logic</label>
+</div>
+
+<div class="quiz-question">
+  <p>24. Responsive design ensures?</p>
+  <label><input type="radio" name="q24"> Works on all devices</label>
+  <label><input type="radio" name="q24"> Only desktop support</label>
+  <label><input type="radio" name="q24"> No layout change</label>
+</div>
+
+<div class="quiz-question">
+  <p>25. Which is best practice?</p>
+  <label><input type="radio" name="q25"> Clean code</label>
+  <label><input type="radio" name="q25"> Random CSS</label>
+  <label><input type="radio" name="q25"> Copy-paste everything</label>
+</div>
+
+<div class="quiz-question">
+  <p>26. Which app demonstrates CRUD?</p>
+  <label><input type="radio" name="q26"> Todo App</label>
+  <label><input type="radio" name="q26"> Static Banner</label>
+  <label><input type="radio" name="q26"> Logo Image</label>
+</div>
+
+<div class="quiz-question">
+  <p>27. Which improves UX?</p>
+  <label><input type="radio" name="q27"> Real-time validation</label>
+  <label><input type="radio" name="q27"> Page reload</label>
+  <label><input type="radio" name="q27"> Alert spam</label>
+</div>
+
+<div class="quiz-question">
+  <p>28. Which handles errors safely?</p>
+  <label><input type="radio" name="q28"> try-catch</label>
+  <label><input type="radio" name="q28"> if-only</label>
+  <label><input type="radio" name="q28"> console.log only</label>
+</div>
+
+<div class="quiz-question">
+  <p>29. Which ensures accessibility?</p>
+  <label><input type="radio" name="q29"> Semantic HTML</label>
+  <label><input type="radio" name="q29"> Only div</label>
+  <label><input type="radio" name="q29"> Inline styles</label>
+</div>
+
+<div class="quiz-question">
+  <p>30. What makes you job-ready?</p>
+  <label><input type="radio" name="q30"> Only theory</label>
+  <label><input type="radio" name="q30"> Real projects + clean code</label>
+  <label><input type="radio" name="q30"> Watching tutorials only</label>
+</div>
+ <button class="primary-btn" id="submitWeek5Quiz">
+    Submit Challenge
+  </button>
+  <script>
+document.getElementById("submitWeek5Quiz").addEventListener("click", function(){
+  alert("✅ Last Week challenge recorded successfully! You Complete Your Full Frontend Course Kindly Unlock your Certificate ");
+});
+</script>
+
+  </section>
+<!-- ================= CERTIFICATE PREVIEW ================= -->
+<section class="certificate-preview">
+
+  <h2>🎓 Certificate Preview</h2>
+  <p class="muted">
+    Complete final assessment to unlock your certificate.
+  </p>
+
+  <div class="certificate-container locked" id="certificateContainer">
+
+<img src="../../../public/images/certificate.jpeg"
+     alt="Frontend Certificate"
+     class="certificate-image">
+         alt="Frontend Certificate"
+         class="certificate-image">
+
+    <div class="locked-overlay">
+      🔒 Locked
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- CERTIFICATE UNLOCK -->
+<section class="next-week">
+  <h3>🎓 Certification Unlock</h3>
+  <p>
+    After passing assessment, you can proceed to certificate payment
+    and admin approval.
+  </p>
+
+  <a href="../../user/certificates.html" class="primary-btn">
+  Unlock Certificate →
+</a>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 SkilllCertify · Certified Frontend Developer</p>
+</footer>
+
+<script>
+document.getElementById("submitFinalQuiz").addEventListener("click", function(){
+  alert("✅ Final assessment submitted. Result will be evaluated.");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,635 @@
+/* ================= ROOT THEME ================= */
+:root {
+  --bg-main: #020617;
+  --bg-soft: #020b2a;
+
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.16);
+
+  --primary: #fbbf24;
+  --primary-dark: #f59e0b;
+
+  --text-main: #ffffff;
+  --text-muted: #cbd5f5;
+  --text-soft: #94a3b8;
+
+  --success: #22c55e;
+  --danger: #ef4444;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(900px at 10% -10%, #1e293b, transparent),
+    radial-gradient(900px at 90% 20%, #020617, transparent),
+    linear-gradient(180deg, var(--bg-main), var(--bg-soft));
+  line-height: 1.7;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+}
+
+.nav-inner a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.course-hero {
+  padding: 70px 0 60px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.week-badge {
+  display: inline-block;
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.course-hero h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.course-hero p {
+  max-width: 720px;
+  font-size: 17px;
+  color: var(--text-muted);
+}
+
+/* ================= PROGRESS ================= */
+.progress-box {
+  margin-top: 26px;
+  max-width: 360px;
+}
+
+.progress-box span {
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+}
+
+.progress-box small {
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+/* ================= MAIN CONTENT ================= */
+.course-container {
+  max-width: 900px;
+  margin: 50px auto 80px;
+  padding: 0 24px;
+}
+
+/* ================= CONTENT CARD ================= */
+.content-card {
+  background: linear-gradient(
+    160deg,
+    var(--card-bg),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  padding: 34px;
+  margin-bottom: 34px;
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.content-card h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.content-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.content-card p {
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.content-card ul,
+.content-card ol {
+  padding-left: 22px;
+  margin-bottom: 16px;
+}
+
+.content-card li {
+  margin-bottom: 6px;
+}
+
+/* ================= INFO BOX ================= */
+.info-box {
+  background: rgba(251, 191, 36, 0.12);
+  border-left: 4px solid var(--primary);
+  padding: 16px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+/* ================= CODE ================= */
+.code-box {
+  background: #020617;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 14px;
+  color: #e5e7eb;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+/* ================= TWO COLUMN ================= */
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* ================= QUIZ ================= */
+.quiz-card {
+  border-left: 6px solid var(--primary);
+}
+
+.quiz-question {
+  margin-bottom: 18px;
+}
+
+.quiz-question p {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.quiz-question label {
+  display: block;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+/* ================= BUTTON ================= */
+.primary-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #000;
+  font-weight: 800;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(251, 191, 36, 0.45);
+}
+
+/* ================= NEXT WEEK ================= */
+.next-week {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.next-week h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.next-week p {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid var(--card-border);
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .course-hero h1 {
+    font-size: 30px;
+  }
+
+  .content-card {
+    padding: 24px;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+.project-card {
+  margin-top: 60px;
+}
+
+.project-form {
+  margin-top: 30px;
+}
+
+.project-form .form-group {
+  margin-bottom: 20px;
+}
+
+.project-form input,
+.project-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  font-size: 14px;
+}
+
+.project-form input:focus,
+.project-form textarea:focus {
+  outline: none;
+  border-color: #fbbf24;
+  box-shadow: 0 0 10px rgba(251,191,36,0.3);
+}
+
+.project-form small {
+  display: block;
+  margin-top: 6px;
+  color: #9ca3af;
+}
+/* ================= QUIZ CONTAINER ================= */
+
+.quiz-card {
+  margin-top: 60px;
+  padding: 40px;
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+}
+
+.quiz-card h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  color: #fbbf24;
+}
+
+/* ================= QUESTION BLOCK ================= */
+
+.quiz-question {
+  margin-bottom: 35px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+}
+
+.quiz-question:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.quiz-question p {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+/* ================= OPTIONS ================= */
+
+.quiz-question label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid transparent;
+  transition: 0.25s ease;
+  font-size: 14px;
+}
+
+.quiz-question label:hover {
+  background: rgba(251,191,36,0.15);
+  border-color: rgba(251,191,36,0.5);
+  transform: translateX(5px);
+}
+
+/* ================= RADIO STYLE ================= */
+
+.quiz-question input[type="radio"] {
+  accent-color: #fbbf24;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* ================= SELECTED STATE ================= */
+
+.quiz-question input[type="radio"]:checked + span,
+.quiz-question input[type="radio"]:checked {
+  color: #fbbf24;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+
+.quiz-card .primary-btn {
+  margin-top: 25px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  border: none;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quiz-card .primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 45px rgba(251,191,36,0.45);
+}
+
+/* ================= SUCCESS MESSAGE ================= */
+
+.quiz-success {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(34,197,94,0.15);
+  border: 1px solid rgba(34,197,94,0.5);
+  color: #22c55e;
+  font-weight: 600;
+  display: none;
+}
+
+/* ================= PROGRESS STYLE (OPTIONAL) ================= */
+
+.quiz-progress {
+  margin-bottom: 25px;
+  height: 8px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .quiz-card {
+    padding: 25px;
+  }
+
+  .quiz-question p {
+    font-size: 15px;
+  }
+
+  .quiz-question label {
+    font-size: 13px;
+  }
+}
+/* ================= CERTIFICATE SECTION ================= */
+
+.certificate-preview {
+  margin-top: 80px;
+  padding: 40px;
+  text-align: center;
+}
+
+.certificate-preview h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.certificate-preview .muted {
+  color: #cbd5f5;
+  margin-bottom: 30px;
+}
+
+/* ================= CERTIFICATE BOX ================= */
+
+.certificate-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.04)
+  );
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  transition: 0.4s ease;
+  position: relative;
+}
+
+/* Blur State */
+.certificate-wrapper.locked {
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+/* ================= CERTIFICATE CONTENT ================= */
+
+.certificate-content h1 {
+  font-size: 32px;
+  color: #fbbf24;
+  margin-bottom: 10px;
+}
+
+.certificate-content h2 {
+  font-size: 26px;
+  margin: 15px 0;
+}
+
+.certificate-content h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.cert-id {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+/* ================= UNLOCK BUTTON ================= */
+
+.unlock-btn {
+  margin-top: 30px;
+  padding: 14px 30px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  border: none;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.unlock-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 45px rgba(251,191,36,0.45);
+}
+/* ================= CERTIFICATE PREVIEW ================= */
+
+.certificate-preview {
+  margin-top: 80px;
+  text-align: center;
+  padding: 40px;
+}
+
+.certificate-preview h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.certificate-preview .muted {
+  color: #cbd5f5;
+  margin-bottom: 30px;
+}
+
+/* ================= CERTIFICATE CONTAINER ================= */
+
+.certificate-container {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  transition: 0.4s ease;
+}
+
+/* Blur State */
+.certificate-container.locked img {
+  filter: blur(10px);
+  transform: scale(1.02);
+}
+
+/* Certificate Image */
+.certificate-image {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Overlay */
+.locked-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+  letter-spacing: 2px;
+}
+
+/* ================= UNLOCK BUTTON ================= */
+
+.unlock-btn {
+  margin-top: 30px;
+  padding: 14px 30px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  border: none;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.unlock-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(251,191,36,0.45);
+}

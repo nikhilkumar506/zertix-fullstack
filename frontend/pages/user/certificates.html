@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate Payment | SkilllCertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../assets/css/certificate.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <h2 class="logo">SkilllCertify</h2>
+    <a href="../user/dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<section class="course-hero">
+  <div class="container">
+    <h1>Unlock Your Certificate</h1>
+    <p>Complete payment of ₹299 to generate your official certificate.</p>
+  </div>
+</section>
+
+<main class="course-container">
+
+<section class="content-card payment-card">
+
+  <h2>💳 Payment Details</h2>
+
+  <div class="price-box">
+    ₹299
+  </div>
+
+  <p>Scan the QR code below to complete payment.</p>
+
+  <img src="../../public/images/qr-code.jpeg"
+       alt="QR Code"
+       class="qr-image">
+
+  <div class="info-box">
+    After payment, upload screenshot below for verification.
+  </div>
+
+  <input type="file" id="paymentProof" accept="image/*">
+
+  <button id="completePaymentBtn" class="primary-btn">
+    I Have Paid
+  </button>
+
+</section>
+
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btn = document.getElementById("completePaymentBtn");
+  const fileInput = document.getElementById("paymentProof");
+  const popup = document.getElementById("paymentPopup");
+
+  if (!btn) return;
+
+  btn.addEventListener("click", function () {
+
+    if (!fileInput.files.length) {
+      alert("Please upload payment screenshot before proceeding.");
+      return;
+    }
+
+    // Save status
+    localStorage.setItem("certificateUnlocked", "pending");
+
+    // Show popup
+    popup.classList.add("active");
+
+  });
+
+});
+
+// Close popup function
+function closePopup() {
+  document.getElementById("paymentPopup").classList.remove("active");
+
+  // Optional redirect after confirmation
+  window.location.href = "../courses/frontend-courses/week6.html";
+}
+</script>
+
+<!-- PAYMENT CONFIRMATION POPUP -->
+<div id="paymentPopup" class="popup-overlay">
+  <div class="popup-box">
+
+    <h3>🎓 Certificate Verification in Progress</h3>
+
+    <p>
+      Thank you for submitting your payment details.
+      Your certificate request has been successfully received.
+    </p>
+
+    <p>
+      Our verification team will review your payment and
+      process your official certificate within
+      <strong>48 working hours (2 business days)</strong>.
+    </p>
+
+    <p class="popup-note">
+      You will be notified once your certificate is approved
+      and available for download.
+    </p>
+
+    <button onclick="closePopup()" class="primary-btn">
+      Okay
+    </button>
+
+  </div>
+</div>
+
+
+<footer class="footer">
+  <p>© 2026 SkilllCertify · Secure Payment System</p>
+</footer>
+</body>
+</html>
