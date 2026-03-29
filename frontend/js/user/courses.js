@@ -1,78 +1,62 @@
-console.log("✅ Browse Courses JS loaded");
+console.log("✅ Courses.js loaded");
 
-const API_BASE = "http://localhost:5000/api";
-const token = localStorage.getItem("token");
+import { apiGet } from "../core/api.js";
+import { startPayment } from "../payment/razorpay.js";
 
 /* ================= LOAD COURSES ================= */
 async function loadCourses() {
   const grid = document.getElementById("courseGrid");
 
-  if (!grid) {
-    console.error("❌ courseGrid not found");
-    return;
-  }
+  if (!grid) return;
 
   grid.innerHTML = "<p class='muted'>Loading courses...</p>";
 
-  try {
-    const res = await fetch(`${API_BASE}/courses`);
+  const data = await apiGet("/courses");
 
-    if (!res.ok) {
-      throw new Error("Courses API failed");
-    }
-
-    const data = await res.json();
-    console.log("📦 Courses API response:", data);
-
-    if (!Array.isArray(data) || data.length === 0) {
-      grid.innerHTML = "<p class='muted'>No courses available</p>";
-      return;
-    }
-
-    grid.innerHTML = "";
-
-    data.forEach(course => {
-      const card = document.createElement("div");
-      card.className = "course-card";
-
-      card.innerHTML = `
-        <h3>${course.title}</h3>
-        <p class="muted">${course.description || ""}</p>
-
-        <button class="primary-btn">
-          ${course.isEnrolled ? "Go to Week 1" : "Enroll"}
-        </button>
-      `;
-
-      const btn = card.querySelector("button");
-
-      // ✅ If already enrolled → direct access
-      if (course.isEnrolled) {
-        btn.addEventListener("click", () => {
-          goToWeek1();
-        });
-      } 
-      // ✅ Not enrolled → open modal
-      else {
-        btn.addEventListener("click", () => {
-          openEnrollModal(course._id, course.title);
-        });
-      }
-
-      grid.appendChild(card);
-    });
-
-    console.log("✅ Courses rendered");
-
-  } catch (err) {
-    console.error("❌ Load courses error:", err);
+  if (data.error) {
     grid.innerHTML = "<p class='muted'>Failed to load courses</p>";
+    return;
   }
+
+  if (!Array.isArray(data) || data.length === 0) {
+    grid.innerHTML = "<p class='muted'>No courses available</p>";
+    return;
+  }
+
+  grid.innerHTML = "";
+
+  data.forEach(course => {
+    const card = document.createElement("div");
+    card.className = "course-card";
+
+    card.innerHTML = `
+      <h3>${course.title}</h3>
+      <p class="muted">${course.description || ""}</p>
+
+      <button class="primary-btn">
+        ${course.isEnrolled ? "Go to Course" : "Enroll Now"}
+      </button>
+    `;
+
+    const btn = card.querySelector("button");
+
+    if (course.isEnrolled) {
+      btn.addEventListener("click", () => {
+        goToCourse(course._id);
+      });
+    } else {
+      btn.addEventListener("click", () => {
+        openEnrollModal(course._id, course.title);
+      });
+    }
+
+    grid.appendChild(card);
+  });
 }
 
-/* ================= GO TO WEEK 1 ================= */
-function goToWeek1() {
-  window.location.href = "../courses/frontend-courses/week1.html";
+/* ================= GO TO COURSE ================= */
+function goToCourse(courseId) {
+  window.location.href = `../courses/course.html?id=${courseId}`;
 }
 
 /* ================= MODAL ================= */
@@ -95,13 +79,16 @@ function closeEnrollModal() {
 
 window.closeEnrollModal = closeEnrollModal;
 
-/* ================= ENROLL FORM ================= */
+/* ================= ENROLL (NOW PAYMENT BASED) ================= */
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("enrollForm");
+
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    const token = localStorage.getItem("token");
 
     if (!token) {
       alert("Please login first");
@@ -119,45 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    try {
-      const res = await fetch(`${API_BASE}/enroll`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token
-        },
-        body: JSON.stringify({
-          courseId,
-          name,
-          email,
-          phone
-        })
-      });
+    // 💳 Close modal & start payment
+    closeEnrollModal();
 
-      const data = await res.json();
-
-      // ✅ New enrollment
-      if (res.ok) {
-        alert("🎉 Enrollment successful");
-        closeEnrollModal();
-        goToWeek1();
-        return;
-      }
-
-      // ✅ Already enrolled
-      if (data.message === "Already enrolled") {
-        alert("You are already enrolled");
-        closeEnrollModal();
-        goToWeek1();
-        return;
-      }
-
-      alert(data.message || "Enrollment failed");
-
-    } catch (err) {
-      console.error("❌ Enroll error:", err);
-      alert("Server error");
-    }
+    startPayment(courseId);
   });
 });
 

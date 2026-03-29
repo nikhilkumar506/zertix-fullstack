@@ -1,29 +1,67 @@
-console.log("core/auth.js loaded");
+const API_BASE = "http://localhost:5000/api";
 
-const API_URL = "http://localhost:5000/api/auth";
+// ================= LOGIN =================
+async function loginUser(event) {
+  event.preventDefault();
 
-/* ================= REGISTER ================= */
-async function registerUser(data) {
-  const res = await fetch(`${API_URL}/register`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  });
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-  return res.json();
+  try {
+    const res = await fetch(`${API_BASE}/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("userId", data.userId);
+
+      alert("Login successful 🚀");
+      window.location.href = "../courses/browse-courses.html";
+    } else {
+      alert("Invalid credentials");
+    }
+
+  } catch (err) {
+    console.error(err);
+    alert("Server error");
+  }
 }
 
-/* ================= LOGIN ================= */
-async function loginUser(data) {
-  const res = await fetch(`${API_URL}/login`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  });
+// ================= REGISTER =================
+async function registerUser(event) {
+  event.preventDefault();
 
-  return res.json();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const res = await fetch(`${API_BASE}/auth/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name, email, password })
+    });
+
+    const data = await res.json();
+
+    if (data.message) {
+      alert("Registered successfully ✅");
+      window.location.href = "login.html";
+    } else {
+      alert("Error registering user");
+    }
+
+  } catch (err) {
+    console.error(err);
+    alert("Server error");
+  }
 }

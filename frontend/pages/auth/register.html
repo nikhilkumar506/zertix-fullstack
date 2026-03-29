@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Register | SkilllCertify</title>
+  <title>Register | Zertix</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../assets/css/base.css">
 </head>
@@ -14,7 +14,7 @@
     <!-- LEFT -->
     <div class="auth-info">
       <span class="auth-tag">START CERTIFICATION</span>
-      <h2>Create Your<br><span>SkilllCertify Account</span></h2>
+      <h2>Create Your<br><span>Zertix Account</span></h2>
       <p>Build a verified professional identity trusted by employers.</p>
 
       <ul class="auth-points">
@@ -28,29 +28,27 @@
     <div class="auth-form-box">
       <h3>Create Account</h3>
 
-      <!-- ❌ onsubmit hata diya -->
       <form id="registerForm">
         <div class="form-group">
           <label>Full Name</label>
-          <input type="text" name="fullName" required>
+          <input type="text" id="fullName" required>
         </div>
 
         <div class="form-group">
           <label>Email</label>
-          <input type="email" name="email" required>
+          <input type="email" id="email" required>
         </div>
 
         <div class="form-group">
           <label>Phone</label>
-          <input type="tel" name="phone" required>
+          <input type="tel" id="phone" required>
         </div>
 
         <div class="form-group">
           <label>Password</label>
-          <input type="password" name="password" required>
+          <input type="password" id="password" required>
         </div>
 
-        <!-- 🔥 type="submit" MUST -->
         <button type="submit" class="auth-btn">Register</button>
 
         <p class="auth-switch">
@@ -63,10 +61,6 @@
   </div>
 </section>
 
-<!-- ✅ CORE AUTH API -->
-<script src="../../js/core/auth.js"></script>
-
-<!-- ✅ PAGE LOGIC -->
 <script>
   console.log("register page loaded");
 
@@ -77,26 +71,33 @@
 
     console.log("Register button hit");
 
-    const data = {
-      fullName: registerForm.fullName.value,
-      email: registerForm.email.value,
-      phone: registerForm.phone.value,
-      password: registerForm.password.value
-    };
+    const fullName = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const password = document.getElementById("password").value;
 
     try {
-      const res = await registerUser(data);
-      console.log("Register response:", res);
+      const res = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ fullName, email, phone, password })
+      });
 
-      if (res.userId) {
-        alert("Registration successful");
+      const data = await res.json();
+      console.log("Register response:", data);
+
+      if (data.userId || data.message) {
+        alert("Registration successful ✅");
         window.location.href = "login.html";
       } else {
-        alert(res.message || "Registration failed");
+        alert(data.message || "Registration failed ❌");
       }
+
     } catch (err) {
       console.error(err);
-      alert("Server error");
+      alert("Server error ❌");
     }
   });
 </script>

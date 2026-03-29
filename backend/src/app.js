@@ -7,18 +7,15 @@ const enrollmentRoutes = require("./routes/enrollment.routes");
 
 const app = express();
 
-/* ================= MIDDLEWARE ================= */
 app.use(cors());
 app.use(express.json());
 
-/* ================= ROUTES ================= */
 app.use("/api/auth", authRoutes);
 app.use("/api/courses", courseRoutes);
-app.use("/api/enroll", enrollmentRoutes);
+app.use("/api/enroll", enrollmentRoutes); // 👈 MUST
 
-/* ================= HEALTH ================= */
 app.get("/", (req, res) => {
-  res.json({ status: "SkilllCertify API running" });
+  res.json({ status: "API running" });
 });
 
 module.exports = app;
