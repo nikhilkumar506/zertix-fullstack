@@ -77,8 +77,8 @@
     const password = document.getElementById("password").value;
 
     try {
-const res = await fetch("https://zertix-fullstack.onrender.com/api/auth/register", {
-          method: "POST",
+      const res = await fetch("https://zertix-fullstack.onrender.com/api/auth/register", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
@@ -88,7 +88,7 @@ const res = await fetch("https://zertix-fullstack.onrender.com/api/auth/register
       const data = await res.json();
       console.log("Register response:", data);
 
-      if (data.userId || data.message) {
+      if (res.ok) {
         alert("Registration successful ✅");
         window.location.href = "login.html";
       } else {
@@ -101,6 +101,5 @@ const res = await fetch("https://zertix-fullstack.onrender.com/api/auth/register
     }
   });
 </script>
-
 </body>
 </html>
