@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zertix — Practice MCQs</title>
 
-  <!-- ✅ FIXED CSS PATH -->
-  <link rel="stylesheet" href="/assets/css/base.css">
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <a href="/" class="nav-brand"><span>⚡ Zertix</span></a>
+  <a href="#" class="nav-brand"><span>⚡ Zertix</span></a>
 
   <ul class="nav-links">
-    <li><a href="/" class="active">Home</a></li>
+    <li><a href="#" class="active">Home</a></li>
   </ul>
 
   <div class="nav-right">
-    <a href="/pages/mcqs/mcq.html" class="btn btn-primary btn-sm">Start →</a>
+    <a href="mcq.html" class="btn btn-primary btn-sm">Start →</a>
   </div>
 </nav>
 
@@ -28,7 +28,7 @@
 <main class="page-wrapper">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero animate-in">
     <div class="hero-eyebrow">🎯 100,000+ Questions</div>
 
     <h1>
@@ -40,10 +40,13 @@
       Practice semester-wise MCQs with real exam-level questions.
       Improve accuracy and track your progress.
     </p>
+
+    <div class="hero-actions">
+    </div>
   </section>
 
   <!-- STATS -->
-  <div class="stats-bar">
+  <div class="stats-bar animate-in delay-1">
     <div class="stat-item">
       <div class="stat-val">100K+</div>
       <div class="stat-lbl">Questions</div>
@@ -67,11 +70,50 @@
 
     <div class="subjects-grid">
 
-      <div class="subject-card" onclick="goTo('cpp')"><h3>C++</h3></div>
-      <div class="subject-card" onclick="goTo('accounting')"><h3>Accounting</h3></div>
-      <div class="subject-card" onclick="goTo('os')"><h3>Operating System</h3></div>
-      <div class="subject-card" onclick="goTo('ob')"><h3>Organizational Behaviour</h3></div>
-      <div class="subject-card" onclick="goTo('itwd')"><h3>IT & Web Designing</h3></div>
+      <div class="subject-card" onclick="location.href='mcq.html?subject=cpp'">
+        <div class="subject-icon">⚙️</div>
+        <div class="subject-info">
+          <h3>C++</h3>
+          <p>Programming fundamentals</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=accounting'">
+        <div class="subject-icon">📊</div>
+        <div class="subject-info">
+          <h3>Accounting</h3>
+          <p>Financial concepts</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=os'">
+        <div class="subject-icon">💻</div>
+        <div class="subject-info">
+          <h3>Operating System</h3>
+          <p>Processes & memory</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=ob'">
+        <div class="subject-icon">🧠</div>
+        <div class="subject-info">
+          <h3>Organizational Behaviour</h3>
+          <p>Human behavior & management</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=itwd'">
+        <div class="subject-icon">🌐</div>
+        <div class="subject-info">
+          <h3>IT & Web Designing</h3>
+          <p>Web & IT fundamentals</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
 
     </div>
   </section>
@@ -84,10 +126,41 @@
 
     <div class="subjects-grid">
 
-      <div class="subject-card" onclick="goTo('cg')"><h3>Computer Graphics</h3></div>
-      <div class="subject-card" onclick="goTo('dbms')"><h3>DBMS</h3></div>
-      <div class="subject-card" onclick="goTo('se')"><h3>Software Engineering</h3></div>
-      <div class="subject-card" onclick="goTo('ot')"><h3>Optimization Techniques</h3></div>
+      <div class="subject-card" onclick="location.href='mcq.html?subject=cg'">
+        <div class="subject-icon">🎨</div>
+        <div class="subject-info">
+          <h3>Computer Graphics</h3>
+          <p>Rendering & visualization</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=dbms'">
+        <div class="subject-icon">🗄️</div>
+        <div class="subject-info">
+          <h3>DBMS</h3>
+          <p>Databases & queries</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=se'">
+        <div class="subject-icon">⚙️</div>
+        <div class="subject-info">
+          <h3>Software Engineering</h3>
+          <p>Development lifecycle</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=ot'">
+        <div class="subject-icon">📈</div>
+        <div class="subject-info">
+          <h3>Optimization Techniques</h3>
+          <p>Mathematical optimization</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
 
     </div>
   </section>
@@ -100,10 +173,41 @@
 
     <div class="subjects-grid">
 
-      <div class="subject-card" onclick="goTo('cyber')"><h3>Cyber Security</h3></div>
-      <div class="subject-card" onclick="goTo('ds')"><h3>Data Science</h3></div>
-      <div class="subject-card" onclick="goTo('ecommerce')"><h3>E-Commerce</h3></div>
-      <div class="subject-card" onclick="goTo('iot')"><h3>Internet of Things</h3></div>
+      <div class="subject-card" onclick="location.href='mcq.html?subject=cyber'">
+        <div class="subject-icon">🔐</div>
+        <div class="subject-info">
+          <h3>Cyber Security</h3>
+          <p>Security & encryption</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=ds'">
+        <div class="subject-icon">📊</div>
+        <div class="subject-info">
+          <h3>Data Science</h3>
+          <p>Data & analytics</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=ecommerce'">
+        <div class="subject-icon">🛒</div>
+        <div class="subject-info">
+          <h3>E-Commerce</h3>
+          <p>Online business systems</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
+
+      <div class="subject-card" onclick="location.href='mcq.html?subject=iot'">
+        <div class="subject-icon">📡</div>
+        <div class="subject-info">
+          <h3>Internet of Things</h3>
+          <p>Connected devices</p>
+        </div>
+        <div class="subject-arrow">→</div>
+      </div>
 
     </div>
   </section>
@@ -114,13 +218,6 @@
 <footer class="footer">
   <p>© 2025 Zertix · Built for learners 🚀</p>
 </footer>
-
-<!-- ✅ FIXED SCRIPT -->
-<script>
-function goTo(subject){
-  window.location.href = `/pages/mcqs/mcq.html?subject=${subject}`;
-}
-</script>
 
 </body>
 </html>
