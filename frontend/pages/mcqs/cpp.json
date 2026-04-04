@@ -1,0 +1,74 @@
+[
+  {
+    "q": "cpp",
+    "options": [
+      "What is C++",
+      "Language",
+      "Game",
+      "OS"
+    ],
+    "answer": null,
+    "explanation": "0",
+    "topic": "C++ is a programming language"
+  },
+  {
+    "q": "cpp",
+    "options": [
+      "OOP means",
+      "Object Oriented",
+      "Random",
+      "None"
+    ],
+    "answer": null,
+    "explanation": "0",
+    "topic": "OOP stands for Object Oriented Programming"
+  },
+  {
+    "q": "cpp",
+    "options": [
+      "Who invented C++?",
+      "Dennis Ritchie",
+      "Ken Thompson",
+      "Brian Kernighan"
+    ],
+    "answer": null,
+    "explanation": "3",
+    "topic": "Bjarne Stroustrup invented C++"
+  },
+  {
+    "q": "os",
+    "options": [
+      "OS stands for?",
+      "Operating System",
+      "Open Software",
+      "None"
+    ],
+    "answer": null,
+    "explanation": "0",
+    "topic": "OS means Operating System"
+  },
+  {
+    "q": "os",
+    "options": [
+      "Process is?",
+      "Program in execution",
+      "File",
+      "None"
+    ],
+    "answer": null,
+    "explanation": "0",
+    "topic": "Process = running program"
+  },
+  {
+    "q": "dbms",
+    "options": [
+      "DBMS is?",
+      "Database",
+      "Game",
+      "OS"
+    ],
+    "answer": null,
+    "explanation": "0",
+    "topic": "DBMS manages data"
+  }
+]

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security – Final Assessment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="weeks.css">
+
+<style>
+
+/* QUIZ EXTRA STYLING */
+.question{
+  margin-bottom:20px;
+  padding:15px;
+  border-radius:12px;
+  background:#f1f5f9;
+}
+
+.option{
+  display:block;
+  padding:10px;
+  margin-top:6px;
+  border-radius:8px;
+  cursor:pointer;
+  background:white;
+  border:1px solid #e2e8f0;
+}
+
+.option:hover{
+  background:#e0f2fe;
+}
+
+input{
+  margin-right:8px;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-box{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+  width:320px;
+}
+
+.modal-box h2{
+  color:#2563eb;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🎓 Final Assessment</h1>
+  <p>Complete your Cyber Security Certification</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h2>🧠 Final Quiz (20 Questions)</h2>
+<div id="quiz"></div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<p id="result"></p>
+<div id="badge"></div>
+</div>
+
+<div class="card">
+<h2>🎓 Certificate</h2>
+<button onclick="certificate()">Get Certificate</button>
+</div>
+
+</div>
+
+<!-- SCORE MODAL -->
+<div id="scoreModal" class="modal">
+  <div class="modal-box">
+    <h2>Your Score</h2>
+    <p id="scoreText"></p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- COMPLETION MODAL -->
+<div id="completeModal" class="modal">
+  <div class="modal-box">
+    <h2>🎉 Course Completed</h2>
+    <p>You have successfully completed the Cyber Security course!</p>
+    <button onclick="closeComplete()">Continue</button>
+  </div>
+</div>
+
+<!-- CERTIFICATE MODAL -->
+<div id="certModal" class="modal">
+  <div class="modal-box">
+    <h2>🏅 Congratulations!</h2>
+    <p>Your certification course is complete.</p>
+    <p>We have sent your certificate to your email 📩</p>
+    <button onclick="closeCert()">Close</button>
+  </div>
+</div>
+
+<script>
+
+// QUESTIONS (20)
+const questions = [
+["What is phishing?",["Fake email attack","Virus","Firewall","Encryption"],0],
+["What is malware?",["Malicious software","Safe app","Tool","Protocol"],0],
+["What is ransomware?",["Locks data for money","Antivirus","Firewall","Browser"],0],
+["Firewall purpose?",["Filter traffic","Hack system","Store data","Encrypt"],0],
+["VPN does?",["Encrypt connection","Delete files","Scan viruses","Block user"],0],
+["Nmap used for?",["Scanning","Coding","Design","Gaming"],0],
+["Metasploit is?",["Exploit tool","OS","Browser","Antivirus"],0],
+["HTTPS means?",["Secure HTTP","Fast HTTP","No security","None"],0],
+["Encryption does?",["Protect data","Delete data","Hack","Scan"],0],
+["Wireshark is?",["Packet analyzer","Game","OS","Virus"],0],
+["DDoS attack?",["Traffic overload","Login","Scan","Encrypt"],0],
+["MITM attack?",["Intercept data","Delete","Scan","Secure"],0],
+["Phishing target?",["User data","CPU","RAM","Network"],0],
+["Trojan is?",["Hidden malware","Tool","App","OS"],0],
+["Antivirus purpose?",["Detect malware","Hack","Encrypt","Scan network"],0],
+["Strong password?",["Secure access","Hack","Delete","Scan"],0],
+["2FA means?",["Extra security","Less security","No security","None"],0],
+["Data breach?",["Data leak","Safe","Protected","Encrypted"],0],
+["Ethical hacker?",["Legal tester","Criminal","User","Admin"],0],
+["Goal of security?",["Protection","Attack","Delete","None"],0]
+];
+
+// RENDER
+const quiz=document.getElementById("quiz");
+
+questions.forEach((q,i)=>{
+  let options="";
+  q[1].forEach((opt,index)=>{
+    options+=`
+      <label class="option">
+        <input type="radio" name="q${i}" value="${index}">
+        ${opt}
+      </label>`;
+  });
+
+  quiz.innerHTML+=`
+  <div class="question">
+    <p>${i+1}. ${q[0]}</p>
+    ${options}
+  </div>`;
+});
+
+// SUBMIT
+function submitQuiz(){
+  let score=0;
+
+  questions.forEach((q,i)=>{
+    const ans=document.querySelector(`input[name="q${i}"]:checked`);
+    if(ans && Number(ans.value)===q[2]) score++;
+  });
+
+  document.getElementById("scoreText").innerHTML =
+    `You scored ${score}/20`;
+
+  document.getElementById("scoreModal").style.display="flex";
+
+  if(score>=15){
+    document.getElementById("badge").innerHTML="🏅 Certified Cyber Expert";
+    setTimeout(()=>{
+      document.getElementById("completeModal").style.display="flex";
+    },800);
+  } else {
+    document.getElementById("badge").innerHTML="❌ Try Again";
+  }
+}
+
+// CERTIFICATE
+function certificate(){
+  document.getElementById("certModal").style.display="flex";
+}
+
+// CLOSES
+function closeModal(){
+  document.getElementById("scoreModal").style.display="none";
+}
+function closeComplete(){
+  document.getElementById("completeModal").style.display="none";
+}
+function closeCert(){
+  document.getElementById("certModal").style.display="none";
+}
+
+// SAVE
+localStorage.setItem("progress_cyber","completed");
+
+</script>
+
+</body>
+</html>

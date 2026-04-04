@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python – Week 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="python.css">
+
+<style>
+
+/* BOX */
+.oop-box{
+  background:#020617;
+  padding:20px;
+  border-radius:12px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+}
+
+.card-item{
+  margin-top:10px;
+  padding:10px;
+  background:#0f172a;
+  border-radius:8px;
+  color:#22c55e;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🐍 Python – Week 5</h1>
+  <p>Modules, OOP & Advanced Programming</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 Python Modules Explained</h2>
+<iframe src="https://www.youtube.com/embed/CqvZ3vGoGs0" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 OOP in Python (Class & Object)</h2>
+<iframe src="https://www.youtube.com/embed/JeznW_7DlB0" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Real Python OOP Project</h2>
+<iframe src="https://www.youtube.com/embed/ZDa-Z5JzLYM" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 Modules</h2>
+<p>
+Modules allow you to reuse code by importing functions from other files.
+</p>
+
+<pre style="background:#020617;color:#22c55e;padding:10px;border-radius:10px;">
+import math
+
+print(math.sqrt(16))
+</pre>
+
+</div>
+
+<!-- OOP -->
+<div class="card">
+<h2>🧱 OOP (Object-Oriented Programming)</h2>
+<p>
+OOP allows you to structure your code using classes and objects.
+</p>
+
+<pre style="background:#020617;color:#22c55e;padding:10px;border-radius:10px;">
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+p = Person("Nikhil")
+print(p.name)
+</pre>
+
+</div>
+
+<!-- 🔥 OOP SIMULATOR -->
+<div class="card">
+<h2>🚀 OOP Simulator (Live Demo)</h2>
+
+<div class="oop-box">
+
+<input type="text" id="personName" placeholder="Enter Name">
+<input type="number" id="personAge" placeholder="Enter Age">
+
+<button onclick="createObject()">Create Object</button>
+
+<div id="oopOutput"></div>
+
+</div>
+
+</div>
+
+<!-- CONCEPT -->
+<div class="card">
+<h2>🧠 Why OOP?</h2>
+<ul>
+<li>Reusable code</li>
+<li>Better structure</li>
+<li>Real-world modeling</li>
+</ul>
+</div>
+
+<!-- PRACTICE -->
+<div class="card">
+<h2>🧪 Practice</h2>
+<ul>
+<li>Create class for student</li>
+<li>Add attributes</li>
+<li>Print details</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<ul>
+<li>Create class (Car / Student)</li>
+<li>Create multiple objects</li>
+<li>Display data</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_python","week5");
+
+function goPrev(){
+  window.location.href="week4.html";
+}
+
+function goNext(){
+  window.location.href="week6.html";
+}
+
+// 🔥 OOP SIMULATOR
+let objects = [];
+
+function createObject(){
+
+  const name = document.getElementById("personName").value;
+  const age = document.getElementById("personAge").value;
+
+  const obj = {name, age};
+
+  objects.push(obj);
+
+  renderObjects();
+}
+
+function renderObjects(){
+
+  const container = document.getElementById("oopOutput");
+  container.innerHTML = "";
+
+  objects.forEach(o=>{
+    container.innerHTML += `
+      <div class="card-item">
+        ${o.name} - Age: ${o.age}
+      </div>
+    `;
+  });
+}
+
+</script>
+
+</body>
+</html>

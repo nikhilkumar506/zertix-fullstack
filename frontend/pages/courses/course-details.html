@@ -1,1 +1,158 @@
-// frontend/pages/courses/course-details.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Details | Zertix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      margin:0;
+      font-family:"Segoe UI", system-ui;
+      background:#020617;
+      color:#e2e8f0;
+      padding:30px;
+    }
+
+    .container{
+      max-width:700px;
+      margin:auto;
+      background:#0f172a;
+      padding:30px;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    h1{
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    p{
+      color:#94a3b8;
+      margin-bottom:20px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:5px 10px;
+      background:#1e293b;
+      border-radius:6px;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+
+    button{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:10px;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.25s;
+    }
+
+    .buy{
+      background:linear-gradient(90deg,#3b82f6,#6366f1);
+      color:white;
+    }
+
+    .start{
+      background:#22c55e;
+      color:white;
+    }
+
+    button:hover{
+      transform:scale(1.03);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container" id="course-container">
+  <!-- dynamic content -->
+</div>
+
+<script>
+
+// ✅ GET SLUG
+const params = new URLSearchParams(window.location.search);
+const slugFromURL = params.get("id");
+const slugFromStorage = localStorage.getItem("selectedCourseSlug");
+
+const courseId = (slugFromURL || slugFromStorage)?.toLowerCase().trim();
+
+console.log("🎯 Course:", courseId);
+
+// ❌ NO COURSE
+if(!courseId){
+  document.getElementById("course-container").innerHTML =
+    "<h2>No course selected ❌</h2>";
+  throw new Error("No course");
+}
+
+// ✅ SAVE CURRENT COURSE
+localStorage.setItem("selectedCourseSlug", courseId);
+
+// ✅ CHECK PURCHASE
+let enrolled = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+const isPurchased = enrolled.includes(courseId);
+
+// ✅ COURSE DATA (basic)
+const courseData = {
+  cpp: {title:"C++ Programming", desc:"Learn core programming concepts"},
+  os: {title:"Operating System", desc:"Processes, memory & scheduling"},
+  dbms: {title:"DBMS", desc:"Database concepts & queries"},
+  se: {title:"Software Engineering", desc:"Development lifecycle"},
+  cg: {title:"Computer Graphics", desc:"Rendering & visualization"},
+  ot: {title:"Optimization Techniques", desc:"Mathematical optimization"},
+  cyber: {title:"Cyber Security", desc:"Security & encryption"},
+  ds: {title:"Data Science", desc:"Data & analytics"},
+  ecommerce: {title:"E-Commerce", desc:"Online business systems"},
+  iot: {title:"Internet of Things", desc:"Connected devices"}
+};
+
+// fallback
+const course = courseData[courseId] || {
+  title: courseId.toUpperCase(),
+  desc: "Course details"
+};
+
+// ✅ RENDER UI
+document.getElementById("course-container").innerHTML = `
+  <span class="badge">Premium Course</span>
+  <h1>${course.title}</h1>
+  <p>${course.desc}</p>
+
+  ${
+    isPurchased
+      ? `<button class="start" onclick="startCourse()">Start Course 🚀</button>`
+      : `<button class="buy" onclick="buyCourse()">Buy Course 💳</button>`
+  }
+`;
+
+// ✅ BUY COURSE
+function buyCourse(){
+  let enrolled = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+
+  if(!enrolled.includes(courseId)){
+    enrolled.push(courseId);
+    localStorage.setItem("enrolledCourses", JSON.stringify(enrolled));
+  }
+
+  alert("Course Purchased Successfully ✅");
+
+  location.reload(); // refresh UI
+}
+
+// ✅ START COURSE
+function startCourse(){
+  window.location.href = `${courseId}-courses/week1.html`;
+}
+
+</script>
+
+</body>
+</html>

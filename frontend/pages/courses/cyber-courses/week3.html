@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security – Week 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="weeks.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🌐 Cyber Security – Week 3</h1>
+  <p>Network Security & Packet Analysis</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is Network Security?</h2>
+<iframe src="https://www.youtube-nocookie.com/embed/qiQR5rTSshw" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 How Hackers Attack Networks</h2>
+<iframe src="https://www.youtube-nocookie.com/embed/3Kq1MIfTWCE" allowfullscreen></iframe>
+</div>
+
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is Network Security?</h2>
+<p>
+Network Security focuses on protecting data during transmission across networks. It ensures that unauthorized users cannot access, modify, or intercept sensitive data.
+</p>
+</div>
+
+<!-- COMPONENTS -->
+<div class="card">
+<h2>⚙️ Key Components of Network Security</h2>
+<ul>
+<li><strong>Firewall:</strong> Filters incoming and outgoing traffic</li>
+<li><strong>IDS/IPS:</strong> Detects and prevents intrusions</li>
+<li><strong>VPN:</strong> Encrypts communication</li>
+<li><strong>Proxy:</strong> Hides user identity</li>
+</ul>
+</div>
+
+<!-- ATTACKS -->
+<div class="card">
+<h2>⚠️ Common Network Attacks</h2>
+<ul>
+<li>Man-in-the-Middle (MITM)</li>
+<li>Packet Sniffing</li>
+<li>ARP Spoofing</li>
+<li>DDoS Attacks</li>
+</ul>
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Scenario</h2>
+<p>
+In a public Wi-Fi network, attackers can intercept your data using packet sniffing tools. If you log into accounts without encryption, your credentials can be stolen easily.
+</p>
+</div>
+
+<!-- WIRESHARK -->
+<div class="card">
+<h2>🛠 Wireshark Practical Concept</h2>
+<p>
+Wireshark is a network packet analyzer used to capture and inspect data packets. It helps security professionals detect suspicious traffic and analyze attacks.
+</p>
+<ul>
+<li>Capture live packets</li>
+<li>Filter traffic</li>
+<li>Analyze protocols</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Security Tips</h2>
+<ul>
+<li>Avoid public Wi-Fi for sensitive work</li>
+<li>Use HTTPS websites only</li>
+<li>Enable firewall protection</li>
+<li>Use VPN for secure browsing</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Explain how a Man-in-the-Middle attack works:
+</p>
+<ul>
+<li>How attacker intercepts data</li>
+<li>What tools are used</li>
+<li>How to prevent it</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+// SAVE PROGRESS
+localStorage.setItem("progress_cyber","week3");
+
+// NAVIGATION
+function goPrev(){
+  window.location.href="week2.html";
+}
+
+function goNext(){
+  window.location.href="week4.html";
+}
+
+</script>
+
+</body>
+</html>

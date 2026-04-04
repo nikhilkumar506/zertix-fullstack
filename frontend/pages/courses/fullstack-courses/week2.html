@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Full Stack – Week 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="fullstack.css">
+
+<style>
+
+/* EXTRA UI */
+.api-box{
+  background:#020617;
+  padding:15px;
+  border-radius:10px;
+  margin-top:10px;
+  color:#38bdf8;
+}
+
+.loader{
+  text-align:center;
+  margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🌐 Full Stack – Week 2</h1>
+  <p>Frontend ↔ Backend Connection (Fetch API)</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is Fetch API?</h2>
+<iframe src="https://www.youtube.com/embed/Oive66jrwBs" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 API Integration Explained</h2>
+<iframe src="https://www.youtube.com/embed/7YcW25PHnAA" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Frontend Backend Connection</h2>
+<iframe src="https://www.youtube.com/embed/1Rs2ND1ryYc" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is Fetch API?</h2>
+<p>
+Fetch API is used to send requests from frontend to backend and receive data. It is a core concept in full stack development.
+</p>
+</div>
+
+<!-- FLOW -->
+<div class="card">
+<h2>🔄 Request Flow</h2>
+<ul>
+<li>User clicks button</li>
+<li>Frontend sends request</li>
+<li>Backend processes data</li>
+<li>Response sent back</li>
+<li>Frontend updates UI</li>
+</ul>
+</div>
+
+<!-- CODE -->
+<div class="card">
+<h2>💻 Example Code</h2>
+
+<pre class="api-box">
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(res => res.json())
+.then(data => console.log(data));
+</pre>
+</div>
+
+<!-- 🔥 EXTRA IMPLEMENTATION -->
+<div class="card">
+<h2>🚀 Live API Demo (Real Full Stack Feel)</h2>
+
+<button onclick="loadUsers()">Load Users</button>
+
+<div class="loader" id="loader"></div>
+
+<ul id="userList"></ul>
+
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Example</h2>
+<p>
+When you open Instagram:
+</p>
+<ul>
+<li>Frontend loads UI</li>
+<li>Backend sends posts via API</li>
+<li>Frontend displays data dynamically</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Tips</h2>
+<ul>
+<li>Always handle API errors</li>
+<li>Show loading states</li>
+<li>Update UI dynamically</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<ul>
+<li>Fetch data from API</li>
+<li>Display in UI</li>
+<li>Add loading indicator</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_fullstack","week2");
+
+function goPrev(){
+  window.location.href="week1.html";
+}
+
+function goNext(){
+  window.location.href="week3.html";
+}
+
+// 🔥 API FUNCTION
+function loadUsers(){
+
+  const loader = document.getElementById("loader");
+  const list = document.getElementById("userList");
+
+  loader.innerHTML = "⏳ Loading...";
+  list.innerHTML = "";
+
+  fetch("https://jsonplaceholder.typicode.com/users")
+  .then(res => res.json())
+  .then(data => {
+    loader.innerHTML = "";
+
+    data.forEach(user=>{
+      const li = document.createElement("li");
+      li.innerHTML = user.name + " - " + user.email;
+      list.appendChild(li);
+    });
+  })
+  .catch(()=>{
+    loader.innerHTML = "❌ Failed to load data";
+  });
+}
+
+</script>
+
+</body>
+</html>

@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <header class="dashboard-navbar">
   <div class="logo">Zertix</div>
   <div class="nav-actions">
@@ -19,10 +18,8 @@
   </div>
 </header>
 
-<!-- ================= DASHBOARD MAIN ================= -->
 <main class="dashboard">
 
-  <!-- ================= WELCOME ================= -->
   <section class="card welcome-card">
     <h2>Welcome back, <span id="userName">Learner</span> 👋</h2>
     <p class="muted">
@@ -30,7 +27,6 @@
     </p>
   </section>
 
-  <!-- ================= PROFILE ================= -->
   <section class="card profile-card">
     <h3>My Profile</h3>
     <div class="profile-grid">
@@ -39,7 +35,6 @@
     </div>
   </section>
 
-  <!-- ================= STATS ================= -->
   <section class="stats">
     <div class="stat-box">
       <h4>Enrolled Courses</h4>
@@ -48,21 +43,20 @@
 
     <div class="stat-box">
       <h4>Completed Lessons</h4>
-      <span id="lessonCount">0</span>
+      <span>0</span>
     </div>
 
     <div class="stat-box">
       <h4>Certificates</h4>
-      <span id="certificateCount">0</span>
+      <span>0</span>
     </div>
 
     <div class="stat-box">
-      <h4>Learning Status</h4>
+      <h4>Status</h4>
       <span class="status-active">Active</span>
     </div>
   </section>
 
-  <!-- ================= CURRENT COURSE ================= -->
   <section class="card">
     <h3>Continue Learning</h3>
 
@@ -73,73 +67,81 @@
           Pick up where you left off and continue your learning.
         </p>
       </div>
-
-      <div class="progress-wrapper">
-        <div class="progress-bar">
-          <div class="progress-fill" id="courseProgress" style="width:0%"></div>
-        </div>
-        <small id="progressText">0% completed</small>
-      </div>
     </div>
 
-    <a
-      href="../courses/browse-courses.html"
-      class="primary-btn"
-      id="continueBtn"
-    >
+    <a href="../courses/browse-courses.html" class="primary-btn">
       Start / Continue Course
     </a>
   </section>
 
-  <!-- ================= MY COURSES ================= -->
   <section class="card">
     <h3>My Courses</h3>
 
     <div id="courseList" class="course-list">
-      <p class="muted">You are not enrolled in any course yet.</p>
-    </div>
-  </section>
-
-  <!-- ================= CERTIFICATION ================= -->
-  <section class="card">
-    <h3>Certificates & Verification</h3>
-
-    <ul class="info-list">
-      <li>✔ Certificates are admin-approved</li>
-      <li>✔ Publicly verifiable using QR & ID</li>
-      <li>✔ Lifetime validity</li>
-      <li>✔ Trusted by employers</li>
-    </ul>
-
-    <p class="muted">
-      Complete all modules and pass final assessment to unlock your certificate.
-    </p>
-  </section>
-
-  <!-- ================= QUICK ACTIONS ================= -->
-  <section class="card quick-actions">
-    <h3>Quick Actions</h3>
-
-    <div class="action-grid">
-      <a href="../courses/browse-courses.html" class="action-box">
-        📚 Browse Courses
-      </a>
-
-      <a href="../user/certificates.html" class="action-box">
-        🏆 View Certificates
-      </a>
-
-      <a href="../user/profile.html" class="action-box">
-        👤 Edit Profile
-      </a>
+      <p class="muted">Loading...</p>
     </div>
   </section>
 
 </main>
 
-<!-- ================= SCRIPTS ================= -->
-<script src="../../js/core/guards.js"></script>
-<script src="../../js/user/dashboard.js"></script>
+<!-- ================= SCRIPT ================= -->
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const courseList = document.getElementById("courseList");
+  const courseCount = document.getElementById("courseCount");
+  const currentCourse = document.getElementById("currentCourse");
+
+  let purchasedCourses = [];
+
+  // 🔥 Load from localStorage
+  for (let key in localStorage) {
+    if (key.startsWith("purchased_")) {
+      const courseId = key.replace("purchased_", "");
+      purchasedCourses.push(courseId);
+    }
+  }
+
+  // ================= SHOW COURSES =================
+  if (purchasedCourses.length === 0) {
+
+    courseList.innerHTML = `
+      <p class="muted">You are not enrolled in any course yet.</p>
+    `;
+
+  } else {
+
+    courseCount.innerText = purchasedCourses.length;
+
+    courseList.innerHTML = "";
+
+    purchasedCourses.forEach(id => {
+
+      courseList.innerHTML += `
+        <div class="course-card">
+          <h4>Course ID: ${id}</h4>
+          <button class="primary-btn" onclick="goToCourse('${id}')">
+            Go to Course
+          </button>
+        </div>
+      `;
+    });
+
+    // show first course as current
+    currentCourse.innerText = "Course ID: " + purchasedCourses[0];
+  }
+
+});
+
+
+// ================= NAVIGATION =================
+function goToCourse(id) {
+  alert("Opening Course: " + id);
+  // future: redirect to course page
+}
+
+</script>
 
 </body>
 </html>

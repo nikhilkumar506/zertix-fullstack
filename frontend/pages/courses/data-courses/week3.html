@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data Analyst – Week 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="data.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🗄️ Data Analyst – Week 3</h1>
+  <p>SQL for Data Analysis (Queries & Real Use Cases)</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 SQL Basics for Beginners</h2>
+<iframe src="https://www.youtube.com/embed/27axs9dO7AE" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 SQL Queries Explained (SELECT, WHERE, JOIN)</h2>
+<iframe src="https://www.youtube.com/embed/HXV3zeQKqGY" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Real SQL Project for Data Analysis</h2>
+<iframe src="https://www.youtube.com/embed/7S_tz1z_5bA" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is SQL?</h2>
+<p>
+SQL (Structured Query Language) is used to communicate with databases. It allows analysts to retrieve, filter, and manipulate data efficiently.
+</p>
+</div>
+
+<!-- CORE COMMANDS -->
+<div class="card">
+<h2>⚙️ Core SQL Commands</h2>
+<ul>
+<li><strong>SELECT:</strong> Fetch data</li>
+<li><strong>WHERE:</strong> Filter records</li>
+<li><strong>ORDER BY:</strong> Sort data</li>
+<li><strong>GROUP BY:</strong> Aggregate data</li>
+<li><strong>JOIN:</strong> Combine tables</li>
+</ul>
+</div>
+
+<!-- EXAMPLE -->
+<div class="card">
+<h2>💻 Example Queries</h2>
+
+<pre style="background:#020617;color:#22c55e;padding:15px;border-radius:10px;">
+SELECT * FROM users;
+
+SELECT name, age FROM users
+WHERE age > 20;
+
+SELECT COUNT(*) FROM orders;
+</pre>
+</div>
+
+<!-- JOINS -->
+<div class="card">
+<h2>🔗 Understanding JOINs</h2>
+<p>
+JOINs are used to combine data from multiple tables:
+</p>
+<ul>
+<li>INNER JOIN</li>
+<li>LEFT JOIN</li>
+<li>RIGHT JOIN</li>
+</ul>
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Scenario</h2>
+<p>
+In an e-commerce company:
+</p>
+<ul>
+<li>Users table stores customer info</li>
+<li>Orders table stores purchases</li>
+<li>JOIN is used to connect both</li>
+</ul>
+</div>
+
+<!-- ANALYST THINKING -->
+<div class="card">
+<h2>🧠 Analyst Thinking</h2>
+<ul>
+<li>Ask questions from data</li>
+<li>Filter only relevant data</li>
+<li>Find patterns & trends</li>
+<li>Convert data into insights</li>
+</ul>
+</div>
+
+<!-- PRACTICE -->
+<div class="card">
+<h2>🧪 Practice Task</h2>
+<ul>
+<li>Write query to fetch all users</li>
+<li>Filter users above age 25</li>
+<li>Count total records</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Create a small database and:
+</p>
+<ul>
+<li>Insert data</li>
+<li>Write 5 queries</li>
+<li>Explain results</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_data","week3");
+
+function goPrev(){
+  window.location.href="week2.html";
+}
+
+function goNext(){
+  window.location.href="week4.html";
+}
+
+</script>
+
+</body>
+</html>

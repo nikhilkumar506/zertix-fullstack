@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data Analyst – Week 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="data.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🐍 Data Analyst – Week 4</h1>
+  <p>Python & Pandas for Data Analysis</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 Python Basics for Data Analysis</h2>
+<iframe src="https://www.youtube.com/embed/rfscVS0vtbw" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 Pandas Tutorial (Data Handling)</h2>
+<iframe src="https://www.youtube.com/embed/vmEHCJofslg" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Real Data Analysis Project (Python)</h2>
+<iframe src="https://www.youtube.com/embed/eMOA1pPVUc4" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 Why Python for Data Analysis?</h2>
+<p>
+Python is one of the most powerful tools for data analysis. It allows analysts to process large datasets, automate tasks, and perform advanced analysis efficiently.
+</p>
+</div>
+
+<!-- LIBRARIES -->
+<div class="card">
+<h2>📚 Important Libraries</h2>
+<ul>
+<li><strong>Pandas:</strong> Data manipulation</li>
+<li><strong>NumPy:</strong> Numerical operations</li>
+<li><strong>Matplotlib:</strong> Visualization</li>
+<li><strong>Seaborn:</strong> Advanced charts</li>
+</ul>
+</div>
+
+<!-- PANDAS -->
+<div class="card">
+<h2>📊 What is Pandas?</h2>
+<p>
+Pandas is a Python library used for working with structured data. It allows filtering, grouping, and analyzing datasets easily.
+</p>
+</div>
+
+<!-- CODE -->
+<div class="card">
+<h2>💻 Example Code</h2>
+
+<pre style="background:#020617;color:#22c55e;padding:15px;border-radius:10px;">
+import pandas as pd
+
+data = pd.read_csv("data.csv")
+
+print(data.head())
+print(data.describe())
+</pre>
+</div>
+
+<!-- WORKFLOW -->
+<div class="card">
+<h2>🔄 Data Analysis Workflow</h2>
+<ul>
+<li>Load dataset</li>
+<li>Clean data</li>
+<li>Analyze patterns</li>
+<li>Visualize results</li>
+<li>Make decisions</li>
+</ul>
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Example</h2>
+<p>
+Companies analyze customer behavior using Python to predict trends, improve marketing strategies, and increase revenue.
+</p>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Analyst Mindset</h2>
+<ul>
+<li>Focus on insights, not code</li>
+<li>Use Python to simplify tasks</li>
+<li>Think business-first</li>
+</ul>
+</div>
+
+<!-- TASK -->
+<div class="card">
+<h2>🧪 Practice Task</h2>
+<ul>
+<li>Load dataset using Pandas</li>
+<li>Print first 5 rows</li>
+<li>Find average values</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Analyze a dataset using Python:
+</p>
+<ul>
+<li>Clean data</li>
+<li>Find trends</li>
+<li>Write insights</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_data","week4");
+
+function goPrev(){
+  window.location.href="week3.html";
+}
+
+function goNext(){
+  window.location.href="week5.html";
+}
+
+</script>
+
+</body>
+</html>

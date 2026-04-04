@@ -1,14 +1,36 @@
 const mongoose = require("mongoose");
 
-const courseSchema = new mongoose.Schema(
-  {
-    title: String,
-    description: String,
-    duration: String,
-    level: String,
-    instructor: String
+const courseSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
   },
-  { timestamps: true }
-);
+
+  description: {
+    type: String,
+    default: ""
+  },
+
+  // 🔥 ADD THIS (MAIN FIX)
+  slug: {
+    type: String,
+    required: true,
+    unique: true
+  },
+
+  price: {
+    type: Number,
+    default: 0
+  },
+
+  content: [
+    {
+      title: String,
+      video: String,
+      notes: String
+    }
+  ]
+
+}, { timestamps: true });
 
 module.exports = mongoose.model("Course", courseSchema);

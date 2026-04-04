@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Loader | Zertix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      margin:0;
+      font-family:"Segoe UI", sans-serif;
+      background:#020617;
+      color:#e2e8f0;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      text-align:center;
+    }
+
+    .box{
+      background:#0f172a;
+      padding:30px;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      max-width:400px;
+    }
+
+    button{
+      margin-top:15px;
+      padding:10px 15px;
+      border:none;
+      border-radius:8px;
+      background:#3b82f6;
+      color:white;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#2563eb;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box" id="app">
+  <h2>Loading Course...</h2>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+// ✅ GET SLUG
+const slugFromURL = params.get("id");
+const slugFromStorage = localStorage.getItem("selectedCourseSlug");
+
+const slug = slugFromURL || slugFromStorage;
+
+console.log("🎯 Final Slug:", slug);
+
+// ❌ NO SLUG
+if (!slug) {
+  document.getElementById("app").innerHTML = `
+    <h2>No course selected ❌</h2>
+    <p>Please go back and select a course.</p>
+  `;
+  throw new Error("Slug missing");
+}
+
+// ✅ CLEAN SLUG
+const cleanSlug = slug.toLowerCase().trim();
+
+// ✅ LOAD PURCHASE DATA
+let enrolled = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+
+console.log("📦 Enrolled Courses:", enrolled);
+
+// ❌ NOT PURCHASED → BLOCK
+if (!enrolled.includes(cleanSlug)) {
+  document.getElementById("app").innerHTML = `
+    <h2>Access Denied ❌</h2>
+    <p>You have not purchased this course.</p>
+    <button onclick="goToBuy()">Buy Course</button>
+  `;
+
+  window.goToBuy = function(){
+    window.location.href = `course-details.html?id=${cleanSlug}`;
+  };
+
+  throw new Error("Not enrolled");
+}
+
+// ✅ IF PURCHASED → REDIRECT
+const path = `../courses/${cleanSlug}-courses/week1.html`;
+
+console.log("🚀 Redirecting to:", path);
+
+window.location.href = path;
+</script>
+
+</body>
+</html>

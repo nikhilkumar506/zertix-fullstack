@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Backend Development – Week 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="backend.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🚀 Backend Development – Week 5</h1>
+  <p>Advanced Backend & Deployment</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is Middleware?</h2>
+<iframe src="https://www.youtube.com/embed/lY6icfhap2o" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 File Upload with Multer</h2>
+<iframe src="https://www.youtube.com/embed/9Qzmri1WaaE" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Deploy Node.js App</h2>
+<iframe src="https://www.youtube.com/embed/71wSzpLyW9k" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is Middleware?</h2>
+<p>
+Middleware functions are functions that execute during the request-response cycle. They can modify requests, check authentication, log data, or handle errors.
+</p>
+</div>
+
+<!-- EXAMPLE -->
+<div class="card">
+<h2>💻 Middleware Example</h2>
+
+<pre style="background:#020617;color:#38bdf8;padding:15px;border-radius:10px;">
+app.use((req, res, next) => {
+  console.log("Request received");
+  next();
+});
+</pre>
+</div>
+
+<!-- FILE UPLOAD -->
+<div class="card">
+<h2>📂 File Upload (Multer)</h2>
+<p>
+Multer is a middleware used to handle file uploads in Node.js.
+</p>
+<ul>
+<li>Upload images</li>
+<li>Store files</li>
+<li>Handle form data</li>
+</ul>
+</div>
+
+<!-- PROJECT STRUCTURE -->
+<div class="card">
+<h2>🏗️ Backend Project Structure</h2>
+
+<pre style="background:#020617;color:#38bdf8;padding:15px;border-radius:10px;">
+project/
+ ├── routes/
+ ├── controllers/
+ ├── models/
+ ├── middleware/
+ ├── config/
+ └── server.js
+</pre>
+</div>
+
+<!-- DEPLOYMENT -->
+<div class="card">
+<h2>🌍 Deployment Basics</h2>
+<p>
+Deployment means making your backend live so users can access it.
+</p>
+<ul>
+<li>Use platforms like Render, Railway</li>
+<li>Set environment variables</li>
+<li>Connect database</li>
+</ul>
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Example</h2>
+<p>
+When you upload a profile picture on Instagram, the backend uses middleware to process the file and store it securely.
+</p>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Tips</h2>
+<ul>
+<li>Organize your code properly</li>
+<li>Use middleware efficiently</li>
+<li>Always secure your APIs</li>
+<li>Test before deployment</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Build a mini backend project:
+</p>
+<ul>
+<li>Create API</li>
+<li>Add middleware</li>
+<li>Upload file</li>
+<li>Deploy it</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_backend","week5");
+
+function goPrev(){
+  window.location.href="week4.html";
+}
+
+function goNext(){
+  window.location.href="week6.html";
+}
+
+</script>
+
+</body>
+</html>

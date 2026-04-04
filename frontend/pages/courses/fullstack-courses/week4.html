@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Full Stack – Week 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="fullstack.css">
+
+<style>
+
+/* LOGIN BOX */
+.login-box{
+  background:#020617;
+  padding:20px;
+  border-radius:12px;
+  max-width:400px;
+  margin:auto;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+}
+
+.status{
+  margin-top:10px;
+}
+
+/* DASHBOARD */
+.dashboard{
+  display:none;
+  margin-top:20px;
+  padding:20px;
+  background:#020617;
+  border-radius:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🔐 Full Stack – Week 4</h1>
+  <p>Authentication & Protected Routes</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is Authentication?</h2>
+<iframe src="https://www.youtube.com/embed/2PPSXonhIck" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 Login System Explained</h2>
+<iframe src="https://www.youtube.com/embed/7Q17ubqLfaM" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Protected Routes Concept</h2>
+<iframe src="https://www.youtube.com/embed/64veb6tKTm0" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 Authentication</h2>
+<p>
+Authentication verifies user identity. It ensures that only valid users can access specific parts of an application.
+</p>
+</div>
+
+<!-- LOGIN -->
+<div class="card">
+<h2>🚀 Login System (Live Demo)</h2>
+
+<div class="login-box">
+
+<input type="email" id="email" placeholder="Enter Email">
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+<p id="status" class="status"></p>
+
+</div>
+
+</div>
+
+<!-- DASHBOARD -->
+<div class="card dashboard" id="dashboard">
+<h2>🎉 Welcome to Dashboard</h2>
+<p>You are logged in successfully 🔐</p>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+<!-- FLOW -->
+<div class="card">
+<h2>🔄 Auth Flow</h2>
+<ul>
+<li>User enters credentials</li>
+<li>Frontend validates</li>
+<li>Session stored</li>
+<li>Access granted</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Tips</h2>
+<ul>
+<li>Never store passwords in plain text</li>
+<li>Use JWT in real apps</li>
+<li>Protect sensitive routes</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<ul>
+<li>Create login system</li>
+<li>Add logout</li>
+<li>Protect dashboard page</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_fullstack","week4");
+
+function goPrev(){
+  window.location.href="week3.html";
+}
+
+function goNext(){
+  window.location.href="week5.html";
+}
+
+// 🔐 LOGIN LOGIC
+function login(){
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if(email === "admin@test.com" && password === "1234"){
+
+    localStorage.setItem("isLoggedIn","true");
+
+    document.getElementById("status").innerHTML = "✅ Login Successful";
+
+    showDashboard();
+
+  } else {
+    document.getElementById("status").innerHTML = "❌ Invalid Credentials";
+  }
+}
+
+// SHOW DASHBOARD
+function showDashboard(){
+  document.getElementById("dashboard").style.display="block";
+}
+
+// LOGOUT
+function logout(){
+  localStorage.removeItem("isLoggedIn");
+  location.reload();
+}
+
+// AUTO LOGIN
+if(localStorage.getItem("isLoggedIn") === "true"){
+  showDashboard();
+}
+
+</script>
+
+</body>
+</html>

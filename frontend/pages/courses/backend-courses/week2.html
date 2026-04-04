@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Backend Development – Week 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="backend.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🚀 Backend Development – Week 2</h1>
+  <p>Node.js, Express & First API</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 Node.js Introduction</h2>
+<iframe src="https://www.youtube.com/embed/TlB_eWDSMt4" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 Express.js Crash Course</h2>
+<iframe src="https://www.youtube.com/embed/L72fhGm1tfE" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Build Your First API</h2>
+<iframe src="https://www.youtube.com/embed/pKd0Rpw7O48" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is Node.js?</h2>
+<p>
+Node.js is a runtime environment that allows JavaScript to run on the server. It is fast, scalable, and widely used for backend development.
+</p>
+</div>
+
+<!-- EXPRESS -->
+<div class="card">
+<h2>⚙️ What is Express.js?</h2>
+<p>
+Express.js is a minimal web framework for Node.js that simplifies building APIs and server-side applications.
+</p>
+<ul>
+<li>Routing</li>
+<li>Middleware</li>
+<li>Request handling</li>
+</ul>
+</div>
+
+<!-- API -->
+<div class="card">
+<h2>🔗 Creating Your First API</h2>
+<p>
+A simple API using Express:
+</p>
+
+<pre style="background:#020617;color:#38bdf8;padding:15px;border-radius:10px;">
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send("Hello Backend 🚀");
+});
+
+app.listen(3000, () => console.log("Server running"));
+</pre>
+</div>
+
+<!-- FLOW -->
+<div class="card">
+<h2>🌐 Backend Flow</h2>
+<ul>
+<li>Client sends request</li>
+<li>Server receives request</li>
+<li>Logic runs</li>
+<li>Response sent back</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Mindset</h2>
+<ul>
+<li>Understand request & response</li>
+<li>Focus on API building</li>
+<li>Test APIs using Postman</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Create a simple API:
+</p>
+<ul>
+<li>/ → returns "Hello World"</li>
+<li>/about → returns your name</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_backend","week2");
+
+function goPrev(){
+  window.location.href="week1.html";
+}
+
+function goNext(){
+  window.location.href="week3.html";
+}
+
+</script>
+
+</body>
+</html>

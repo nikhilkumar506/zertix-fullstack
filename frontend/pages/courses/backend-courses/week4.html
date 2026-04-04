@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Backend Development – Week 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="backend.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🔐 Backend Development – Week 4</h1>
+  <p>Authentication, JWT & Security</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is Authentication?</h2>
+<iframe src="https://www.youtube.com/embed/2PPSXonhIck" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 JWT Explained</h2>
+<iframe src="https://www.youtube.com/embed/7Q17ubqLfaM" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Cookies vs Sessions</h2>
+<iframe src="https://www.youtube.com/embed/64veb6tKTm0" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is Authentication?</h2>
+<p>
+Authentication verifies the identity of a user. For example, login using email and password ensures the user is valid.
+</p>
+</div>
+
+<!-- AUTHORIZATION -->
+<div class="card">
+<h2>🪪 What is Authorization?</h2>
+<p>
+Authorization determines what actions a user can perform after login.
+</p>
+<ul>
+<li>User → Limited access</li>
+<li>Admin → Full access</li>
+</ul>
+</div>
+
+<!-- JWT -->
+<div class="card">
+<h2>🔑 What is JWT?</h2>
+<p>
+JWT (JSON Web Token) is used to securely transmit information between client and server.
+</p>
+<ul>
+<li>Header</li>
+<li>Payload</li>
+<li>Signature</li>
+</ul>
+</div>
+
+<!-- FLOW -->
+<div class="card">
+<h2>🌐 Authentication Flow</h2>
+<ul>
+<li>User logs in</li>
+<li>Server validates credentials</li>
+<li>JWT token generated</li>
+<li>Token sent to client</li>
+<li>Client uses token for requests</li>
+</ul>
+</div>
+
+<!-- CODE -->
+<div class="card">
+<h2>💻 JWT Example</h2>
+
+<pre style="background:#020617;color:#38bdf8;padding:15px;border-radius:10px;">
+const jwt = require('jsonwebtoken');
+
+const token = jwt.sign(
+  { userId: 1 },
+  "secretkey",
+  { expiresIn: "1h" }
+);
+</pre>
+</div>
+
+<!-- SECURITY -->
+<div class="card">
+<h2>🛡️ Security Best Practices</h2>
+<ul>
+<li>Hash passwords (bcrypt)</li>
+<li>Use HTTPS</li>
+<li>Store tokens securely</li>
+<li>Validate inputs</li>
+</ul>
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Example</h2>
+<p>
+In apps like Instagram or Amazon, JWT is used to keep users logged in securely without storing passwords repeatedly.
+</p>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Explain how JWT works:
+</p>
+<ul>
+<li>Token creation</li>
+<li>Token usage</li>
+<li>Security benefits</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_backend","week4");
+
+function goPrev(){
+  window.location.href="week3.html";
+}
+
+function goNext(){
+  window.location.href="week5.html";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python – Week 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="python.css">
+
+<style>
+
+/* PLAYGROUND */
+.playground{
+  background:#020617;
+  padding:20px;
+  border-radius:12px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+}
+
+.output{
+  margin-top:10px;
+  padding:10px;
+  background:#0f172a;
+  border-radius:8px;
+  color:#22c55e;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🐍 Python – Week 2</h1>
+  <p>Conditions, Loops & Logic Building</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 Python If-Else Explained</h2>
+<iframe src="https://www.youtube.com/embed/Zp5MuPOtsSY" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 Python Loops (For & While)</h2>
+<iframe src="https://www.youtube.com/embed/6iF8Xb7Z3wQ" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Logic Building in Python</h2>
+<iframe src="https://www.youtube.com/embed/HGOBQPFzWKo" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 Conditions (if-else)</h2>
+<p>
+Conditions allow your program to make decisions. Based on certain conditions, different code blocks are executed.
+</p>
+
+<pre style="background:#020617;color:#22c55e;padding:10px;border-radius:10px;">
+age = 18
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+</pre>
+
+</div>
+
+<!-- LOOPS -->
+<div class="card">
+<h2>🔁 Loops</h2>
+<ul>
+<li><strong>For loop:</strong> Repeat fixed times</li>
+<li><strong>While loop:</strong> Repeat until condition is true</li>
+</ul>
+
+<pre style="background:#020617;color:#22c55e;padding:10px;border-radius:10px;">
+for i in range(5):
+    print(i)
+</pre>
+
+</div>
+
+<!-- LOGIC -->
+<div class="card">
+<h2>🧠 Logic Building</h2>
+<ul>
+<li>Break problem into steps</li>
+<li>Use conditions + loops</li>
+<li>Think before coding</li>
+</ul>
+</div>
+
+<!-- 🔥 EXTRA FEATURE -->
+<div class="card">
+<h2>🚀 Mini Coding Playground</h2>
+
+<div class="playground">
+
+<input type="number" id="num" placeholder="Enter a number">
+
+<button onclick="checkNumber()">Check Even/Odd</button>
+<button onclick="generateTable()">Generate Table</button>
+
+<div id="output" class="output"></div>
+
+</div>
+
+</div>
+
+<!-- PRACTICE -->
+<div class="card">
+<h2>🧪 Practice Problems</h2>
+<ul>
+<li>Check even or odd</li>
+<li>Print numbers 1–10</li>
+<li>Find largest number</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<ul>
+<li>Create number guessing logic</li>
+<li>Print multiplication table</li>
+<li>Use loops + conditions</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_python","week2");
+
+function goPrev(){
+  window.location.href="week1.html";
+}
+
+function goNext(){
+  window.location.href="week3.html";
+}
+
+// 🔥 EVEN / ODD
+function checkNumber(){
+  const num = document.getElementById("num").value;
+  const output = document.getElementById("output");
+
+  if(num % 2 == 0){
+    output.innerHTML = "✅ Even Number";
+  } else {
+    output.innerHTML = "🔴 Odd Number";
+  }
+}
+
+// 🔥 TABLE
+function generateTable(){
+  const num = document.getElementById("num").value;
+  let result = "";
+
+  for(let i=1;i<=10;i++){
+    result += `${num} x ${i} = ${num*i}<br>`;
+  }
+
+  document.getElementById("output").innerHTML = result;
+}
+
+</script>
+
+</body>
+</html>

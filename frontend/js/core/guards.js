@@ -1,5 +1,6 @@
-// guards.js
-if (!localStorage.getItem("token")) {
-  alert("Please login first");
+const token = localStorage.getItem("token");
+
+if (!token) {
+  alert("Session expired. Please login again.");
   window.location.href = "../auth/login.html";
 }

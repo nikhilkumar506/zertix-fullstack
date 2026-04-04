@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Backend Development – Week 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="backend.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🗄️ Backend Development – Week 3</h1>
+  <p>Database, MongoDB & CRUD Operations</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is Database?</h2>
+<iframe src="https://www.youtube.com/embed/ztHopE5Wnpc" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 MongoDB Explained</h2>
+<iframe src="https://www.youtube.com/embed/-56x56UppqQ" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 CRUD Operations in Backend</h2>
+<iframe src="https://www.youtube.com/embed/1NrHkjlWVhM" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is a Database?</h2>
+<p>
+A database stores and manages data efficiently. Backend applications use databases to store user information, products, orders, and more.
+</p>
+</div>
+
+<!-- TYPES -->
+<div class="card">
+<h2>⚙️ Types of Databases</h2>
+<ul>
+<li><strong>SQL:</strong> Structured (MySQL, PostgreSQL)</li>
+<li><strong>NoSQL:</strong> Flexible (MongoDB)</li>
+</ul>
+</div>
+
+<!-- MONGODB -->
+<div class="card">
+<h2>🍃 What is MongoDB?</h2>
+<p>
+MongoDB is a NoSQL database that stores data in JSON-like documents. It is flexible and widely used with Node.js.
+</p>
+</div>
+
+<!-- CRUD -->
+<div class="card">
+<h2>🔗 CRUD Operations</h2>
+<ul>
+<li><strong>Create:</strong> Add data</li>
+<li><strong>Read:</strong> Fetch data</li>
+<li><strong>Update:</strong> Modify data</li>
+<li><strong>Delete:</strong> Remove data</li>
+</ul>
+</div>
+
+<!-- CODE -->
+<div class="card">
+<h2>💻 Example Code (Node + MongoDB)</h2>
+
+<pre style="background:#020617;color:#38bdf8;padding:15px;border-radius:10px;">
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/test');
+
+const userSchema = new mongoose.Schema({
+  name: String,
+});
+
+const User = mongoose.model('User', userSchema);
+
+User.create({ name: "Nikhil" });
+</pre>
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Example</h2>
+<p>
+In an e-commerce app:
+</p>
+<ul>
+<li>Users stored in database</li>
+<li>Products stored in database</li>
+<li>Orders stored in database</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Tips</h2>
+<ul>
+<li>Always validate data</li>
+<li>Use proper schema</li>
+<li>Keep database secure</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Create a simple database structure:
+</p>
+<ul>
+<li>User: name, email</li>
+<li>Insert data</li>
+<li>Fetch data</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_backend","week3");
+
+function goPrev(){
+  window.location.href="week2.html";
+}
+
+function goNext(){
+  window.location.href="week4.html";
+}
+
+</script>
+
+</body>
+</html>

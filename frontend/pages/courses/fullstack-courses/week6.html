@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Full Stack – Final Assessment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="fullstack.css">
+
+<style>
+
+/* QUIZ */
+.question{
+  margin-bottom:20px;
+  padding:15px;
+  border-radius:12px;
+  background:#020617;
+}
+
+.option{
+  display:block;
+  padding:10px;
+  margin-top:6px;
+  border-radius:8px;
+  background:#1e293b;
+  border:1px solid #334155;
+  cursor:pointer;
+}
+
+.option:hover{
+  background:#334155;
+}
+
+/* MODALS */
+.modal{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-box{
+  background:rgb(0, 0, 0);
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+  width:350px;
+}
+
+.big-modal{
+  text-align:center;
+  color:white;
+}
+
+.big-modal h1{
+  font-size:36px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🎓 Final Assessment</h1>
+  <p>Complete your Full Stack Development Course</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h2>🚀 Final Project Summary</h2>
+<p>
+You have learned how to build full stack applications including frontend, backend, APIs, authentication, and project structure.
+</p>
+</div>
+
+<div class="card">
+<h2>🧠 Final Quiz (20 Questions)</h2>
+<div id="quiz"></div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<p id="result"></p>
+<div id="badge"></div>
+</div>
+
+<div class="card">
+<h2>🎓 Certificate</h2>
+<button onclick="certificate()">Get Certificate</button>
+</div>
+
+</div>
+
+<!-- SCORE MODAL -->
+<div id="scoreModal" class="modal">
+  <div class="modal-box">
+    <h2>Your Score</h2>
+    <p id="scoreText"></p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- COMPLETION MODAL -->
+<div id="completeModal" class="modal">
+  <div class="big-modal">
+    <h1>🎉 Congratulations!</h1>
+    <p>You are now a Full Stack Developer 🚀</p>
+  </div>
+</div>
+
+<!-- CERTIFICATE MODAL -->
+<div id="certModal" class="modal">
+  <div class="modal-box">
+    <h2>🏅 Certification Complete</h2>
+    <p>Your course is successfully completed.</p>
+    <p>📩 Our team will send your certificate to your email shortly.</p>
+    <button onclick="closeCert()">Close</button>
+  </div>
+</div>
+
+<script>
+
+// QUESTIONS
+const questions = [
+["Frontend uses?",["HTML","DB","OS","API"],0],
+["Backend?",["Server","UI","CSS","None"],0],
+["API?",["Communication","Design","DB","None"],0],
+["Fetch?",["GET data","Delete","None","None"],0],
+["POST?",["Send data","Fetch","None","None"],0],
+["Database?",["Store data","UI","Game","None"],0],
+["MongoDB?",["NoSQL","SQL","OS","None"],0],
+["Auth?",["Verify user","Delete","None","None"],0],
+["JWT?",["Token","DB","None","None"],0],
+["Middleware?",["Function","UI","None","None"],0],
+["Project?",["App","Game","None","None"],0],
+["HTML?",["Structure","Logic","None","None"],0],
+["CSS?",["Style","Logic","None","None"],0],
+["JS?",["Logic","Style","None","None"],0],
+["Full stack?",["All layers","UI","None","None"],0],
+["Request?",["Client call","Server","None","None"],0],
+["Response?",["Server reply","Client","None","None"],0],
+["CRUD?",["Operations","UI","None","None"],0],
+["Goal?",["Working app","Color","None","None"],0],
+["Result?",["Project","Game","None","None"],0]
+];
+
+// RENDER
+const quiz=document.getElementById("quiz");
+
+questions.forEach((q,i)=>{
+  let options="";
+  q[1].forEach((opt,index)=>{
+    options+=`
+    <label class="option">
+      <input type="radio" name="q${i}" value="${index}">
+      ${opt}
+    </label>`;
+  });
+
+  quiz.innerHTML+=`
+  <div class="question">
+    <p>${i+1}. ${q[0]}</p>
+    ${options}
+  </div>`;
+});
+
+// SUBMIT
+function submitQuiz(){
+  let score=0;
+
+  questions.forEach((q,i)=>{
+    const ans=document.querySelector(`input[name="q${i}"]:checked`);
+    if(ans && Number(ans.value)===q[2]) score++;
+  });
+
+  document.getElementById("scoreText").innerHTML =
+  `You scored ${score}/20`;
+
+  document.getElementById("scoreModal").style.display="flex";
+
+  if(score>=15){
+    document.getElementById("badge").innerHTML="🏅 Certified Full Stack Developer";
+
+    setTimeout(()=>{
+      document.getElementById("completeModal").style.display="flex";
+    },1000);
+  } else {
+    document.getElementById("badge").innerHTML="❌ Try Again";
+  }
+}
+
+// CERTIFICATE
+function certificate(){
+  document.getElementById("certModal").style.display="flex";
+}
+
+// CLOSE
+function closeModal(){
+  document.getElementById("scoreModal").style.display="none";
+}
+
+function closeCert(){
+  document.getElementById("certModal").style.display="none";
+}
+
+// SAVE
+localStorage.setItem("progress_fullstack","completed");
+
+</script>
+
+</body>
+</html>

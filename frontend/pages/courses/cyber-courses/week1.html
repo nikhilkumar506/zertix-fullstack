@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security – Week 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CONNECT CSS -->
+<link rel="stylesheet" href="weeks.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🛡️ Cyber Security – Week 1</h1>
+  <p>Introduction to Cyber Security & Real-World Threats</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is Cyber Security?</h2>
+<iframe src="https://www.youtube.com/embed/inWWhr5tnEA" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 Real World Cyber Attacks</h2>
+<iframe src="https://www.youtube.com/embed/dz7Ntp7KQGA" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is Cyber Security?</h2>
+<p>
+Cyber Security refers to protecting systems, networks, and data from digital attacks such as hacking, malware, and phishing.
+</p>
+</div>
+
+<!-- CASE STUDY -->
+<div class="card">
+<h2>🌍 Real-World Case Study</h2>
+<p>
+The WannaCry ransomware attack (2017) infected over 200,000 computers globally, locking data and demanding Bitcoin payments.
+</p>
+</div>
+
+<!-- LEARNINGS -->
+<div class="card">
+<h2>🧠 Key Learnings</h2>
+<ul>
+<li>Importance of cybersecurity</li>
+<li>Types of cyber threats</li>
+<li>Impact of attacks</li>
+<li>Security basics</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🛠 Practical Insight</h2>
+<p>
+Use strong passwords, enable 2FA, and avoid suspicious links.
+</p>
+</div>
+
+<!-- TOOLS -->
+<div class="card">
+<h2>⚙️ Tools</h2>
+<ul>
+<li>Kali Linux</li>
+<li>Wireshark</li>
+<li>Metasploit</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Research a cyber attack and explain:
+- Attack method  
+- Damage  
+- Prevention  
+</p>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+localStorage.setItem("progress_cyber","week1");
+
+function goPrev(){
+  alert("This is the first week");
+}
+
+function goNext(){
+  window.location.href="week2.html";
+}
+</script>
+
+</body>
+</html>

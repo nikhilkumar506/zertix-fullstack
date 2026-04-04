@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python – Week 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="python.css">
+
+<style>
+
+/* APP BOX */
+.app-box{
+  background:#020617;
+  padding:20px;
+  border-radius:12px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+}
+
+.record{
+  margin-top:10px;
+  padding:10px;
+  background:#0f172a;
+  border-radius:8px;
+  color:#22c55e;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🐍 Python – Week 4</h1>
+  <p>Dictionaries & File Handling</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 Python Dictionaries Explained</h2>
+<iframe src="https://www.youtube.com/embed/daefaLgNkw0" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 File Handling in Python</h2>
+<iframe src="https://www.youtube.com/embed/Uh2ebFW8OYM" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Real Python Project Concept</h2>
+<iframe src="https://www.youtube.com/embed/HGOBQPFzWKo" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 Dictionaries</h2>
+<p>
+Dictionaries store data in key-value pairs. They are useful for structured data like user profiles.
+</p>
+
+<pre style="background:#020617;color:#22c55e;padding:10px;border-radius:10px;">
+user = {
+  "name": "Nikhil",
+  "age": 20
+}
+</pre>
+
+</div>
+
+<!-- FILE -->
+<div class="card">
+<h2>📂 File Handling</h2>
+<p>
+File handling allows saving and reading data from files.
+</p>
+
+<pre style="background:#020617;color:#22c55e;padding:10px;border-radius:10px;">
+file = open("data.txt", "w")
+file.write("Hello")
+file.close()
+</pre>
+
+</div>
+
+<!-- 🔥 MINI APP -->
+<div class="card">
+<h2>🚀 Mini Data Storage App</h2>
+
+<div class="app-box">
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="number" id="age" placeholder="Enter Age">
+
+<button onclick="saveData()">Save Data</button>
+
+<div id="records"></div>
+
+</div>
+
+</div>
+
+<!-- LOGIC -->
+<div class="card">
+<h2>🧠 Real Data Thinking</h2>
+<ul>
+<li>Store structured data</li>
+<li>Use key-value format</li>
+<li>Save and retrieve data</li>
+</ul>
+</div>
+
+<!-- PRACTICE -->
+<div class="card">
+<h2>🧪 Practice Problems</h2>
+<ul>
+<li>Create dictionary of user</li>
+<li>Store multiple records</li>
+<li>Read and display data</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<ul>
+<li>Create student record system</li>
+<li>Add multiple entries</li>
+<li>Display all data</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_python","week4");
+
+function goPrev(){
+  window.location.href="week3.html";
+}
+
+function goNext(){
+  window.location.href="week5.html";
+}
+
+// STORAGE
+let dataList = JSON.parse(localStorage.getItem("pythonData")) || [];
+
+// SAVE DATA
+function saveData(){
+
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+
+  const user = {name, age};
+
+  dataList.push(user);
+
+  localStorage.setItem("pythonData", JSON.stringify(dataList));
+
+  renderData();
+}
+
+// DISPLAY
+function renderData(){
+
+  const container = document.getElementById("records");
+  container.innerHTML = "";
+
+  dataList.forEach(d=>{
+    container.innerHTML += `
+      <div class="record">
+        ${d.name} - ${d.age}
+      </div>
+    `;
+  });
+}
+
+renderData();
+
+</script>
+
+</body>
+</html>

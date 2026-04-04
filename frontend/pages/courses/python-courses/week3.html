@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python – Week 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="python.css">
+
+<style>
+
+/* INTERACTIVE BOX */
+.tool-box{
+  background:#020617;
+  padding:20px;
+  border-radius:12px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+}
+
+.output{
+  margin-top:10px;
+  padding:10px;
+  background:#0f172a;
+  border-radius:8px;
+  color:#22c55e;
+}
+
+.item{
+  background:#020617;
+  padding:8px;
+  margin-top:5px;
+  border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🐍 Python – Week 3</h1>
+  <p>Functions, Lists & Problem Solving</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 Python Functions Explained</h2>
+<iframe src="https://www.youtube.com/embed/NSbOtYzIQI0" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 Python Lists Tutorial</h2>
+<iframe src="https://www.youtube.com/embed/W8KRzm-HUcc" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Problem Solving in Python</h2>
+<iframe src="https://www.youtube.com/embed/HGOBQPFzWKo" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 Functions</h2>
+<p>
+Functions are reusable blocks of code that help organize and simplify programs.
+</p>
+
+<pre style="background:#020617;color:#22c55e;padding:10px;border-radius:10px;">
+def greet(name):
+    print("Hello", name)
+</pre>
+
+</div>
+
+<!-- LIST -->
+<div class="card">
+<h2>📦 Lists</h2>
+<p>
+Lists store multiple values in a single variable.
+</p>
+
+<pre style="background:#020617;color:#22c55e;padding:10px;border-radius:10px;">
+numbers = [1,2,3,4]
+print(numbers[0])
+</pre>
+
+</div>
+
+<!-- 🔥 FUNCTION BUILDER -->
+<div class="card">
+<h2>🚀 Function Builder (Live Demo)</h2>
+
+<div class="tool-box">
+
+<input type="text" id="username" placeholder="Enter Name">
+<button onclick="runFunction()">Run Function</button>
+
+<div id="funcOutput" class="output"></div>
+
+</div>
+
+</div>
+
+<!-- 🔥 LIST SYSTEM -->
+<div class="card">
+<h2>📊 Dynamic List System</h2>
+
+<div class="tool-box">
+
+<input type="text" id="itemInput" placeholder="Enter item">
+<button onclick="addItem()">Add Item</button>
+
+<div id="listOutput"></div>
+
+</div>
+
+</div>
+
+<!-- LOGIC -->
+<div class="card">
+<h2>🧠 Problem Solving Mindset</h2>
+<ul>
+<li>Understand the problem</li>
+<li>Break into steps</li>
+<li>Use functions for reuse</li>
+<li>Use lists for data</li>
+</ul>
+</div>
+
+<!-- PRACTICE -->
+<div class="card">
+<h2>🧪 Practice Problems</h2>
+<ul>
+<li>Create sum function</li>
+<li>Store values in list</li>
+<li>Find max number</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<ul>
+<li>Create function for calculator</li>
+<li>Store 5 values in list</li>
+<li>Print largest value</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_python","week3");
+
+function goPrev(){
+  window.location.href="week2.html";
+}
+
+function goNext(){
+  window.location.href="week4.html";
+}
+
+// FUNCTION DEMO
+function runFunction(){
+  const name = document.getElementById("username").value;
+  document.getElementById("funcOutput").innerHTML =
+    "Hello " + name + " 👋";
+}
+
+// LIST SYSTEM
+let items = [];
+
+function addItem(){
+  const value = document.getElementById("itemInput").value;
+
+  items.push(value);
+
+  renderList();
+}
+
+function renderList(){
+  const container = document.getElementById("listOutput");
+  container.innerHTML = "";
+
+  items.forEach(item=>{
+    container.innerHTML += `<div class="item">${item}</div>`;
+  });
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Full Stack – Week 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="fullstack.css">
+
+<style>
+
+/* FORM */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+input{
+  padding:10px;
+  border-radius:8px;
+  border:none;
+}
+
+/* SUCCESS */
+.success{
+  color:#22c55e;
+  margin-top:10px;
+}
+
+/* DATA LIST */
+.user-data{
+  margin-top:10px;
+  padding:10px;
+  background:#020617;
+  border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🌐 Full Stack – Week 3</h1>
+  <p>POST API + Form + Data Handling</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is POST Request?</h2>
+<iframe src="https://www.youtube.com/embed/pKd0Rpw7O48" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 Form Handling in JavaScript</h2>
+<iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Sending Data to Backend</h2>
+<iframe src="https://www.youtube.com/embed/Oive66jrwBs" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is POST API?</h2>
+<p>
+POST API is used to send data from frontend to backend. It is commonly used in forms like login, signup, and data submission.
+</p>
+</div>
+
+<!-- FORM -->
+<div class="card">
+<h2>🚀 Live Form (Real Implementation)</h2>
+
+<form onsubmit="submitForm(event)">
+  <input type="text" id="name" placeholder="Enter Name" required>
+  <input type="email" id="email" placeholder="Enter Email" required>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="msg" class="success"></p>
+
+</div>
+
+<!-- DATA DISPLAY -->
+<div class="card">
+<h2>📊 Submitted Data</h2>
+<div id="dataList"></div>
+</div>
+
+<!-- FLOW -->
+<div class="card">
+<h2>🔄 Full Stack Flow</h2>
+<ul>
+<li>User fills form</li>
+<li>Frontend captures data</li>
+<li>POST request sent</li>
+<li>Backend stores data</li>
+<li>Response returned</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Tips</h2>
+<ul>
+<li>Validate user input</li>
+<li>Handle errors properly</li>
+<li>Store data securely</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<ul>
+<li>Create form</li>
+<li>Store data</li>
+<li>Display submitted data</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_fullstack","week3");
+
+function goPrev(){
+  window.location.href="week2.html";
+}
+
+function goNext(){
+  window.location.href="week4.html";
+}
+
+// 🔥 FORM SUBMIT
+function submitForm(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+
+  // MOCK STORAGE
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  users.push({name, email});
+
+  localStorage.setItem("users", JSON.stringify(users));
+
+  document.getElementById("msg").innerHTML = "✅ Data Submitted Successfully";
+
+  displayData();
+}
+
+// DISPLAY DATA
+function displayData(){
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const container = document.getElementById("dataList");
+
+  container.innerHTML = "";
+
+  users.forEach(user=>{
+    container.innerHTML += `
+      <div class="user-data">
+        ${user.name} - ${user.email}
+      </div>
+    `;
+  });
+}
+
+displayData();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security – Week 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="weeks.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🔐 Cyber Security – Week 4</h1>
+  <p>Encryption & Data Protection</p>
+</div>
+
+<div class="container">
+<div class="card">
+<h2>🎥 What is Encryption?</h2>
+<iframe src="https://www.youtube.com/embed/jhXCTbFnK8o" allowfullscreen></iframe>
+</div>
+
+<div class="card">
+<h2>🎥 Symmetric vs Asymmetric Encryption</h2>
+<iframe src="https://www.youtube.com/embed/AQDCe585Lnc" allowfullscreen></iframe>
+</div>
+
+<div class="card">
+<h2>🎥 How HTTPS Keeps You Safe</h2>
+<iframe src="https://www.youtube.com/embed/SJJmoDZ3il8" allowfullscreen></iframe>
+</div>
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is Encryption?</h2>
+<p>
+Encryption is the process of converting readable data (plaintext) into an unreadable format (ciphertext) to protect it from unauthorized access.
+</p>
+</div>
+
+<!-- TYPES -->
+<div class="card">
+<h2>🔑 Types of Encryption</h2>
+<ul>
+<li><strong>Symmetric Encryption:</strong> Same key for encryption & decryption (AES)</li>
+<li><strong>Asymmetric Encryption:</strong> Public + Private key (RSA)</li>
+</ul>
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Example</h2>
+<p>
+When you access a banking website, HTTPS encrypts your data. Even if hackers intercept the data, they cannot read it without the decryption key.
+</p>
+</div>
+
+<!-- HTTPS -->
+<div class="card">
+<h2>🌐 What is HTTPS?</h2>
+<p>
+HTTPS uses SSL/TLS encryption to secure communication between your browser and the server.
+</p>
+<ul>
+<li>Encrypts data</li>
+<li>Prevents interception</li>
+<li>Ensures secure login</li>
+</ul>
+</div>
+
+<!-- DATA PROTECTION -->
+<div class="card">
+<h2>🛡️ Data Protection Techniques</h2>
+<ul>
+<li>Encryption</li>
+<li>Hashing (password protection)</li>
+<li>Access control</li>
+<li>Data backup</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Tips</h2>
+<ul>
+<li>Always use HTTPS websites</li>
+<li>Never share OTPs or passwords</li>
+<li>Use password managers</li>
+<li>Enable encryption on devices</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Explain the difference between symmetric and asymmetric encryption:
+</p>
+<ul>
+<li>How they work</li>
+<li>Where they are used</li>
+<li>Advantages and disadvantages</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+// SAVE PROGRESS
+localStorage.setItem("progress_cyber","week4");
+
+// NAVIGATION
+function goPrev(){
+  window.location.href="week3.html";
+}
+
+function goNext(){
+  window.location.href="week5.html";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Backend Development – Week 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="backend.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>⚙️ Backend Development – Week 1</h1>
+  <p>Understanding Backend, Servers & APIs</p>
+</div>
+
+<div class="container">
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 What is Backend Development?</h2>
+<iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 Client Server Architecture</h2>
+<iframe src="https://www.youtube.com/embed/8aGhZQkoFbQ" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 What is API?</h2>
+<iframe src="https://www.youtube.com/embed/GZvSYJDk-us" allowfullscreen></iframe>
+</div>
+<!-- THEORY -->
+<div class="card">
+<h2>📘 What is Backend Development?</h2>
+<p>
+Backend development is responsible for handling server logic, databases, authentication, and APIs. It ensures that the frontend (what users see) can communicate with the server and retrieve or store data.
+</p>
+</div>
+
+<!-- CLIENT SERVER -->
+<div class="card">
+<h2>🌐 Client–Server Model</h2>
+<p>
+In modern web applications:
+</p>
+<ul>
+<li><strong>Client:</strong> Browser (frontend)</li>
+<li><strong>Server:</strong> Backend logic (Node.js, etc.)</li>
+<li><strong>Database:</strong> Stores data</li>
+</ul>
+</div>
+
+<!-- API -->
+<div class="card">
+<h2>🔗 What is an API?</h2>
+<p>
+API (Application Programming Interface) allows communication between frontend and backend.
+</p>
+<ul>
+<li>GET → fetch data</li>
+<li>POST → send data</li>
+<li>PUT → update data</li>
+<li>DELETE → remove data</li>
+</ul>
+</div>
+
+<!-- REAL WORLD -->
+<div class="card">
+<h2>🌍 Real-World Example</h2>
+<p>
+When you login to a website:
+</p>
+<ul>
+<li>Frontend sends request</li>
+<li>Backend verifies credentials</li>
+<li>Database checks user data</li>
+<li>Response is returned</li>
+</ul>
+</div>
+
+<!-- NODE -->
+<div class="card">
+<h2>⚙️ Introduction to Node.js</h2>
+<p>
+Node.js allows JavaScript to run on the server. It is widely used for building scalable backend applications.
+</p>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Understanding</h2>
+<ul>
+<li>Frontend = UI</li>
+<li>Backend = logic + data</li>
+<li>Database = storage</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<p>
+Explain the flow of a login system:
+</p>
+<ul>
+<li>Request → Server → Database → Response</li>
+<li>What happens at each step</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+// SAVE PROGRESS
+localStorage.setItem("progress_backend","week1");
+
+// NAV
+function goPrev(){
+  alert("This is the first week");
+}
+
+function goNext(){
+  window.location.href="week2.html";
+}
+
+</script>
+
+</body>
+</html>

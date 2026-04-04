@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python – Final Assessment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="python.css">
+
+<style>
+
+/* QUIZ */
+.question{
+  margin-bottom:20px;
+  padding:15px;
+  border-radius:12px;
+  background:#020617;
+}
+
+.option{
+  display:block;
+  padding:10px;
+  margin-top:6px;
+  border-radius:8px;
+  background:#0f172a;
+  border:1px solid #1e293b;
+  cursor:pointer;
+}
+
+.option:hover{
+  background:#1e293b;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-box{
+  background:rgb(0, 0, 0);
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+  width:350px;
+}
+
+.big-modal{
+  text-align:center;
+  color:white;
+}
+
+.big-modal h1{
+  font-size:36px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🎓 Final Assessment</h1>
+  <p>Complete your Python Course</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h2>🧠 Final Quiz (20 Questions)</h2>
+<div id="quiz"></div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<p id="result"></p>
+<div id="badge"></div>
+</div>
+
+<div class="card">
+<h2>🎓 Certificate</h2>
+<button onclick="certificate()">Get Certificate</button>
+</div>
+
+</div>
+
+<!-- SCORE MODAL -->
+<div id="scoreModal" class="modal">
+  <div class="modal-box">
+    <h2>Your Score</h2>
+    <p id="scoreText"></p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- COMPLETE MODAL -->
+<div id="completeModal" class="modal">
+  <div class="big-modal">
+    <h1>🎉 Congratulations!</h1>
+    <p>You have successfully completed Python Course 🚀</p>
+  </div>
+</div>
+
+<!-- CERT MODAL -->
+<div id="certModal" class="modal">
+  <div class="modal-box">
+    <h2>🏅 Certification Complete</h2>
+    <p>Your certificate has been generated.</p>
+    <p>📩 Our team will send your certificate to your email shortly.</p>
+    <button onclick="closeCert()">Close</button>
+  </div>
+</div>
+
+<script>
+
+// QUESTIONS
+const questions = [
+["Python is?",["Language","Game","OS","DB"],0],
+["Variable?",["Store data","Delete","None","None"],0],
+["Data type?",["Type of data","UI","None","None"],0],
+["If used for?",["Condition","Loop","None","None"],0],
+["Loop?",["Repeat","Stop","None","None"],0],
+["Function?",["Reusable code","Game","None","None"],0],
+["List?",["Collection","Single","None","None"],0],
+["Dictionary?",["Key-value","List","None","None"],0],
+["File?",["Store data","Delete","None","None"],0],
+["Module?",["Reuse code","Game","None","None"],0],
+["OOP?",["Structure","UI","None","None"],0],
+["Class?",["Blueprint","Game","None","None"],0],
+["Object?",["Instance","Game","None","None"],0],
+["Print?",["Output","Input","None","None"],0],
+["Input?",["User data","Output","None","None"],0],
+["Range?",["Loop","Game","None","None"],0],
+["Goal?",["Program","Game","None","None"],0],
+["Logic?",["Thinking","None","None","None"],0],
+["Error?",["Bug","Game","None","None"],0],
+["Result?",["Output","Game","None","None"],0]
+];
+
+// RENDER
+const quiz=document.getElementById("quiz");
+
+questions.forEach((q,i)=>{
+  let options="";
+  q[1].forEach((opt,index)=>{
+    options+=`
+    <label class="option">
+      <input type="radio" name="q${i}" value="${index}">
+      ${opt}
+    </label>`;
+  });
+
+  quiz.innerHTML+=`
+  <div class="question">
+    <p>${i+1}. ${q[0]}</p>
+    ${options}
+  </div>`;
+});
+
+// SUBMIT
+function submitQuiz(){
+  let score=0;
+
+  questions.forEach((q,i)=>{
+    const ans=document.querySelector(`input[name="q${i}"]:checked`);
+    if(ans && Number(ans.value)===q[2]) score++;
+  });
+
+  document.getElementById("scoreText").innerHTML =
+    `You scored ${score}/20`;
+
+  document.getElementById("scoreModal").style.display="flex";
+
+  if(score>=15){
+    document.getElementById("badge").innerHTML="🏅 Certified Python Developer";
+
+    setTimeout(()=>{
+      document.getElementById("completeModal").style.display="flex";
+    },1000);
+  } else {
+    document.getElementById("badge").innerHTML="❌ Try Again";
+  }
+}
+
+// CERTIFICATE
+function certificate(){
+  document.getElementById("certModal").style.display="flex";
+}
+
+// CLOSE
+function closeModal(){
+  document.getElementById("scoreModal").style.display="none";
+}
+
+function closeCert(){
+  document.getElementById("certModal").style.display="none";
+}
+
+// SAVE
+localStorage.setItem("progress_python","completed");
+
+</script>
+
+</body>
+</html>

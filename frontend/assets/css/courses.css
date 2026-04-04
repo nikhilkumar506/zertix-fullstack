@@ -171,3 +171,19 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.buy-btn {
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+.course-card::before,
+.course-card::after {
+  pointer-events: none;
+}
+.course-card {
+  position: relative;
+  z-index: 1;
+}
+.course-card * {
+  pointer-events: auto;
+}

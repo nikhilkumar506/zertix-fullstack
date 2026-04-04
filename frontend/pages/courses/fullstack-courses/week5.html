@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Full Stack – Week 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="fullstack.css">
+
+<style>
+
+/* FORM */
+.profile-box{
+  background:#020617;
+  padding:20px;
+  border-radius:12px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+}
+
+/* IMAGE PREVIEW */
+.preview{
+  margin-top:10px;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #38bdf8;
+}
+
+/* PROFILE CARD */
+.profile-card{
+  margin-top:20px;
+  padding:15px;
+  background:#020617;
+  border-radius:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🚀 Full Stack – Week 5</h1>
+  <p>Mini Project + File Upload + Project Structure</p>
+</div>
+
+<div class="container">
+
+<!-- VIDEO 1 -->
+<div class="card">
+<h2>🎥 Project Structure Explained</h2>
+<iframe src="https://www.youtube.com/embed/TlB_eWDSMt4" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+<h2>🎥 File Upload Concept</h2>
+<iframe src="https://www.youtube.com/embed/9Qzmri1WaaE" allowfullscreen></iframe>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="card">
+<h2>🎥 Build Mini Project</h2>
+<iframe src="https://www.youtube.com/embed/pKd0Rpw7O48" allowfullscreen></iframe>
+</div>
+
+<!-- THEORY -->
+<div class="card">
+<h2>📘 Mini Project Overview</h2>
+<p>
+In this week, you will build a simple profile system where users can submit their details and upload a profile image.
+</p>
+</div>
+
+<!-- PROJECT STRUCTURE -->
+<div class="card">
+<h2>🏗️ Project Structure</h2>
+
+<pre style="background:#020617;color:#38bdf8;padding:15px;border-radius:10px;">
+project/
+ ├── frontend/
+ ├── backend/
+ ├── routes/
+ ├── controllers/
+ └── database/
+</pre>
+</div>
+
+<!-- MINI PROJECT -->
+<div class="card">
+<h2>🚀 Mini Project (Profile System)</h2>
+
+<div class="profile-box">
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="email" id="email" placeholder="Enter Email">
+<input type="file" id="image">
+
+<button onclick="saveProfile()">Save Profile</button>
+
+<img id="preview" class="preview" src="">
+
+</div>
+
+</div>
+
+<!-- DISPLAY -->
+<div class="card">
+<h2>📊 Profile Data</h2>
+<div id="profileData"></div>
+</div>
+
+<!-- FLOW -->
+<div class="card">
+<h2>🔄 Full Stack Flow</h2>
+<ul>
+<li>User fills form</li>
+<li>Image selected</li>
+<li>Data stored</li>
+<li>Profile displayed</li>
+</ul>
+</div>
+
+<!-- PRACTICAL -->
+<div class="card">
+<h2>🧠 Practical Tips</h2>
+<ul>
+<li>Always validate file type</li>
+<li>Limit file size</li>
+<li>Store data securely</li>
+</ul>
+</div>
+
+<!-- ASSIGNMENT -->
+<div class="card">
+<h2>📝 Assignment</h2>
+<ul>
+<li>Add profile edit feature</li>
+<li>Add delete option</li>
+<li>Improve UI</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="btns">
+<button onclick="goPrev()">⬅ Previous</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+localStorage.setItem("progress_fullstack","week5");
+
+function goPrev(){
+  window.location.href="week4.html";
+}
+
+function goNext(){
+  window.location.href="week6.html";
+}
+
+// IMAGE PREVIEW
+document.getElementById("image").addEventListener("change", function(e){
+  const file = e.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function(){
+    document.getElementById("preview").src = reader.result;
+  }
+
+  reader.readAsDataURL(file);
+});
+
+// SAVE PROFILE
+function saveProfile(){
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const image = document.getElementById("preview").src;
+
+  const profile = {name, email, image};
+
+  localStorage.setItem("profile", JSON.stringify(profile));
+
+  displayProfile();
+}
+
+// DISPLAY
+function displayProfile(){
+
+  const profile = JSON.parse(localStorage.getItem("profile"));
+
+  if(profile){
+    document.getElementById("profileData").innerHTML = `
+      <div class="profile-card">
+        <img src="${profile.image}" class="preview">
+        <p>${profile.name}</p>
+        <p>${profile.email}</p>
+      </div>
+    `;
+  }
+}
+
+displayProfile();
+
+</script>
+
+</body>
+</html>

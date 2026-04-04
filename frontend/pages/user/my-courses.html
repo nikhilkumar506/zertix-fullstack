@@ -1,1 +1,19 @@
-0// frontend/pages/user/my-courses.html
+<script>
+const API = "http://localhost:5000";
+
+async function checkAccess() {
+  const res = await fetch(
+    API + "/api/enroll/check-access?userId=testUser&courseId=frontend"
+  );
+
+  const data = await res.json();
+
+  if (data.access) {
+    document.body.innerHTML = "<h2>Access Granted ✅</h2>";
+  } else {
+    document.body.innerHTML = "<h2>No Access ❌</h2>";
+  }
+}
+
+checkAccess();
+</script>
