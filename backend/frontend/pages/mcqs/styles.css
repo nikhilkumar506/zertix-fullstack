@@ -1301,3 +1301,49 @@ button:hover{
   }
 
 }
+/* ===========================
+   FINAL HERO FIX (IMPORTANT)
+   =========================== */
+
+@media (max-width: 768px) {
+
+  /* FULL WIDTH FIX */
+  .page-wrapper {
+    padding: 0;
+  }
+
+  .hero {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0;
+    padding: 80px 20px 40px;
+  }
+
+  /* REMOVE CENTER BOX LOOK */
+  .hero > * {
+    max-width: 100%;
+  }
+
+  /* TEXT FIX */
+  .hero h1 {
+    font-size: 26px !important;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* FIX IMAGE (VERY IMPORTANT) */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* REMOVE HORIZONTAL SCROLL ISSUE */
+  body {
+    overflow-x: hidden;
+  }
+
+}
