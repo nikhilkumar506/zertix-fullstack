@@ -1347,3 +1347,15 @@ button:hover{
   }
 
 }
+.hero img,
+.hero-image {
+  width: 100% !important;
+  max-width: 100%;
+  object-fit: contain;
+}
+.hero img,
+.hero-image {
+  width: 100% !important;
+  max-width: 100%;
+  object-fit: contain;
+}
