@@ -25,10 +25,10 @@ export async function startPayment() {
     console.log("🧾 Order:", order);
 
     const options = {
-      key: "rzp_test_SXVFnE3ssCJ4vF",
+      key: "rzp_live_SZJjtsX853sdMm",
       amount: order.amount,
       currency: "INR",
-      name: "SkilllCertify",
+      name: "Zertix",
       description: "Course Purchase",
       order_id: order.id,
 
