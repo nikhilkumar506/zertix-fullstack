@@ -8,18 +8,24 @@ const paymentRoutes = require("./routes/payment.routes");
 
 const app = express();
 
+// ✅ CORS (production friendly)
 app.use(cors({
-  origin: "http://127.0.0.1:5500",
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
+// ✅ Middleware
 app.use(express.json());
 
+// ✅ API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/courses", courseRoutes);
-app.use("/api/enroll", enrollmentRoutes); // 👈 MUST
+app.use("/api/enroll", enrollmentRoutes);
 app.use("/api/payment", paymentRoutes);
-app.get("/", (req, res) => {
+
+// ✅ Optional: status route (safe)
+app.get("/api/status", (req, res) => {
   res.json({ status: "API running" });
 });
 
