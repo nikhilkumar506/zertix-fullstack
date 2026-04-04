@@ -65,8 +65,8 @@ loginForm.addEventListener("submit", async function (e) {
   const password = document.getElementById("password").value.trim();
 
   try {
-    const res = await fetch("https://zertix-fullstack.onrender.com", {
-      method: "POST",
+const res = await fetch("https://zertix-fullstack.onrender.com/api/auth/register", {
+        method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
