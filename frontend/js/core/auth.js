@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://zertix-fullstack.onrender.com";
 
 // ================= LOGIN =================
 async function loginUser(event) {

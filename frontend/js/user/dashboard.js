@@ -4,8 +4,8 @@ const authToken = localStorage.getItem("token"); // ✅ UNIQUE NAME
 
 async function loadUser() {
   try {
-    const res = await fetch("http://localhost:5000/api/auth/me", {
-      headers: {
+const res = await fetch("https://zertix-fullstack.onrender.com/api/auth/me", {
+        headers: {
         Authorization: "Bearer " + authToken
       }
     });

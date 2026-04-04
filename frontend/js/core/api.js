@@ -1,8 +1,7 @@
 console.log("core/api.js loaded");
 
 /* ================= CONFIG ================= */
-export const API_BASE = "http://localhost:5000/api";
-
+export const API_BASE = "https://zertix-fullstack.onrender.com/api";
 /* ================= GET TOKEN ================= */
 function getToken() {
   return localStorage.getItem("token");
