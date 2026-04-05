@@ -21,9 +21,9 @@
       "Only scripting language",
       "Assembly language"
     ],
-    "answer": 0,
-    "explanation": "C++ supports procedural",
-    "topic": "OOP and generic programming"
+    "answer": null,
+    "explanation": "OOP and generic programming",
+    "topic": "basics"
   },
   {
     "subject": "cpp",
@@ -1308,9 +1308,9 @@
       "Show cash flow",
       "Show expenses"
     ],
-    "answer": 1,
-    "explanation": "Balance sheet shows assets",
-    "topic": "liabilities"
+    "answer": null,
+    "explanation": "equity at a point in time",
+    "topic": "financial_statements"
   },
   {
     "subject": "accounting",
@@ -1386,9 +1386,9 @@
       "Future value",
       "Replacement cost"
     ],
-    "answer": 1,
-    "explanation": "Depreciation is based on original cost allocation",
-    "topic": "not market fluctuations"
+    "answer": null,
+    "explanation": "not market fluctuations",
+    "topic": "depreciation"
   },
   {
     "subject": "accounting",
@@ -1407,14 +1407,14 @@
     "subject": "accounting",
     "q": "Which statement includes operating",
     "options": [
-      " investing",
-      " financing activities?",
+      "investing",
+      "financing activities?",
       "Income Statement",
       "Balance Sheet"
     ],
-    "answer": null,
-    "explanation": "Trial Balance",
-    "topic": "2"
+    "answer": 2,
+    "explanation": "Cash flow statement is divided into these three activities",
+    "topic": "financial_statements"
   },
   {
     "subject": "accounting",
@@ -1581,9 +1581,9 @@
       "Revenue",
       "Expense"
     ],
-    "answer": 1,
-    "explanation": "Depreciation reduces asset value",
-    "topic": "not liabilities"
+    "answer": null,
+    "explanation": "not liabilities",
+    "topic": "depreciation"
   },
   {
     "subject": "accounting",
@@ -2920,9 +2920,9 @@
       "Terminated",
       "All of these"
     ],
-    "answer": 3,
-    "explanation": "After running",
-    "topic": "process may go to ready"
+    "answer": null,
+    "explanation": "or terminated",
+    "topic": "process_states"
   },
   {
     "subject": "os",
@@ -3323,9 +3323,9 @@
       "Scheduling",
       "Swapping"
     ],
-    "answer": 2,
-    "explanation": "Scheduling is CPU management",
-    "topic": "not memory"
+    "answer": null,
+    "explanation": "not memory",
+    "topic": "memory"
   },
   {
     "subject": "os",
@@ -3505,9 +3505,9 @@
       "Cache",
       "RAM"
     ],
-    "answer": 3,
-    "explanation": "RAM loses data when power is off",
-    "topic": "while ROM and disk retain data"
+    "answer": null,
+    "explanation": "while ROM and disk retain data",
+    "topic": "memory"
   },
   {
     "subject": "os",
@@ -4545,9 +4545,9 @@
       "Supportive Model",
       "Collegial Model"
     ],
-    "answer": 3,
-    "explanation": "Collegial model emphasizes partnership",
-    "topic": "teamwork"
+    "answer": null,
+    "explanation": "and self-discipline; others rely more on authority or economic security",
+    "topic": "ob_models"
   },
   {
     "subject": "ob",
@@ -4727,9 +4727,9 @@
       "Feedback",
       "Perception"
     ],
-    "answer": 2,
-    "explanation": "Feedback improves communication",
-    "topic": "not a barrier"
+    "answer": null,
+    "explanation": "not a barrier",
+    "topic": "communication"
   },
   {
     "subject": "ob",
@@ -5221,22 +5221,22 @@
       "A false but R true",
       "Both false"
     ],
-    "answer": 1,
-    "explanation": "While motivation affects performance",
-    "topic": "high motivation alone doesn't guarantee better performance without skills or resources"
+    "answer": null,
+    "explanation": "high motivation alone doesn't guarantee better performance without skills or resources",
+    "topic": "motivation"
   },
   {
     "subject": "ob",
     "q": "In a team",
     "options": [
-      " members openly challenge each other's ideas but still work toward goals. This represents:",
+      "members openly challenge each other's ideas but still work toward goals. This represents:",
       "Dysfunctional conflict",
       "Functional conflict",
       "Role conflict"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Functional conflict improves decision-making and innovation"
+    "answer": 1,
+    "explanation": "Functional conflict improves decision-making and innovation",
+    "topic": "conflict"
   },
   {
     "subject": "ob",
@@ -5364,9 +5364,9 @@
       "Expectancy theory",
       "Herzberg theory"
     ],
-    "answer": 2,
-    "explanation": "Expectancy theory links effort",
-    "topic": "performance"
+    "answer": null,
+    "explanation": "and rewards",
+    "topic": "motivation"
   },
   {
     "subject": "ob",
@@ -5437,14 +5437,14 @@
     "subject": "ob",
     "q": "Employees are motivated by achievement",
     "options": [
-      " power",
-      " and affiliation needs. This theory is:",
+      "power",
+      "and affiliation needs. This theory is:",
       "Maslow",
       "Herzberg"
     ],
-    "answer": null,
-    "explanation": "Vroom",
-    "topic": "2"
+    "answer": 2,
+    "explanation": "McClelland identified three key needs",
+    "topic": "motivation"
   },
   {
     "subject": "ob",
@@ -5476,14 +5476,14 @@
     "subject": "ob",
     "q": "Employees feel dissatisfied due to poor working conditions. According to Herzberg",
     "options": [
-      " this is related to:",
+      "this is related to:",
       "Motivators",
       "Hygiene factors",
       "Expectancy factors"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Hygiene factors prevent dissatisfaction but don’t motivate"
+    "answer": 1,
+    "explanation": "Hygiene factors prevent dissatisfaction but don’t motivate",
+    "topic": "motivation"
   },
   {
     "subject": "ob",
@@ -5645,14 +5645,14 @@
     "subject": "ob",
     "q": "A worker’s attitude toward job includes beliefs",
     "options": [
-      " feelings",
-      " and behavior. This reflects:",
+      "feelings",
+      "and behavior. This reflects:",
       "Personality",
       "Attitude"
     ],
     "answer": null,
-    "explanation": "Learning",
-    "topic": "1"
+    "explanation": "behavioral components",
+    "topic": "attitude"
   },
   {
     "subject": "subject",
@@ -5749,14 +5749,14 @@
     "subject": "itwd",
     "q": "When multiple CSS rules target same element",
     "options": [
-      " priority is decided by:",
+      "priority is decided by:",
       "File size",
       "Selector specificity",
       "Browser type"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Specificity determines which rule is applied"
+    "answer": 1,
+    "explanation": "Specificity determines which rule is applied",
+    "topic": "css"
   },
   {
     "subject": "itwd",
@@ -7691,9 +7691,9 @@
       "<",
       "LIKE"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Equi-join matches equality conditions"
+    "answer": 0,
+    "explanation": "Equi-join matches equality conditions",
+    "topic": "sql"
   },
   {
     "subject": "dbms",
@@ -8207,13 +8207,13 @@
     "q": "CAP theorem states you can have at most:",
     "options": [
       "Two of consistency",
-      " availability",
-      " partition tolerance",
+      "availability",
+      "partition tolerance",
       "All three"
     ],
-    "answer": null,
-    "explanation": "Only one",
-    "topic": "0"
+    "answer": 0,
+    "explanation": "Trade-offs exist under partition",
+    "topic": "distributed"
   },
   {
     "subject": "dbms",
@@ -8714,13 +8714,13 @@
     "q": "Three-level architecture includes:",
     "options": [
       "External",
-      " conceptual",
-      " internal levels",
+      "conceptual",
+      "internal levels",
       "Only external"
     ],
-    "answer": null,
-    "explanation": "Only conceptual",
-    "topic": "0"
+    "answer": 0,
+    "explanation": "Separates views and storage",
+    "topic": "basics"
   },
   {
     "subject": "dbms",
@@ -9390,13 +9390,13 @@
     "q": "Backup types include:",
     "options": [
       "Full",
-      " incremental",
-      " differential",
+      "incremental",
+      "differential",
       "Only full"
     ],
-    "answer": null,
-    "explanation": "Only differential",
-    "topic": "0"
+    "answer": 0,
+    "explanation": "Various strategies exist",
+    "topic": "backup"
   },
   {
     "subject": "dbms",
@@ -9832,26 +9832,26 @@
     "q": "Consistency constraints include:",
     "options": [
       "Keys",
-      " checks",
-      " FKs",
+      "checks",
+      "FKs",
       "Only keys"
     ],
-    "answer": null,
-    "explanation": "Only FKs",
-    "topic": "0"
+    "answer": 0,
+    "explanation": "All enforce validity",
+    "topic": "keys"
   },
   {
     "subject": "dbms",
     "q": "Isolation anomalies include:",
     "options": [
       "Dirty",
-      " non-repeatable",
-      " phantom",
+      "non-repeatable",
+      "phantom",
       "Only dirty"
     ],
-    "answer": null,
-    "explanation": "Only non-repeatable",
-    "topic": "0"
+    "answer": 0,
+    "explanation": "Common concurrency issues",
+    "topic": "transactions"
   },
   {
     "subject": "dbms",
@@ -10495,13 +10495,13 @@
     "q": "Data integrity constraints include:",
     "options": [
       "Entity",
-      " domain",
-      " referential",
+      "domain",
+      "referential",
       "Only entity"
     ],
-    "answer": null,
-    "explanation": "Only referential",
-    "topic": "0"
+    "answer": 0,
+    "explanation": "All enforce correctness",
+    "topic": "keys"
   },
   {
     "subject": "dbms",
@@ -10889,9 +10889,9 @@
       "None",
       "Only PK"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Ensures reconstruction"
+    "answer": 0,
+    "explanation": "Ensures reconstruction",
+    "topic": "normalization"
   },
   {
     "subject": "dbms",
@@ -11136,9 +11136,9 @@
       "No security",
       "Encryption"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "2FA adds extra security layer"
+    "answer": 1,
+    "explanation": "2FA adds extra security layer",
+    "topic": "security_practices"
   },
   {
     "subject": "cyber",
@@ -12228,9 +12228,9 @@
       "None",
       "None"
     ],
-    "answer": 0,
-    "explanation": "CIA includes confidentiality",
-    "topic": "integrity"
+    "answer": null,
+    "explanation": "availability",
+    "topic": "basics"
   },
   {
     "subject": "subject",
@@ -14381,14 +14381,14 @@
     "subject": "ds",
     "q": "A dataset containing text",
     "options": [
-      " images",
-      " and videos is classified as:",
+      "images",
+      "and videos is classified as:",
       "Structured",
       "Semi-structured"
     ],
-    "answer": null,
-    "explanation": "Relational",
-    "topic": "2"
+    "answer": 2,
+    "explanation": "Unstructured data has no predefined format",
+    "topic": "basics"
   },
   {
     "subject": "ds",
@@ -14464,9 +14464,9 @@
       "Deleting dataset",
       "Encoding"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Imputation replaces missing values"
+    "answer": 1,
+    "explanation": "Imputation replaces missing values",
+    "topic": "preprocessing"
   },
   {
     "subject": "ds",
@@ -15543,9 +15543,9 @@
       "Removing data",
       "Clustering"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Bootstrapping creates multiple samples for estimation"
+    "answer": 0,
+    "explanation": "Bootstrapping creates multiple samples for estimation",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15582,9 +15582,9 @@
       "Dataset size",
       "Output label"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Measures contribution of each feature"
+    "answer": 1,
+    "explanation": "Measures contribution of each feature",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15595,9 +15595,9 @@
       "Remove data",
       "Increase features"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Log reduces skewness improving distribution"
+    "answer": 1,
+    "explanation": "Log reduces skewness improving distribution",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -15608,9 +15608,9 @@
       "Variance",
       "Cluster"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "True positive is correct positive prediction"
+    "answer": 1,
+    "explanation": "True positive is correct positive prediction",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15621,9 +15621,9 @@
       "Remove features",
       "Normalize dataset"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Tuning improves model performance by optimizing parameters"
+    "answer": 0,
+    "explanation": "Tuning improves model performance by optimizing parameters",
+    "topic": "machine_learning"
   },
   {
     "subject": "subject",
@@ -15751,9 +15751,9 @@
       "Normalize dataset",
       "Cluster data"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "PCA reduces dimensionality by retaining maximum variance"
+    "answer": 1,
+    "explanation": "PCA reduces dimensionality by retaining maximum variance",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15790,9 +15790,9 @@
       "Reduced features",
       "Improved accuracy"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Multicollinearity inflates variance making coefficients unreliable"
+    "answer": 1,
+    "explanation": "Multicollinearity inflates variance making coefficients unreliable",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -15803,9 +15803,9 @@
       "Increases error",
       "Simplifies data"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Regularization penalizes complexity preventing overfitting"
+    "answer": 0,
+    "explanation": "Regularization penalizes complexity preventing overfitting",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15816,9 +15816,9 @@
       "Removing features",
       "Clustering data"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Gradient descent iteratively updates weights to minimize loss"
+    "answer": 0,
+    "explanation": "Gradient descent iteratively updates weights to minimize loss",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15829,9 +15829,9 @@
       "Controls features",
       "Controls labels"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Learning rate determines how quickly model updates weights"
+    "answer": 0,
+    "explanation": "Learning rate determines how quickly model updates weights",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15842,9 +15842,9 @@
       "Too little data always",
       "Balanced data"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Complex models learn noise leading to overfitting"
+    "answer": 1,
+    "explanation": "Complex models learn noise leading to overfitting",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15855,9 +15855,9 @@
       "Too much data",
       "High variance"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Simple models fail to capture patterns"
+    "answer": 0,
+    "explanation": "Simple models fail to capture patterns",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15868,9 +15868,9 @@
       "Perfect accuracy",
       "Variance"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Bias arises from simplifying assumptions"
+    "answer": 0,
+    "explanation": "Bias arises from simplifying assumptions",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15881,9 +15881,9 @@
       "Loss function",
       "None"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Variance measures how predictions change with data"
+    "answer": 0,
+    "explanation": "Variance measures how predictions change with data",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15894,9 +15894,9 @@
       "Reduce features",
       "Cluster data"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "It shows TP FP FN TN giving detailed evaluation"
+    "answer": 0,
+    "explanation": "It shows TP FP FN TN giving detailed evaluation",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15946,9 +15946,9 @@
       "Feature removal",
       "Clustering"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Bagging builds models independently reducing variance"
+    "answer": 0,
+    "explanation": "Bagging builds models independently reducing variance",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15959,9 +15959,9 @@
       "Random sampling",
       "Feature scaling"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Boosting trains models sequentially correcting errors"
+    "answer": 0,
+    "explanation": "Boosting trains models sequentially correcting errors",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15972,9 +15972,9 @@
       "None",
       "None"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Random forest combines trees for better performance"
+    "answer": 1,
+    "explanation": "Random forest combines trees for better performance",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15985,9 +15985,9 @@
       "Scaling features",
       "Clustering"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Feature engineering improves model input quality"
+    "answer": 0,
+    "explanation": "Feature engineering improves model input quality",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -15998,9 +15998,9 @@
       "Reduce features",
       "Normalize data"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Outliers distort models and statistics"
+    "answer": 0,
+    "explanation": "Outliers distort models and statistics",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -16011,9 +16011,9 @@
       "Removing features",
       "Clustering"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Normalization rescales values"
+    "answer": 0,
+    "explanation": "Normalization rescales values",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -16024,9 +16024,9 @@
       "Clustering",
       "Feature removal"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Standardization centers data around mean"
+    "answer": 0,
+    "explanation": "Standardization centers data around mean",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -16037,9 +16037,9 @@
       "Regression",
       "Sorting"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Clustering groups similar data points"
+    "answer": 0,
+    "explanation": "Clustering groups similar data points",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -16050,9 +16050,9 @@
       "Classification model",
       "Normalization"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "K-means groups data into clusters"
+    "answer": 0,
+    "explanation": "K-means groups data into clusters",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -16063,9 +16063,9 @@
       "Remove features",
       "Split dataset"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Elbow method determines best cluster number"
+    "answer": 0,
+    "explanation": "Elbow method determines best cluster number",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -16076,9 +16076,9 @@
       "Variance",
       "Mode"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Correlation measures dependency"
+    "answer": 0,
+    "explanation": "Correlation measures dependency",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -16089,9 +16089,9 @@
       "No relation",
       "Random"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Positive correlation means both move in same direction"
+    "answer": 0,
+    "explanation": "Positive correlation means both move in same direction",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -16102,9 +16102,9 @@
       "None",
       "None"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Negative correlation means inverse relation"
+    "answer": 0,
+    "explanation": "Negative correlation means inverse relation",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -16115,9 +16115,9 @@
       "Normalization",
       "Feature selection"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Tests assumptions using data"
+    "answer": 0,
+    "explanation": "Tests assumptions using data",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -16128,9 +16128,9 @@
       "Variance",
       "Mode"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Indicates significance of result"
+    "answer": 0,
+    "explanation": "Indicates significance of result",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -16141,9 +16141,9 @@
       "True positive",
       "True negative"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Rejecting true null hypothesis"
+    "answer": 0,
+    "explanation": "Rejecting true null hypothesis",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -16154,9 +16154,9 @@
       "True positive",
       "True negative"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Failing to reject false null"
+    "answer": 0,
+    "explanation": "Failing to reject false null",
+    "topic": "statistics"
   },
   {
     "subject": "ds",
@@ -16167,9 +16167,9 @@
       "Clustered data",
       "Static data"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Time series has time dependency"
+    "answer": 0,
+    "explanation": "Time series has time dependency",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -16180,9 +16180,9 @@
       "Classification model",
       "Normalization"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "ARIMA predicts time-based data"
+    "answer": 0,
+    "explanation": "ARIMA predicts time-based data",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -16193,9 +16193,9 @@
       "Simple model",
       "Static model"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Neural networks consist of layers of neurons"
+    "answer": 0,
+    "explanation": "Neural networks consist of layers of neurons",
+    "topic": "machine_learning"
   },
   {
     "subject": "ds",
@@ -16206,9 +16206,9 @@
       "Normalization",
       "Clustering"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Activation introduces non-linearity"
+    "answer": 0,
+    "explanation": "Activation introduces non-linearity",
+    "topic": "machine_learning"
   },
   {
     "subject": "subject",
@@ -16362,9 +16362,9 @@
       "Supplier ships directly to customer",
       "Customer picks product"
     ],
-    "answer": null,
-    "explanation": "2",
-    "topic": "In drop shipping supplier handles shipping removing need for inventory unlike traditional retail"
+    "answer": 2,
+    "explanation": "In drop shipping supplier handles shipping removing need for inventory unlike traditional retail",
+    "topic": "logistics"
   },
   {
     "subject": "ecommerce",
@@ -16570,9 +16570,9 @@
       "Designing UI",
       "Marketing"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Inventory management ensures product availability unlike payment systems"
+    "answer": 0,
+    "explanation": "Inventory management ensures product availability unlike payment systems",
+    "topic": "logistics"
   },
   {
     "subject": "ecommerce",
@@ -16635,9 +16635,9 @@
       "Payment gateway",
       "Shipping"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Checkout completes transaction unlike browsing stage"
+    "answer": 1,
+    "explanation": "Checkout completes transaction unlike browsing stage",
+    "topic": "basics"
   },
   {
     "subject": "ecommerce",
@@ -16973,9 +16973,9 @@
       "Deleting users",
       "Assigning prices"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Segmentation helps targeted marketing unlike random grouping"
+    "answer": 0,
+    "explanation": "Segmentation helps targeted marketing unlike random grouping",
+    "topic": "analytics"
   },
   {
     "subject": "ecommerce",
@@ -17649,9 +17649,9 @@
       "Increasing delays",
       "Reducing stock"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Optimization improves delivery speed and reduces cost"
+    "answer": 1,
+    "explanation": "Optimization improves delivery speed and reduces cost",
+    "topic": "logistics"
   },
   {
     "subject": "subject",
@@ -18221,9 +18221,9 @@
       "Store data offline",
       "Replace internet"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "IoT connects physical devices enabling data exchange unlike traditional internet focused on human interaction"
+    "answer": 1,
+    "explanation": "IoT connects physical devices enabling data exchange unlike traditional internet focused on human interaction",
+    "topic": "basics"
   },
   {
     "subject": "iot",
@@ -18260,9 +18260,9 @@
       "Act as sensor",
       "Replace router"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Gateway bridges local devices and cloud handling protocol translation unlike storage systems"
+    "answer": 1,
+    "explanation": "Gateway bridges local devices and cloud handling protocol translation unlike storage systems",
+    "topic": "architecture"
   },
   {
     "subject": "iot",
@@ -18364,9 +18364,9 @@
       "Act as sensors",
       "Replace devices"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Cloud platforms handle storage and analytics unlike sensors or gateways"
+    "answer": 1,
+    "explanation": "Cloud platforms handle storage and analytics unlike sensors or gateways",
+    "topic": "cloud"
   },
   {
     "subject": "iot",
@@ -18390,9 +18390,9 @@
       "Store data",
       "Process data"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "RFID tags identify objects without contact unlike encryption or storage"
+    "answer": 1,
+    "explanation": "RFID tags identify objects without contact unlike encryption or storage",
+    "topic": "technology"
   },
   {
     "subject": "iot",
@@ -18416,9 +18416,9 @@
       "Processing speed",
       "Storage capacity"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Latency measures delay between sending and receiving data"
+    "answer": 1,
+    "explanation": "Latency measures delay between sending and receiving data",
+    "topic": "performance"
   },
   {
     "subject": "iot",
@@ -18442,9 +18442,9 @@
       "Offline farming",
       "Traditional irrigation"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "IoT uses sensors for soil moisture and crop health unlike manual methods"
+    "answer": 1,
+    "explanation": "IoT uses sensors for soil moisture and crop health unlike manual methods",
+    "topic": "applications"
   },
   {
     "subject": "iot",
@@ -18468,9 +18468,9 @@
       "Data storage",
       "Network failure"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Interoperability allows different devices to communicate seamlessly"
+    "answer": 1,
+    "explanation": "Interoperability allows different devices to communicate seamlessly",
+    "topic": "concepts"
   },
   {
     "subject": "iot",
@@ -18481,9 +18481,9 @@
       "No connectivity",
       "No data"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Security is major concern due to distributed devices unlike power or connectivity assumptions"
+    "answer": 1,
+    "explanation": "Security is major concern due to distributed devices unlike power or connectivity assumptions",
+    "topic": "security"
   },
   {
     "subject": "iot",
@@ -18494,9 +18494,9 @@
       "Database",
       "System"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Digital twin represents real-world object digitally for analysis"
+    "answer": 1,
+    "explanation": "Digital twin represents real-world object digitally for analysis",
+    "topic": "concepts"
   },
   {
     "subject": "iot",
@@ -18520,9 +18520,9 @@
       "Satellite communication",
       "Fiber network"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Zigbee is low-power protocol for IoT devices unlike high-speed networks"
+    "answer": 1,
+    "explanation": "Zigbee is low-power protocol for IoT devices unlike high-speed networks",
+    "topic": "communication"
   },
   {
     "subject": "iot",
@@ -18533,9 +18533,9 @@
       "Offline maps",
       "Traditional signals"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "IoT improves traffic management using sensors unlike manual control"
+    "answer": 0,
+    "explanation": "IoT improves traffic management using sensors unlike manual control",
+    "topic": "applications"
   },
   {
     "subject": "iot",
@@ -18546,9 +18546,9 @@
       "Limiting data",
       "Reducing performance"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Scalability ensures system handles growth efficiently"
+    "answer": 1,
+    "explanation": "Scalability ensures system handles growth efficiently",
+    "topic": "concepts"
   },
   {
     "subject": "iot",
@@ -18559,9 +18559,9 @@
       "Deleting data",
       "Storing data"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Analytics extracts useful insights from IoT data"
+    "answer": 1,
+    "explanation": "Analytics extracts useful insights from IoT data",
+    "topic": "cloud"
   },
   {
     "subject": "iot",
@@ -18572,9 +18572,9 @@
       "Caching",
       "Compression"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Authentication verifies device identity preventing unauthorized access"
+    "answer": 1,
+    "explanation": "Authentication verifies device identity preventing unauthorized access",
+    "topic": "security"
   },
   {
     "subject": "iot",
@@ -18585,9 +18585,9 @@
       "Processing power",
       "Device count"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Bandwidth defines amount of data transmitted per time"
+    "answer": 1,
+    "explanation": "Bandwidth defines amount of data transmitted per time",
+    "topic": "performance"
   },
   {
     "subject": "iot",
@@ -18598,9 +18598,9 @@
       "Local storage",
       "Offline processing"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Fog computing processes data closer to devices reducing latency"
+    "answer": 1,
+    "explanation": "Fog computing processes data closer to devices reducing latency",
+    "topic": "architecture"
   },
   {
     "subject": "iot",
@@ -18611,9 +18611,9 @@
       "Offline systems",
       "Traditional machines"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "IoT enables automation and monitoring in industries"
+    "answer": 0,
+    "explanation": "IoT enables automation and monitoring in industries",
+    "topic": "applications"
   },
   {
     "subject": "iot",
@@ -18624,9 +18624,9 @@
       "Deleting data",
       "Encrypting data"
     ],
-    "answer": null,
-    "explanation": "0",
-    "topic": "Calibration ensures accurate measurements unlike replacement or encryption"
+    "answer": 0,
+    "explanation": "Calibration ensures accurate measurements unlike replacement or encryption",
+    "topic": "components"
   },
   {
     "subject": "iot",
@@ -18650,9 +18650,9 @@
       "Database only",
       "System only"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "IoT ecosystem includes devices networks and services working together"
+    "answer": 1,
+    "explanation": "IoT ecosystem includes devices networks and services working together",
+    "topic": "concepts"
   },
   {
     "subject": "iot",
@@ -18663,9 +18663,9 @@
       "Color",
       "Shape"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Low power design is critical for IoT devices unlike physical appearance"
+    "answer": 1,
+    "explanation": "Low power design is critical for IoT devices unlike physical appearance",
+    "topic": "performance"
   },
   {
     "subject": "iot",
@@ -18676,9 +18676,9 @@
       "Offline system",
       "Manual system"
     ],
-    "answer": null,
-    "explanation": "1",
-    "topic": "Real-time systems process data instantly unlike delayed systems"
+    "answer": 1,
+    "explanation": "Real-time systems process data instantly unlike delayed systems",
+    "topic": "concepts"
   },
   {
     "subject": "subject",
