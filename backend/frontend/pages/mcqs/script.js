@@ -4,7 +4,7 @@ const subject = params.get("subject");
 document.getElementById("title").innerText =
   subject.toUpperCase() + " MCQs";
 
-fetch("/pages/mcqs/all.json")
+fetch("all.json")
   .then(res => res.json())
   .then(data => {
 
