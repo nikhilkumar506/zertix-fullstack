@@ -1,34 +1,50 @@
 require("dotenv").config();
 
+const express = require("express");
 const path = require("path");
 
-// ✅ USE YOUR EXISTING APP (routes + cors already inside)
+// ✅ Use existing app (API routes already inside)
 const app = require("./src/app");
 
-// ✅ DB connect
+// ✅ DB connect (safe - app crash नहीं होगा)
 const connectDB = require("./src/config/db");
-connectDB();
+connectDB().catch(err => {
+console.log("❌ MongoDB Error:", err.message);
+});
 
-// ✅ Serve frontend
-app.use(require("express").static(path.join(__dirname, "../frontend")));
+// ✅ FRONTEND PATH (VERY IMPORTANT FIX)
+const FRONTEND_PATH = path.join(__dirname, "../frontend");
+
+// ✅ Serve all static frontend files (CSS, JS, images)
+app.use(express.static(FRONTEND_PATH));
 
 // ✅ Homepage
 app.get("/", (req, res) => {
-res.sendFile(path.join(__dirname, "../frontend/index.html"));
+res.sendFile(path.join(FRONTEND_PATH, "index.html"));
 });
 
-// 🔥 IMPORTANT FIX (THIS WAS MISSING)
-app.get("/mcq.html", (req, res) => {
-res.sendFile(path.join(__dirname, "../frontend/pages/mcqs/mcq.html"));
-});
-
-// 🔥 OPTIONAL (clean URL)
+// ✅ MCQs listing page
 app.get("/mcqs", (req, res) => {
-res.sendFile(path.join(__dirname, "../frontend/pages/mcqs/index.html"));
+res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/index.html"));
 });
 
-// ✅ Start server
-const PORT = process.env.PORT || 5000;
+// ✅ Individual MCQ page
+app.get("/mcq.html", (req, res) => {
+res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/mcq.html"));
+});
+
+// ✅ Optional: direct subject route (smart UX)
+app.get("/mcq", (req, res) => {
+res.redirect("/mcq.html?" + req.url.split("?")[1]);
+});
+
+// ✅ 404 fallback (debugging friendly)
+app.use((req, res) => {
+res.status(404).send("❌ Route Not Found");
+});
+
+// ✅ PORT (Render compatible)
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
 console.log(`🚀 Server running on port ${PORT}`);
