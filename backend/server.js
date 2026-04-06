@@ -13,8 +13,7 @@ console.log("❌ MongoDB Error:", err.message);
 });
 
 // ✅ FRONTEND PATH (VERY IMPORTANT FIX)
-const FRONTEND_PATH = path.join(__dirname, "../frontend");
-
+const FRONTEND_PATH = path.resolve(__dirname, "frontend");
 // ✅ Serve all static frontend files (CSS, JS, images)
 app.use(express.static(FRONTEND_PATH));
 
