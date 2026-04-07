@@ -23,4 +23,4 @@ for (let i = 1; i < lines.length; i++) {
 
 fs.writeFileSync("all.json", JSON.stringify(result, null, 2));
 
-console.log("✅ JSON generated");
+console.log(" JSON generated");
