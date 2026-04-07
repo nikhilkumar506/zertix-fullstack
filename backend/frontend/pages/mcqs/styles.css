@@ -1331,12 +1331,12 @@ code, pre { font-family: var(--font-mono); }
   }
 
   .question p {
-    font-size: 18px;   /* 🔥 bigger question */
+    font-size: 22px;   /* 🔥 bigger question */
     line-height: 1.5;
   }
 
   .option {
-    font-size: 16px;   /* 🔥 bigger options */
+    font-size: 20px;   /* 🔥 bigger options */
     padding: 14px;
   }
 

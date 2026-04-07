@@ -35,4 +35,4 @@ for (let i = 1; i < lines.length; i++) {
 
 fs.writeFileSync("all.json", JSON.stringify(result, null, 2));
 
-console.log("✅ Smart JSON generated");
+console.log(" Smart JSON generated");
