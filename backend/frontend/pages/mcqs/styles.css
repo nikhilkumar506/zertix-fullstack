@@ -1315,3 +1315,42 @@ code, pre { font-family: var(--font-mono); }
 .question {
   animation: fadeInUp 0.3s ease;
 }
+/* =========================
+   MCQ MOBILE FIX (IMPORTANT)
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .mcq-container {
+    padding: 10px;
+  }
+
+  .question {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .question p {
+    font-size: 18px;   /* 🔥 bigger question */
+    line-height: 1.5;
+  }
+
+  .option {
+    font-size: 16px;   /* 🔥 bigger options */
+    padding: 14px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .question p {
+    font-size: 17px;
+  }
+
+  .option {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+}
