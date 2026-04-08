@@ -3,67 +3,48 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
-// ✅ Create app FIRST
-const app = express();
+// ✅ Use existing app (API routes already inside)
+const app = require("./src/app");
 
-// ✅ DB connect (non-blocking)
+// ✅ DB connect (safe - app crash नहीं होगा)
 const connectDB = require("./src/config/db");
-connectDB()
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch(err => console.log("❌ MongoDB Error:", err.message));
-
-// ✅ Import routes AFTER app init
-try {
-  const apiApp = require("./src/app");
-  app.use("/api", apiApp);
-} catch (err) {
-  console.log("⚠️ src/app load issue:", err.message);
-}
-
-// ✅ FRONTEND PATH
-const FRONTEND_PATH = path.join(__dirname, "frontend");
-
-// ✅ Static files
-app.use(express.static(FRONTEND_PATH));
-
-// ✅ Health check (VERY IMPORTANT for Render)
-app.get("/health", (req, res) => {
-  res.status(200).send("OK");
+connectDB().catch(err => {
+console.log("❌ MongoDB Error:", err.message);
 });
+
+// ✅ FRONTEND PATH (VERY IMPORTANT FIX)
+const FRONTEND_PATH = path.resolve(__dirname, "frontend");
+// ✅ Serve all static frontend files (CSS, JS, images)
+app.use(express.static(FRONTEND_PATH));
 
 // ✅ Homepage
 app.get("/", (req, res) => {
-  res.sendFile(path.join(FRONTEND_PATH, "index.html"));
+res.sendFile(path.join(FRONTEND_PATH, "index.html"));
 });
 
-// ✅ Routes
+// ✅ MCQs listing page
 app.get("/mcqs", (req, res) => {
-  res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/index.html"));
+res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/index.html"));
 });
 
+// ✅ Individual MCQ page
 app.get("/mcq.html", (req, res) => {
-  res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/mcq.html"));
+res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/mcq.html"));
 });
 
+// ✅ Optional: direct subject route (smart UX)
 app.get("/mcq", (req, res) => {
-  res.redirect("/mcq.html" + (req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : ""));
+res.redirect("/mcq.html?" + req.url.split("?")[1]);
 });
 
-// ✅ 404
+// ✅ 404 fallback (debugging friendly)
 app.use((req, res) => {
-  res.status(404).send("❌ Route Not Found");
+res.status(404).send("❌ Route Not Found");
 });
 
-// ✅ ERROR HANDLER (important)
-app.use((err, req, res, next) => {
-  console.error("🔥 Server Error:", err);
-  res.status(500).send("Internal Server Error");
-});
-
-// ✅ PORT (Render fix)
+// ✅ PORT (Render compatible)
 const PORT = process.env.PORT || 10000;
 
-// ⚠️ IMPORTANT: 0.0.0.0 binding (fixes 521 issue)
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+app.listen(PORT, () => {
+console.log(`🚀 Server running on port ${PORT}`);
 });
