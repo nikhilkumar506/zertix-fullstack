@@ -3,90 +3,76 @@ console.log("✅ Courses.js loaded");
 import { apiGet } from "../core/api.js";
 import { startPayment } from "../payment/razorpay.js";
 
-/* ================= LOAD COURSES ================= */
 async function loadCourses() {
   const grid = document.getElementById("courseGrid");
   if (!grid) return;
 
-  grid.innerHTML = "<p class='muted'>Loading courses...</p>";
+  grid.innerHTML = "<p>Loading...</p>";
 
   try {
-    const data = await apiGet("/courses");
-
-    console.log("📦 API DATA:", data);
-
-    if (!Array.isArray(data) || data.length === 0) {
-      grid.innerHTML = "<p class='muted'>No courses found</p>";
-      return;
-    }
+    const courses = await apiGet("/courses");
 
     grid.innerHTML = "";
 
-    data.forEach(course => {
-      console.log("📦 COURSE:", course);
-
+    for (const course of courses) {
       const card = document.createElement("div");
       card.className = "course-card";
 
       card.innerHTML = `
         <h3>${course.title}</h3>
-        <p class="muted">${course.description || ""}</p>
-        <button class="primary-btn">
-          ${course.isEnrolled ? "Go to Course" : "Enroll Now"}
-        </button>
+        <p>${course.description || ""}</p>
       `;
 
-      const btn = card.querySelector("button");
+      const btn = document.createElement("button");
+      btn.innerText = "Checking...";
+      btn.className = "primary-btn";
 
-      /* ================= ENROLLED ================= */
-      if (course.isEnrolled) {
-        btn.onclick = () => {
+      card.appendChild(btn);
 
-          if (!course.slug) {
-            alert("Slug missing ❌");
-            console.error("❌ Missing slug:", course);
-            return;
+      // 🔥 CHECK PURCHASE
+      try {
+        const token = localStorage.getItem("token");
+
+        const res = await fetch(`/api/enrollment/${course._id}`, {
+          headers: {
+            Authorization: `Bearer ${token}`
           }
+        });
 
-          console.log("🚀 Opening course:", course.slug);
+        const data = await res.json();
 
-          window.location.href = `../courses/course-player.html?id=${course.slug}`;
-        };
-      }
+        // ✅ PURCHASED
+        if (data.purchased) {
+          btn.innerText = "Continue";
 
-      /* ================= NEW ENROLL ================= */
-      else {
-        btn.onclick = () => {
+          btn.onclick = () => {
+            window.location.href = `../courses/course-player.html?id=${course.slug}`;
+          };
+        }
 
-          console.log("📦 Selected:", course);
+        // ❌ NOT PURCHASED
+        else {
+          btn.innerText = "Buy Now";
 
-          // 🔥 HARD VALIDATION
-          if (!course._id || !course.slug) {
-            alert("Course data missing ❌");
-            console.error("❌ Broken course:", course);
-            return;
-          }
+          btn.onclick = () => {
+            localStorage.setItem("selectedCourseId", course._id);
+            localStorage.setItem("selectedCourseSlug", course.slug);
+            startPayment();
+          };
+        }
 
-          // 🔥 SAVE DATA
-          localStorage.setItem("selectedCourseId", course._id);
-          localStorage.setItem("selectedCourseSlug", course.slug);
-
-          console.log("💾 Stored ID:", course._id);
-          console.log("💾 Stored Slug:", course.slug);
-
-          // 💳 START PAYMENT
-          startPayment();
-        };
+      } catch (err) {
+        console.error(err);
+        btn.innerText = "Error";
       }
 
       grid.appendChild(card);
-    });
+    }
 
   } catch (err) {
-    console.error("❌ Load error:", err);
-    grid.innerHTML = "<p class='muted'>Failed to load courses</p>";
+    console.error(err);
+    grid.innerHTML = "<p>Failed to load</p>";
   }
 }
 
-/* ================= INIT ================= */
 document.addEventListener("DOMContentLoaded", loadCourses);

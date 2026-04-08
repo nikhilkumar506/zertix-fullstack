@@ -6,45 +6,58 @@ const path = require("path");
 // ✅ Use existing app (API routes already inside)
 const app = require("./src/app");
 
-// ✅ DB connect (safe - app crash नहीं होगा)
+// ✅ DB connect (safe)
 const connectDB = require("./src/config/db");
 connectDB().catch(err => {
-console.log("❌ MongoDB Error:", err.message);
+  console.log("❌ MongoDB Error:", err.message);
 });
 
-// ✅ FRONTEND PATH (VERY IMPORTANT FIX)
+// ================= API ROUTES =================
+
+// 🔥 IMPORTANT: add enrollment check route
+app.use("/api/enrollment", require("./src/routes/enrollment.check"));
+
+// (Make sure these already exist inside src/app OR add if missing)
+// app.use("/api/payment", require("./src/routes/payment.routes"));
+// app.use("/api/courses", require("./src/routes/course.routes"));
+
+
+// ================= FRONTEND =================
+
+// ✅ FRONTEND PATH
 const FRONTEND_PATH = path.resolve(__dirname, "frontend");
-// ✅ Serve all static frontend files (CSS, JS, images)
+
+// ✅ Static files
 app.use(express.static(FRONTEND_PATH));
 
 // ✅ Homepage
 app.get("/", (req, res) => {
-res.sendFile(path.join(FRONTEND_PATH, "index.html"));
+  res.sendFile(path.join(FRONTEND_PATH, "index.html"));
 });
 
-// ✅ MCQs listing page
+// ✅ MCQs listing
 app.get("/mcqs", (req, res) => {
-res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/index.html"));
+  res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/index.html"));
 });
 
-// ✅ Individual MCQ page
+// ✅ Individual MCQ
 app.get("/mcq.html", (req, res) => {
-res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/mcq.html"));
+  res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/mcq.html"));
 });
 
-// ✅ Optional: direct subject route (smart UX)
+// ✅ Smart redirect
 app.get("/mcq", (req, res) => {
-res.redirect("/mcq.html?" + req.url.split("?")[1]);
+  res.redirect("/mcq.html?" + req.url.split("?")[1]);
 });
 
-// ✅ 404 fallback (debugging friendly)
+// ================= 404 =================
 app.use((req, res) => {
-res.status(404).send("❌ Route Not Found");
+  res.status(404).send("❌ Route Not Found");
 });
 
-// ✅ PORT (Render compatible)
+// ================= SERVER =================
 const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
-console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });

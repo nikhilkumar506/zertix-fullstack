@@ -21,4 +21,7 @@ const enrollmentSchema = new mongoose.Schema({
   }
 });
 
+// ✅ Prevent duplicate purchase
+enrollmentSchema.index({ user: 1, courseId: 1 }, { unique: true });
+
 module.exports = mongoose.model("Enrollment", enrollmentSchema);
