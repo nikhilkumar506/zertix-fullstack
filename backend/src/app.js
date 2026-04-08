@@ -6,9 +6,6 @@ const courseRoutes = require("./routes/course.routes");
 const enrollmentRoutes = require("./routes/enrollment.routes");
 const paymentRoutes = require("./routes/payment.routes");
 
-// ✅ NEW: check route
-const enrollmentCheckRoute = require("./routes/enrollment.check");
-
 const app = express();
 
 // ================= CORS =================
@@ -25,11 +22,9 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/courses", courseRoutes);
 
-// OLD (keep if needed)
+// ✅ SAME ROUTE USED FOR BOTH
 app.use("/api/enroll", enrollmentRoutes);
-
-// 🔥 IMPORTANT (THIS FIXES YOUR PROBLEM)
-app.use("/api/enrollment", enrollmentCheckRoute);
+app.use("/api/enrollment", enrollmentRoutes);
 
 app.use("/api/payment", paymentRoutes);
 
