@@ -45,6 +45,6 @@ res.status(404).send("❌ Route Not Found");
 // ✅ PORT (Render compatible)
 const PORT = process.env.PORT || 10000;
 
-app.listen(PORT, "0.0.0.0", () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+app.listen(PORT, () => {
+console.log(`🚀 Server running on port ${PORT}`);
 });
