@@ -1354,3 +1354,175 @@ code, pre { font-family: var(--font-mono); }
   }
 
 }
+/* =====================================
+   ZERTIX FINAL MCQ UI (WHITE + RESPONSIVE)
+   ===================================== */
+
+/* ===== GLOBAL BACKGROUND FIX ===== */
+body {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* remove dark overlay */
+body::before {
+  display: none !important;
+}
+
+/* ===== CONTAINER ===== */
+.mcq-container,
+.quiz-main {
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* ===== QUESTION CARD ===== */
+.question,
+.question-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* ===== QUESTION TEXT ===== */
+.question p,
+.question-text {
+  font-size: 20px !important;
+  font-weight: 600;
+  color: #0f172a !important;
+  line-height: 1.6;
+}
+
+/* ===== OPTIONS ===== */
+.option,
+.option-btn {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 10px;
+  font-size: 18px !important;
+  padding: 16px !important;
+  margin-top: 10px;
+  color: #1e293b !important;
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.option:hover,
+.option-btn:hover {
+  background: #eff6ff !important;
+  border-color: #3b82f6 !important;
+  transform: translateY(-1px);
+}
+
+/* selected */
+.option.selected,
+.option-selected {
+  background: #dbeafe !important;
+  border-color: #3b82f6 !important;
+}
+
+/* correct */
+.option.correct,
+.option-correct {
+  background: #dcfce7 !important;
+  border-color: #16a34a !important;
+}
+
+/* wrong */
+.option.wrong,
+.option-wrong {
+  background: #fee2e2 !important;
+  border-color: #dc2626 !important;
+}
+
+/* ===== OPTION KEY (A,B,C,D) ===== */
+.option-key {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* ===== EXPLANATION ===== */
+.explanation,
+.explanation-box {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #ecfdf5 !important;
+  border-left: 4px solid #10b981;
+  color: #065f46;
+}
+
+/* ===== NAV / HEADER FIX ===== */
+.question-header,
+.quiz-nav {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+/* ===== REMOVE DARK COLORS ===== */
+.card,
+.sidebar-card {
+  background: #ffffff !important;
+}
+
+/* =====================================
+   MOBILE RESPONSIVE (SUPER CLEAN)
+   ===================================== */
+
+@media (max-width: 768px) {
+
+  .mcq-container,
+  .quiz-main {
+    padding: 12px;
+  }
+
+  .question,
+  .question-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .question p,
+  .question-text {
+    font-size: 22px !important;
+  }
+
+  .option,
+  .option-btn {
+    font-size: 19px !important;
+    padding: 15px !important;
+  }
+
+}
+
+/* extra small */
+@media (max-width: 480px) {
+
+  .question p {
+    font-size: 20px !important;
+  }
+
+  .option {
+    font-size: 18px !important;
+    padding: 14px !important;
+  }
+
+}
+
+/* =====================================
+   PREMIUM TOUCH (OPTIONAL ENHANCEMENT)
+   ===================================== */
+
+.question {
+  border-left: 5px solid #3b82f6;
+}
+
+/* smooth animation */
+.question,
+.option {
+  animation: fadeInUp 0.3s ease;
+}
