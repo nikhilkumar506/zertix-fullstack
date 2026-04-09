@@ -39,11 +39,16 @@ app.get("/mcq", (req, res) => {
   res.redirect("/mcq.html?" + (req.url.split("?")[1] || ""));
 });
 
-// ================= ✅ SEO ROUTE (IMPORTANT) =================
+// ================= 🔥 SEO ROUTE =================
 
 app.get("/mcqs/:subject", (req, res) => {
 
-  const subject = req.params.subject;
+  let subject = req.params.subject;
+
+  // ✅ FIX for C++
+  if (subject === "c++" || subject === "c%2B%2B") {
+    subject = "cpp";
+  }
 
   const formatted = subject
     .replace(/-/g, " ")
@@ -82,7 +87,36 @@ app.get("/mcqs/:subject", (req, res) => {
   `);
 });
 
-// ================= 404 (LAST) =================
+// ================= 🔥 SITEMAP (VERY IMPORTANT) =================
+
+app.get("/sitemap.xml", (req, res) => {
+
+  res.header("Content-Type", "application/xml");
+
+  res.send(`
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+      <url><loc>https://zertix.in/</loc></url>
+
+      <url><loc>https://zertix.in/mcqs/cpp</loc></url>
+      <url><loc>https://zertix.in/mcqs/dbms</loc></url>
+      <url><loc>https://zertix.in/mcqs/accounting</loc></url>
+      <url><loc>https://zertix.in/mcqs/os</loc></url>
+      <url><loc>https://zertix.in/mcqs/ob</loc></url>
+      <url><loc>https://zertix.in/mcqs/it</loc></url>
+      <url><loc>https://zertix.in/mcqs/cg</loc></url>
+      <url><loc>https://zertix.in/mcqs/se</loc></url>
+      <url><loc>https://zertix.in/mcqs/ot</loc></url>
+      <url><loc>https://zertix.in/mcqs/cyber</loc></url>
+      <url><loc>https://zertix.in/mcqs/datascience</loc></url>
+      <url><loc>https://zertix.in/mcqs/ecommerce</loc></url>
+      <url><loc>https://zertix.in/mcqs/iot</loc></url>
+
+    </urlset>
+  `);
+});
+
+// ================= 404 =================
 
 app.use((req, res) => {
   res.status(404).send("❌ Route Not Found");
