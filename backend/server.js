@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
-// ✅ Import app (routes already inside)
+// ✅ Import app
 const app = require("./src/app");
 
 // ✅ DB connect
@@ -24,22 +24,66 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(FRONTEND_PATH, "index.html"));
 });
 
-// MCQs page
+// MCQs main page
 app.get("/mcqs", (req, res) => {
   res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/index.html"));
 });
 
-// MCQ single
+// MCQ single page
 app.get("/mcq.html", (req, res) => {
   res.sendFile(path.join(FRONTEND_PATH, "pages/mcqs/mcq.html"));
 });
 
 // Smart redirect
 app.get("/mcq", (req, res) => {
-  res.redirect("/mcq.html?" + req.url.split("?")[1]);
+  res.redirect("/mcq.html?" + (req.url.split("?")[1] || ""));
 });
 
-// 404
+// ================= ✅ SEO ROUTE (IMPORTANT) =================
+
+app.get("/mcqs/:subject", (req, res) => {
+
+  const subject = req.params.subject;
+
+  const formatted = subject
+    .replace(/-/g, " ")
+    .toUpperCase();
+
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>${formatted} MCQ Questions with Answers | Zertix</title>
+      <meta name="description" content="Practice ${formatted} MCQs online free with answers.">
+    </head>
+
+    <body style="font-family:sans-serif; padding:20px;">
+
+      <h1>${formatted} MCQ Questions with Answers</h1>
+
+      <p>
+        Practice ${formatted} MCQs for exams, placements and interviews.
+      </p>
+
+      <h2>Free ${formatted} MCQ Test</h2>
+
+      <p>
+        These questions are important for preparation.
+      </p>
+
+      <br>
+
+      <a href="/mcq.html?subject=${subject}">
+        Start ${formatted} Test 🚀
+      </a>
+
+    </body>
+    </html>
+  `);
+});
+
+// ================= 404 (LAST) =================
+
 app.use((req, res) => {
   res.status(404).send("❌ Route Not Found");
 });
