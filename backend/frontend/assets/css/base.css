@@ -1647,3 +1647,192 @@ body {
 body {
   overflow-x: hidden;
 }
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0f172a; /* deep navy */
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Heading */
+.hero h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Highlight (premium gold feel) */
+.hero .highlight {
+  color: #facc15;
+}
+
+/* Subtitle */
+.hero p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  margin-top: 25px;
+  display: inline-block;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(99,102,241,0.4);
+}
+
+.btn-outline {
+  margin-top: 10px;
+  display: inline-block;
+  border: 2px solid #6366f1;
+  color: #6366f1;
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #6366f1;
+  color: #fff;
+}
+
+/* ===== SUBJECT CARDS ===== */
+.card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #273449;
+}
+
+/* Icon */
+.card img {
+  width: 50px;
+}
+
+/* Text */
+.card .text {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.card p {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ===== QUIZ ===== */
+.question {
+  background: #1e293b;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.option {
+  display: block;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background: #0f172a;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option:hover {
+  background: #1e293b;
+}
+
+/* Answer states */
+.correct {
+  background: #064e3b !important;
+  color: #34d399;
+}
+
+.wrong {
+  background: #7f1d1d !important;
+  color: #f87171;
+}
+
+.selected {
+  border: 2px solid #6366f1;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 90%;
+    text-align: center;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card img {
+    margin-bottom: 10px;
+  }
+
+  .card .text {
+    margin-left: 0;
+  }
+}
