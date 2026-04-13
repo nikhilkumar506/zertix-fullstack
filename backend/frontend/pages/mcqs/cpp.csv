@@ -1161,6 +1161,18 @@ cyber,What is the full form of CSP header?,Content Security Policy header,Contro
 cyber,What is the full form of DDoS mitigation?,Distributed Denial of Service mitigation,Data Distributed OS mitigation,Digital Data OS mitigation,Dynamic Denial Output mitigation,0,DDoS mitigation prevents attack impact,full_forms
 cyber,What is the full form of SSL handshake?,Secure Socket Layer handshake,Safe Socket Layer handshake,System Security Layer handshake,Secure System Layer handshake,0,SSL handshake establishes secure session,full_forms
 subject,Question,A,B,C,D,answer,explanation,topic
+cyber,Which of the below is a kind of cyber security?,Cloud Security,Application Security,Network Security,All options mentioned,3,All mentioned options are types of cybersecurity that protect data applications and networks from threats,cyber_security
+cyber,Which of the below does not constitute a cybercrime?,Refusal of service,Man in the middle,Phishing,MD5,3,MD5 is a cryptographic hash function used to verify data integrity and is not a cybercrime,cyber_security
+cyber,Which software is designed to detect and prevent viruses?,Malware,Adware,Antivirus,Both B and C,2,Antivirus software is designed to detect prevent and remove malicious software from a system,cyber_security
+cyber,Which of the following are elements of cyber security?,Application Security,Operational Security,Network Security,All of the above,3,All these elements work together to protect systems data and networks from cyber threats,cyber_security
+subject,Question,A,B,C,D,answer,explanation,topic
+cyber,Hackers usually use computer viruses for what purpose?,To log monitor each user's keystrokes,To gain access to sensitive information like user IDs and passwords,To corrupt the user's data stored in the computer system,All of the above,3,Computer viruses can log keystrokes steal sensitive data and corrupt stored data for malicious purposes,cyber_security
+cyber,Which of the following is an independent malicious program that does not require a host program?,Trojan Horse,Worm,Trap Door,Virus,1,Worm is a self-replicating malicious program that spreads without needing a host program,cyber_security
+cyber,In the CIA Triad which of the following is not included?,Availability,Confidentiality,Authenticity,Integrity,2,CIA Triad includes Confidentiality Integrity and Availability so Authenticity is not included,cyber_security
+cyber,To ensure data security we need to what?,Encrypt,Decrypt,Delete,None of the above,0,Encryption converts data into a secure coded form to protect it from unauthorized access,cyber_security
+cyber,Cyber security provides protection against what?,Against Malware,Against cyber-terrorists,Defends devices from threats,All mentioned options,3,Cyber security protects against malware cyber attacks and various online threats,cyber_security
+cyber,Which of the following are common cyber-attacks?,DDoS and Drive-by Downloads,Malware and Malvertising,Phishing and Password attacks,All of the above,3,All listed options are common cyber attacks used by hackers,cyber_security
+subject,Question,A,B,C,D,answer,explanation,topic
 ds,A dataset contains structured rows and columns stored in tables. This type of data is:,Unstructured,Structured,Semi-structured,Raw data,1,Structured data is organized in rows and columns,basics
 ds,A dataset containing text, images, and videos is classified as:,Structured,Semi-structured,Unstructured,Relational,2,Unstructured data has no predefined format,basics
 ds,A process of extracting useful information from data is called:,Data storage,Data mining,Data cleaning,Data loading,1,Data mining extracts patterns and insights,basics
