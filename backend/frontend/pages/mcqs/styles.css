@@ -1549,3 +1549,29 @@ body::before {
 .subject-arrow {
   color: #3b82f6 !important;
 }
+/* ===== FINAL MCQ SIZE FIX (NO ZOOM NEEDED) ===== */
+
+.question p,
+.question-text {
+  font-size: 22px !important;
+  line-height: 1.6;
+}
+
+.option,
+.option-btn {
+  font-size: 18px !important;
+  padding: 16px !important;
+}
+
+/* laptop optimization */
+@media (min-width: 1024px) {
+  .question p,
+  .question-text {
+    font-size: 24px !important;
+  }
+
+  .option,
+  .option-btn {
+    font-size: 19px !important;
+  }
+}
