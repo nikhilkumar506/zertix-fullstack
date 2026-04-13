@@ -1521,7 +1521,11 @@ body::before {
   border-left: 5px solid #3b82f6;
 }
 
-
+/* smooth animation */
+.question,
+.option {
+  animation: fadeInUp 0.1s ease;
+}
 /* ===== SUBJECT CARDS FIX ===== */
 
 .subject-card {
