@@ -217,20 +217,3 @@ body {
     gap: 10px;
   }
 }
-.card {
-  position: relative;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  background: linear-gradient(45deg, transparent, rgba(245,158,11,0.2));
-  opacity: 0;
-  transition: 0.4s;
-}
-
-.card:hover::before {
-  opacity: 1;
-}
