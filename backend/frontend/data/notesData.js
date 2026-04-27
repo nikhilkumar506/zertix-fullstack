@@ -1,20 +1,4 @@
 const notesData = {
-  "Class 6": [
-    "Hindi", "English", "Math", "Science",
-    "Social Science", "Sanskrit",
-    "Hindi Grammar", "GK", "Art"
-  ],
-
-  "Class 7": [
-    "Hindi", "English", "Math", "Science",
-    "Social Science", "Sanskrit", "GK"
-  ],
-
-  "Class 8": [
-    "Hindi", "English", "Math", "Science",
-    "Social Science", "Sanskrit", "GK"
-  ],
-
   "Class 9": [
     "Hindi", "English", "Math", "Science",
     "Social Science"
