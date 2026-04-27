@@ -1,43 +1,375 @@
-body {
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
-  padding: 20px;
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #fff;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== MAIN CONTAINER ===== */
+#notesContainer {
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px 16px;
+}
+
+/* ===== TITLE ===== */
 h1 {
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.class-box {
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 30px;
-  padding: 20px;
-  background: #1e293b;
-  border-radius: 12px;
 }
 
+/* ===== CLASS CARD ===== */
+.class-box {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* CLASS TITLE */
 .class-box h2 {
-  margin-bottom: 15px;
+  font-size: 20px;
   color: #facc15;
+  margin-bottom: 16px;
+  font-weight: 600;
 }
 
+/* ===== SUBJECT GRID ===== */
 .subjects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
+/* ===== SUBJECT BUTTON ===== */
 .subjects a {
-  padding: 10px 15px;
+  font-size: 13px;
+  padding: 8px 12px;
+
   background: #334155;
   border-radius: 8px;
+
   text-decoration: none;
   color: white;
-  transition: 0.3s;
+
+  transition: all 0.25s ease;
 }
 
+/* HOVER */
 .subjects a:hover {
   background: #facc15;
   color: black;
+  transform: scale(1.05);
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 600px) {
+
+  #notesContainer {
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .class-box {
+    padding: 26px;
+  }
+
+  .class-box h2 {
+    font-size: 22px;
+  }
+
+  .subjects a {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+/* ===== LAPTOP ===== */
+@media (min-width: 1024px) {
+
+  #notesContainer {
+    max-width: 1400px;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .class-box {
+    padding: 30px;
+  }
+
+  .class-box h2 {
+    font-size: 24px;
+  }
+
+  .subjects {
+    gap: 14px;
+  }
+
+  .subjects a {
+    font-size: 16px;
+    padding: 12px 18px;
+    border-radius: 10px;
+  }
+}
+
+/* ===== LARGE SCREENS ===== */
+@media (min-width: 1400px) {
+
+  #notesContainer {
+    max-width: 1600px;
+  }
+
+  .subjects a {
+    font-size: 17px;
+    padding: 14px 22px;
+  }
+}
+/* ===== FIX CENTER LAYOUT ===== */
+#notesContainer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== CLASS BOX FULL WIDTH FIX ===== */
+.class-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+}
+
+/* ===== SUBJECTS STACK (1 BELOW 1) ===== */
+.subjects {
+  display: grid;
+  grid-template-columns: 1fr;   /* 🔥 1 per row */
+  gap: 10px;
+  width: 100%;
+}
+
+/* ===== SUBJECT BUTTON FULL WIDTH ===== */
+.subjects a {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  font-size: 16px;
+  padding: 12px;
+
+  border-radius: 10px;
+}
+
+/* ===== TABLET (2 per row) ===== */
+@media (min-width: 600px) {
+  .subjects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== LAPTOP (3 per row) ===== */
+@media (min-width: 1024px) {
+  .subjects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== BIG SCREEN (4 per row) ===== */
+@media (min-width: 1400px) {
+  .subjects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #fff;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CONTAINER ===== */
+#notesContainer {
+  width: 100%;
+  max-width: 1300px;
+  padding: 40px 20px;
+}
+
+/* ===== TITLE ===== */
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 40px;
+
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ===== CLASS CARD ===== */
+.class-box {
+  position: relative;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(16px);
+
+  padding: 28px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+
+  transition: 0.4s ease;
+}
+
+/* glow border effect */
+.class-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(45deg, transparent, rgba(250,204,21,0.2));
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.class-box:hover::before {
+  opacity: 1;
+}
+
+.class-box:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+/* ===== CLASS TITLE ===== */
+.class-box h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+
+  color: #facc15;
+}
+
+/* ===== SUBJECT GRID ===== */
+.subjects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* ===== SUBJECT BUTTON ===== */
+.subjects a {
+  display: block;
+  text-align: center;
+
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #334155, #1e293b);
+  color: #fff;
+
+  text-decoration: none;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER MAGIC */
+.subjects a:hover {
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: #000;
+
+  transform: translateY(-2px) scale(1.05);
+
+  box-shadow: 0 10px 25px rgba(250,204,21,0.4);
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 600px) {
+
+  .subjects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subjects a {
+    font-size: 16px;
+  }
+}
+
+/* ===== LAPTOP ===== */
+@media (min-width: 1024px) {
+
+  h1 {
+    font-size: 46px;
+  }
+
+  .subjects {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .subjects a {
+    font-size: 17px;
+    padding: 14px;
+  }
+}
+
+/* ===== LARGE SCREEN ===== */
+@media (min-width: 1400px) {
+
+  .subjects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .subjects a {
+    font-size: 18px;
+    padding: 16px;
+  }
 }
