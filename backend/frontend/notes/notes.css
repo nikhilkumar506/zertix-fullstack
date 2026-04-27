@@ -1,0 +1,43 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.class-box {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #1e293b;
+  border-radius: 12px;
+}
+
+.class-box h2 {
+  margin-bottom: 15px;
+  color: #facc15;
+}
+
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subjects a {
+  padding: 10px 15px;
+  background: #334155;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.subjects a:hover {
+  background: #facc15;
+  color: black;
+}

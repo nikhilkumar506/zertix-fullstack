@@ -126,7 +126,7 @@ accounting,Which account is debited when goods are purchased for cash?,Purchase 
 accounting,What is goodwill in accounting?,Tangible asset,Intangible asset,Fictitious asset,Current asset,1,Goodwill is intangible; it lacks physical form; not fictitious or current,basics
 accounting,Which financial statement shows financial position?,Income Statement,Balance Sheet,Cash Flow Statement,Trial Balance,1,Balance sheet shows assets/liabilities; income statement shows performance,financial_statements
 accounting,Which method values inventory at latest purchase price?,FIFO,LIFO,Weighted Average,Specific Identification,1,LIFO assumes latest items sold first; FIFO uses earliest; weighted average averages cost,inventory
-accounting,What is the normal balance of liabilities?,Debit,Credit,Both,None,1,Liabilities increase with credit; assets use debit,basics
+accounting,What is the normal balance of liabilities?,Debit,Credit,Both,,1,Liabilities increase with credit; assets use debit,basics
 accounting,Which account records personal withdrawals by owner?,Capital,Drawings,Expense,Revenue,1,Drawings reduce owner's capital; not an expense or revenue,ledger
 accounting,Which concept ensures expenses are recorded in same period as revenues?,Accrual,Matching,Going Concern,Consistency,1,Matching aligns expenses with revenues; accrual is broader recognition principle,basics
 accounting,What is depreciation?,Increase in asset value,Decrease in asset value over time,Expense recognition only,Cash outflow,1,Depreciation represents reduction in asset value; not necessarily cash outflow,depreciation
@@ -150,7 +150,7 @@ accounting,What happens when depreciation is charged on an asset?,Asset value in
 accounting,Which account is debited when rent is paid in advance?,Rent Expense,Prepaid Rent,Cash,Capital,1,Prepaid rent is an asset because benefit is future; expense is recognized later,adjustments
 accounting,Which financial statement shows cash inflows and outflows?,Balance Sheet,Income Statement,Cash Flow Statement,Trial Balance,2,Cash flow statement records actual cash movements; others focus on accrual or position,financial_statements
 accounting,Which method assumes inventory sold is from earliest purchases?,LIFO,FIFO,Weighted Average,Standard Cost,1,FIFO assumes oldest inventory is sold first; LIFO assumes latest,inventory
-accounting,What is the normal balance of revenue accounts?,Debit,Credit,None,Both,1,Revenue increases owner's equity and is recorded on credit side,basics
+accounting,What is the normal balance of revenue accounts?,Debit,Credit,,Both,1,Revenue increases owner's equity and is recorded on credit side,basics
 accounting,Which error affects only one account?,Error of omission,Error of commission,Error of principle,Error of complete reversal,1,Error of commission involves incorrect posting in one account; omission affects both sides equally,errors
 accounting,Which concept ensures consistency in accounting methods?,Matching,Consistency,Accrual,Going Concern,1,Consistency ensures same accounting methods across periods for comparability,basics
 accounting,What is the effect of accrued expenses?,Increase asset,Increase liability,Decrease expense,No effect,1,Accrued expenses are unpaid obligations → liabilities increase,adjustments
@@ -158,7 +158,7 @@ accounting,Which account is credited when interest is received?,Interest Expense
 accounting,Which ratio indicates efficiency in using inventory?,Current Ratio,Quick Ratio,Inventory Turnover Ratio,Debt Ratio,2,Inventory turnover shows how frequently inventory is sold; others measure liquidity/solvency,ratios
 accounting,What is the purpose of a balance sheet?,Show profit,Show financial position,Show cash flow,Show expenses,1,Balance sheet shows assets, liabilities, equity at a point in time,financial_statements
 accounting,Which account type is 'Unearned Revenue'?,Asset,Liability,Expense,Capital,1,Unearned revenue represents obligation to provide service → liability,adjustments
-accounting,Which method results in higher profit in inflation?,FIFO,LIFO,Weighted Average,None,0,FIFO uses older lower costs → higher profit; LIFO uses higher recent costs reducing profit,inventory
+accounting,Which method results in higher profit in inflation?,FIFO,LIFO,Weighted Average,Queue,0,FIFO uses older lower costs → higher profit; LIFO uses higher recent costs reducing profit,inventory
 accounting,What is the effect of drawings on capital?,Increase capital,Decrease capital,No effect,Increase liability,1,Drawings reduce owner's equity; not a liability,ledger
 accounting,Which principle states losses should be recorded immediately?,Consistency,Conservatism,Matching,Accrual,1,Conservatism records expected losses but not unrealized gains,basics
 accounting,Which account is debited for credit purchase?,Purchase,Cash,Sales,Capital,0,Purchase increases → debited; cash not involved in credit purchase,ledger
@@ -172,7 +172,7 @@ accounting,What is a fictitious asset?,Real asset,Intangible asset,Deferred expe
 accounting,Which error does not affect trial balance?,Error of omission,Error of posting,Error of casting,Error of balancing,0,Omission keeps both sides equal; others disturb balance,trial_balance
 accounting,Which account is debited when salary is outstanding?,Salary Expense,Outstanding Salary,Cash,Capital,0,Expense is incurred → debited; liability is credited,adjustments
 accounting,Which ratio excludes inventory?,Current Ratio,Quick Ratio,Debt Ratio,Profit Ratio,1,Quick ratio excludes inventory for stricter liquidity check,ratios
-accounting,Which method spreads depreciation unevenly?,Straight Line,Declining Balance,Units Method,None,1,Declining balance applies higher depreciation earlier,depreciation
+accounting,Which method spreads depreciation unevenly?,Straight Line,Declining Balance,Units Method,,1,Declining balance applies higher depreciation earlier,depreciation
 accounting,Which account is credited for commission earned?,Commission Expense,Commission Income,Cash,Debtors,1,Income accounts are credited; cash is debited,ledger
 accounting,Which concept separates business from owner?,Entity Concept,Going Concern,Matching,Accrual,0,Entity concept treats business separately from owner,basics
 accounting,Which account is debited for cash sales?,Cash,Sales,Debtors,Capital,0,Cash increases → debited; sales credited,ledger
@@ -187,7 +187,7 @@ accounting,Which concept assumes indefinite life of business?,Matching,Consisten
 accounting,Which account is credited for discount received?,Discount Allowed,Discount Received,Cash,Expense,1,Discount received is income → credited,ledger
 accounting,Which account type is 'Outstanding Rent'?,Asset,Liability,Expense,Revenue,1,Outstanding rent is unpaid obligation → liability,adjustments
 accounting,Which ratio indicates operational efficiency?,Inventory Turnover,Current Ratio,Debt Ratio,Quick Ratio,0,Inventory turnover reflects efficiency in managing stock,ratios
-accounting,Which method considers salvage value?,Straight Line,Declining Balance,Both,None,2,Both methods may consider residual value in calculation,depreciation
+accounting,Which method considers salvage value?,Straight Line,Declining Balance,Both,,2,Both methods may consider residual value in calculation,depreciation
 accounting,Which account is debited for bad debts written off?,Bad Debts,Debtors,Cash,Revenue,0,Bad debts expense is recognized → debited,adjustments
 accounting,Which concept ensures comparability?,Consistency,Accrual,Matching,Entity,0,Consistency allows comparison across periods,basics
 accounting,Which account is credited when loan is taken?,Loan Account,Cash,Capital,Revenue,0,Loan increases liability → credited; cash debited,ledger
@@ -202,11 +202,11 @@ accounting,Which account is debited when goods are purchased on credit?,Purchase
 accounting,What is the effect of prepaid expenses on profit?,Increase profit,Decrease profit,No effect,Increase liability,0,Prepaid expenses reduce current expenses increasing profit,adjustments
 accounting,Which statement shows owner's equity changes?,Balance Sheet,Income Statement,Cash Flow,Statement of Changes in Equity,3,This statement tracks equity changes over period unlike others,financial_statements
 accounting,Which account is credited when salary is paid?,Cash,Salary Expense,Capital,Liability,0,Cash decreases → credited; expense is debited,ledger
-accounting,Which method allocates higher depreciation in early years?,Straight Line,Declining Balance,Units Method,None,1,Declining balance accelerates depreciation initially,depreciation
+accounting,Which method allocates higher depreciation in early years?,Straight Line,Declining Balance,Units Method,,1,Declining balance accelerates depreciation initially,depreciation
 accounting,Which ratio measures ability to pay immediate liabilities?,Current Ratio,Quick Ratio,Debt Ratio,Profit Ratio,1,Quick ratio excludes inventory for immediate liquidity,ratios
 accounting,Which account type is 'Bills Receivable'?,Asset,Liability,Expense,Income,0,Bills receivable are amounts to be received → asset,ledger
 accounting,Which concept assumes stable currency value?,Money Measurement,Going Concern,Matching,Consistency,0,Money measurement assumes currency stability ignoring inflation,basics
-accounting,Which error occurs when transaction is recorded in wrong account?,Error of omission,Error of commission,Error of principle,None,1,Wrong account posting is error of commission,errors
+accounting,Which error occurs when transaction is recorded in wrong account?,Error of omission,Error of commission,Error of principle,,1,Wrong account posting is error of commission,errors
 accounting,Which account is debited when rent is unpaid?,Rent Expense,Cash,Capital,Revenue,0,Expense is incurred → debited; liability credited,adjustments
 accounting,Which financial statement shows net profit?,Balance Sheet,Income Statement,Cash Flow,Trial Balance,1,Income statement calculates profit or loss,financial_statements
 accounting,Which ratio measures efficiency in asset usage?,Asset Turnover Ratio,Current Ratio,Debt Ratio,Quick Ratio,0,Asset turnover shows revenue generated from assets,ratios
@@ -215,7 +215,7 @@ accounting,Which concept ensures expenses recorded in correct period?,Matching,C
 accounting,Which account is debited when capital is withdrawn?,Drawings,Cash,Capital,Expense,0,Drawings reduce capital and are debited,ledger
 accounting,Which ratio measures solvency?,Current Ratio,Debt Equity Ratio,Quick Ratio,Inventory Ratio,1,Debt equity ratio measures long-term solvency,ratios
 accounting,Which account type is 'Accrued Income'?,Asset,Liability,Expense,Revenue,0,Accrued income is receivable → asset,adjustments
-accounting,Which method spreads cost evenly?,Straight Line,Declining Balance,Units,None,0,Straight line gives equal depreciation each year,depreciation
+accounting,Which method spreads cost evenly?,Straight Line,Declining Balance,Units,,0,Straight line gives equal depreciation each year,depreciation
 accounting,Which account is credited when loan is repaid?,Loan,Cash,Capital,Expense,1,Cash decreases → credited; loan debited,ledger
 accounting,Which ratio excludes prepaid expenses?,Quick Ratio,Current Ratio,Debt Ratio,Profit Ratio,0,Quick ratio excludes prepaid expenses for liquidity,ratios
 accounting,Which account is debited for discount allowed?,Discount Allowed,Cash,Revenue,Capital,0,Discount allowed is expense → debited,ledger
@@ -224,7 +224,7 @@ accounting,Which account is credited for bad debts recovered?,Bad Debt,Cash,Inco
 accounting,Which statement shows liabilities?,Income Statement,Balance Sheet,Cash Flow,Trial Balance,1,Balance sheet lists liabilities and assets,financial_statements
 accounting,Which ratio measures profitability?,Net Profit Ratio,Current Ratio,Debt Ratio,Quick Ratio,0,Net profit ratio indicates profitability efficiency,ratios
 accounting,Which account is debited for purchase return?,Purchase Return,Cash,Sales,Debtors,0,Purchase return reduces purchases → debited,ledger
-accounting,Which method is based on production units?,Straight Line,Units Method,Declining Balance,None,1,Units method depends on usage output,depreciation
+accounting,Which method is based on production units?,Straight Line,Units Method,Declining Balance,,1,Units method depends on usage output,depreciation
 accounting,Which account is credited for commission income?,Commission Income,Cash,Expense,Capital,0,Income increases → credited,ledger
 accounting,Which ratio shows liquidity?,Current Ratio,Debt Ratio,Profit Ratio,Inventory Ratio,0,Current ratio measures short-term liquidity,ratios
 accounting,Which account is debited for accrued expenses?,Expense,Cash,Capital,Revenue,0,Expense is incurred → debited,adjustments
@@ -240,7 +240,7 @@ accounting,Which concept ensures comparability?,Consistency,Matching,Entity,Accr
 accounting,Which account is credited for drawings?,Cash,Drawings,Capital,Expense,0,Cash decreases → credited,ledger
 accounting,Which ratio measures profitability per sales?,Gross Profit Ratio,Current Ratio,Debt Ratio,Quick Ratio,0,Gross profit ratio measures profitability from sales,ratios
 accounting,Which account is debited for interest received?,Cash,Interest Income,Expense,Capital,0,Cash increases → debited,ledger
-accounting,Which method gives declining depreciation?,Straight Line,Declining Balance,Units,None,1,Declining balance reduces value faster early,depreciation
+accounting,Which method gives declining depreciation?,Straight Line,Declining Balance,Units,,1,Declining balance reduces value faster early,depreciation
 accounting,Which account is credited for rent received?,Rent Income,Cash,Expense,Capital,0,Rent income increases → credited,ledger
 accounting,Which ratio measures liquidity quickly?,Quick Ratio,Current Ratio,Debt Ratio,Profit Ratio,0,Quick ratio excludes inventory,ratios
 accounting,Which account is debited for salary paid?,Salary Expense,Cash,Capital,Revenue,0,Expense increases → debited,ledger
@@ -249,7 +249,7 @@ accounting,Which account is credited for cash sales?,Sales,Cash,Debtors,Purchase
 accounting,Which ratio measures asset efficiency?,Asset Turnover,Current Ratio,Debt Ratio,Quick Ratio,0,Shows efficiency of asset usage,ratios
 accounting,Which account is debited for goods returned?,Purchase Return,Cash,Sales,Debtors,0,Purchase return reduces purchases,ledger
 accounting,Which account is credited for outstanding income?,Income,Cash,Expense,Capital,0,Income earned → credited,adjustments
-accounting,Which method spreads cost equally?,Straight Line,Declining Balance,Units,None,0,Equal depreciation allocation,depreciation
+accounting,Which method spreads cost equally?,Straight Line,Declining Balance,Units,,0,Equal depreciation allocation,depreciation
 accounting,Which account is debited for bad debts?,Bad Debts,Cash,Revenue,Capital,0,Expense recognized → debited,adjustments
 accounting,Which ratio measures solvency long-term?,Debt Equity Ratio,Current Ratio,Quick Ratio,Inventory Ratio,0,Measures long-term financial stability,ratios
 accounting,Which account is credited for interest income?,Interest Income,Cash,Expense,Capital,0,Income credited; cash debited,ledger
@@ -257,7 +257,7 @@ accounting,Which concept records revenue when earned?,Accrual,Matching,Consisten
 accounting,Which account is debited for capital introduced?,Cash,Capital,Expense,Revenue,0,Cash increases → debited,ledger
 accounting,Which ratio measures profitability overall?,Net Profit Ratio,Current Ratio,Debt Ratio,Quick Ratio,0,Net profit ratio shows overall profitability,ratios
 accounting,Which account is credited for discount received?,Discount Received,Cash,Expense,Capital,0,Discount received is income,ledger
-accounting,Which method is production-based?,Units Method,Straight Line,Declining,None,0,Depends on asset usage,depreciation
+accounting,Which method is production-based?,Units Method,Straight Line,Declining,,0,Depends on asset usage,depreciation
 accounting,Which account is debited for accrued income?,Accrued Income,Cash,Revenue,Expense,0,Asset increases → debited,adjustments
 accounting,Which ratio measures liquidity?,Current Ratio,Debt Ratio,Profit Ratio,Inventory Ratio,0,Measures short-term obligations ability,ratios
 accounting,Which account is credited for prepaid expense?,Asset,Liability,Cash,Expense,0,Prepaid expense is asset initially,adjustments
@@ -278,7 +278,7 @@ os,What is context switching?,Switching CPU to another process,Loading OS,Execut
 os,Which memory is fastest?,Cache,RAM,Disk,Virtual memory,0,Cache memory is fastest among listed types,memory
 os,Which system call is used to create a process?,fork(),exec(),wait(),exit(),0,fork() creates a new child process in Unix-like systems,system_calls
 os,What is a semaphore?,Scheduling tool,Memory unit,Synchronization variable,File,2,Semaphore is used for process synchronization,synchronization
-os,Which technique is used in virtual memory?,Paging only,Segmentation only,Both paging and segmentation,None,2,Modern OS use both techniques for memory management,memory
+os,Which technique is used in virtual memory?,Paging only,Segmentation only,Both paging and segmentation,,2,Modern OS use both techniques for memory management,memory
 os,What is the purpose of CPU scheduling?,Increase CPU idle time,Maximize CPU utilization,Reduce processes,Increase waiting time,1,Scheduling aims to maximize CPU efficiency,process_scheduling
 os,Which state follows running state?,Ready,Blocked,Terminated,All of these,3,After running, process may go to ready, blocked, or terminated,process_states
 os,Which scheduling is time-sharing based?,FCFS,SJF,Round Robin,Priority,2,Round Robin uses time quantum for sharing CPU,scheduling
@@ -297,9 +297,9 @@ os,Which memory is used for buffering?,Cache,Disk,Virtual,ROM,0,Cache memory buf
 os,Which OS manages file system?,Compiler,Operating System,Assembler,Loader,1,OS handles file operations and storage,file_system
 os,Which is NOT a process state?,Ready,Waiting,Executing,Compiling,3,Compiling is not a process state,process_states
 os,Which technique loads process partially?,Paging,Segmentation,Virtual memory,Swapping,2,Virtual memory allows partial loading,memory
-os,Which OS supports multitasking?,Batch OS,Single user OS,Time-sharing OS,None,2,Time-sharing supports multitasking,types
+os,Which OS supports multitasking?,Batch OS,Single user OS,Time-sharing OS,,2,Time-sharing supports multitasking,types
 os,Which call terminates process?,fork(),exec(),exit(),wait(),2,exit() ends process execution,system_calls
-os,Which memory is temporary?,ROM,Cache,Disk,None,1,Cache is temporary fast memory,memory
+os,Which memory is temporary?,ROM,Cache,Disk,,1,Cache is temporary fast memory,memory
 os,Which condition leads to starvation?,Fair scheduling,Priority scheduling,Round Robin,FCFS,1,Priority scheduling may starve low-priority tasks,scheduling
 os,Which algorithm avoids deadlock?,Banker’s,SJF,FCFS,Round Robin,0,Banker’s algorithm ensures safe state,deadlock
 os,Which is NOT scheduling criteria?,Throughput,Turnaround time,CPU utilization,Compilation time,3,Compilation time is unrelated to scheduling,scheduling
@@ -310,7 +310,7 @@ os,Which resource causes deadlock?,CPU only,Memory only,I/O only,Multiple resour
 os,Which scheduling uses priority?,FCFS,SJF,Priority scheduling,Round Robin,2,Priority scheduling assigns CPU based on priority,scheduling
 os,Which concept avoids race condition?,Deadlock,Semaphore,Thrashing,Paging,1,Semaphores ensure synchronized access,synchronization
 os,Which OS manages interrupts?,Compiler,Operating System,Loader,Assembler,1,OS handles interrupts for process execution,basics
-os,Which scheduling is preemptive?,SJF (non),FCFS,Round Robin,None,2,Round Robin preempts after time slice,scheduling
+os,Which scheduling is preemptive?,SJF (non),FCFS,Round Robin,,2,Round Robin preempts after time slice,scheduling
 os,Which is NOT memory management technique?,Paging,Segmentation,Scheduling,Swapping,2,Scheduling is CPU management, not memory,memory
 os,Which OS is used in embedded systems?,Batch OS,Real-time OS,Distributed OS,Time-sharing OS,1,Embedded systems require RTOS,types
 os,Which scheduling gives fairness?,FCFS,SJF,Round Robin,Priority,2,Round Robin distributes CPU equally,scheduling
@@ -321,7 +321,7 @@ os,Which state represents waiting for an event to occur?,Ready,Running,Blocked,T
 os,Which scheduling algorithm is best for time-sharing systems?,FCFS,SJF,Round Robin,Priority,2,Round Robin ensures fair CPU sharing with time quantum,scheduling
 os,Which memory management scheme suffers from external fragmentation?,Paging,Segmentation,Virtual Memory,Cache,1,Segmentation uses variable sizes leading to external fragmentation,memory_management
 os,Which is not a type of OS?,Batch,Distributed,Multiprogramming,Compiler,3,Compiler is a software tool not an OS,type
-os,Which scheduling algorithm is preemptive?,FCFS,SJF(non),Round Robin,None,2,Round Robin uses time slicing making it preemptive,scheduling
+os,Which scheduling algorithm is preemptive?,FCFS,SJF(non),Round Robin,,2,Round Robin uses time slicing making it preemptive,scheduling
 os,Which condition is necessary for deadlock?,Mutual exclusion,Preemption allowed,No circular wait,All processes independent,0,Mutual exclusion is one of the necessary conditions for deadlock,deadlock
 os,Which data structure is used for ready queue?,Stack,Queue,Tree,Graph,1,Processes are scheduled in a queue structure,process_management
 os,What is the main goal of multiprogramming?,Increase idle time,Maximize CPU utilization,Reduce processes,Increase memory,1,Multiprogramming keeps CPU busy by switching processes,process_management
@@ -329,7 +329,7 @@ os,Which memory is volatile?,ROM,Disk,Cache,RAM,3,RAM loses data when power is o
 os,Which algorithm selects shortest job first?,FCFS,SJF,Round Robin,Priority,1,SJF selects process with minimum burst time,scheduling
 os,Which OS supports resource sharing across network?,Batch OS,Distributed OS,Single user OS,Real-time OS,1,Distributed OS manages multiple systems over network,types
 os,Which scheduling metric measures completion time?,Waiting time,Turnaround time,Response time,Throughput,1,Turnaround time = completion - arrival time,scheduling
-os,Which file system structure uses tree hierarchy?,Single level,Two level,Hierarchical,None,2,Hierarchical file systems use tree-like directory structure,file_system
+os,Which file system structure uses tree hierarchy?,Single level,Two level,Hierarchical,,2,Hierarchical file systems use tree-like directory structure,file_system
 os,Which memory technique loads pages on demand?,Demand Paging,Segmentation,Swapping,Overlay,0,Demand paging loads pages only when required,memory
 os,Which is not CPU scheduling criteria?,Throughput,Turnaround time,Waiting time,Disk speed,3,Disk speed is unrelated to CPU scheduling,scheduling
 os,Which process state indicates execution?,Ready,Running,Blocked,Waiting,1,Running state means CPU is executing the process,process_states
@@ -340,7 +340,7 @@ os,Which scheduling may cause starvation?,Priority,SJF,Round Robin,All,3,All can
 os,Which memory is fastest access?,Register,Cache,RAM,Disk,0,Registers are fastest as they are inside CPU,memory
 os,Which OS manages hardware abstraction?,Compiler,Operating System,Loader,Assembler,1,OS abstracts hardware details for users,basics
 os,Which condition prevents deadlock?,Mutual exclusion,Hold and wait,Preemption allowed,Circular wait,2,Allowing preemption can prevent deadlock,deadlock
-os,Which file allocation method uses linked list?,Contiguous,Linked,Indexed,None,1,Linked allocation connects blocks using pointers,file_system
+os,Which file allocation method uses linked list?,Contiguous,Linked,Indexed,,1,Linked allocation connects blocks using pointers,file_system
 os,Which scheduling uses smallest remaining time?,FCFS,SJF,SRTF,Priority,2,SRTF is preemptive version of SJF,scheduling
 os,Which memory type is secondary storage?,Cache,RAM,Disk,Register,2,Disk is non-volatile secondary storage,memory
 os,Which OS type is interactive?,Batch,Time-sharing,Real-time,Distributed,1,Time-sharing allows user interaction,types
@@ -350,56 +350,56 @@ os,Which state occurs after I/O completion?,Blocked,Ready,Running,Terminated,1,P
 os,Which concept avoids race condition?,Semaphore,Deadlock,Thrashing,Paging,0,Semaphore ensures controlled access,synchronization
 os,Which scheduling is simplest?,FCFS,SJF,Round Robin,Priority,0,FCFS is easiest to implement,scheduling
 os,Which OS uses distributed resources?,Batch,Distributed,Time-sharing,Real-time,1,Distributed OS manages multiple systems,types
-os,Which memory issue occurs in segmentation?,Internal fragmentation,External fragmentation,Thrashing,None,1,Segmentation leads to external fragmentation,memory
+os,Which memory issue occurs in segmentation?,Internal fragmentation,External fragmentation,Thrashing,,1,Segmentation leads to external fragmentation,memory
 os,Which process state is initial?,New,Ready,Running,Blocked,0,Process starts in new state,process_states
 os,Which algorithm uses quantum time?,Round Robin,FCFS,SJF,Priority,0,Round Robin divides CPU time equally,scheduling
 os,Which OS type is fastest response?,Batch,Time-sharing,Real-time,Distributed,2,Real-time OS responds instantly,types
 os,Which condition is not for deadlock?,Mutual exclusion,Hold and wait,Preemption allowed,Circular wait,2,Deadlock requires no preemption,deadlock
 os,Which memory is used for execution?,Disk,Cache,RAM,ROM,2,RAM stores active processes,memory
 os,Which scheduling improves response time?,FCFS,SJF,Round Robin,Priority,2,Round Robin improves responsiveness,scheduling
-os,Which file system stores metadata?,FAT,NTFS,Both,None,2,Both file systems store metadata differently,file_system
-os,Which OS provides virtual memory?,Batch,Multiprogramming,Modern OS,None,2,Modern OS implement virtual memory,memory
+os,Which file system stores metadata?,FAT,NTFS,Both,,2,Both file systems store metadata differently,file_system
+os,Which OS provides virtual memory?,Batch,Multiprogramming,Modern OS,,2,Modern OS implement virtual memory,memory
 os,Which scheduling uses burst time?,SJF,FCFS,Round Robin,Priority,0,SJF depends on burst time,scheduling
 os,Which process is executing?,Ready,Running,Blocked,Waiting,1,Running means CPU execution,process_states
-os,Which OS type supports multiple CPUs?,Single user,Multiprocessing,Batch,None,1,Multiprocessing uses multiple CPUs,types
+os,Which OS type supports multiple CPUs?,Single user,Multiprocessing,Batch,,1,Multiprocessing uses multiple CPUs,types
 os,Which memory stores OS permanently?,RAM,ROM,Cache,Register,1,ROM stores firmware permanently,memory
 os,Which scheduling avoids convoy effect?,Round Robin,FCFS,SJF,Priority,0,RR avoids long wait due to fairness,scheduling
-os,Which OS feature supports multitasking?,Batch,Time-sharing,Single user,None,1,Time-sharing allows multiple tasks,types
-os,Which deadlock condition forms cycle?,Circular wait,Hold and wait,Mutual exclusion,None,0,Circular wait creates deadlock cycle,deadlock
-os,Which memory technique swaps processes?,Paging,Swapping,Segmentation,None,1,Swapping moves processes between disk and RAM,memory
+os,Which OS feature supports multitasking?,Batch,Time-sharing,Single user,,1,Time-sharing allows multiple tasks,types
+os,Which deadlock condition forms cycle?,Circular wait,Hold and wait,Mutual exclusion,,0,Circular wait creates deadlock cycle,deadlock
+os,Which memory technique swaps processes?,Paging,Swapping,Segmentation,,1,Swapping moves processes between disk and RAM,memory
 os,Which OS manages file permissions?,Compiler,Operating System,Assembler,Loader,1,OS enforces file security,file_system
 os,Which scheduling reduces waiting time?,SJF,FCFS,Round Robin,Priority,0,SJF minimizes waiting time,scheduling
 os,Which system call waits for child?,fork(),exec(),wait(),exit(),2,wait() pauses parent until child finishes,system_calls
 os,Which memory stores frequently used data?,Cache,RAM,Disk,ROM,0,Cache speeds up frequent access,memory
-os,Which OS type is embedded?,Real-time,Batch,Distributed,None,0,Embedded systems use RTOS,types
+os,Which OS type is embedded?,Real-time,Batch,Distributed,,0,Embedded systems use RTOS,types
 os,Which scheduling is non-preemptive?,FCFS,SRTF,Round Robin,Priority(pre),0,FCFS does not interrupt running process,scheduling
 os,Which state after creation?,New,Ready,Running,Blocked,1,Process moves to ready after creation,process_states
 os,Which OS manages interrupts?,Compiler,Operating System,Loader,Assembler,1,OS handles interrupts and scheduling,basics
-os,Which memory suffers internal fragmentation?,Paging,Segmentation,Swapping,None,0,Paging wastes space within fixed blocks,memory
+os,Which memory suffers internal fragmentation?,Paging,Segmentation,Swapping,,0,Paging wastes space within fixed blocks,memory
 os,Which scheduling uses priorities?,Priority,SJF,FCFS,Round Robin,0,Priority scheduling selects based on priority,scheduling
-os,Which file system is fastest access?,Contiguous,Linked,Indexed,None,0,Contiguous allocation provides fastest access,file_system
-os,Which OS type is scalable?,Distributed,Batch,Single,None,0,Distributed OS scales across systems,types
+os,Which file system is fastest access?,Contiguous,Linked,Indexed,,0,Contiguous allocation provides fastest access,file_system
+os,Which OS type is scalable?,Distributed,Batch,Single,,0,Distributed OS scales across systems,types
 os,Which scheduling improves fairness?,Round Robin,FCFS,SJF,Priority,0,RR ensures equal CPU distribution,scheduling
 os,Which memory supports multitasking?,RAM,ROM,Cache,Disk,0,RAM holds multiple processes,memory
-os,Which OS supports parallelism?,Multiprocessing,Batch,Single,None,0,Multiprocessing executes parallel tasks,types
+os,Which OS supports parallelism?,Multiprocessing,Batch,Single,,0,Multiprocessing executes parallel tasks,types
 os,Which scheduling reduces response time?,Round Robin,SJF,FCFS,Priority,0,RR provides faster response,scheduling
 os,Which OS component loads programs?,Loader,Compiler,Assembler,Linker,0,Loader loads programs into memory,basics
 os,Which memory stores instructions?,RAM,Cache,Disk,ROM,0,RAM holds program instructions during execution,memory
 os,Which scheduling is optimal theoretically?,SJF,FCFS,Priority,RR,0,SJF gives optimal waiting time,scheduling
 os,Which OS ensures security?,Operating System,Compiler,Loader,Assembler,0,OS enforces authentication and access control,basics
-os,Which deadlock condition is avoidable?,Hold and wait,Mutual exclusion,Circular wait,None,0,Hold and wait can be prevented by allocation strategy,deadlock
-os,Which file system uses index blocks?,Indexed,Linked,Contiguous,None,0,Indexed allocation uses index blocks,file_system
+os,Which deadlock condition is avoidable?,Hold and wait,Mutual exclusion,Circular wait,,0,Hold and wait can be prevented by allocation strategy,deadlock
+os,Which file system uses index blocks?,Indexed,Linked,Contiguous,,0,Indexed allocation uses index blocks,file_system
 os,Which scheduling handles dynamic priorities?,Priority,SJF,FCFS,RR,0,Priority scheduling can adjust dynamically,scheduling
 os,Which OS manages processes?,Kernel,Compiler,Loader,Assembler,0,Kernel controls process execution,basics
 os,Which memory is persistent?,Disk,RAM,Cache,Register,0,Disk stores data permanently,memory
 os,Which scheduling avoids starvation?,Round Robin,SJF,Priority,FCFS,0,RR ensures fairness,scheduling
-os,Which OS type is network-based?,Distributed,Batch,Single,None,0,Distributed OS works over networks,types
-os,Which memory technique uses segments?,Segmentation,Paging,Swapping,None,0,Segmentation divides memory into logical parts,memory
+os,Which OS type is network-based?,Distributed,Batch,Single,,0,Distributed OS works over networks,types
+os,Which memory technique uses segments?,Segmentation,Paging,Swapping,,0,Segmentation divides memory into logical parts,memory
 os,Which scheduling uses shortest remaining?,SRTF,SJF,FCFS,RR,0,SRTF is preemptive shortest job,scheduling
-os,Which OS supports multi-user?,Multi-user OS,Single user,Batch,None,0,Multi-user OS allows multiple users,types
+os,Which OS supports multi-user?,Multi-user OS,Single user,Batch,,0,Multi-user OS allows multiple users,types
 os,Which memory is used for buffering?,Cache,RAM,Disk,ROM,0,Cache buffers frequently accessed data,memory
 os,Which scheduling prevents deadlock?,Banker’s,FCFS,SJF,RR,0,Banker’s ensures safe state,deadlock
-os,Which OS is interactive?,Time-sharing,Batch,Real-time,None,0,Time-sharing supports interaction,types
+os,Which OS is interactive?,Time-sharing,Batch,Real-time,,0,Time-sharing supports interaction,types
 os,Which process state is waiting?,Blocked,Ready,Running,Terminated,0,Blocked waits for event,process_states
 os,Which scheduling is fair?,Round Robin,SJF,Priority,FCFS,0,RR ensures equal CPU time,scheduling
 os,Which memory is closest to CPU?,Register,Cache,RAM,Disk,0,Registers are inside CPU,memory
@@ -416,44 +416,44 @@ ob,Which conflict type is beneficial?,Functional conflict,Dysfunctional conflict
 ob,Which theory focuses on job satisfaction factors?,Maslow,Herzberg,Vroom,McClelland,1,Herzberg distinguishes hygiene and motivators affecting satisfaction,motivation
 ob,Which group is informal?,Department team,Friendship group,Committee,Task force,1,Friendship groups form naturally without formal structure,groups
 ob,Which personality trait shows emotional stability?,Neuroticism,Extroversion,Agreeableness,Conscientiousness,0,Low neuroticism indicates emotional stability,personality
-ob,Which learning type occurs through observation?,Classical conditioning,Operant conditioning,Social learning,None,2,Social learning involves observing others’ behavior,learning
+ob,Which learning type occurs through observation?,Classical conditioning,Operant conditioning,Social learning,,2,Social learning involves observing others’ behavior,learning
 ob,Which motivation theory uses needs hierarchy?,Maslow,Vroom,Adams,McGregor,0,Maslow organized needs into hierarchy,motivation
 ob,Which leadership focuses on change?,Transactional,Transformational,Laissez-faire,Autocratic,1,Transformational leaders inspire change and innovation,leadership
 ob,Which is NOT a communication barrier?,Noise,Language,Feedback,Perception,2,Feedback improves communication, not a barrier,communication
 ob,Which structure is flexible?,Mechanistic,Organic,Bureaucratic,Hierarchical,1,Organic structure is adaptable and flexible,organization_structure
-ob,Which stress is positive?,Distress,Eustress,Chronic stress,None,1,Eustress motivates performance,stress
+ob,Which stress is positive?,Distress,Eustress,Chronic stress,,1,Eustress motivates performance,stress
 ob,Which factor motivates employees most?,Salary,Recognition,Rules,Control,1,Recognition is a strong intrinsic motivator,motivation
 ob,Which leadership involves team decision?,Autocratic,Democratic,Laissez-faire,Bureaucratic,1,Democratic leadership involves participation,leadership
 ob,Which communication flows upward?,Manager to employee,Employee to manager,Peer to peer,External,1,Upward communication goes from subordinates to superiors,communication
 ob,Which personality dimension shows sociability?,Neuroticism,Extroversion,Agreeableness,Openness,1,Extroversion relates to social interaction,personality
 ob,Which theory emphasizes fairness?,Maslow,Herzberg,Equity theory,Vroom,2,Equity theory focuses on fairness in rewards,motivation
-ob,Which group role maintains harmony?,Task role,Maintenance role,Individual role,None,1,Maintenance roles ensure group cohesion,groups
-ob,Which conflict arises from roles?,Role conflict,Task conflict,Process conflict,None,0,Role conflict occurs due to incompatible expectations,conflict
+ob,Which group role maintains harmony?,Task role,Maintenance role,Individual role,,1,Maintenance roles ensure group cohesion,groups
+ob,Which conflict arises from roles?,Role conflict,Task conflict,Process conflict,,0,Role conflict occurs due to incompatible expectations,conflict
 ob,Which leadership is authority-based?,Autocratic,Democratic,Laissez-faire,Transformational,0,Autocratic leadership centralizes authority,leadership
-ob,Which perception error is stereotyping?,Generalization,Bias,Judgment,None,0,Stereotyping generalizes traits to groups,perception
+ob,Which perception error is stereotyping?,Generalization,Bias,Judgment,,0,Stereotyping generalizes traits to groups,perception
 ob,Which learning reinforces behavior?,Punishment,Reinforcement,Extinction,Observation,1,Reinforcement strengthens behavior,learning
 ob,Which culture emphasizes innovation?,Clan culture,Adhocracy culture,Market culture,Hierarchy culture,1,Adhocracy supports creativity and innovation,organization_culture
-ob,Which stress source is workload?,Personal stress,Work stress,Environmental stress,None,1,Work stress arises from job demands,stress
+ob,Which stress source is workload?,Personal stress,Work stress,Environmental stress,,1,Work stress arises from job demands,stress
 ob,Which theory focuses on achievement needs?,Maslow,McClelland,Herzberg,Vroom,1,McClelland identified need for achievement,motivation
 ob,Which communication is documented?,Oral,Written,Non-verbal,Informal,1,Written communication provides record,communication
-ob,Which structure is rigid?,Organic,Mechanistic,Flexible,None,1,Mechanistic structure is rigid and formal,organization_structure
-ob,Which leadership inspires followers?,Transactional,Transformational,Autocratic,None,1,Transformational leaders inspire vision,leadership
+ob,Which structure is rigid?,Organic,Mechanistic,Flexible,,1,Mechanistic structure is rigid and formal,organization_structure
+ob,Which leadership inspires followers?,Transactional,Transformational,Autocratic,,1,Transformational leaders inspire vision,leadership
 ob,Which personality trait shows discipline?,Conscientiousness,Agreeableness,Openness,Neuroticism,0,Conscientiousness reflects discipline and organization,personality
-ob,Which group size affects performance?,Small groups,Large groups,Both,None,2,Both sizes impact interaction and efficiency,groups
+ob,Which group size affects performance?,Small groups,Large groups,Both,,2,Both sizes impact interaction and efficiency,groups
 ob,Which theory uses expectancy?,Vroom theory,Maslow,Herzberg,Equity,0,Vroom’s expectancy theory links effort to outcomes,motivation
-ob,Which conflict harms performance?,Functional,Dysfunctional,Constructive,None,1,Dysfunctional conflict reduces productivity,conflict
+ob,Which conflict harms performance?,Functional,Dysfunctional,Constructive,,1,Dysfunctional conflict reduces productivity,conflict
 ob,Which communication is body language?,Verbal,Non-verbal,Written,Formal,1,Non-verbal includes gestures and expressions,communication
-ob,Which culture values teamwork?,Clan culture,Market culture,Hierarchy,None,0,Clan culture emphasizes collaboration,organization_culture
-ob,Which stress leads to burnout?,Eustress,Chronic stress,Acute stress,None,1,Chronic stress causes burnout over time,stress
-ob,Which leadership delegates authority?,Autocratic,Democratic,Laissez-faire,None,2,Laissez-faire gives maximum freedom,leadership
-ob,Which perception is quick judgment?,Selective perception,Stereotyping,Halo effect,None,0,Selective perception filters information quickly,perception
-ob,Which motivation is internal?,Extrinsic,Intrinsic,External,None,1,Intrinsic motivation comes from within, motivation
-ob,Which group decision method uses consensus?,Brainstorming,Voting,Consensus,None,2,Consensus ensures agreement among members,groups
-ob,Which communication barrier is noise?,Physical barrier,Semantic barrier,Psychological barrier,None,0,Noise disrupts communication physically,communication
-ob,Which structure has clear hierarchy?,Organic,Flat,Hierarchical,None,2,Hierarchical structure defines authority levels,organization_structure
-ob,Which leadership uses rewards?,Transformational,Transactional,Autocratic,None,1,Transactional leaders use rewards and punishments,leadership
-ob,Which personality trait shows creativity?,Openness,Conscientiousness,Agreeableness,None,0,Openness relates to creativity and innovation,personality
-ob,Which conflict is about task content?,Task conflict,Role conflict,Process conflict,None,0,Task conflict relates to work itself,conflict
+ob,Which culture values teamwork?,Clan culture,Market culture,Hierarchy,,0,Clan culture emphasizes collaboration,organization_culture
+ob,Which stress leads to burnout?,Eustress,Chronic stress,Acute stress,,1,Chronic stress causes burnout over time,stress
+ob,Which leadership delegates authority?,Autocratic,Democratic,Laissez-faire,,2,Laissez-faire gives maximum freedom,leadership
+ob,Which perception is quick judgment?,Selective perception,Stereotyping,Halo effect,,0,Selective perception filters information quickly,perception
+ob,Which motivation is internal?,Extrinsic,Intrinsic,External,,1,Intrinsic motivation comes from within, motivation
+ob,Which group decision method uses consensus?,Brainstorming,Voting,Consensus,,2,Consensus ensures agreement among members,groups
+ob,Which communication barrier is noise?,Physical barrier,Semantic barrier,Psychological barrier,,0,Noise disrupts communication physically,communication
+ob,Which structure has clear hierarchy?,Organic,Flat,Hierarchical,,2,Hierarchical structure defines authority levels,organization_structure
+ob,Which leadership uses rewards?,Transformational,Transactional,Autocratic,,1,Transactional leaders use rewards and punishments,leadership
+ob,Which personality trait shows creativity?,Openness,Conscientiousness,Agreeableness,,0,Openness relates to creativity and innovation,personality
+ob,Which conflict is about task content?,Task conflict,Role conflict,Process conflict,,0,Task conflict relates to work itself,conflict
 subject,Question,A,B,C,D,answer,explanation,topic
 ob,An employee continues to perform better after receiving praise from the manager. This is an example of:,Punishment,Negative reinforcement,Positive reinforcement,Extinction,2,Positive reinforcement strengthens behavior by rewarding it; punishment reduces behavior; extinction removes reinforcement,learning
 ob,Statement: Employees resist change due to fear of the unknown. This reflects:,Motivation issue,Perception barrier,Resistance to change,Leadership failure,2,Fear of uncertainty is a classic reason for resistance to change in organizations,change_management
@@ -484,12 +484,12 @@ ob,A new employee imitates senior employees’ work style. This is:,Conditioning
 ob,A worker feels underpaid compared to peers. This leads to:,Motivation increase,Equity tension,Job satisfaction,Commitment,1,Perceived inequity creates dissatisfaction,motivation
 ob,A team uses open communication and mutual respect. This reflects:,Low cohesion,High trust,Conflict avoidance,Hierarchy,1,Trust enhances collaboration and effectiveness,groups
 ob,A leader who involves employees in decision-making demonstrates:,Autocratic style,Democratic style,Laissez-faire style,Bureaucratic style,1,Democratic leadership encourages participation,leadership
-ob,A sudden change in environment causing stress is:,Chronic stress,Acute stress,Eustress,None,1,Acute stress arises from sudden pressures,stress
+ob,A sudden change in environment causing stress is:,Chronic stress,Acute stress,Eustress,,1,Acute stress arises from sudden pressures,stress
 ob,A person judges others based on a single trait. This is:,Halo effect,Stereotyping,Projection,Selective perception,0,Halo effect influences overall judgment based on one trait,perception
-ob,Employees motivated by personal growth exhibit:,Extrinsic motivation,Intrinsic motivation,External control,None,1,Intrinsic motivation comes from internal satisfaction,motivation
+ob,Employees motivated by personal growth exhibit:,Extrinsic motivation,Intrinsic motivation,External control,,1,Intrinsic motivation comes from internal satisfaction,motivation
 ob,A group avoids risk to maintain harmony. This leads to:,Innovation,Groupthink,Conflict resolution,Efficiency,1,Groupthink suppresses critical thinking,groups
 ob,A leader sets clear structure and expectations. This behavior is:,Initiating structure,Consideration,Delegation,Participation,0,Initiating structure defines roles and tasks clearly,leadership
-ob,An organization adapts quickly to change due to flexible structure. This is:,Mechanistic,Organic,Bureaucratic,None,1,Organic structures are flexible and adaptive,organization_structure
+ob,An organization adapts quickly to change due to flexible structure. This is:,Mechanistic,Organic,Bureaucratic,,1,Organic structures are flexible and adaptive,organization_structure
 ob,A worker’s attitude toward job includes beliefs, feelings, and behavior. This reflects:,Personality,Attitude,Perception,Learning,1,Attitude consists of cognitive, affective, behavioral components,attitude
 subject,Question,A,B,C,D,answer,explanation,topic
 itwd,A webpage fails to adapt on smaller screens because fixed pixel widths are used. The issue can be solved by:,Using tables,Using responsive units like %,Removing CSS,Using inline styles,1,Responsive units like % or vw allow layout to adjust across devices while fixed px breaks responsiveness,css
@@ -513,14 +513,14 @@ itwd,A CSS flex container aligns items horizontally using:,justify-content,align
 itwd,A database loses data consistency due to update anomalies. Root cause is:,Normalization,Redundancy,Indexing,Constraints,1,Redundancy causes anomalies in update/delete,dbms
 itwd,A hyperlink opens in new tab using attribute:,target="_blank",href,rel,src,0,target="_blank" opens link in new tab,html
 itwd,A JavaScript loop runs infinitely due to:,Missing condition,Wrong variable,Extra function,Array usage,0,Infinite loops occur when exit condition is missing,javascript
-itwd,A CSS property display:none will:,Hide element completely,Reduce opacity,Move element,Resize element,0,display:none removes element from layout flow,css
+itwd,A CSS property display: will:,Hide element completely,Reduce opacity,Move element,Resize element,0,display: removes element from layout flow,css
 itwd,A database transaction ensures:,Speed,Consistency,Security,Backup,1,Transactions maintain ACID consistency,dbms
 itwd,A webpage loads slowly due to large images. Solution is:,Use compression,Add CSS,Use JS,Remove HTML,0,Optimizing images improves load speed,performance
 itwd,A JavaScript event bubbling means:,Event stops,Event propagates upward,Event deletes,Event loops,1,Events propagate from child to parent,javascript
 itwd,A CSS position:fixed element is relative to:,Parent,Viewport,Body,Screen size,1,Fixed position is relative to viewport,css
 itwd,A database foreign key ensures:,Uniqueness,Relationship,Sorting,Deletion,1,Foreign keys link tables,dbms
 itwd,A webpage becomes unresponsive due to excessive JS. This affects:,UX,SEO,DBMS,Network,0,Heavy JS reduces user experience,javascript
-itwd,A CSS margin collapse occurs when:,Two margins overlap,Padding applied,Border used,None,0,Vertical margins collapse into one,css
+itwd,A CSS margin collapse occurs when:,Two margins overlap,Padding applied,Border used,,0,Vertical margins collapse into one,css
 itwd,A SQL query fails due to syntax error. This is detected during:,Execution,Compilation,Parsing,Rendering,2,Parser checks syntax before execution,dbms
 subject,Question,A,B,C,D,answer,explanation,topic
 itwd,A webpage renders differently across browsers due to inconsistent CSS support. The most reliable fix is:,Use inline CSS,Use vendor prefixes,Remove CSS,Use only HTML,1,Vendor prefixes ensure compatibility across different browser engines,css
@@ -541,7 +541,7 @@ itwd,A database query retrieves only distinct values using:,SELECT *,SELECT DIST
 itwd,A webpage requires scalable typography. The best unit is:,px,em,%,rem,3,rem is scalable and consistent across layouts,css
 itwd,A JavaScript array method to add element at end is:,push(),pop(),shift(),slice(),0,push() adds element to end,javascript
 itwd,A CSS position:relative moves element based on:,Viewport,Parent,Itself,Screen,2,Relative positioning shifts element from its normal position,css
-itwd,A secure login system should use:,Plain text,Encryption,Local storage,None,1,Encryption protects sensitive data,security
+itwd,A secure login system should use:,Plain text,Encryption,Local storage,,1,Encryption protects sensitive data,security
 itwd,A database table linking two others represents:,Primary key,Foreign key,Join table,Index,2,Join table connects many-to-many relationships,dbms
 itwd,A webpage script fails due to undefined variable. This is a:,Syntax error,Runtime error,Logical error,Compilation error,1,Undefined variables cause runtime errors,javascript
 itwd,A CSS grid layout defines rows using:,grid-column,grid-row,grid-template-rows,grid-area,2,grid-template-rows defines row sizes,css
@@ -553,26 +553,26 @@ itwd,A script prevents default form submission using:,preventDefault(),stop(),ca
 itwd,A network protocol for file transfer is:,HTTP,FTP,SMTP,TCP,1,FTP is used for file transfer,networking
 itwd,A database index primarily improves:,Insert speed,Delete speed,Read speed,Storage,2,Indexes optimize data retrieval,dbms
 itwd,A CSS hover effect is triggered using:,hover,:hover,onhover,hover(),1,:hover applies style on mouse hover,css
-itwd,A JavaScript setTimeout executes:,Immediately,After delay,Before load,None,1,setTimeout runs after specified delay,javascript
+itwd,A JavaScript setTimeout executes:,Immediately,After delay,Before load,,1,setTimeout runs after specified delay,javascript
 itwd,A webpage SEO improves by using:,Div tags,Semantic tags,Inline CSS,Tables,1,Semantic tags improve SEO ranking,html
 itwd,A database normalization reduces:,Speed,Redundancy,Security,Complexity,1,Normalization removes duplicate data,dbms
 itwd,A CSS z-index controls:,Width,Height,Stacking order,Color,2,z-index controls element layering,css
 itwd,A JavaScript event listener is attached using:,addEventListener(),attachEvent(),listen(),onEvent(),0,addEventListener binds events,javascript
-itwd,A network latency affects:,Speed,Security,Storage,None,0,Latency impacts response time,networking
+itwd,A network latency affects:,Speed,Security,Storage,,0,Latency impacts response time,networking
 itwd,A SQL WHERE clause filters:,Columns,Rows,Tables,Indexes,1,WHERE filters rows based on condition,dbms
-itwd,A CSS padding affects:,Outer space,Inner space,Border,None,1,Padding controls inner spacing,css
+itwd,A CSS padding affects:,Outer space,Inner space,Border,,1,Padding controls inner spacing,css
 itwd,A JavaScript loop that checks condition first is:,do-while,while,forEach,map,1,while checks before execution,javascript
-itwd,A webpage caching improves:,Security,Speed,Storage,None,1,Caching reduces load time,performance
+itwd,A webpage caching improves:,Security,Speed,Storage,,1,Caching reduces load time,performance
 itwd,A database constraint prevents null values:,PRIMARY KEY,UNIQUE,NOT NULL,FOREIGN KEY,2,NOT NULL disallows empty values,dbms
 itwd,A CSS property float is used for:,Positioning,Alignment,Layout flow,Animation,2,float controls element flow,javascript
 itwd,A JavaScript fetch API is used for:,DOM,Network requests,Styling,Loops,1,fetch handles HTTP requests,javascript
-itwd,A network firewall provides:,Speed,Security,Storage,None,1,Firewall protects against unauthorized access,networking
+itwd,A network firewall provides:,Speed,Security,Storage,,1,Firewall protects against unauthorized access,networking
 itwd,A SQL ORDER BY sorts data in:,Columns,Rows,Tables,Indexes,1,ORDER BY arranges rows,javascript
 itwd,A CSS media query applies styles based on:,Device type,Screen size,Resolution,All of these,3,Media queries support responsive design,css
-itwd,A JavaScript variable hoisting occurs with:,let,const,var,None,2,var variables are hoisted,javascript
+itwd,A JavaScript variable hoisting occurs with:,let,const,var,,2,var variables are hoisted,javascript
 itwd,A database join combines:,Columns,Tables,Rows,Indexes,1,JOIN merges data from tables,dbms
-itwd,A webpage uses lazy loading to:,Improve speed,Improve security,Reduce CSS,None,0,Lazy loading loads content only when needed,performance
-itwd,A CSS property opacity controls:,Visibility,Transparency,Position,None,1,opacity defines transparency,css
+itwd,A webpage uses lazy loading to:,Improve speed,Improve security,Reduce CSS,,0,Lazy loading loads content only when needed,performance
+itwd,A CSS property opacity controls:,Visibility,Transparency,Position,,1,opacity defines transparency,css
 subject,Question,A,B,C,D,answer,explanation,topic
 dbms,A table stores duplicate records causing update anomalies. The root problem is:,Normalization,Redundancy,Indexing,Partitioning,1,Redundancy leads to anomalies during insert/update/delete operations,normalization
 dbms,A database schema defines:,Data structure,Data values,User interface,Query language,0,Schema describes structure of database not actual data,basics
@@ -594,7 +594,7 @@ dbms,A database view is:,Physical table,Virtual table,Index,Schema,1,View is a v
 dbms,A trigger executes:,Manually,Automatically,Periodically,Randomly,1,Triggers execute automatically on events,triggers
 dbms,A schema change affects:,Structure only,Data only,Queries only,Users only,0,Schema defines structure,basics
 dbms,A transaction commit means:,Undo changes,Save changes,Delete changes,Ignore changes,1,Commit permanently saves changes,transactions
-dbms,A table without primary key leads to:,Duplication,Uniqueness,Integrity,None,0,Without primary key duplicates can exist,keys
+dbms,A table without primary key leads to:,Duplication,Uniqueness,Integrity,,0,Without primary key duplicates can exist,keys
 dbms,A SQL DELETE removes:,Table,Rows,Columns,Schema,1,DELETE removes rows from table,sql
 dbms,A SQL DROP command removes:,Rows,Columns,Table,Index,2,DROP deletes entire table,sql
 dbms,A SQL UPDATE modifies:,Table,Rows,Columns,Schema,1,UPDATE changes existing rows,sql
@@ -609,14 +609,14 @@ dbms,A cursor is used to:,Fetch row-by-row,Join tables,Sort data,Delete records,
 dbms,A stored procedure is:,Query,Function,Program,Table,2,Stored procedure is precompiled SQL program,advanced
 dbms,A transaction isolation prevents:,Concurrency,Inconsistency,Indexing,Partitioning,1,Isolation ensures consistency in concurrent transactions,transactions
 dbms,A database lock ensures:,Concurrency,Integrity,Security,Performance,1,Locks prevent data inconsistency,transactions
-dbms,A shared lock allows:,Read only,Write only,Both,None,0,Shared lock allows reading but not writing,transactions
-dbms,A exclusive lock allows:,Read only,Write only,Both,None,2,Exclusive lock allows both read and write,transactions
+dbms,A shared lock allows:,Read only,Write only,Both,,0,Shared lock allows reading but not writing,transactions
+dbms,A exclusive lock allows:,Read only,Write only,Both,,2,Exclusive lock allows both read and write,transactions
 dbms,A database system ensures:,Security,Integrity,Consistency,All of these,3,DBMS ensures all these properties,basics
 dbms,A join without condition produces:,Inner join,Outer join,Cross join,Self join,2,Cross join produces cartesian product,sql
-dbms,A self join is used when:,Same table joins itself,Two tables join,Three tables join,None,0,Self join joins table with itself,sql
-dbms,A left join returns:,Matching rows,All left rows,All right rows,None,1,Left join returns all rows from left table,sql
-dbms,A right join returns:,All left rows,All right rows,Matching rows,None,1,Right join returns all rows from right table,sql
-dbms,A full join returns:,Left only,Right only,All rows,None,2,Full join returns all rows from both tables,sql
+dbms,A self join is used when:,Same table joins itself,Two tables join,Three tables join,,0,Self join joins table with itself,sql
+dbms,A left join returns:,Matching rows,All left rows,All right rows,,1,Left join returns all rows from left table,sql
+dbms,A right join returns:,All left rows,All right rows,Matching rows,,1,Right join returns all rows from right table,sql
+dbms,A full join returns:,Left only,Right only,All rows,,2,Full join returns all rows from both tables,sql
 dbms,A database system is designed for:,Data storage,Data retrieval,Data manipulation,All of these,3,DBMS handles all data operations,basics
 dbms,A primary key cannot be:,Unique,Null,Indexed,Key,1,Primary key cannot be null,keys
 dbms,A composite key contains:,One attribute,Multiple attributes,Foreign key,Index,1,Composite key has multiple columns,keys
@@ -629,7 +629,7 @@ dbms,Choosing one candidate key as primary key implies the others become:,Foreig
 dbms,A relation having composite primary key means:,Single column key,Multiple columns combined as key,Foreign key present,Index created,1,Composite key uses more than one attribute to uniquely identify tuples,keys
 dbms,Partial dependency occurs when:,Non-key depends on part of composite key,Key depends on non-key,All attributes depend fully on key,Transitive dependency exists,0,Partial dependency violates 2NF,normalization
 dbms,Transitive dependency implies:,Non-key depends on another non-key,Key depends on key,All attributes depend directly on key,Only primary key exists,0,Transitive dependency violates 3NF,normalization
-dbms,A relation is in 2NF but not in 3NF when:,Partial dependency exists,Transitive dependency exists,Both dependencies exist,None exist,1,2NF removes partial but not transitive dependency,normalization
+dbms,A relation is in 2NF but not in 3NF when:,Partial dependency exists,Transitive dependency exists,Both dependencies exist, exist,1,2NF removes partial but not transitive dependency,normalization
 dbms,BCNF is stricter than 3NF because it requires:,All determinants are super keys,No nulls allowed,No composite keys,All keys are foreign,0,BCNF removes anomalies where 3NF may still allow some,normalization
 dbms,Decomposition is lossless if:,Join restores original relation,No redundancy remains,All attributes are keys,All tables have PK,0,Lossless join ensures no information loss after decomposition,normalization
 dbms,Dependency preservation ensures:,All FDs can be enforced without join,No redundancy,No nulls,No indexes,0,All functional dependencies are preserved in decomposed tables,normalization
@@ -638,7 +638,7 @@ dbms,Comparisons with NULL using = operator return:,True,False,Unknown,Error,2,A
 dbms,COUNT(*) differs from COUNT(column) because:,Counts rows vs non-null values,Counts columns vs rows,Counts distinct vs all,No difference,0,COUNT(column) ignores NULLs,sql
 dbms,An index on multiple columns is called:,Clustered index,Composite index,Bitmap index,Unique index,1,Composite index covers multiple columns,indexing
 dbms,A clustered index organizes:,Table rows physically,Only pointers,Only keys,Only views,0,Clustered index sorts and stores rows physically,indexing
-dbms,A non-clustered index stores:,Data rows,Pointers to data rows,Only keys,None,1,Non-clustered index holds pointers to actual data,indexing
+dbms,A non-clustered index stores:,Data rows,Pointers to data rows,Only keys,,1,Non-clustered index holds pointers to actual data,indexing
 dbms,Selectivity of an index refers to:,Number of rows,Uniqueness of values,Size of table,Query count,1,Higher selectivity means more distinct values,indexing
 dbms,Bitmap index is best for:,High cardinality columns,Low cardinality columns,Primary keys,Foreign keys,1,Bitmap index suits columns with few distinct values,indexing
 dbms,A covering index means:,Index contains all needed columns,Index covers table,Index is unique,Index is clustered,0,Query can be answered from index alone,indexing
@@ -670,7 +670,7 @@ dbms,Write-ahead logging requires:,Log before data write,Data before log,No logg
 dbms,Checkpointing helps in:,Faster recovery,More locks,More redundancy,Indexing,0,Reduces recovery work by marking safe points,transactions
 dbms,UNDO operation is used when:,Transaction aborted,Committed,Read-only,Indexed,0,Reverts effects of incomplete transactions,transactions
 dbms,REDO operation is used when:,Reapply committed changes,Undo changes,Delete logs,Rebuild index,0,Ensures durability after crash,transactions
-dbms,Functional dependency X→Y means:,X determines Y,Y determines X,X equals Y,None,0,Y depends on X functionally,normalization
+dbms,Functional dependency X→Y means:,X determines Y,Y determines X,X equals Y,,0,Y depends on X functionally,normalization
 dbms,Closure of attributes helps to:,Find candidate keys,Sort data,Join tables,Create index,0,Used to compute keys and dependencies,normalization
 dbms,Armstrong’s axioms include:,Reflexivity,Augmentation,Transitivity,All of these,3,They define inference rules for FDs,normalization
 dbms,Multivalued dependency leads to:,4NF requirement,3NF requirement,2NF requirement,BCNF requirement,0,4NF handles MVDs,normalization
@@ -687,7 +687,7 @@ dbms,Sharding refers to:,Distributed horizontal partitioning,Indexing,Clustering
 dbms,Replication improves:,Availability and read scaling,Write speed only,Consistency only,Security only,0,Copies data across nodes,distributed
 dbms,Strong consistency ensures:,Immediate visibility of writes,Eventual visibility,No visibility,Delayed writes,0,All nodes see latest data,distributed
 dbms,Eventual consistency means:,Updates propagate over time,Immediate consistency,No consistency,Only local consistency,0,System converges eventually,distributed
-dbms,CAP theorem states you can have at most:,Two of consistency, availability, partition tolerance,All three,None,Only one,0,Trade-offs exist under partition,distributed
+dbms,CAP theorem states you can have at most:,Two of consistency, availability, partition tolerance,All three,,Only one,0,Trade-offs exist under partition,distributed
 dbms,OLTP systems are optimized for:,Frequent small transactions,Large analytical queries,Reporting only,Backups,0,Designed for transactional workloads,systems
 dbms,OLAP systems are optimized for:,Analytics and aggregates,Transactions only,Indexing only,Networking,0,Used for reporting and analysis,systems
 dbms,Star schema uses:,Fact table with dimension tables,Only fact tables,Only dimensions,No keys,0,Common in data warehousing,warehouse
@@ -699,7 +699,7 @@ dbms,Natural key is:,Business meaningful key,Artificial key,Index key,Hash key,0
 dbms,Referential action ON DELETE CASCADE means:,Delete child rows,Restrict delete,Set null,Ignore,0,Deletes dependent rows automatically,keys
 dbms,ON UPDATE CASCADE means:,Propagate updates to child,Restrict updates,Set null,Ignore,0,Maintains referential integrity on updates,keys
 dbms,Check constraint example enforces:,Value range,Uniqueness,Foreign relation,Indexing,0,Validates column values,keys
-dbms,Default constraint provides:,Default value when none supplied,Uniqueness,Foreign relation,Indexing,0,Auto-fills missing values,keys
+dbms,Default constraint provides:,Default value when  supplied,Uniqueness,Foreign relation,Indexing,0,Auto-fills missing values,keys
 dbms,Prepared statements help in:,Prevent SQL injection and reuse plan,Speed only,Sorting,Indexing,0,Parameterization improves security and performance,security
 dbms,SQL injection occurs when:,User input alters query,Index missing,Join used,Group by used,0,Unsanitized input changes query logic,security
 dbms,Normalization trade-off may reduce:,Write anomalies,Read performance,Integrity,Consistency,1,More joins can slow reads,normalization
@@ -715,15 +715,15 @@ dbms,Normalization level to remove repeating groups is:,1NF,2NF,3NF,BCNF,0,1NF e
 dbms,Atomic attribute means:,Indivisible value,Composite value,Multivalued,Derived,0,Cannot be broken further,normalization
 dbms,Derived attribute example is:,Age from DOB,Name,ID,Address,0,Computed from other attributes,basics
 dbms,Weak entity depends on:,Owner entity,Itself,Index,View,0,Identified by owner’s key,ermodel
-dbms,Total participation means:,Every entity participates,Some participate,None participate,Optional only,0,All entities must participate,ermodel
+dbms,Total participation means:,Every entity participates,Some participate, participate,Optional only,0,All entities must participate,ermodel
 dbms,Cardinality describes:,Relationship count,Attribute type,Key type,Index type,0,One-to-many etc.,ermodel
 dbms,Aggregation in ER is used for:,Treat relationship as entity,Indexing,Sorting,Clipping,0,Helps model complex relationships,ermodel
 dbms,Generalization is:,Bottom-up abstraction,Top-down,Normalization,Indexing,0,Combines entities into higher class,ermodel
 dbms,Specialization is:,Top-down abstraction,Bottom-up,Indexing,Sorting,0,Splits entity into subtypes,ermodel
-dbms,Disjoint constraint means:,Entity in one subtype only,Multiple subtypes allowed,None allowed,All allowed,0,No overlap among subtypes,ermodel
-dbms,Overlap constraint means:,Entity in multiple subtypes,Only one subtype,None allowed,All disallowed,0,Entities can belong to multiple subtypes,ermodel
-dbms,Total specialization requires:,Every entity in some subtype,Optional subtype,None,Index,0,All entities must be classified,ermodel
-dbms,Partial specialization allows:,Some entities not in subtypes,All in subtypes,None allowed,Only one subtype,0,Optional classification,ermodel
+dbms,Disjoint constraint means:,Entity in one subtype only,Multiple subtypes allowed, allowed,All allowed,0,No overlap among subtypes,ermodel
+dbms,Overlap constraint means:,Entity in multiple subtypes,Only one subtype, allowed,All disallowed,0,Entities can belong to multiple subtypes,ermodel
+dbms,Total specialization requires:,Every entity in some subtype,Optional subtype,,Index,0,All entities must be classified,ermodel
+dbms,Partial specialization allows:,Some entities not in subtypes,All in subtypes, allowed,Only one subtype,0,Optional classification,ermodel
 dbms,Logical data independence means:,Change schema without affecting apps,Change data without affecting schema,No change allowed,Only physical changes,0,Decouples logical schema from apps,basics
 dbms,Physical data independence means:,Change storage without affecting schema,Change schema without affecting apps,No change,Only logical changes,0,Storage changes are transparent,basics
 dbms,Three-level architecture includes:,External, conceptual, internal levels,Only external,Only internal,Only conceptual,0,Separates views and storage,basics
@@ -738,15 +738,15 @@ dbms,Cartesian product produces:,All pair combinations,Only matches,Sorted rows,
 dbms,Join in algebra is:,Selection over product,Projection only,Union only,Difference only,0,Join = σ over Cartesian product,algebra
 dbms,Set difference returns:,Rows in A not in B,Common rows,All rows,Sorted rows,0,Removes tuples of B from A,algebra
 dbms,Rename operator ρ is used for:,Renaming relations/attributes,Sorting,Joining,Filtering,0,Improves readability,algebra
-dbms,Division operator returns:,Tuples related to all values,Common tuples,All tuples,None,0,Useful for “for all” queries,algebra
-dbms,Outer join retains:,Unmatched rows,Only matched rows,None,Sorted rows,0,Includes non-matching tuples,sql
-dbms,Anti-join returns:,Non-matching rows,Matching rows,All rows,None,0,Rows in one table without matches,sql
-dbms,Window frame defines:,Subset around current row,Whole table,Only first row,None,0,Controls rows for window function,sql
+dbms,Division operator returns:,Tuples related to all values,Common tuples,All tuples,,0,Useful for “for all” queries,algebra
+dbms,Outer join retains:,Unmatched rows,Only matched rows,,Sorted rows,0,Includes non-matching tuples,sql
+dbms,Anti-join returns:,Non-matching rows,Matching rows,All rows,,0,Rows in one table without matches,sql
+dbms,Window frame defines:,Subset around current row,Whole table,Only first row,,0,Controls rows for window function,sql
 dbms,Partition by in window functions:,Divides rows into groups,Sorts rows,Joins tables,Indexes,0,Computes per partition,sql
 dbms,Order by in window functions:,Defines sequence,Filters rows,Joins tables,Indexes,0,Determines processing order,sql
 dbms,Having vs where difference is:,After vs before aggregation,Same,Only syntax,Only indexing,0,HAVING filters groups,sql
 dbms,Scalar subquery returns:,Single value,Multiple rows,Table,Index,0,Used in expressions,sql
-dbms,Correlated subquery cost is often:,Higher,Lower,Same,None,0,Executed per row,sql
+dbms,Correlated subquery cost is often:,Higher,Lower,Same,,0,Executed per row,sql
 dbms,Index maintenance cost affects:,Writes more than reads,Reads only,Nothing,Sorting,0,Indexes slow inserts/updates,indexing
 dbms,Fill factor in indexes controls:,Page fullness,Row count,Key size,Join order,0,Leaves space for growth,indexing
 dbms,Heap vs index-organized table differs by:,Storage order,Keys,Constraints,Views,0,IOT stores by index order,indexing
@@ -786,7 +786,7 @@ dbms,Hot backup means:,While system running,Offline,No backup,Only logs,0,No dow
 dbms,Cold backup means:,System offline,Online,No logs,Only indexes,0,Taken when DB is stopped,backup
 dbms,Checksum helps to:,Detect corruption,Encrypt data,Index data,Join tables,0,Verifies data integrity,backup
 dbms,RAID improves:,Reliability/performance,Only speed,Only storage,Only security,0,Combines disks,storage
-dbms,RAID 1 provides:,Mirroring,Striping,Parity,None,0,Duplicates data for reliability,storage
+dbms,RAID 1 provides:,Mirroring,Striping,Parity,,0,Duplicates data for reliability,storage
 dbms,RAID 5 uses:,Striping with parity,Mirroring,No parity,Only striping,0,Balances performance and redundancy,storage
 dbms,SSD vs HDD advantage is:,Lower latency,Higher latency,Same,Only cost,0,SSDs are faster,storage
 dbms,Buffer pool caches:,Pages in memory,Queries,Indexes only,Views only,0,Reduces disk I/O,storage
@@ -841,7 +841,7 @@ dbms,MVCC allows:,Readers don’t block writers,No concurrency,Only writers,Only
 dbms,Write amplification refers to:,Extra writes vs user writes,Only reads,Only deletes,Only indexes,0,Affects SSD endurance,storage
 dbms,Query parallelism uses:,Multiple cores,Single core,No cores,Only GPU,0,Splits work across CPUs,optimization
 dbms,Vector indexes support:,Similarity search,Exact match only,Sorting,Joins,0,Used in modern search,advanced
-dbms,JSON data type supports:,Semi-structured data,Only structured,Only unstructured,None,0,Flexible schema support,advanced
+dbms,JSON data type supports:,Semi-structured data,Only structured,Only unstructured,,0,Flexible schema support,advanced
 dbms,Schema-on-read is typical of:,Data lakes,OLTP DBs,Indexes,Views,0,Applies schema at query time,systems
 dbms,Schema-on-write is typical of:,Warehouses/OLTP,Data lakes,Indexes,Views,0,Validates on ingestion,systems
 dbms,Upsert operation means:,Insert or update,Only insert,Only update,Delete,0,Merge-like behavior,sql
@@ -851,9 +851,9 @@ dbms,LEAD returns:,Next row value,Previous row,Aggregate,Index,0,Access next row
 dbms,NTILE distributes rows into:,Buckets,Tables,Indexes,Views,0,Creates equal groups,sql
 dbms,PERCENT_RANK computes:,Relative rank,Absolute rank,Index,Key,0,Normalized ranking,sql
 dbms,CUME_DIST computes:,Cumulative distribution,Rank,Index,Key,0,Proportion of rows ≤ current,sql
-dbms,ROLLUP generates:,Subtotals,Only totals,Only details,None,0,Hierarchical aggregates,sql
-dbms,CUBE generates:,All combinations of aggregates,Only totals,Only details,None,0,All dimension combos,sql
-dbms,GROUPING SETS allows:,Custom aggregates,Only totals,Only details,None,0,Flexible grouping,sql
+dbms,ROLLUP generates:,Subtotals,Only totals,Only details,,0,Hierarchical aggregates,sql
+dbms,CUBE generates:,All combinations of aggregates,Only totals,Only details,,0,All dimension combos,sql
+dbms,GROUPING SETS allows:,Custom aggregates,Only totals,Only details,,0,Flexible grouping,sql
 dbms,Window frame ROWS BETWEEN defines:,Row-based frame,Range-based,Partition,Index,0,Uses physical row counts,sql
 dbms,RANGE BETWEEN defines:,Value-based frame,Row-based,Partition,Index,0,Uses order value ranges,sql
 dbms,Collation affects:,Sorting/comparison rules,Indexing only,Keys only,Views only,0,Locale-specific ordering,basics
@@ -861,7 +861,7 @@ dbms,Case sensitivity depends on:,Collation/settings,Index,Key,View,0,Affects co
 dbms,Data type DECIMAL is:,Exact numeric,Approximate,String,Date,0,Fixed precision,basics
 dbms,FLOAT is:,Approximate numeric,Exact,String,Date,0,May have rounding errors,basics
 dbms,CHAR vs VARCHAR differs by:,Fixed vs variable length,Speed only,Keys,Indexes,0,CHAR padded; VARCHAR variable,basics
-dbms,DATE vs TIMESTAMP differs by:,Time component,Only date,Only time,None,0,TIMESTAMP includes time,basics
+dbms,DATE vs TIMESTAMP differs by:,Time component,Only date,Only time,,0,TIMESTAMP includes time,basics
 dbms,Normalization vs denormalization trade-off is:,Integrity vs performance,Only speed,Only storage,Only keys,0,Balance needed,normalization
 dbms,Data integrity constraints include:,Entity, domain, referential,Only entity,Only domain,Only referential,0,All enforce correctness,keys
 dbms,Entity integrity requires:,Primary key not null,Foreign key exists,Check valid,Index present,0,PK must be non-null,keys
@@ -886,15 +886,15 @@ dbms,Idempotent operation means:,Same result on retries,Different results,No res
 dbms,Event sourcing stores:,Sequence of events,Only current state,Indexes,Views,0,Rebuild state from events,advanced
 dbms,Change data capture records:,Data changes stream,Only queries,Only indexes,Only views,0,Used for pipelines,advanced
 dbms,ETL vs ELT differs by:,Transform before vs after load,Same,Only extract,Only load,0,Depends on system,warehouse
-dbms,Dimensional modeling uses:,Facts and dimensions,Only facts,Only dimensions,None,0,Analytical modeling,warehouse
+dbms,Dimensional modeling uses:,Facts and dimensions,Only facts,Only dimensions,,0,Analytical modeling,warehouse
 dbms,Slowly changing dimension type 2 uses:,Versioned rows,Overwrite,Delete,Ignore,0,Keeps history,warehouse
-dbms,Star join optimization targets:,Fact-dimension joins,Only dimensions,Only facts,None,0,Speeds warehouse queries,warehouse
-dbms,Columnar compression benefits:,Storage and scan speed,Only speed,Only storage,None,0,Better for analytics,systems
-dbms,Predicate indexing indexes:,Filtered subset,All rows,Columns only,None,0,Improves selective queries,indexing
-dbms,Functional dependency minimal cover requires:,Minimal LHS/RHS and no redundancy,Only RHS minimal,Only LHS minimal,None,0,Simplifies FD set,normalization
+dbms,Star join optimization targets:,Fact-dimension joins,Only dimensions,Only facts,,0,Speeds warehouse queries,warehouse
+dbms,Columnar compression benefits:,Storage and scan speed,Only speed,Only storage,,0,Better for analytics,systems
+dbms,Predicate indexing indexes:,Filtered subset,All rows,Columns only,,0,Improves selective queries,indexing
+dbms,Functional dependency minimal cover requires:,Minimal LHS/RHS and no redundancy,Only RHS minimal,Only LHS minimal,,0,Simplifies FD set,normalization
 dbms,Key inference via closure requires:,Compute X+,Sort X,Join X,Index X,0,Find attributes implied,normalization
-dbms,Lossless join test uses:,Common attribute as key,Any attribute,None,Only PK,None,0,Ensures reconstruction,normalization
-dbms,Dependency preservation test checks:,All FDs retained,All rows retained,All keys retained,None,0,No need to join to enforce FDs,normalization
+dbms,Lossless join test uses:,Common attribute as key,Any attribute,,Only PK,,0,Ensures reconstruction,normalization
+dbms,Dependency preservation test checks:,All FDs retained,All rows retained,All keys retained,,0,No need to join to enforce FDs,normalization
 subject,Question,A,B,C,D,answer,explanation,topic
 cyber,A system is attacked by flooding it with excessive traffic causing downtime. This attack is:,Phishing,DoS attack,SQL injection,Man-in-the-middle,1,DoS attack overwhelms system resources making it unavailable,attacks
 cyber,A fake email asking for sensitive information is an example of:,Malware,Phishing,Firewall,Spoofing,1,Phishing tricks users into revealing confidential data,attacks
@@ -906,41 +906,41 @@ cyber,A firewall is used to:,Encrypt data,Monitor network traffic,Store password
 cyber,A system that detects suspicious activity is:,IDS,Firewall,VPN,Proxy,0,Intrusion Detection System monitors suspicious activity,security_tools
 cyber,A system that prevents attacks is:,IDS,IPS,Proxy,Router,1,Intrusion Prevention System blocks malicious actions,security_tools
 cyber,Encryption converts:,Plaintext to ciphertext,Ciphertext to plaintext,Data to code,Code to data,0,Encryption secures data by converting it into unreadable form,cryptography
-cyber,Decryption converts:,Ciphertext to plaintext,Plaintext to ciphertext,Data to code,None,0,Decryption restores original data,cryptography
-cyber,A symmetric key algorithm uses:,One key,Two keys,Multiple keys,None,0,Symmetric encryption uses same key for encryption and decryption,cryptography
-cyber,An asymmetric algorithm uses:,One key,Two keys,No keys,None,1,Uses public and private keys,cryptography
+cyber,Decryption converts:,Ciphertext to plaintext,Plaintext to ciphertext,Data to code,,0,Decryption restores original data,cryptography
+cyber,A symmetric key algorithm uses:,One key,Two keys,Multiple keys,,0,Symmetric encryption uses same key for encryption and decryption,cryptography
+cyber,An asymmetric algorithm uses:,One key,Two keys,No keys,,1,Uses public and private keys,cryptography
 cyber,A digital signature ensures:,Confidentiality,Integrity and authenticity,Availability,Encryption,1,Digital signature verifies authenticity and integrity,cryptography
 cyber,A hash function produces:,Fixed-length output,Variable-length output,Encrypted data,Plain data,0,Hash functions produce fixed-size output,cryptography
 cyber,A strong password should include:,Only letters,Letters and numbers,Letters numbers symbols,Only numbers,2,Strong passwords include multiple character types,security_practices
-cyber,Two-factor authentication provides:,One layer security,Two layers security,No security,Encryption,None,1,2FA adds extra security layer,security_practices
+cyber,Two-factor authentication provides:,One layer security,Two layers security,No security,Encryption,,1,2FA adds extra security layer,security_practices
 cyber,A VPN provides:,Speed,Secure connection,Storage,Firewall,1,VPN encrypts data over network,security_tools
 cyber,A man-in-the-middle attack involves:,Direct attack,Intercepting communication,Deleting data,Encrypting data,1,Attacker intercepts communication between parties,attacks
-cyber,A brute force attack tries:,Random data,All possible passwords,Encryption,None,1,Brute force tries all combinations,attacks
+cyber,A brute force attack tries:,Random data,All possible passwords,Encryption,,1,Brute force tries all combinations,attacks
 cyber,A SQL injection attack targets:,Database,UI,Network,Hardware,0,SQL injection manipulates database queries,attacks
 cyber,A cross-site scripting attack affects:,Server,Client browser,Database,Network,1,XSS injects malicious scripts into web pages,attacks
-cyber,A denial-of-service attack affects:,Availability,Integrity,Confidentiality,None,0,DoS disrupts system availability,attacks
+cyber,A denial-of-service attack affects:,Availability,Integrity,Confidentiality,,0,DoS disrupts system availability,attacks
 cyber,A secure protocol for web communication is:,HTTP,FTP,HTTPS,SMTP,2,HTTPS encrypts web data,network
 cyber,Port number for HTTPS is:,80,21,443,25,2,HTTPS uses port 443,network
 cyber,Port number for HTTP is:,21,80,443,25,1,HTTP uses port 80,network
-cyber,A firewall filters based on:,Rules,Code,Database,None,0,Firewall uses rules to allow/block traffic,security_tools
-cyber,An antivirus detects:,Hardware errors,Malware,Network speed,None,1,Antivirus scans for malicious software,security_tools
-cyber,A secure password storage uses:,Plaintext,Hashing,Encryption,None,1,Passwords should be hashed,security_practices
-cyber,A certificate authority issues:,Passwords,Certificates,Keys,None,1,CA provides digital certificates,cryptography
-cyber,SSL/TLS ensures:,Speed,Secure communication,Storage,None,1,SSL/TLS encrypts data in transit,network
-cyber,A phishing website looks:,Fake,Legitimate,Encrypted,None,1,Phishing sites mimic real sites,attacks
-cyber,A security policy defines:,Code,Rules,Database,None,1,Policy defines security guidelines,security_practices
-cyber,A vulnerability is:,Threat,Weakness,Attack,None,1,Vulnerability is weakness in system,basics
-cyber,A threat is:,Potential danger,Weakness,Protection,None,0,Threat is possible attack source,basics
-cyber,An exploit is:,Attack method,Protection,Encryption,None,0,Exploit uses vulnerability,basics
-cyber,A backup helps in:,Security,Recovery,Encryption,None,1,Backup restores lost data,security_practices
+cyber,A firewall filters based on:,Rules,Code,Database,,0,Firewall uses rules to allow/block traffic,security_tools
+cyber,An antivirus detects:,Hardware errors,Malware,Network speed,,1,Antivirus scans for malicious software,security_tools
+cyber,A secure password storage uses:,Plaintext,Hashing,Encryption,,1,Passwords should be hashed,security_practices
+cyber,A certificate authority issues:,Passwords,Certificates,Keys,,1,CA provides digital certificates,cryptography
+cyber,SSL/TLS ensures:,Speed,Secure communication,Storage,,1,SSL/TLS encrypts data in transit,network
+cyber,A phishing website looks:,Fake,Legitimate,Encrypted,,1,Phishing sites mimic real sites,attacks
+cyber,A security policy defines:,Code,Rules,Database,,1,Policy defines security guidelines,security_practices
+cyber,A vulnerability is:,Threat,Weakness,Attack,,1,Vulnerability is weakness in system,basics
+cyber,A threat is:,Potential danger,Weakness,Protection,,0,Threat is possible attack source,basics
+cyber,An exploit is:,Attack method,Protection,Encryption,,0,Exploit uses vulnerability,basics
+cyber,A backup helps in:,Security,Recovery,Encryption,,1,Backup restores lost data,security_practices
 cyber,A strong encryption algorithm is:,DES,AES,MD5,SHA1,1,AES is modern secure encryption standard,cryptography
 cyber,A weak hashing algorithm is:,SHA256,MD5,SHA512,AES,1,MD5 is considered insecure,cryptography
-cyber,A secure login system uses:,Plain password,Hashed password,Encrypted password,None,1,Hashing protects stored passwords,security_practices
-cyber,A phishing email often contains:,Malicious link,Code,None,None,0,Phishing emails trick users with links,attacks
-cyber,A worm spreads via:,User action,Network,None,None,1,Worm spreads automatically via network,malware
-cyber,A trojan hides as:,Malware,Legitimate app,None,None,1,Trojan appears legitimate,malware
-cyber,A spyware collects:,User data,Code,None,None,0,Spyware monitors user activity,malware
-cyber,A firewall prevents:,Unauthorized access,Encryption,None,None,0,Firewall blocks unauthorized traffic,security_tools
+cyber,A secure login system uses:,Plain password,Hashed password,Encrypted password,,1,Hashing protects stored passwords,security_practices
+cyber,A phishing email often contains:,Malicious link,Code,,,0,Phishing emails trick users with links,attacks
+cyber,A worm spreads via:,User action,Network,,,1,Worm spreads automatically via network,malware
+cyber,A trojan hides as:,Malware,Legitimate app,,,1,Trojan appears legitimate,malware
+cyber,A spyware collects:,User data,Code,,,0,Spyware monitors user activity,malware
+cyber,A firewall prevents:,Unauthorized access,Encryption,,,0,Firewall blocks unauthorized traffic,security_tools
 cyber,A secure system ensures:,Confidentiality,Integrity,Availability,All of these,3,CIA triad defines security,basics
 subject,Question,A,B,C,D,answer,explanation,topic
 cyber,A user unknowingly installs software that records keystrokes. This threat is:,Ransomware,Keylogger,Firewall,Rootkit,1,Keyloggers capture keystrokes to steal sensitive information,malware
@@ -950,53 +950,53 @@ cyber,A hacker intercepts network traffic to capture passwords. This is:,Spoofin
 cyber,A technique used to verify message integrity is:,Encryption,Hashing,Firewall,Proxy,1,Hashing ensures data integrity,cryptography
 cyber,A digital certificate is issued by:,Firewall,Certificate authority,Router,Server,1,CA issues certificates to verify identity,cryptography
 cyber,A secure hashing algorithm is:,MD5,SHA256,SHA1,DES,1,SHA256 is secure compared to MD5 and SHA1,cryptography
-cyber,A public key is used for:,Encryption,Decryption,Both,None,0,Public key encrypts data in asymmetric cryptography,cryptography
-cyber,A private key is used for:,Encryption,Decryption,Both,None,1,Private key decrypts data securely,cryptography
+cyber,A public key is used for:,Encryption,Decryption,Both,,0,Public key encrypts data in asymmetric cryptography,cryptography
+cyber,A private key is used for:,Encryption,Decryption,Both,,1,Private key decrypts data securely,cryptography
 cyber,A strong password policy includes:,Short passwords,Complex passwords,Repeated passwords,Simple words,1,Complex passwords increase security,security_practices
 cyber,A network attack that floods server is:,Phishing,DoS,Sniffing,Spoofing,1,DoS overwhelms server resources,attacks
-cyber,A spoofing attack involves:,Fake identity,Data encryption,Network scan,None,0,Spoofing impersonates trusted entity,attacks
-cyber,A SQL injection attack occurs due to:,Weak UI,Poor input validation,Strong password,None,1,SQL injection exploits improper input validation,attacks
-cyber,A cross-site scripting attack executes:,Server code,Client-side script,Database query,None,1,XSS runs scripts in user's browser,attacks
-cyber,A VPN ensures:,High speed,Secure communication,Storage,None,1,VPN encrypts network traffic,network
-cyber,A firewall blocks:,Authorized access,Unauthorized access,Encryption,None,1,Firewall filters unwanted traffic,security_tools
+cyber,A spoofing attack involves:,Fake identity,Data encryption,Network scan,,0,Spoofing impersonates trusted entity,attacks
+cyber,A SQL injection attack occurs due to:,Weak UI,Poor input validation,Strong password,,1,SQL injection exploits improper input validation,attacks
+cyber,A cross-site scripting attack executes:,Server code,Client-side script,Database query,,1,XSS runs scripts in user's browser,attacks
+cyber,A VPN ensures:,High speed,Secure communication,Storage,,1,VPN encrypts network traffic,network
+cyber,A firewall blocks:,Authorized access,Unauthorized access,Encryption,,1,Firewall filters unwanted traffic,security_tools
 cyber,A system using biometric authentication uses:,Password,Fingerprint,Token,Code,1,Biometrics uses physical traits,authentication
-cyber,A one-time password provides:,Static security,Dynamic security,Weak security,None,1,OTP changes each time for better security,authentication
-cyber,A denial of service affects:,Integrity,Availability,Confidentiality,None,1,DoS impacts system availability,attacks
-cyber,A vulnerability scan identifies:,Threats,Weaknesses,Attacks,None,1,Scans find system vulnerabilities,security_tools
-cyber,A penetration test simulates:,Real attack,Backup,Encryption,None,0,Pen testing mimics real attacks,security_testing
+cyber,A one-time password provides:,Static security,Dynamic security,Weak security,,1,OTP changes each time for better security,authentication
+cyber,A denial of service affects:,Integrity,Availability,Confidentiality,,1,DoS impacts system availability,attacks
+cyber,A vulnerability scan identifies:,Threats,Weaknesses,Attacks,,1,Scans find system vulnerabilities,security_tools
+cyber,A penetration test simulates:,Real attack,Backup,Encryption,,0,Pen testing mimics real attacks,security_testing
 cyber,A secure protocol for email sending is:,HTTP,SMTP,FTP,SSH,1,SMTP is used for sending emails,network
 cyber,A secure shell protocol is:,HTTP,SSH,FTP,SMTP,1,SSH provides secure remote login,network
 cyber,A malware that hides deep in system is:,Virus,Rootkit,Worm,Spyware,1,Rootkits hide malicious activity,malware
-cyber,A worm spreads through:,User action,Network,None,None,1,Worm spreads automatically via network,malware
-cyber,A trojan disguises as:,Malware,Legitimate software,None,None,1,Trojan tricks users by appearing safe,malware
-cyber,A brute force attack tries:,Random guesses,All combinations,None,None,1,Brute force tries every possible password,attacks
-cyber,A dictionary attack uses:,Random words,Predefined words,None,None,1,Dictionary attack uses common passwords,attacks
-cyber,A security audit evaluates:,System performance,Security controls,None,None,1,Audit checks system security,security_practices
-cyber,A backup strategy ensures:,Security,Recovery,None,None,1,Backup restores lost data,security_practices
-cyber,A honeypot is used to:,Trap attackers,Encrypt data,None,None,0,Honeypot attracts attackers for study,security_tools
-cyber,A sandbox environment is used to:,Run suspicious code safely,Encrypt,None,None,0,Sandbox isolates risky programs,security_tools
-cyber,A digital signature ensures:,Integrity,Confidentiality,None,None,0,Signature verifies data integrity,cryptography
-cyber,A MAC address is:,Logical address,Physical address,None,None,1,MAC uniquely identifies hardware,network
-cyber,A port scan identifies:,Open ports,Passwords,None,None,0,Port scanning finds open services,network
-cyber,A phishing attack targets:,System,User,None,None,1,Phishing manipulates users,attacks
-cyber,A strong encryption key should be:,Short,Long,None,None,1,Long keys improve security,cryptography
-cyber,A certificate verifies:,Identity,Data,None,None,0,Certificates confirm identity,cryptography
-cyber,A firewall works at:,Network layer,Application layer,Both,None,2,Firewall can operate at multiple layers,security_tools
-cyber,A malware scanner detects:,Threats,Files,None,None,0,Scanner identifies malicious programs,security_tools
-cyber,A symmetric key encryption is:,Fast,Slow,None,None,0,Symmetric encryption is faster than asymmetric,cryptography
-cyber,A asymmetric encryption is:,Fast,Secure,None,None,1,Asymmetric encryption provides higher security,cryptography
-cyber,A secure website uses:,HTTP,HTTPS,None,None,1,HTTPS encrypts communication,network
-cyber,A password cracking tool uses:,Encryption,Attack,None,None,1,Cracking tools break passwords,attacks
-cyber,A threat actor is:,User,Attacker,None,None,1,Threat actor is entity causing harm,basics
-cyber,A vulnerability is:,Strength,Weakness,None,None,1,Vulnerability is system weakness,basics
-cyber,A risk is:,Probability of threat,Attack,None,None,0,Risk combines threat and vulnerability,basics
-cyber,A patch fixes:,Bugs,Features,None,None,0,Patches update system security,security_practices
-cyber,A zero-day vulnerability is:,Known bug,Unknown bug,None,None,1,Zero-day is undiscovered vulnerability,attacks
-cyber,A firewall rule allows:,Traffic,Data,None,None,0,Rules define allowed traffic,security_tools
-cyber,A secure login uses:,Hashing,Plain text,None,None,0,Hashing secures password storage,security_practices
-cyber,A data breach exposes:,Public data,Sensitive data,None,None,1,Breach leaks confidential information,attacks
-cyber,A security policy defines:,Rules,Code,None,None,0,Policy defines security guidelines,security_practices
-cyber,A secure system ensures:,CIA triad,Only confidentiality,None,None,0,CIA includes confidentiality, integrity, availability,basics
+cyber,A worm spreads through:,User action,Network,,,1,Worm spreads automatically via network,malware
+cyber,A trojan disguises as:,Malware,Legitimate software,,,1,Trojan tricks users by appearing safe,malware
+cyber,A brute force attack tries:,Random guesses,All combinations,,,1,Brute force tries every possible password,attacks
+cyber,A dictionary attack uses:,Random words,Predefined words,,,1,Dictionary attack uses common passwords,attacks
+cyber,A security audit evaluates:,System performance,Security controls,,,1,Audit checks system security,security_practices
+cyber,A backup strategy ensures:,Security,Recovery,,,1,Backup restores lost data,security_practices
+cyber,A honeypot is used to:,Trap attackers,Encrypt data,,,0,Honeypot attracts attackers for study,security_tools
+cyber,A sandbox environment is used to:,Run suspicious code safely,Encrypt,,,0,Sandbox isolates risky programs,security_tools
+cyber,A digital signature ensures:,Integrity,Confidentiality,,,0,Signature verifies data integrity,cryptography
+cyber,A MAC address is:,Logical address,Physical address,,,1,MAC uniquely identifies hardware,network
+cyber,A port scan identifies:,Open ports,Passwords,,,0,Port scanning finds open services,network
+cyber,A phishing attack targets:,System,User,,,1,Phishing manipulates users,attacks
+cyber,A strong encryption key should be:,Short,Long,,,1,Long keys improve security,cryptography
+cyber,A certificate verifies:,Identity,Data,,,0,Certificates confirm identity,cryptography
+cyber,A firewall works at:,Network layer,Application layer,Both,,2,Firewall can operate at multiple layers,security_tools
+cyber,A malware scanner detects:,Threats,Files,,,0,Scanner identifies malicious programs,security_tools
+cyber,A symmetric key encryption is:,Fast,Slow,,,0,Symmetric encryption is faster than asymmetric,cryptography
+cyber,A asymmetric encryption is:,Fast,Secure,,,1,Asymmetric encryption provides higher security,cryptography
+cyber,A secure website uses:,HTTP,HTTPS,,,1,HTTPS encrypts communication,network
+cyber,A password cracking tool uses:,Encryption,Attack,,,1,Cracking tools break passwords,attacks
+cyber,A threat actor is:,User,Attacker,,,1,Threat actor is entity causing harm,basics
+cyber,A vulnerability is:,Strength,Weakness,,,1,Vulnerability is system weakness,basics
+cyber,A risk is:,Probability of threat,Attack,,,0,Risk combines threat and vulnerability,basics
+cyber,A patch fixes:,Bugs,Features,,,0,Patches update system security,security_practices
+cyber,A zero-day vulnerability is:,Known bug,Unknown bug,,,1,Zero-day is undiscovered vulnerability,attacks
+cyber,A firewall rule allows:,Traffic,Data,,,0,Rules define allowed traffic,security_tools
+cyber,A secure login uses:,Hashing,Plain text,,,0,Hashing secures password storage,security_practices
+cyber,A data breach exposes:,Public data,Sensitive data,,,1,Breach leaks confidential information,attacks
+cyber,A security policy defines:,Rules,Code,,,0,Policy defines security guidelines,security_practices
+cyber,A secure system ensures:,CIA triad,Only confidentiality,,,0,CIA includes confidentiality, integrity, availability,basics
 subject,Question,A,B,C,D,answer,explanation,topic
 cyber,A system is compromised through outdated software vulnerabilities. The best preventive action is:,Disable system,Apply patches,Change UI,Restart system,1,Regular patching fixes known vulnerabilities,security_practices
 cyber,A user receives a call pretending to be bank support asking for OTP. This attack is:,Phishing,Social engineering,DoS,Spoofing,1,Social engineering manipulates human behavior,attacks
@@ -1006,47 +1006,47 @@ cyber,A secure protocol used for file transfer is:,FTP,HTTP,SFTP,SMTP,2,SFTP enc
 cyber,A cyber attack exploiting human trust is:,Brute force,Social engineering,Injection,Sniffing,1,Social engineering targets human behavior,attacks
 cyber,A method of verifying identity using SMS code is:,Single factor,Two-factor authentication,Encryption,Hashing,1,2FA adds extra verification step,authentication
 cyber,A hacker sends fake ARP messages to intercept traffic. This is:,Phishing,ARP spoofing,DoS,SQL injection,1,ARP spoofing redirects traffic to attacker,attacks
-cyber,A technique used to protect passwords in database is:,Plain storage,Hashing,Encryption,None,1,Hashing protects stored passwords securely,cryptography
-cyber,A digital certificate contains:,Private key,Public key,Password,None,1,Certificates contain public key for verification,cryptography
+cyber,A technique used to protect passwords in database is:,Plain storage,Hashing,Encryption,,1,Hashing protects stored passwords securely,cryptography
+cyber,A digital certificate contains:,Private key,Public key,Password,,1,Certificates contain public key for verification,cryptography
 cyber,A system that logs user activity is used for:,Performance,Auditing,Encryption,Backup,1,Auditing tracks actions for security,security_practices
-cyber,A network sniffing tool captures:,Packets,Passwords only,Files,None,0,Sniffers capture network packets,attacks
-cyber,A brute force attack success depends on:,Weak password,Strong password,None,None,0,Weak passwords are easier to crack,attacks
+cyber,A network sniffing tool captures:,Packets,Passwords only,Files,,0,Sniffers capture network packets,attacks
+cyber,A brute force attack success depends on:,Weak password,Strong password,,,0,Weak passwords are easier to crack,attacks
 cyber,A botnet is a network of:,Servers,Compromised devices,Users,Firewalls,1,Botnets are used for large-scale attacks,malware
-cyber,A distributed DoS attack uses:,Single system,Multiple systems,None,None,1,DDoS uses many systems to attack target,attacks
-cyber,A firewall rule denies traffic based on:,IP address,Code,None,None,0,Firewall filters traffic based on rules,security_tools
-cyber,A system vulnerability arises due to:,Strong design,Weak configuration,None,None,1,Weak configurations expose systems,basics
-cyber,A secure network uses:,Encryption,Plain text,None,None,0,Encryption protects data transmission,network
-cyber,A malicious script injected into website is:,SQL injection,XSS,Phishing,None,1,XSS injects scripts into web pages,attacks
-cyber,A secure login system uses:,Plain passwords,Hashed passwords,None,None,1,Hashing protects user credentials,security_practices
-cyber,A digital signature verifies:,Identity and integrity,Speed,None,None,0,Signature confirms authenticity,cryptography
+cyber,A distributed DoS attack uses:,Single system,Multiple systems,,,1,DDoS uses many systems to attack target,attacks
+cyber,A firewall rule denies traffic based on:,IP address,Code,,,0,Firewall filters traffic based on rules,security_tools
+cyber,A system vulnerability arises due to:,Strong design,Weak configuration,,,1,Weak configurations expose systems,basics
+cyber,A secure network uses:,Encryption,Plain text,,,0,Encryption protects data transmission,network
+cyber,A malicious script injected into website is:,SQL injection,XSS,Phishing,,1,XSS injects scripts into web pages,attacks
+cyber,A secure login system uses:,Plain passwords,Hashed passwords,,,1,Hashing protects user credentials,security_practices
+cyber,A digital signature verifies:,Identity and integrity,Speed,,,0,Signature confirms authenticity,cryptography
 cyber,A symmetric encryption algorithm example is:,RSA,AES,DSA,SSL,1,AES is symmetric encryption algorithm,cryptography
 cyber,A asymmetric encryption algorithm example is:,AES,RSA,DES,MD5,1,RSA uses public-private keys,cryptography
-cyber,A secure socket layer is used for:,Encryption,Storage,None,None,0,SSL encrypts communication,network
-cyber,A vulnerability allowing remote code execution is:,Critical,Low,None,None,0,RCE allows attacker to run code,attacks
-cyber,A phishing attack uses:,Fake website,Encryption,None,None,0,Phishing tricks users with fake sites,attacks
-cyber,A malware that locks screen is:,Virus,Ransomware,Spyware,None,1,Ransomware blocks system access,malware
-cyber,A system using firewall prevents:,Unauthorized access,Encryption,None,None,0,Firewall blocks unwanted traffic,security_tools
-cyber,A penetration test identifies:,Weaknesses,Strengths,None,None,0,Pen testing finds vulnerabilities,security_testing
+cyber,A secure socket layer is used for:,Encryption,Storage,,,0,SSL encrypts communication,network
+cyber,A vulnerability allowing remote code execution is:,Critical,Low,,,0,RCE allows attacker to run code,attacks
+cyber,A phishing attack uses:,Fake website,Encryption,,,0,Phishing tricks users with fake sites,attacks
+cyber,A malware that locks screen is:,Virus,Ransomware,Spyware,,1,Ransomware blocks system access,malware
+cyber,A system using firewall prevents:,Unauthorized access,Encryption,,,0,Firewall blocks unwanted traffic,security_tools
+cyber,A penetration test identifies:,Weaknesses,Strengths,,,0,Pen testing finds vulnerabilities,security_testing
 cyber,A secure system ensures:,Confidentiality,Integrity,Availability,All of these,3,CIA triad ensures security,basics
-cyber,A password policy requiring symbols improves:,Security,Speed,None,None,0,Complex passwords are harder to crack,security_practices
-cyber,A digital hash ensures:,Integrity,Confidentiality,None,None,0,Hashing verifies data integrity,cryptography
-cyber,A rootkit hides:,Malware activity,User,None,None,0,Rootkits conceal malicious processes,malware
-cyber,A trojan spreads via:,Network,User installation,None,None,1,Trojan requires user action,malware
-cyber,A worm spreads via:,User action,Network,None,None,1,Worm spreads automatically,malware
-cyber,A spyware collects:,User data,System logs,None,None,0,Spyware monitors activity,malware
-cyber,A secure network uses:,VPN,Plain network,None,None,0,VPN encrypts traffic,network
-cyber,A firewall can block:,Ports,Passwords,None,None,0,Firewall filters ports and traffic,security_tools
-cyber,A system log helps in:,Debugging,Security,None,None,1,Logs help detect suspicious activity,security_practices
-cyber,A hacker using stolen credentials performs:,Spoofing,Unauthorized access,None,None,1,Using stolen credentials leads to unauthorized access,attacks
-cyber,A brute force tool attempts:,Passwords,System,None,None,0,Brute force cracks passwords,attacks
-cyber,A phishing message often contains:,Suspicious link,Code,None,None,0,Phishing uses fake links,attacks
-cyber,A secure communication protocol is:,HTTP,HTTPS,None,None,1,HTTPS encrypts data transmission,network
-cyber,A vulnerability patch fixes:,Bug,System,None,None,0,Patches update vulnerabilities,security_practices
-cyber,A security audit checks:,System security,Performance,None,None,0,Audit evaluates security controls,security_practices
-cyber,A honeypot attracts:,Attackers,Users,None,None,0,Honeypot traps attackers,security_tools
-cyber,A sandbox isolates:,Applications,System,None,None,0,Sandbox runs programs safely,security_tools
-cyber,A threat actor is:,User,Attacker,None,None,1,Threat actor causes attack,basics
-cyber,A risk is combination of:,Threat and vulnerability,Code,None,None,0,Risk depends on threat and weakness,basics
+cyber,A password policy requiring symbols improves:,Security,Speed,,,0,Complex passwords are harder to crack,security_practices
+cyber,A digital hash ensures:,Integrity,Confidentiality,,,0,Hashing verifies data integrity,cryptography
+cyber,A rootkit hides:,Malware activity,User,,,0,Rootkits conceal malicious processes,malware
+cyber,A trojan spreads via:,Network,User installation,,,1,Trojan requires user action,malware
+cyber,A worm spreads via:,User action,Network,,,1,Worm spreads automatically,malware
+cyber,A spyware collects:,User data,System logs,,,0,Spyware monitors activity,malware
+cyber,A secure network uses:,VPN,Plain network,,,0,VPN encrypts traffic,network
+cyber,A firewall can block:,Ports,Passwords,,,0,Firewall filters ports and traffic,security_tools
+cyber,A system log helps in:,Debugging,Security,,,1,Logs help detect suspicious activity,security_practices
+cyber,A hacker using stolen credentials performs:,Spoofing,Unauthorized access,,,1,Using stolen credentials leads to unauthorized access,attacks
+cyber,A brute force tool attempts:,Passwords,System,,,0,Brute force cracks passwords,attacks
+cyber,A phishing message often contains:,Suspicious link,Code,,,0,Phishing uses fake links,attacks
+cyber,A secure communication protocol is:,HTTP,HTTPS,,,1,HTTPS encrypts data transmission,network
+cyber,A vulnerability patch fixes:,Bug,System,,,0,Patches update vulnerabilities,security_practices
+cyber,A security audit checks:,System security,Performance,,,0,Audit evaluates security controls,security_practices
+cyber,A honeypot attracts:,Attackers,Users,,,0,Honeypot traps attackers,security_tools
+cyber,A sandbox isolates:,Applications,System,,,0,Sandbox runs programs safely,security_tools
+cyber,A threat actor is:,User,Attacker,,,1,Threat actor causes attack,basics
+cyber,A risk is combination of:,Threat and vulnerability,Code,,,0,Risk depends on threat and weakness,basics
 subject,Question,A,B,C,D,answer,explanation,topic
 cyber,A user connects to public Wi-Fi without protection and data gets intercepted. The best prevention is:,Use VPN,Disable device,Restart system,Use HTTP,0,VPN encrypts data over insecure networks,network
 cyber,A malicious actor modifies DNS records to redirect traffic. This attack is:,Phishing,DNS spoofing,DoS,Sniffing,1,DNS spoofing redirects users to fake sites,attacks
@@ -1069,7 +1069,7 @@ cyber,A digital signature uses:,Private key,Public key,Password,Hash,0,Private k
 cyber,A strong password should avoid:,Symbols,Numbers,Dictionary words,Mixed case,2,Dictionary words are easy to guess,security_practices
 cyber,A firewall works by:,Encrypting data,Filtering traffic,Storing logs,Scanning files,1,Firewall filters allowed/blocked traffic,security_tools
 cyber,A DDoS attack differs from DoS because it uses:,Single system,Multiple systems,Encryption,Firewall,1,DDoS uses multiple systems,attacks
-cyber,A system log helps in:,Performance only,Security analysis,Encryption,None,1,Logs help detect suspicious activity,security_practices
+cyber,A system log helps in:,Performance only,Security analysis,Encryption,,1,Logs help detect suspicious activity,security_practices
 cyber,A malware that displays ads is:,Adware,Spyware,Worm,Trojan,0,Adware shows unwanted advertisements,malware
 cyber,A malicious code embedded in software is:,Trojan,Firewall,Proxy,VPN,0,Trojan hides inside legitimate programs,malware
 cyber,A hashing algorithm produces:,Encrypted text,Fixed-length output,Variable output,Plain text,1,Hash functions produce fixed-size output,cryptography
@@ -1080,23 +1080,23 @@ cyber,A brute force attack can be slowed by:,Weak passwords,Strong passwords,No 
 cyber,A secure website uses:,HTTP,HTTPS,FTP,SMTP,1,HTTPS encrypts communication,network
 cyber,A malware hiding system processes is:,Rootkit,Adware,Spyware,Firewall,0,Rootkit hides malicious activity,malware
 cyber,A spyware collects:,System logs,User data,Encryption keys,Firewall rules,1,Spyware tracks user activity,malware
-cyber,A worm spreads without:,User action,Network,None,None,0,Worm spreads automatically across network,malware
-cyber,A firewall protects against:,Unauthorized access,Encryption,None,None,0,Firewall blocks unwanted traffic,security_tools
-cyber,A penetration test simulates:,Real attack,Backup,None,None,0,Pen test mimics real attacks,security_testing
-cyber,A risk assessment evaluates:,Threats,Code,None,None,0,Risk assessment identifies threats,basics
-cyber,A vulnerability is:,Strength,Weakness,None,None,1,Vulnerability is system weakness,basics
-cyber,A threat is:,Potential danger,Weakness,None,None,0,Threat is possible attack source,basics
-cyber,A zero-day attack exploits:,Known bug,Unknown bug,None,None,1,Zero-day exploits undiscovered vulnerability,attacks
-cyber,A secure backup ensures:,Recovery,Security,None,None,0,Backup restores data after loss,security_practices
-cyber,A honeypot is used to:,Trap attackers,Encrypt data,None,None,0,Honeypot attracts attackers,security_tools
-cyber,A sandbox is used to:,Run code safely,Encrypt,None,None,0,Sandbox isolates programs,security_tools
+cyber,A worm spreads without:,User action,Network,,,0,Worm spreads automatically across network,malware
+cyber,A firewall protects against:,Unauthorized access,Encryption,,,0,Firewall blocks unwanted traffic,security_tools
+cyber,A penetration test simulates:,Real attack,Backup,,,0,Pen test mimics real attacks,security_testing
+cyber,A risk assessment evaluates:,Threats,Code,,,0,Risk assessment identifies threats,basics
+cyber,A vulnerability is:,Strength,Weakness,,,1,Vulnerability is system weakness,basics
+cyber,A threat is:,Potential danger,Weakness,,,0,Threat is possible attack source,basics
+cyber,A zero-day attack exploits:,Known bug,Unknown bug,,,1,Zero-day exploits undiscovered vulnerability,attacks
+cyber,A secure backup ensures:,Recovery,Security,,,0,Backup restores data after loss,security_practices
+cyber,A honeypot is used to:,Trap attackers,Encrypt data,,,0,Honeypot attracts attackers,security_tools
+cyber,A sandbox is used to:,Run code safely,Encrypt,,,0,Sandbox isolates programs,security_tools
 cyber,A digital certificate is issued by:,Firewall,CA,Router,Server,1,Certificate authority issues certificates,cryptography
-cyber,A port scan identifies:,Open ports,Passwords,None,None,0,Port scanning finds services,network
-cyber,A brute force attack uses:,All combinations,Random,None,None,0,Tries all possible passwords,attacks
-cyber,A dictionary attack uses:,Random strings,Wordlist,None,None,1,Uses common passwords list,attacks
-cyber,A security audit reviews:,Security policies,Code,None,None,0,Audit evaluates controls,security_practices
-cyber,A patch update fixes:,Vulnerabilities,Performance,None,None,0,Patches fix security issues,security_practices
-cyber,A system ensures CIA triad for:,Security,Performance,None,None,0,CIA ensures security principles,basics
+cyber,A port scan identifies:,Open ports,Passwords,,,0,Port scanning finds services,network
+cyber,A brute force attack uses:,All combinations,Random,,,0,Tries all possible passwords,attacks
+cyber,A dictionary attack uses:,Random strings,Wordlist,,,1,Uses common passwords list,attacks
+cyber,A security audit reviews:,Security policies,Code,,,0,Audit evaluates controls,security_practices
+cyber,A patch update fixes:,Vulnerabilities,Performance,,,0,Patches fix security issues,security_practices
+cyber,A system ensures CIA triad for:,Security,Performance,,,0,CIA ensures security principles,basics
 subject,Question,A,B,C,D,answer,explanation,topic
 cyber,What is the full form of VPN?,Virtual Private Network,Verified Public Network,Virtual Public Node,Verified Private Node,0,VPN stands for Virtual Private Network used for secure communication,full_forms
 cyber,What is the full form of SSL?,Secure Socket Layer,Safe Security Layer,System Secure Link,Secure System Line,0,SSL is Secure Socket Layer used for encryption,full_forms
@@ -1169,9 +1169,59 @@ subject,Question,A,B,C,D,answer,explanation,topic
 cyber,Hackers usually use computer viruses for what purpose?,To log monitor each user's keystrokes,To gain access to sensitive information like user IDs and passwords,To corrupt the user's data stored in the computer system,All of the above,3,Computer viruses can log keystrokes steal sensitive data and corrupt stored data for malicious purposes,cyber_security
 cyber,Which of the following is an independent malicious program that does not require a host program?,Trojan Horse,Worm,Trap Door,Virus,1,Worm is a self-replicating malicious program that spreads without needing a host program,cyber_security
 cyber,In the CIA Triad which of the following is not included?,Availability,Confidentiality,Authenticity,Integrity,2,CIA Triad includes Confidentiality Integrity and Availability so Authenticity is not included,cyber_security
-cyber,To ensure data security we need to what?,Encrypt,Decrypt,Delete,None of the above,0,Encryption converts data into a secure coded form to protect it from unauthorized access,cyber_security
+cyber,To ensure data security we need to what?,Encrypt,Decrypt,Delete, of the above,0,Encryption converts data into a secure coded form to protect it from unauthorized access,cyber_security
 cyber,Cyber security provides protection against what?,Against Malware,Against cyber-terrorists,Defends devices from threats,All mentioned options,3,Cyber security protects against malware cyber attacks and various online threats,cyber_security
 cyber,Which of the following are common cyber-attacks?,DDoS and Drive-by Downloads,Malware and Malvertising,Phishing and Password attacks,All of the above,3,All listed options are common cyber attacks used by hackers,cyber_security
+cyber,Which protocol is used to securely browse the web?,HTTP,FTP,HTTPS,SMTP,2,HTTPS uses SSL/TLS to encrypt communication making browsing secure,cyber_security
+cyber,Which attack involves injecting malicious SQL queries?,Phishing,SQL Injection,DDoS,Spoofing,1,SQL Injection manipulates database queries to gain unauthorized access,cyber_security
+cyber,Which malware disguises itself as legitimate software?,Virus,Worm,Trojan Horse,Spyware,2,Trojan appears legitimate but performs malicious actions,cyber_security
+cyber,Which layer of OSI model handles encryption?,Application,Transport,Presentation,Network,2,Presentation layer is responsible for encryption and decryption,cyber_security
+cyber,What is the main purpose of a firewall?,Store data,Block unauthorized access,Encrypt files,Monitor hardware,1,Firewall filters incoming and outgoing traffic,cyber_security
+cyber,Which type of attack uses multiple systems to attack one system?,DoS,DDoS,Phishing,Sniffing,1,DDoS uses many systems to overwhelm a target,cyber_security
+cyber,Which tool is used for password cracking?,Wireshark,John the Ripper,Nmap,Metasploit,1,John the Ripper is used to crack passwords,cyber_security
+cyber,Which attack intercepts communication between two parties?,MITM,DDoS,Phishing,SQL Injection,0,MITM attack intercepts communication secretly,cyber_security
+cyber,Which malware records keystrokes?,Adware,Spyware,Keylogger,Worm,2,Keylogger captures user keystrokes,cyber_security
+cyber,Which protocol is used to send emails?,FTP,SMTP,HTTP,SSH,1,SMTP is used for sending emails,cyber_security
+cyber,Which attack redirects users to fake websites?,Phishing,Spoofing,DNS Poisoning,Sniffing,2,DNS poisoning redirects to malicious sites,cyber_security
+cyber,Which malware spreads without user interaction?,Virus,Trojan,Worm,Adware,2,Worm spreads automatically across networks,cyber_security
+cyber,Which security principle ensures data accuracy?,Confidentiality,Integrity,Availability,Authentication,1,Integrity ensures data is not altered,cyber_security
+cyber,Which attack floods network with traffic?,Phishing,DDoS,MITM,Spoofing,1,DDoS overloads network resources,cyber_security
+cyber,Which technique hides data inside images?,Encryption,Steganography,Hashing,Encoding,1,Steganography hides data within files,cyber_security
+cyber,Which protocol is used for secure remote login?,Telnet,FTP,SSH,SMTP,2,SSH encrypts remote login sessions,cyber_security
+cyber,Which attack uses fake emails?,DDoS,Phishing,Sniffing,Spoofing,1,Phishing uses deceptive emails,cyber_security
+cyber,Which tool scans open ports?,Wireshark,Nmap,Burp Suite,Hydra,1,Nmap scans network ports,cyber_security
+cyber,Which type of malware displays ads?,Spyware,Adware,Trojan,Worm,1,Adware shows unwanted advertisements,cyber_security
+cyber,Which security concept verifies identity?,Authorization,Authentication,Integrity,Availability,1,Authentication verifies user identity,cyber_security
+cyber,Which attack involves fake IP address?,Phishing,IP Spoofing,DDoS,SQL Injection,1,IP spoofing hides attacker identity,cyber_security
+cyber,Which malware encrypts files?,Worm,Trojan,Ransomware,Spyware,2,Ransomware locks files for ransom,cyber_security
+cyber,Which protocol transfers files?,SMTP,FTP,HTTP,SSH,1,FTP is used for file transfer,cyber_security
+cyber,Which attack captures network packets?,Sniffing,DDoS,Phishing,Spoofing,0,Sniffing monitors network traffic,cyber_security
+cyber,Which tool is used for vulnerability scanning?,Nmap,Nessus,Wireshark,Hydra,1,Nessus scans vulnerabilities,cyber_security
+cyber,Which malware replicates itself?,Trojan,Spyware,Worm,Adware,2,Worm self-replicates,cyber_security
+cyber,Which protocol is unsecured?,HTTPS,SSH,HTTP,SFTP,2,HTTP is not encrypted,cyber_security
+cyber,Which attack uses brute force?,Password attack,DDoS,MITM,Phishing,0,Brute force tries all combinations,cyber_security
+cyber,Which attack manipulates ARP table?,ARP Spoofing,DNS Attack,Phishing,Sniffing,0,ARP spoofing alters MAC mapping,cyber_security
+cyber,Which malware steals information?,Adware,Spyware,Trojan,Worm,1,Spyware collects sensitive data,cyber_security
+cyber,Which tool captures packets?,Wireshark,Nmap,Hydra,Burp Suite,0,Wireshark analyzes packets,cyber_security
+cyber,Which attack uses fake DNS response?,Phishing,DNS Spoofing,DDoS,Sniffing,1,DNS spoofing redirects traffic,cyber_security
+cyber,Which protocol secures emails?,SMTP,POP3,IMAP,SMTPS,3,SMTPS encrypts email transfer,cyber_security
+cyber,Which malware deletes data?,Virus,Trojan,Worm,Spyware,0,Viruses can destroy files,cyber_security
+cyber,Which attack targets database?,SQL Injection,Phishing,DDoS,Spoofing,0,SQL injection targets databases,cyber_security
+cyber,Which attack overloads server?,DDoS,MITM,Sniffing,Phishing,0,DDoS overwhelms server,cyber_security
+cyber,Which tool cracks passwords?,Hydra,Nmap,Wireshark,Nessus,0,Hydra is used for password cracking,cyber_security
+cyber,Which protocol is secure file transfer?,FTP,SFTP,HTTP,TCP,1,SFTP encrypts file transfer,cyber_security
+cyber,Which attack alters data in transit?,MITM,Phishing,DDoS,Sniffing,0,MITM modifies communication,cyber_security
+cyber,Which malware hides itself?,Rootkit,Trojan,Worm,Adware,0,Rootkits hide malicious activity,cyber_security
+cyber,Which attack uses email scams?,Phishing,DDoS,Sniffing,Spoofing,0,Phishing uses email scams,cyber_security
+cyber,Which protocol secures websites?,HTTP,HTTPS,FTP,SMTP,1,HTTPS ensures encryption,cyber_security
+cyber,Which malware shows pop-ups?,Adware,Spyware,Worm,Trojan,0,Adware displays ads,cyber_security
+cyber,Which attack involves fake websites?,Phishing,MITM,DDoS,Spoofing,0,Phishing uses fake sites,cyber_security
+cyber,Which security ensures uptime?,Integrity,Availability,Confidentiality,Authentication,1,Availability ensures access,cyber_security
+cyber,Which tool tests web security?,Burp Suite,Nmap,Wireshark,Hydra,0,Burp Suite tests web apps,cyber_security
+cyber,Which attack captures passwords?,Sniffing,DDoS,Phishing,MITM,0,Sniffing captures credentials,cyber_security
+cyber,Which protocol is used for DNS?,UDP,TCP,HTTP,FTP,0,DNS mainly uses UDP,cyber_security
+cyber,Which attack hides identity?,Spoofing,DDoS,Phishing,Sniffing,0,Spoofing masks identity,cyber_security
+cyber,Which malware spreads via email?,Virus,Worm,Trojan,Spyware,0,Viruses spread through email attachments,cyber_security
 subject,Question,A,B,C,D,answer,explanation,topic
 ds,A dataset contains structured rows and columns stored in tables. This type of data is:,Unstructured,Structured,Semi-structured,Raw data,1,Structured data is organized in rows and columns,basics
 ds,A dataset containing text, images, and videos is classified as:,Structured,Semi-structured,Unstructured,Relational,2,Unstructured data has no predefined format,basics
@@ -1180,44 +1230,44 @@ ds,A measure of central tendency is:,Mean,Variance,Range,Standard deviation,0,Me
 ds,A measure of dispersion is:,Mean,Median,Standard deviation,Mode,2,Standard deviation measures spread of data,statistics
 ds,A dataset with extreme values is handled using:,Normalization,Outlier detection,Clustering,Sampling,1,Outliers are identified and handled carefully,preprocessing
 ds,A process of converting raw data into usable form is:,Modeling,Data preprocessing,Deployment,Testing,1,Preprocessing prepares data for analysis,preprocessing
-ds,A missing value in dataset can be handled by:,Ignoring data,Imputation,Deleting dataset,Encoding,None,1,Imputation replaces missing values,preprocessing
+ds,A missing value in dataset can be handled by:,Ignoring data,Imputation,Deleting dataset,Encoding,,1,Imputation replaces missing values,preprocessing
 ds,A categorical variable is:,Numeric,Text-based,Continuous,Discrete numeric,1,Categorical data represents categories,basics
 ds,A continuous variable is:,Discrete values,Infinite values,Text values,Labels,1,Continuous data can take infinite values,basics
 ds,A supervised learning algorithm requires:,No labels,Input-output pairs,Only input,Only output,1,Supervised learning uses labeled data,machine_learning
 ds,A unsupervised learning algorithm uses:,Labeled data,Unlabeled data,Output only,Input only,1,Unsupervised learning finds patterns,machine_learning
-ds,A classification problem predicts:,Continuous value,Category,Cluster,None,1,Classification predicts discrete categories,machine_learning
-ds,A regression problem predicts:,Category,Continuous value,Cluster,None,1,Regression predicts numeric values,machine_learning
-ds,A clustering algorithm groups:,Similar data,Different data,Random data,None,0,Clustering groups similar data points,machine_learning
+ds,A classification problem predicts:,Continuous value,Category,Cluster,,1,Classification predicts discrete categories,machine_learning
+ds,A regression problem predicts:,Category,Continuous value,Cluster,,1,Regression predicts numeric values,machine_learning
+ds,A clustering algorithm groups:,Similar data,Different data,Random data,,0,Clustering groups similar data points,machine_learning
 ds,A popular clustering algorithm is:,Linear regression,K-means,Decision tree,Naive Bayes,1,K-means groups data into clusters,machine_learning
-ds,A model that overfits data performs:,Well on training,Well on test,Poor on training,None,0,Overfitting memorizes training data,machine_learning
-ds,A model that underfits data shows:,High accuracy,Low accuracy,Perfect fit,None,1,Underfitting fails to capture patterns,machine_learning
-ds,A training dataset is used for:,Testing model,Training model,Deployment,None,1,Training data builds model,machine_learning
-ds,A test dataset is used for:,Training,Evaluation,Deployment,None,1,Test data evaluates model performance,machine_learning
-ds,A confusion matrix is used for:,Regression,Classification,Clustering,None,1,Confusion matrix evaluates classification,machine_learning
-ds,Accuracy is calculated as:,Correct predictions/Total,Errors/Total,None,None,0,Accuracy measures correct predictions ratio,machine_learning
-ds,Precision measures:,Correct positives,Correct negatives,None,None,0,Precision measures true positives accuracy,machine_learning
-ds,Recall measures:,False positives,True positives,None,None,1,Recall measures sensitivity,machine_learning
-ds,F1 score is:,Average of precision recall,Harmonic mean,Sum,None,1,F1 balances precision and recall,machine_learning
-ds,A decision tree splits data based on:,Features,Output,None,None,0,Tree splits data using features,machine_learning
-ds,A random forest is:,Single tree,Multiple trees,None,None,1,Random forest combines multiple trees,machine_learning
-ds,A linear regression assumes:,Linear relation,Nonlinear,None,None,0,Linear regression models linear relation,machine_learning
-ds,A logistic regression is used for:,Regression,Classification,None,None,1,Logistic regression predicts probability,machine_learning
-ds,A feature is:,Output variable,Input variable,None,None,1,Feature is input variable,machine_learning
-ds,A label is:,Input,Output,None,None,1,Label is output variable,machine_learning
-ds,Normalization scales data between:,0 and 1,0 and 100,None,None,0,Normalization rescales data,preprocessing
-ds,Standardization converts data to:,Mean 0 std 1,Mean 1 std 0,None,None,0,Standardization normalizes distribution,preprocessing
-ds,A histogram represents:,Frequency distribution,Mean,None,None,0,Histogram shows distribution of values,visualization
-ds,A scatter plot shows:,Relation between variables,Frequency,None,None,0,Scatter shows correlation,visualization
-ds,A bar chart represents:,Categories,Continuous,None,None,0,Bar charts compare categories,visualization
-ds,A correlation measures:,Relationship,Mean,None,None,0,Correlation shows relationship strength,statistics
-ds,A positive correlation means:,Increase together,Decrease together,None,None,0,Positive correlation means both increase,statistics
-ds,A negative correlation means:,Opposite relation,Same relation,None,None,0,Negative correlation means inverse relation,statistics
-ds,A dataset split ratio is commonly:,50-50,70-30,90-10,None,1,70-30 split is common practice,machine_learning
-ds,A pipeline in data science includes:,Steps,Code,None,None,0,Pipeline organizes workflow,data_pipeline
-ds,A data warehouse stores:,Raw data,Processed data,None,None,1,Warehouse stores cleaned structured data,data_engineering
-ds,A big data tool is:,Excel,Hadoop,Word,None,1,Hadoop handles large datasets,data_engineering
+ds,A model that overfits data performs:,Well on training,Well on test,Poor on training,,0,Overfitting memorizes training data,machine_learning
+ds,A model that underfits data shows:,High accuracy,Low accuracy,Perfect fit,,1,Underfitting fails to capture patterns,machine_learning
+ds,A training dataset is used for:,Testing model,Training model,Deployment,,1,Training data builds model,machine_learning
+ds,A test dataset is used for:,Training,Evaluation,Deployment,,1,Test data evaluates model performance,machine_learning
+ds,A confusion matrix is used for:,Regression,Classification,Clustering,,1,Confusion matrix evaluates classification,machine_learning
+ds,Accuracy is calculated as:,Correct predictions/Total,Errors/Total,,,0,Accuracy measures correct predictions ratio,machine_learning
+ds,Precision measures:,Correct positives,Correct negatives,,,0,Precision measures true positives accuracy,machine_learning
+ds,Recall measures:,False positives,True positives,,,1,Recall measures sensitivity,machine_learning
+ds,F1 score is:,Average of precision recall,Harmonic mean,Sum,,1,F1 balances precision and recall,machine_learning
+ds,A decision tree splits data based on:,Features,Output,,,0,Tree splits data using features,machine_learning
+ds,A random forest is:,Single tree,Multiple trees,,,1,Random forest combines multiple trees,machine_learning
+ds,A linear regression assumes:,Linear relation,Nonlinear,,,0,Linear regression models linear relation,machine_learning
+ds,A logistic regression is used for:,Regression,Classification,,,1,Logistic regression predicts probability,machine_learning
+ds,A feature is:,Output variable,Input variable,,,1,Feature is input variable,machine_learning
+ds,A label is:,Input,Output,,,1,Label is output variable,machine_learning
+ds,Normalization scales data between:,0 and 1,0 and 100,,,0,Normalization rescales data,preprocessing
+ds,Standardization converts data to:,Mean 0 std 1,Mean 1 std 0,,,0,Standardization normalizes distribution,preprocessing
+ds,A histogram represents:,Frequency distribution,Mean,,,0,Histogram shows distribution of values,visualization
+ds,A scatter plot shows:,Relation between variables,Frequency,,,0,Scatter shows correlation,visualization
+ds,A bar chart represents:,Categories,Continuous,,,0,Bar charts compare categories,visualization
+ds,A correlation measures:,Relationship,Mean,,,0,Correlation shows relationship strength,statistics
+ds,A positive correlation means:,Increase together,Decrease together,,,0,Positive correlation means both increase,statistics
+ds,A negative correlation means:,Opposite relation,Same relation,,,0,Negative correlation means inverse relation,statistics
+ds,A dataset split ratio is commonly:,50-50,70-30,90-10,,1,70-30 split is common practice,machine_learning
+ds,A pipeline in data science includes:,Steps,Code,,,0,Pipeline organizes workflow,data_pipeline
+ds,A data warehouse stores:,Raw data,Processed data,,,1,Warehouse stores cleaned structured data,data_engineering
+ds,A big data tool is:,Excel,Hadoop,Word,,1,Hadoop handles large datasets,data_engineering
 ds,A Python library for data analysis is:,NumPy,Pandas,Matplotlib,All of these,3,All are used in data science,tools
-ds,A model deployment means:,Training,Using model,None,None,1,Deployment uses model in real system,machine_learning
+ds,A model deployment means:,Training,Using model,,,1,Deployment uses model in real system,machine_learning
 subject,Question,A,B,C,D,answer,explanation,topic
 ds,A model shows high accuracy on training data but significantly lower accuracy on unseen test data. What is the most appropriate interpretation?,The model is underfitting due to insufficient features,The model is overfitting due to memorizing training patterns,The dataset is perfectly balanced,The algorithm is deterministic,1,The model has learned noise and specific patterns from training data instead of generalizable features leading to poor test performance. Underfitting would show low accuracy on both sets while balanced data or determinism do not explain this gap,machine_learning
 ds,In a classification problem where false negatives are extremely costly such as disease detection which metric should be prioritized?,Accuracy,Precision,Recall,Specificity,2,Recall measures how many actual positives are correctly identified which is critical in disease detection. Precision focuses on false positives while accuracy can be misleading in imbalanced datasets and specificity focuses on true negatives,statistics
@@ -1255,7 +1305,7 @@ ds,What is the purpose of train-test split?,Increase data size,Evaluate generali
 ds,What does recall focus on?,False positives,False negatives,True negatives,Accuracy,1,Recall minimizes missed positives making it critical in sensitive applications,statistics
 ds,Why is precision important in spam detection?,To reduce missed spam,To reduce false alarms,To increase recall,To balance data,1,Precision ensures non-spam emails are not incorrectly flagged,statistics
 ds,What is gradient descent sensitive to?,Learning rate,Dataset size only,Feature count only,Output labels,0,Learning rate controls convergence speed and stability,machine_learning
-ds,What happens if learning rate is too high?,Slow convergence,Overshooting minimum,Different dataset,None,1,High learning rate causes instability and overshooting,machine_learning
+ds,What happens if learning rate is too high?,Slow convergence,Overshooting minimum,Different dataset,,1,High learning rate causes instability and overshooting,machine_learning
 ds,What is batch gradient descent?,Updates per sample,Updates using full dataset,Updates randomly,Updates per feature,1,Uses entire dataset for each update,machine_learning
 ds,What is stochastic gradient descent?,Uses full data,Updates per sample,Uses no data,Uses fixed output,1,SGD updates weights for each data point improving speed,machine_learning
 ds,What is mini-batch gradient descent?,Single update,Uses subset of data,Uses no data,Uses output only,1,Mini-batch balances speed and stability,machine_learning
@@ -1263,13 +1313,13 @@ ds,Why is dimensionality reduction useful?,Increase features,Reduce noise and co
 ds,What is curse of dimensionality?,More data improves model,High dimensions degrade performance,Features always useful,Models become simple,1,High dimensional space makes learning difficult,machine_learning
 ds,What does standardization achieve?,Range 0-1,Mean 0 std 1,Remove features,Cluster data,1,Standardization centers and scales data,preprocessing
 ds,Why are outliers problematic?,Improve model,Distort statistical measures,Normalize data,Reduce variance,1,Outliers skew mean and affect models,statistics
-ds,What is bootstrapping?,Sampling with replacement,Sampling without replacement,Removing data,Clustering,None,0,Bootstrapping creates multiple samples for estimation,machine_learning
+ds,What is bootstrapping?,Sampling with replacement,Sampling without replacement,Removing data,Clustering,,0,Bootstrapping creates multiple samples for estimation,machine_learning
 ds,Why is bagging effective?,Reduces bias,Reduces variance,Increases noise,Removes features,1,Bagging averages models reducing variance,machine_learning
 ds,What is boosting strategy?,Parallel models,Sequential error correction,Random selection,Feature removal,1,Boosting focuses on correcting previous errors,machine_learning
-ds,What is feature importance?,Model accuracy,Impact of feature on prediction,Dataset size,Output label,None,1,Measures contribution of each feature,machine_learning
-ds,Why is log transformation used?,Increase variance,Reduce skewness,Remove data,Increase features,None,1,Log reduces skewness improving distribution,statistics
-ds,What is a confusion matrix element?,Mean,True positive,Variance,Cluster,None,1,True positive is correct positive prediction,machine_learning
-ds,What is hyperparameter tuning?,Adjust model parameters,Adjust data,Remove features,Normalize dataset,None,0,Tuning improves model performance by optimizing parameters,machine_learning
+ds,What is feature importance?,Model accuracy,Impact of feature on prediction,Dataset size,Output label,,1,Measures contribution of each feature,machine_learning
+ds,Why is log transformation used?,Increase variance,Reduce skewness,Remove data,Increase features,,1,Log reduces skewness improving distribution,statistics
+ds,What is a confusion matrix element?,Mean,True positive,Variance,Cluster,,1,True positive is correct positive prediction,machine_learning
+ds,What is hyperparameter tuning?,Adjust model parameters,Adjust data,Remove features,Normalize dataset,,0,Tuning improves model performance by optimizing parameters,machine_learning
 subject,Question,A,B,C,D,answer,explanation,topic
 ds,A model shows low training error and low test error. What does this indicate?,Overfitting,Underfitting,Good generalization,High variance,2,Low error on both datasets indicates the model has learned patterns effectively without memorizing noise unlike overfitting or underfitting,machine_learning
 ds,A dataset has highly skewed distribution. Which measure is most robust?,Mean,Median,Variance,Range,1,Median is resistant to extreme values unlike mean which shifts with outliers,statistics
@@ -1279,42 +1329,42 @@ ds,What is the drawback of using accuracy in imbalanced datasets?,Ignores true p
 ds,What does entropy measure in decision trees?,Accuracy,Impurity,Variance,Distance,1,Entropy measures randomness and helps determine best splits,machine_learning
 ds,What happens when model complexity increases excessively?,Underfitting,Overfitting,Reduced variance,Perfect predictions,1,Highly complex models capture noise leading to overfitting,machine_learning
 ds,Why is cross-validation preferred over single train-test split?,Reduces bias in evaluation,Increases dataset size,Removes outliers,Simplifies model,0,Cross-validation uses multiple splits improving reliability of evaluation,machine_learning
-ds,What is the goal of PCA transformation?,Increase dimensions,Reduce dimensions while preserving variance,Normalize dataset,Cluster data,None,1,PCA reduces dimensionality by retaining maximum variance,machine_learning
+ds,What is the goal of PCA transformation?,Increase dimensions,Reduce dimensions while preserving variance,Normalize dataset,Cluster data,,1,PCA reduces dimensionality by retaining maximum variance,machine_learning
 ds,What is a key assumption of linear regression?,Nonlinear relationship,Linear relationship between variables,Random output,Clustered data,1,Linear regression assumes linear dependency between features and target,machine_learning
 ds,What is variance in statistics?,Spread of data,Central value,Maximum value,Minimum value,0,Variance measures dispersion around mean,statistics
-ds,What is the effect of multicollinearity?,Stable coefficients,Unstable coefficients,Reduced features,Improved accuracy,None,1,Multicollinearity inflates variance making coefficients unreliable,statistics
-ds,Why is regularization useful?,Reduces overfitting,Removes all features,Increases error,Simplifies data,None,0,Regularization penalizes complexity preventing overfitting,machine_learning
-ds,What is gradient descent optimization?,Minimizing loss function,Maximizing accuracy directly,Removing features,Clustering data,None,0,Gradient descent iteratively updates weights to minimize loss,machine_learning
-ds,What is the role of learning rate?,Controls update step size,Controls dataset size,Controls features,Controls labels,None,0,Learning rate determines how quickly model updates weights,machine_learning
-ds,What is overfitting mainly caused by?,Too simple model,Too complex model,Too little data always,Balanced data,None,1,Complex models learn noise leading to overfitting,machine_learning
-ds,What is underfitting mainly caused by?,Too simple model,Too complex model,Too much data,High variance,None,0,Simple models fail to capture patterns,machine_learning
-ds,What is bias in ML?,Error due to simplicity,Error due to noise,Perfect accuracy,Variance,None,0,Bias arises from simplifying assumptions,machine_learning
-ds,What is variance in ML?,Model sensitivity to data changes,Mean value,Loss function,None,None,0,Variance measures how predictions change with data,machine_learning
-ds,What is the purpose of confusion matrix?,Evaluate classification performance,Train model,Reduce features,Cluster data,None,0,It shows TP FP FN TN giving detailed evaluation,machine_learning
+ds,What is the effect of multicollinearity?,Stable coefficients,Unstable coefficients,Reduced features,Improved accuracy,,1,Multicollinearity inflates variance making coefficients unreliable,statistics
+ds,Why is regularization useful?,Reduces overfitting,Removes all features,Increases error,Simplifies data,,0,Regularization penalizes complexity preventing overfitting,machine_learning
+ds,What is gradient descent optimization?,Minimizing loss function,Maximizing accuracy directly,Removing features,Clustering data,,0,Gradient descent iteratively updates weights to minimize loss,machine_learning
+ds,What is the role of learning rate?,Controls update step size,Controls dataset size,Controls features,Controls labels,,0,Learning rate determines how quickly model updates weights,machine_learning
+ds,What is overfitting mainly caused by?,Too simple model,Too complex model,Too little data always,Balanced data,,1,Complex models learn noise leading to overfitting,machine_learning
+ds,What is underfitting mainly caused by?,Too simple model,Too complex model,Too much data,High variance,,0,Simple models fail to capture patterns,machine_learning
+ds,What is bias in ML?,Error due to simplicity,Error due to noise,Perfect accuracy,Variance,,0,Bias arises from simplifying assumptions,machine_learning
+ds,What is variance in ML?,Model sensitivity to data changes,Mean value,Loss function,,,0,Variance measures how predictions change with data,machine_learning
+ds,What is the purpose of confusion matrix?,Evaluate classification performance,Train model,Reduce features,Cluster data,,0,It shows TP FP FN TN giving detailed evaluation,machine_learning
 ds,What is precision?,TP/(TP+FP),TP/(TP+FN),FP/(FP+TN),TN/(TN+FP),0,Precision measures correctness of positive predictions,machine_learning
 ds,What is recall?,TP/(TP+FN),TP/(TP+FP),TN/(TN+FP),FP/(FP+TN),0,Recall measures ability to find all positives,machine_learning
 ds,What is F1 score?,Arithmetic mean,Harmonic mean,Geometric mean,Weighted mean,1,F1 balances precision and recall,machine_learning
-ds,What is bagging?,Parallel model training,Sequential training,Feature removal,Clustering,None,0,Bagging builds models independently reducing variance,machine_learning
-ds,What is boosting?,Sequential learning,Parallel learning,Random sampling,Feature scaling,None,0,Boosting trains models sequentially correcting errors,machine_learning
-ds,What is random forest?,Single tree,Multiple decision trees,None,None,None,1,Random forest combines trees for better performance,machine_learning
-ds,What is feature engineering?,Creating useful features,Deleting features,Scaling features,Clustering,None,0,Feature engineering improves model input quality,machine_learning
-ds,Why are outliers removed?,Improve accuracy,Increase variance,Reduce features,Normalize data,None,0,Outliers distort models and statistics,statistics
-ds,What is normalization?,Scaling data 0-1,Mean 0 std 1,Removing features,Clustering,None,0,Normalization rescales values,machine_learning
-ds,What is standardization?,Mean 0 std 1,Range 0-1,Clustering,Feature removal,None,0,Standardization centers data around mean,machine_learning
-ds,What is clustering?,Grouping similar data,Classification,Regression,Sorting,None,0,Clustering groups similar data points,machine_learning
-ds,What is K-means?,Clustering algorithm,Regression model,Classification model,Normalization,None,0,K-means groups data into clusters,machine_learning
-ds,What is elbow method?,Find optimal k,Normalize data,Remove features,Split dataset,None,0,Elbow method determines best cluster number,machine_learning
-ds,What is correlation?,Relationship between variables,Mean,Variance,Mode,None,0,Correlation measures dependency,statistics
-ds,What is positive correlation?,Variables increase together,Opposite relation,No relation,Random,None,0,Positive correlation means both move in same direction,statistics
-ds,What is negative correlation?,Opposite relation,Same relation,None,None,None,0,Negative correlation means inverse relation,statistics
-ds,What is hypothesis testing?,Statistical decision method,Clustering,Normalization,Feature selection,None,0,Tests assumptions using data,statistics
-ds,What is p-value?,Probability of result,Mean,Variance,Mode,None,0,Indicates significance of result,statistics
-ds,What is type I error?,False positive,False negative,True positive,True negative,None,0,Rejecting true null hypothesis,statistics
-ds,What is type II error?,False negative,False positive,True positive,True negative,None,0,Failing to reject false null,statistics
-ds,What is time series data?,Sequential data,Random data,Clustered data,Static data,None,0,Time series has time dependency,machine_learning
-ds,What is ARIMA?,Time series model,Clustering model,Classification model,Normalization,None,0,ARIMA predicts time-based data,machine_learning
-ds,What is neural network?,Layered model,Clustering model,Simple model,Static model,None,0,Neural networks consist of layers of neurons,machine_learning
-ds,What is activation function?,Non-linear transformation,Scaling,Normalization,Clustering,None,0,Activation introduces non-linearity,machine_learning
+ds,What is bagging?,Parallel model training,Sequential training,Feature removal,Clustering,,0,Bagging builds models independently reducing variance,machine_learning
+ds,What is boosting?,Sequential learning,Parallel learning,Random sampling,Feature scaling,,0,Boosting trains models sequentially correcting errors,machine_learning
+ds,What is random forest?,Single tree,Multiple decision trees,,,,1,Random forest combines trees for better performance,machine_learning
+ds,What is feature engineering?,Creating useful features,Deleting features,Scaling features,Clustering,,0,Feature engineering improves model input quality,machine_learning
+ds,Why are outliers removed?,Improve accuracy,Increase variance,Reduce features,Normalize data,,0,Outliers distort models and statistics,statistics
+ds,What is normalization?,Scaling data 0-1,Mean 0 std 1,Removing features,Clustering,,0,Normalization rescales values,machine_learning
+ds,What is standardization?,Mean 0 std 1,Range 0-1,Clustering,Feature removal,,0,Standardization centers data around mean,machine_learning
+ds,What is clustering?,Grouping similar data,Classification,Regression,Sorting,,0,Clustering groups similar data points,machine_learning
+ds,What is K-means?,Clustering algorithm,Regression model,Classification model,Normalization,,0,K-means groups data into clusters,machine_learning
+ds,What is elbow method?,Find optimal k,Normalize data,Remove features,Split dataset,,0,Elbow method determines best cluster number,machine_learning
+ds,What is correlation?,Relationship between variables,Mean,Variance,Mode,,0,Correlation measures dependency,statistics
+ds,What is positive correlation?,Variables increase together,Opposite relation,No relation,Random,,0,Positive correlation means both move in same direction,statistics
+ds,What is negative correlation?,Opposite relation,Same relation,,,,0,Negative correlation means inverse relation,statistics
+ds,What is hypothesis testing?,Statistical decision method,Clustering,Normalization,Feature selection,,0,Tests assumptions using data,statistics
+ds,What is p-value?,Probability of result,Mean,Variance,Mode,,0,Indicates significance of result,statistics
+ds,What is type I error?,False positive,False negative,True positive,True negative,,0,Rejecting true null hypothesis,statistics
+ds,What is type II error?,False negative,False positive,True positive,True negative,,0,Failing to reject false null,statistics
+ds,What is time series data?,Sequential data,Random data,Clustered data,Static data,,0,Time series has time dependency,machine_learning
+ds,What is ARIMA?,Time series model,Clustering model,Classification model,Normalization,,0,ARIMA predicts time-based data,machine_learning
+ds,What is neural network?,Layered model,Clustering model,Simple model,Static model,,0,Neural networks consist of layers of neurons,machine_learning
+ds,What is activation function?,Non-linear transformation,Scaling,Normalization,Clustering,,0,Activation introduces non-linearity,machine_learning
 subject,Question,A,B,C,D,answer,explanation,topic
 ecommerce,A business selling products directly to consumers online follows which model?,B2B,B2C,C2C,C2B,1,B2C means Business to Consumer where companies sell directly to customers unlike B2B which involves businesses,models
 ecommerce,A platform where consumers sell products to other consumers is classified as:,B2B,B2C,C2C,C2G,2,C2C enables peer-to-peer transactions like resale platforms unlike B2C which involves businesses,models
@@ -1326,7 +1376,7 @@ ecommerce,What is a shopping cart in e-commerce?,Database,Temporary storage for 
 ecommerce,Which factor most influences customer trust in e-commerce?,Website color,Security and reviews,Font size,Background music,1,Security features and reviews build trust unlike visual elements which have minor impact,customer_behavior
 ecommerce,What is the primary function of SSL certificate?,Improve speed,Encrypt data,Store data,Optimize images,1,SSL encrypts data ensuring secure communication unlike caching which improves speed,security
 ecommerce,Which model involves individuals offering products to businesses?,B2B,C2B,B2C,G2B,1,C2B allows individuals to sell services or products to companies unlike B2C,models
-ecommerce,What is drop shipping?,Seller stores inventory,Seller ships products directly,Supplier ships directly to customer,Customer picks product,None,2,In drop shipping supplier handles shipping removing need for inventory unlike traditional retail,logistics
+ecommerce,What is drop shipping?,Seller stores inventory,Seller ships products directly,Supplier ships directly to customer,Customer picks product,,2,In drop shipping supplier handles shipping removing need for inventory unlike traditional retail,logistics
 ecommerce,What is digital wallet?,Physical wallet,Online payment tool,Inventory system,Shipping method,1,Digital wallets store payment info securely for transactions unlike logistics systems,payments
 ecommerce,Which metric measures conversion in e-commerce?,Bounce rate,Conversion rate,Click rate,Load time,1,Conversion rate shows percentage of visitors making purchase unlike bounce rate which measures exits,analytics
 ecommerce,What does SEO stand for?,Search Engine Optimization,System Engine Operation,Secure Electronic Operation,Search Engine Output,0,SEO improves website visibility in search engines unlike security protocols,marketing
@@ -1342,12 +1392,12 @@ ecommerce,What is bounce rate?,Users purchasing,Users leaving without interactio
 ecommerce,Which feature enhances product visibility?,SEO,Encryption,Firewall,Cache,0,SEO improves ranking in search engines unlike security tools,marketing
 ecommerce,What is personalization in e-commerce?,Same content for all,Customized user experience,Random content,Static content,1,Personalization improves engagement by tailoring content unlike generic experience,customer_behavior
 ecommerce,Which payment method is fastest online?,Cash,Credit card,UPI,Cheque,2,UPI enables instant real-time transactions unlike cheque processing,payments
-ecommerce,What is inventory management?,Tracking stock,Processing payment,Designing UI,Marketing,None,0,Inventory management ensures product availability unlike payment systems,logistics
+ecommerce,What is inventory management?,Tracking stock,Processing payment,Designing UI,Marketing,,0,Inventory management ensures product availability unlike payment systems,logistics
 ecommerce,Which factor affects page load time?,Server speed,Design color,Font type,Content language,0,Server speed directly impacts loading performance,performance
 ecommerce,What is A/B testing?,Comparing two versions,Testing database,Checking payment,Validating code,0,A/B testing compares variations to optimize performance,analytics
 ecommerce,What is customer lifetime value?,Single purchase value,Total revenue from customer,Product price,Discount rate,1,CLV measures long-term value of customer unlike single transaction value,analytics
 ecommerce,Which method reduces fraud?,Encryption,Weak passwords,Public access,No authentication,0,Encryption protects sensitive data reducing fraud risk,security
-ecommerce,What is checkout process?,Product selection,Final purchase step,Payment gateway,Shipping,None,1,Checkout completes transaction unlike browsing stage,basics
+ecommerce,What is checkout process?,Product selection,Final purchase step,Payment gateway,Shipping,,1,Checkout completes transaction unlike browsing stage,basics
 ecommerce,Which element increases trust?,Customer reviews,Slow loading,No security,Hidden info,0,Reviews build credibility unlike poor UX,customer_behavior
 subject,Question,A,B,C,D,answer,explanation,topic
 ecommerce,A sudden drop in conversion rate after a website redesign most likely indicates:,Improved user experience,UI/UX issues affecting usability,Better SEO performance,Reduced server load,1,A drop in conversion after redesign usually means usability or navigation issues. Improved UX would increase conversions while SEO and server load do not directly cause immediate conversion decline,analytics
@@ -1373,7 +1423,7 @@ ecommerce,Which model focuses on subscription-based services?,One-time purchase 
 ecommerce,What is affiliate marketing commission based on?,Page views,Sales generated by affiliate,Server load,Inventory size,1,Affiliates earn commission per sale unlike metrics like views or load,marketing
 ecommerce,Which factor improves SEO ranking?,Keyword optimization,Heavy images,Slow loading pages,Duplicate content,0,Keywords improve search visibility unlike poor performance factors,marketing
 ecommerce,What is a payment gateway failure impact?,Improved sales,Transaction failure,Better UX,Higher conversion,1,Failure stops transactions reducing revenue unlike improving UX,payments
-ecommerce,What is customer segmentation?,Grouping customers by characteristics,Random grouping,Deleting users,Assigning prices,None,0,Segmentation helps targeted marketing unlike random grouping,analytics
+ecommerce,What is customer segmentation?,Grouping customers by characteristics,Random grouping,Deleting users,Assigning prices,,0,Segmentation helps targeted marketing unlike random grouping,analytics
 ecommerce,Which approach improves mobile e-commerce experience?,Responsive design,Heavy graphics,Large scripts,Complex navigation,0,Responsive design adapts layout for mobile improving usability unlike heavy elements,performance
 ecommerce,What is logistics in e-commerce?,Payment handling,Product delivery management,Marketing,UI design,1,Logistics manages shipping and delivery unlike payment or marketing systems,logistics
 ecommerce,Which factor increases repeat purchases?,Poor service,Loyalty programs,Slow delivery,High prices,1,Loyalty programs encourage retention unlike poor service which reduces it,marketing
@@ -1425,7 +1475,7 @@ ecommerce,What is heatmap analysis?,User behavior visualization,Payment tracking
 ecommerce,Which strategy increases upselling success?,Offering cheaper products,Suggesting premium options,Removing features,Reducing price,1,Upselling promotes higher-value products,marketing
 ecommerce,What is demand forecasting?,Predicting future demand,Tracking orders,Managing UI,Handling payments,0,Forecasting uses data to estimate future demand improving planning,analytics
 ecommerce,Which factor improves conversion rate?,Slow checkout,Fast checkout process,Limited payment options,Hidden fees,1,Fast checkout reduces friction increasing conversions,analytics
-ecommerce,What is logistics optimization?,Reducing delivery efficiency,Improving delivery routes and cost,Increasing delays,Reducing stock,None,1,Optimization improves delivery speed and reduces cost,logistics
+ecommerce,What is logistics optimization?,Reducing delivery efficiency,Improving delivery routes and cost,Increasing delays,Reducing stock,,1,Optimization improves delivery speed and reduces cost,logistics
 subject,Question,A,B,C,D,answer,explanation,topic
 ecommerce,During a flash sale the website crashes due to high traffic. Which solution is most appropriate?,Reduce product listings,Implement auto-scaling infrastructure,Disable payment gateway,Increase product price,1,Auto-scaling dynamically allocates resources to handle traffic spikes unlike reducing listings or increasing price which do not solve infrastructure issues,performance
 ecommerce,Which pricing strategy maximizes profit by setting high initial prices for new products?,Penetration pricing,Skimming pricing,Dynamic pricing,Discount pricing,1,Skimming targets early adopters willing to pay more unlike penetration pricing which starts low,marketing
@@ -1469,10 +1519,10 @@ ecommerce,Which factor improves search experience?,Relevant filters,Heavy images
 ecommerce,What is warehouse automation?,Manual storage,Automated inventory handling,Manual delivery,Manual tracking,1,Automation improves efficiency and reduces errors unlike manual processes,logistics
 ecommerce,Which factor impacts conversion most?,Page speed,Font size,Logo color,Background music,0,Faster pages improve user experience and conversions unlike visual factors,performance
 subject,Question,A,B,C,D,answer,explanation,topic
-iot,What is the primary goal of Internet of Things?,Connect people only,Connect devices and enable communication,Store data offline,Replace internet,None,1,IoT connects physical devices enabling data exchange unlike traditional internet focused on human interaction,basics
+iot,What is the primary goal of Internet of Things?,Connect people only,Connect devices and enable communication,Store data offline,Replace internet,,1,IoT connects physical devices enabling data exchange unlike traditional internet focused on human interaction,basics
 iot,Which component collects data from environment in IoT systems?,Actuator,Sensor,Gateway,Cloud server,1,Sensors gather real-world data such as temperature or motion unlike actuators which act on data,components
 iot,Which component performs action based on IoT data?,Sensor,Actuator,Router,Database,1,Actuators execute actions like turning on devices unlike sensors which only collect data,components
-iot,What is the role of IoT gateway?,Store data permanently,Connect devices to cloud and manage communication,Act as sensor,Replace router,None,1,Gateway bridges local devices and cloud handling protocol translation unlike storage systems,architecture
+iot,What is the role of IoT gateway?,Store data permanently,Connect devices to cloud and manage communication,Act as sensor,Replace router,,1,Gateway bridges local devices and cloud handling protocol translation unlike storage systems,architecture
 iot,Which protocol is lightweight and widely used in IoT?,HTTP,FTP,MQTT,SMTP,2,MQTT is lightweight publish-subscribe protocol suitable for low bandwidth unlike HTTP which is heavier,protocols
 iot,Which layer of IoT architecture interacts with physical devices?,Application layer,Network layer,Perception layer,Business layer,2,Perception layer includes sensors and actuators interacting with environment,architecture
 iot,Which layer handles data processing and analytics in IoT?,Perception layer,Application layer,Network layer,Transport layer,1,Application layer processes and uses data unlike perception which collects it,architecture
@@ -1480,31 +1530,31 @@ iot,Which communication technology is used for short-range IoT devices?,Satellit
 iot,Which communication technology is used for long-range IoT connectivity?,Bluetooth,Wi-Fi,LoRa,USB,2,LoRa supports long-range low-power communication unlike Wi-Fi or Bluetooth,communication
 iot,What is edge computing in IoT?,Processing data in cloud,Processing data near source devices,Storing data offline,Replacing sensors,1,Edge computing reduces latency by processing near devices unlike cloud-only systems,architecture
 iot,Which security mechanism protects IoT data transmission?,Compression,Encryption,Caching,Indexing,1,Encryption ensures confidentiality and integrity unlike compression which reduces size,security
-iot,What is the function of IoT cloud platforms?,Collect sensor data only,Store process and analyze IoT data,Act as sensors,Replace devices,None,1,Cloud platforms handle storage and analytics unlike sensors or gateways,cloud
+iot,What is the function of IoT cloud platforms?,Collect sensor data only,Store process and analyze IoT data,Act as sensors,Replace devices,,1,Cloud platforms handle storage and analytics unlike sensors or gateways,cloud
 iot,Which IoT device is used in smart homes for automation?,Thermostat,Printer,Scanner,Monitor,0,Smart thermostats adjust temperature automatically unlike traditional devices,applications
-iot,What is the role of RFID in IoT?,Encrypt data,Identify objects wirelessly,Store data,Process data,None,1,RFID tags identify objects without contact unlike encryption or storage,technology
+iot,What is the role of RFID in IoT?,Encrypt data,Identify objects wirelessly,Store data,Process data,,1,RFID tags identify objects without contact unlike encryption or storage,technology
 iot,Which network protocol uses publish-subscribe model?,HTTP,FTP,MQTT,TCP,2,MQTT uses pub-sub for efficient communication unlike request-response protocols,protocols
-iot,What is latency in IoT systems?,Data size,Delay in communication,Processing speed,Storage capacity,None,1,Latency measures delay between sending and receiving data,performance
+iot,What is latency in IoT systems?,Data size,Delay in communication,Processing speed,Storage capacity,,1,Latency measures delay between sending and receiving data,performance
 iot,Which IoT application is used in healthcare?,Smart meters,Remote patient monitoring,Smart farming,Traffic control,1,IoT enables remote monitoring of patients improving healthcare delivery,applications
-iot,What is smart agriculture in IoT?,Manual farming,Using sensors for crop monitoring,Offline farming,Traditional irrigation,None,1,IoT uses sensors for soil moisture and crop health unlike manual methods,applications
+iot,What is smart agriculture in IoT?,Manual farming,Using sensors for crop monitoring,Offline farming,Traditional irrigation,,1,IoT uses sensors for soil moisture and crop health unlike manual methods,applications
 iot,Which device connects IoT sensors to internet?,Gateway,Actuator,Sensor,Switch,0,Gateway provides connectivity and protocol translation unlike sensors or actuators,architecture
-iot,What is interoperability in IoT?,Devices cannot communicate,Devices work together across systems,Data storage,Network failure,None,1,Interoperability allows different devices to communicate seamlessly,concepts
-iot,Which challenge is common in IoT systems?,Unlimited power,Security issues,No connectivity,No data,None,1,Security is major concern due to distributed devices unlike power or connectivity assumptions,security
-iot,What is a digital twin in IoT?,Physical device,Virtual model of device,Database,System,None,1,Digital twin represents real-world object digitally for analysis,concepts
+iot,What is interoperability in IoT?,Devices cannot communicate,Devices work together across systems,Data storage,Network failure,,1,Interoperability allows different devices to communicate seamlessly,concepts
+iot,Which challenge is common in IoT systems?,Unlimited power,Security issues,No connectivity,No data,,1,Security is major concern due to distributed devices unlike power or connectivity assumptions,security
+iot,What is a digital twin in IoT?,Physical device,Virtual model of device,Database,System,,1,Digital twin represents real-world object digitally for analysis,concepts
 iot,Which IoT standard is used for low power wide area network?,Wi-Fi,Bluetooth,Zigbee,LoRaWAN,3,LoRaWAN supports long-range low-power communication unlike Zigbee,communication
-iot,What is Zigbee used for?,High-speed internet,Low power short-range communication,Satellite communication,Fiber network,None,1,Zigbee is low-power protocol for IoT devices unlike high-speed networks,communication
-iot,Which IoT application is used in smart cities?,Traffic monitoring,Manual systems,Offline maps,Traditional signals,None,0,IoT improves traffic management using sensors unlike manual control,applications
-iot,What is scalability in IoT?,Reducing devices,Handling increasing devices efficiently,Limiting data,Reducing performance,None,1,Scalability ensures system handles growth efficiently,concepts
-iot,What is data analytics in IoT?,Collecting data,Analyzing data for insights,Deleting data,Storing data,None,1,Analytics extracts useful insights from IoT data,cloud
-iot,Which component ensures device authentication?,Encryption,Authentication mechanism,Caching,Compression,None,1,Authentication verifies device identity preventing unauthorized access,security
-iot,What is bandwidth in IoT?,Storage capacity,Data transfer capacity,Processing power,Device count,None,1,Bandwidth defines amount of data transmitted per time,performance
-iot,What is fog computing?,Cloud computing,Intermediate layer between cloud and devices,Local storage,Offline processing,None,1,Fog computing processes data closer to devices reducing latency,architecture
-iot,Which IoT application is used in industry?,Smart manufacturing,Manual production,Offline systems,Traditional machines,None,0,IoT enables automation and monitoring in industries,applications
-iot,What is sensor calibration?,Adjusting sensor accuracy,Replacing sensor,Deleting data,Encrypting data,None,0,Calibration ensures accurate measurements unlike replacement or encryption,components
+iot,What is Zigbee used for?,High-speed internet,Low power short-range communication,Satellite communication,Fiber network,,1,Zigbee is low-power protocol for IoT devices unlike high-speed networks,communication
+iot,Which IoT application is used in smart cities?,Traffic monitoring,Manual systems,Offline maps,Traditional signals,,0,IoT improves traffic management using sensors unlike manual control,applications
+iot,What is scalability in IoT?,Reducing devices,Handling increasing devices efficiently,Limiting data,Reducing performance,,1,Scalability ensures system handles growth efficiently,concepts
+iot,What is data analytics in IoT?,Collecting data,Analyzing data for insights,Deleting data,Storing data,,1,Analytics extracts useful insights from IoT data,cloud
+iot,Which component ensures device authentication?,Encryption,Authentication mechanism,Caching,Compression,,1,Authentication verifies device identity preventing unauthorized access,security
+iot,What is bandwidth in IoT?,Storage capacity,Data transfer capacity,Processing power,Device count,,1,Bandwidth defines amount of data transmitted per time,performance
+iot,What is fog computing?,Cloud computing,Intermediate layer between cloud and devices,Local storage,Offline processing,,1,Fog computing processes data closer to devices reducing latency,architecture
+iot,Which IoT application is used in industry?,Smart manufacturing,Manual production,Offline systems,Traditional machines,,0,IoT enables automation and monitoring in industries,applications
+iot,What is sensor calibration?,Adjusting sensor accuracy,Replacing sensor,Deleting data,Encrypting data,,0,Calibration ensures accurate measurements unlike replacement or encryption,components
 iot,Which IoT protocol supports REST architecture?,MQTT,CoAP,FTP,SMTP,1,CoAP is lightweight protocol supporting REST unlike MQTT pub-sub model,protocols
-iot,What is IoT ecosystem?,Single device,Network of devices platforms and users,Database only,System only,None,1,IoT ecosystem includes devices networks and services working together,concepts
-iot,Which factor affects IoT device battery life?,Screen size,Power consumption,Color,Shape,None,1,Low power design is critical for IoT devices unlike physical appearance,performance
-iot,What is real-time IoT system?,Delayed response,Immediate data processing,Offline system,Manual system,None,1,Real-time systems process data instantly unlike delayed systems,concepts
+iot,What is IoT ecosystem?,Single device,Network of devices platforms and users,Database only,System only,,1,IoT ecosystem includes devices networks and services working together,concepts
+iot,Which factor affects IoT device battery life?,Screen size,Power consumption,Color,Shape,,1,Low power design is critical for IoT devices unlike physical appearance,performance
+iot,What is real-time IoT system?,Delayed response,Immediate data processing,Offline system,Manual system,,1,Real-time systems process data instantly unlike delayed systems,concepts
 subject,Question,A,B,C,D,answer,explanation,topic
 iot,An IoT system requires real-time decision making with minimal latency. Which architecture is most suitable?,Cloud-centric architecture,Edge computing architecture,Centralized database system,Batch processing system,1,Edge computing processes data near devices reducing latency unlike cloud-centric systems which introduce network delays,architecture
 iot,Which protocol is most suitable for constrained devices with limited bandwidth and power?,HTTP,FTP,MQTT,SOAP,2,MQTT uses lightweight publish-subscribe model minimizing overhead unlike HTTP or SOAP which are heavier,protocols
