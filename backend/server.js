@@ -138,3 +138,7 @@ const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+// NOTES MAIN PAGE
+app.get("/notes", (req, res) => {
+  res.sendFile(path.join(FRONTEND_PATH, "notes/index.html"));
+});
