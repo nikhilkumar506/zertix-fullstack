@@ -1836,3 +1836,98 @@ footer {
     margin-left: 0;
   }
 }
+/* ===== GLOBAL SAFETY ===== */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ===== HERO LAYOUT FIX ===== */
+.hero {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px !important;
+}
+
+/* LEFT TEXT */
+.hero-left {
+  max-width: 650px;
+}
+
+/* ===== HERO IMAGE FIX (certificate) ===== */
+.hero-right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* IMAGE CONTROL */
+.hero-right img {
+  width: 90%;
+  max-width: 300px;
+  height: auto;
+
+  /* 🔥 MAIN FIX */
+  position: static !important;
+  transform: none !important;
+
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* REMOVE RANDOM EFFECTS */
+.glow {
+  display: none !important;
+}
+
+/* ===== BUTTON FIX ===== */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* ===== TEXT FIX ===== */
+.hero-left p {
+  margin: 15px auto;
+  line-height: 1.7;
+}
+
+/* ===== SECTION SPACING FIX ===== */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== CERTIFICATE SECTION FIX ===== */
+.certificate-showcase-fixed {
+  margin-top: 50px;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 40px 15px !important;
+  }
+
+  .hero-left h1 {
+    font-size: 26px;
+  }
+
+  .hero-right img {
+    max-width: 260px;
+  }
+}
+/* 🔥 REMOVE EMPTY HERO SHAPES */
+.hero::before,
+.hero::after,
+.glow,
+.shape,
+.border-box {
+  display: none !important;
+}
