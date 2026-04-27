@@ -38,10 +38,6 @@ app.get("/mcq.html", (req, res) => {
 app.get("/mcq", (req, res) => {
   res.redirect("/mcq.html?" + (req.url.split("?")[1] || ""));
 });
-// NOTES MAIN PAGE
-app.get("/notes", (req, res) => {
-  res.sendFile(path.join(FRONTEND_PATH, "notes/index.html"));
-});
 
 // ================= 🔥 SEO ROUTE =================
 
