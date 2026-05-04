@@ -26,7 +26,7 @@ export async function startPayment() {
   try {
     // ================= CREATE ORDER =================
     const order = await apiPost("/payment/create-order", {
-      amount: 29900 // ₹299
+      amount: 49900 // ₹299
     });
 
     console.log("🧾 Order:", order);
