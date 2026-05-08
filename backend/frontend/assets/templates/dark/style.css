@@ -1,0 +1,50 @@
+.dark-template{
+
+  background:#111827;
+
+  color:white;
+
+  padding:40px;
+
+  border-radius:24px;
+
+  font-family:Inter,sans-serif;
+}
+
+.dark-template .dark-top{
+
+  margin-bottom:30px;
+}
+
+.dark-template h1{
+
+  font-size:42px;
+}
+
+.dark-template p{
+
+  color:#d1d5db;
+}
+
+.dark-template .template-section{
+
+  margin-top:28px;
+}
+
+.dark-template .tech-grid{
+
+  display:flex;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+}
+
+.dark-template .tech-grid span{
+
+  background:#1e293b;
+
+  padding:10px 16px;
+
+  border-radius:14px;
+}

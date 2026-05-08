@@ -1,0 +1,671 @@
+/* ================= RESET ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ================= ROOT ================= */
+
+:root{
+
+  --bg:#f6f7fb;
+
+  --card:#ffffff;
+
+  --soft:#f3f4f6;
+
+  --primary:#111827;
+
+  --accent:#2563eb;
+
+  --accent-light:#dbeafe;
+
+  --text:#111827;
+
+  --muted:#6b7280;
+
+  --border:#e5e7eb;
+
+  --green:#16a34a;
+
+  --yellow:#f59e0b;
+
+  --red:#dc2626;
+
+  --radius:24px;
+
+  --shadow:
+  0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* ================= BODY ================= */
+
+body{
+
+  font-family:"Inter",sans-serif;
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.ats-navbar{
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:22px 40px;
+}
+
+.nav-left{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+}
+
+.logo{
+
+  width:54px;
+  height:54px;
+
+  border-radius:18px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #2563eb
+  );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:white;
+
+  font-size:24px;
+
+  font-weight:800;
+}
+
+.nav-left h2{
+
+  font-size:24px;
+
+  font-weight:700;
+}
+
+.nav-left p{
+
+  font-size:13px;
+
+  color:var(--muted);
+}
+
+/* ================= BUTTONS ================= */
+
+.primary-btn,
+.glass-btn{
+
+  border:none;
+
+  cursor:pointer;
+
+  transition:0.25s ease;
+
+  font-weight:600;
+}
+
+.primary-btn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #2563eb
+  );
+
+  color:white;
+
+  padding:14px 24px;
+
+  border-radius:18px;
+}
+
+.glass-btn{
+
+  background:white;
+
+  border:1px solid var(--border);
+
+  padding:14px 22px;
+
+  border-radius:18px;
+
+  color:#111827;
+}
+
+/* ================= HERO ================= */
+
+.hero-section{
+
+  text-align:center;
+
+  padding:40px 20px 20px;
+}
+
+.hero-badge{
+
+  background:var(--accent-light);
+
+  color:#2563eb;
+
+  padding:8px 18px;
+
+  border-radius:999px;
+
+  font-size:14px;
+
+  font-weight:600;
+}
+
+.hero-section h1{
+
+  margin-top:24px;
+
+  font-size:58px;
+
+  line-height:1.1;
+
+  max-width:900px;
+
+  margin-inline:auto;
+}
+
+.hero-section p{
+
+  margin-top:20px;
+
+  color:var(--muted);
+
+  font-size:18px;
+
+  line-height:1.8;
+
+  max-width:760px;
+
+  margin-inline:auto;
+}
+
+/* ================= LAYOUT ================= */
+
+.ats-layout{
+
+  display:grid;
+
+  grid-template-columns:0.9fr 1.1fr;
+
+  gap:28px;
+
+  padding:40px;
+}
+
+/* ================= LEFT PANEL ================= */
+
+.upload-panel{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:24px;
+}
+
+/* ================= CARDS ================= */
+
+.upload-card,
+.job-card,
+.score-card,
+.analysis-card{
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow);
+}
+
+/* ================= UPLOAD ================= */
+
+.upload-card{
+
+  padding:42px;
+
+  text-align:center;
+}
+
+.upload-icon{
+
+  width:92px;
+  height:92px;
+
+  border-radius:28px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #2563eb
+  );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-inline:auto;
+
+  font-size:36px;
+
+  color:white;
+}
+
+.upload-card h2{
+
+  margin-top:24px;
+
+  font-size:30px;
+}
+
+.upload-card p{
+
+  margin-top:14px;
+
+  color:var(--muted);
+
+  line-height:1.7;
+}
+
+.upload-btn{
+
+  margin-top:26px;
+
+  background:#111827;
+
+  color:white;
+
+  border:none;
+
+  padding:16px 28px;
+
+  border-radius:18px;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+  transition:0.25s;
+}
+
+.upload-btn:hover{
+
+  transform:translateY(-2px);
+}
+
+/* ================= JOB CARD ================= */
+
+.job-card{
+
+  padding:28px;
+}
+
+.section-title{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  margin-bottom:20px;
+}
+
+.section-title i{
+
+  color:#2563eb;
+}
+
+textarea{
+
+  width:100%;
+
+  background:white;
+
+  border:1px solid #d1d5db;
+
+  border-radius:18px;
+
+  padding:18px;
+
+  resize:none;
+
+  outline:none;
+
+  font-size:15px;
+
+  transition:0.25s ease;
+}
+
+textarea:focus{
+
+  border-color:#2563eb;
+
+  box-shadow:
+  0 0 0 4px rgba(37,99,235,0.08);
+}
+
+/* ================= ANALYZE BUTTON ================= */
+
+.analyze-btn{
+
+  width:100%;
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #2563eb
+  );
+
+  color:white;
+
+  border:none;
+
+  padding:20px;
+
+  border-radius:22px;
+
+  font-size:17px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.25s ease;
+}
+
+.analyze-btn:hover{
+
+  transform:translateY(-2px);
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.results-panel{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:24px;
+}
+
+/* ================= SCORE CARD ================= */
+
+.score-card{
+
+  padding:34px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:28px;
+}
+
+.score-circle{
+
+  width:180px;
+  height:180px;
+
+  border-radius:50%;
+
+  background:
+  conic-gradient(
+    #2563eb 82%,
+    #e5e7eb 0
+  );
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:white;
+
+  position:relative;
+}
+
+.score-circle::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:140px;
+  height:140px;
+
+  border-radius:50%;
+
+  background:white;
+}
+
+.score-circle h1{
+
+  position:relative;
+
+  z-index:2;
+
+  color:#111827;
+
+  font-size:48px;
+}
+
+.score-circle span{
+
+  position:relative;
+
+  z-index:2;
+
+  color:#6b7280;
+
+  font-size:14px;
+}
+
+.score-info h2{
+
+  font-size:34px;
+}
+
+.score-info p{
+
+  margin-top:14px;
+
+  color:var(--muted);
+
+  line-height:1.8;
+
+  max-width:420px;
+}
+
+/* ================= ANALYSIS ================= */
+
+.analysis-card{
+
+  padding:28px;
+}
+
+.analysis-header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:20px;
+}
+
+.analysis-header i{
+
+  color:#2563eb;
+}
+
+/* ================= KEYWORDS ================= */
+
+.keyword-list{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+}
+
+.keyword-list span{
+
+  background:#eef2ff;
+
+  color:#2563eb;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  font-size:14px;
+
+  font-weight:600;
+}
+
+/* ================= SUGGESTIONS ================= */
+
+.suggestion-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:14px;
+
+  padding-left:20px;
+}
+
+.suggestion-list li{
+
+  color:#374151;
+
+  line-height:1.7;
+}
+
+/* ================= GRAMMAR ================= */
+
+.grammar-status{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:16px;
+}
+
+.good,
+.warning{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:16px 18px;
+
+  border-radius:16px;
+
+  font-weight:500;
+}
+
+.good{
+
+  background:#ecfdf3;
+
+  color:#16a34a;
+}
+
+.warning{
+
+  background:#fff7ed;
+
+  color:#f59e0b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+  .ats-layout{
+
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .hero-section h1{
+
+    font-size:38px;
+  }
+
+  .ats-layout{
+
+    padding:20px;
+  }
+
+  .ats-navbar{
+
+    padding:20px;
+  }
+
+  .score-card{
+
+    flex-direction:column;
+
+    text-align:center;
+  }
+
+  .nav-right{
+
+    display:none;
+  }
+}

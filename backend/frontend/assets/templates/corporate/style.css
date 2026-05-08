@@ -1,0 +1,29 @@
+.corporate-template{
+
+  background:white;
+
+  padding:50px;
+
+  border-top:8px solid #0f766e;
+
+  font-family:Inter,sans-serif;
+}
+
+.corporate-template h1{
+
+  color:#0f172a;
+
+  font-size:40px;
+}
+
+.corporate-role{
+
+  color:#0f766e;
+
+  margin-top:8px;
+}
+
+.corporate-template .template-section{
+
+  margin-top:32px;
+}

@@ -1,0 +1,648 @@
+/* ================= RESET ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ================= ROOT ================= */
+
+:root{
+
+  --bg:#f6f7fb;
+
+  --card:#ffffff;
+
+  --soft:#f3f4f6;
+
+  --primary:#111827;
+
+  --accent:#2563eb;
+
+  --accent-light:#dbeafe;
+
+  --text:#111827;
+
+  --muted:#6b7280;
+
+  --border:#e5e7eb;
+
+  --green:#16a34a;
+
+  --yellow:#f59e0b;
+
+  --red:#dc2626;
+
+  --radius:24px;
+
+  --shadow:
+  0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* ================= BODY ================= */
+
+body{
+
+  font-family:"Inter",sans-serif;
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.analysis-navbar{
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:22px 40px;
+}
+
+.nav-left{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+}
+
+.logo{
+
+  width:54px;
+  height:54px;
+
+  border-radius:18px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #2563eb
+  );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:white;
+
+  font-size:24px;
+
+  font-weight:800;
+}
+
+.nav-left h2{
+
+  font-size:24px;
+
+  font-weight:700;
+}
+
+.nav-left p{
+
+  font-size:13px;
+
+  color:var(--muted);
+}
+
+/* ================= BUTTONS ================= */
+
+.primary-btn,
+.glass-btn{
+
+  border:none;
+
+  cursor:pointer;
+
+  transition:0.25s ease;
+
+  font-weight:600;
+}
+
+.primary-btn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #2563eb
+  );
+
+  color:white;
+
+  padding:14px 24px;
+
+  border-radius:18px;
+}
+
+.glass-btn{
+
+  background:white;
+
+  border:1px solid var(--border);
+
+  padding:14px 22px;
+
+  border-radius:18px;
+
+  color:#111827;
+}
+
+/* ================= HERO ================= */
+
+.hero-section{
+
+  text-align:center;
+
+  padding:40px 20px 20px;
+}
+
+.hero-badge{
+
+  background:var(--accent-light);
+
+  color:#2563eb;
+
+  padding:8px 18px;
+
+  border-radius:999px;
+
+  font-size:14px;
+
+  font-weight:600;
+}
+
+.hero-section h1{
+
+  margin-top:24px;
+
+  font-size:58px;
+
+  line-height:1.1;
+
+  max-width:900px;
+
+  margin-inline:auto;
+}
+
+.hero-section p{
+
+  margin-top:20px;
+
+  color:var(--muted);
+
+  font-size:18px;
+
+  line-height:1.8;
+
+  max-width:760px;
+
+  margin-inline:auto;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-grid{
+
+  display:grid;
+
+  grid-template-columns:1.1fr 0.9fr;
+
+  gap:28px;
+
+  padding:40px;
+}
+
+/* ================= PANELS ================= */
+
+.left-panel,
+.right-panel{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:24px;
+}
+
+/* ================= CARDS ================= */
+
+.main-score-card,
+.mini-card,
+.improvement-card,
+.probability-card,
+.recruiter-card,
+.weak-card{
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow);
+}
+
+/* ================= MAIN SCORE ================= */
+
+.main-score-card{
+
+  padding:34px;
+}
+
+.score-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+.score-top p{
+
+  margin-top:8px;
+
+  color:var(--muted);
+}
+
+.score-badge{
+
+  background:#ecfdf3;
+
+  color:#16a34a;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  font-weight:600;
+}
+
+.big-score{
+
+  margin-top:34px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:34px;
+}
+
+.circle{
+
+  width:180px;
+  height:180px;
+
+  border-radius:50%;
+
+  background:
+  conic-gradient(
+    #2563eb 89%,
+    #e5e7eb 0
+  );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  position:relative;
+}
+
+.circle::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:140px;
+  height:140px;
+
+  border-radius:50%;
+
+  background:white;
+}
+
+.circle h1{
+
+  position:relative;
+
+  z-index:2;
+
+  font-size:52px;
+
+  color:#111827;
+}
+
+.score-details h3{
+
+  font-size:32px;
+}
+
+.score-details p{
+
+  margin-top:14px;
+
+  line-height:1.8;
+
+  color:var(--muted);
+
+  max-width:420px;
+}
+
+/* ================= MINI GRID ================= */
+
+.analysis-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:20px;
+}
+
+.mini-card{
+
+  padding:28px;
+}
+
+.mini-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+.mini-top i{
+
+  color:#2563eb;
+}
+
+.mini-card h1{
+
+  margin-top:22px;
+
+  font-size:44px;
+}
+
+.mini-card p{
+
+  margin-top:12px;
+
+  color:var(--muted);
+
+  line-height:1.7;
+}
+
+/* ================= IMPROVEMENTS ================= */
+
+.improvement-card{
+
+  padding:32px;
+}
+
+.card-header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:28px;
+}
+
+.card-header i{
+
+  color:#2563eb;
+}
+
+.improvement-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:22px;
+}
+
+.improvement-item{
+
+  display:flex;
+
+  gap:18px;
+}
+
+.improvement-icon{
+
+  width:54px;
+  height:54px;
+
+  border-radius:16px;
+
+  background:#eef2ff;
+
+  color:#2563eb;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:20px;
+}
+
+.improvement-item h4{
+
+  margin-bottom:8px;
+}
+
+.improvement-item p{
+
+  color:var(--muted);
+
+  line-height:1.7;
+}
+
+/* ================= PROBABILITY ================= */
+
+.probability-card{
+
+  padding:34px;
+
+  text-align:center;
+}
+
+.probability-circle{
+
+  width:220px;
+  height:220px;
+
+  border-radius:50%;
+
+  margin:30px auto;
+
+  background:
+  conic-gradient(
+    #16a34a 84%,
+    #e5e7eb 0
+  );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  position:relative;
+}
+
+.probability-circle::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:170px;
+  height:170px;
+
+  border-radius:50%;
+
+  background:white;
+}
+
+.probability-circle h1{
+
+  position:relative;
+
+  z-index:2;
+
+  font-size:56px;
+
+  color:#111827;
+}
+
+.probability-card p{
+
+  color:var(--muted);
+
+  line-height:1.8;
+}
+
+/* ================= RECRUITER ================= */
+
+.recruiter-card{
+
+  padding:30px;
+}
+
+.recruiter-card ul{
+
+  padding-left:20px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:14px;
+}
+
+.recruiter-card li{
+
+  line-height:1.7;
+
+  color:#374151;
+}
+
+/* ================= WEAK ================= */
+
+.weak-card{
+
+  padding:30px;
+}
+
+.weak-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:16px;
+}
+
+.weak-item{
+
+  padding:18px;
+
+  background:#fff7ed;
+
+  border-radius:16px;
+
+  color:#f59e0b;
+
+  font-weight:500;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+  .dashboard-grid{
+
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .hero-section h1{
+
+    font-size:38px;
+  }
+
+  .dashboard-grid{
+
+    padding:20px;
+  }
+
+  .analysis-navbar{
+
+    padding:20px;
+  }
+
+  .analysis-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .big-score{
+
+    flex-direction:column;
+
+    text-align:center;
+  }
+
+  .nav-right{
+
+    display:none;
+  }
+}

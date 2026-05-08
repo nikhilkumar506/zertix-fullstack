@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    ATS Resume Checker | Zertix
+  </title>
+
+  <!-- FONT -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- ICONS -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="../../assets/css/ats-checker.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="ats-navbar">
+
+    <div class="nav-left">
+
+      <div class="logo">
+        Z
+      </div>
+
+      <div>
+
+        <h2>Zertix ATS</h2>
+
+        <p>
+          AI Resume Optimization
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="nav-right">
+
+      <button class="glass-btn">
+        AI Powered
+      </button>
+
+      <button class="primary-btn">
+        Upgrade Pro
+      </button>
+
+    </div>
+
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero-section">
+
+    <span class="hero-badge">
+      ATS Optimization Engine
+    </span>
+
+    <h1>
+      Analyze Your Resume
+      Like Recruiters Do
+    </h1>
+
+    <p>
+      Get instant ATS score, keyword analysis,
+      grammar checks and AI-powered improvement suggestions.
+    </p>
+
+  </section>
+
+  <!-- ================= MAIN ================= -->
+
+  <main class="ats-layout">
+
+    <!-- LEFT -->
+
+    <section class="upload-panel">
+
+      <!-- UPLOAD -->
+
+      <div class="upload-card">
+
+        <div class="upload-icon">
+
+          <i class="fa-solid fa-file-arrow-up"></i>
+
+        </div>
+
+        <h2>
+          Upload Resume
+        </h2>
+
+        <p>
+          Upload your resume in PDF or DOCX format.
+        </p>
+
+        <input
+          type="file"
+          id="resumeUpload"
+          hidden
+        >
+
+        <button
+          class="upload-btn"
+          onclick="document.getElementById('resumeUpload').click()"
+        >
+
+          Upload Resume
+
+        </button>
+
+      </div>
+
+      <!-- JOB DESCRIPTION -->
+
+      <div class="job-card">
+
+        <div class="section-title">
+
+          <i class="fa-solid fa-briefcase"></i>
+
+          <h3>
+            Target Job Description
+          </h3>
+
+        </div>
+
+        <textarea
+          rows="10"
+          placeholder="Paste job description here..."
+        ></textarea>
+
+      </div>
+
+      <!-- ANALYZE -->
+
+      <button class="analyze-btn">
+
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+        Analyze Resume
+
+      </button>
+
+    </section>
+
+    <!-- RIGHT -->
+
+    <section class="results-panel">
+
+      <!-- SCORE -->
+
+      <div class="score-card">
+
+        <div class="score-circle">
+
+          <h1 id="atsScore">
+            82
+          </h1>
+
+          <span>
+            ATS Score
+          </span>
+
+        </div>
+
+        <div class="score-info">
+
+          <h2>
+            Excellent Resume
+          </h2>
+
+          <p>
+            Your resume is well optimized
+            for ATS systems and recruiters.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- KEYWORDS -->
+
+      <div class="analysis-card">
+
+        <div class="analysis-header">
+
+          <h3>
+            Missing Keywords
+          </h3>
+
+          <i class="fa-solid fa-key"></i>
+
+        </div>
+
+        <div class="keyword-list">
+
+          <span>
+            Leadership
+          </span>
+
+          <span>
+            REST API
+          </span>
+
+          <span>
+            Agile
+          </span>
+
+          <span>
+            Problem Solving
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- AI SUGGESTIONS -->
+
+      <div class="analysis-card">
+
+        <div class="analysis-header">
+
+          <h3>
+            AI Suggestions
+          </h3>
+
+          <i class="fa-solid fa-brain"></i>
+
+        </div>
+
+        <ul class="suggestion-list">
+
+          <li>
+            Add more measurable achievements.
+          </li>
+
+          <li>
+            Improve project descriptions.
+          </li>
+
+          <li>
+            Use stronger action verbs.
+          </li>
+
+          <li>
+            Add modern technical keywords.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- GRAMMAR -->
+
+      <div class="analysis-card">
+
+        <div class="analysis-header">
+
+          <h3>
+            Grammar Analysis
+          </h3>
+
+          <i class="fa-solid fa-spell-check"></i>
+
+        </div>
+
+        <div class="grammar-status">
+
+          <div class="good">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Strong readability score
+
+          </div>
+
+          <div class="warning">
+
+            <i class="fa-solid fa-circle-exclamation"></i>
+
+            2 weak action verbs found
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    const analyzeBtn =
+      document.querySelector(".analyze-btn");
+
+    analyzeBtn.addEventListener(
+      "click",
+      () => {
+
+        analyzeBtn.innerHTML = `
+          <i class="fa-solid fa-spinner fa-spin"></i>
+          Analyzing...
+        `;
+
+        setTimeout(() => {
+
+          analyzeBtn.innerHTML = `
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Analyze Resume
+          `;
+
+          alert(
+            "✅ ATS Analysis Completed"
+          );
+
+        }, 2500);
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

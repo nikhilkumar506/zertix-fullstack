@@ -1,0 +1,41 @@
+.minimal-template{
+
+  background:white;
+
+  padding:50px;
+
+  color:#111827;
+
+  font-family:Inter,sans-serif;
+}
+
+.minimal-template h1{
+
+  font-size:40px;
+
+  font-weight:800;
+}
+
+.minimal-template .role{
+
+  color:#6b7280;
+}
+
+.minimal-template hr{
+
+  margin:24px 0;
+
+  border:none;
+
+  border-top:1px solid #d1d5db;
+}
+
+.minimal-template .template-section{
+
+  margin-top:28px;
+}
+
+.minimal-template ul{
+
+  padding-left:20px;
+}

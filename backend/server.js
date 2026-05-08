@@ -33,8 +33,7 @@ const templateRoutes = require("./src/routes/templateRoutes");
 
 /* ================= FRONTEND ================= */
 
-const FRONTEND_PATH = path.resolve(__dirname, "frontend");
-
+const FRONTEND_PATH = path.resolve(__dirname, "backend/frontend");
 // Static frontend
 app.use(express.static(FRONTEND_PATH));
 
@@ -82,6 +81,17 @@ app.get("/mcq", (req, res) => {
     "/mcq.html?" +
     (req.url.split("?")[1] || "")
   );
+});
+// RESUME BUILDER PAGE
+app.get("/resume-builder.html", (req, res) => {
+
+  res.sendFile(
+    path.join(
+      FRONTEND_PATH,
+      "pages/tools/resume-builder.html"
+    )
+  );
+
 });
 
 /* ================= RESUME BUILDER APIs ================= */

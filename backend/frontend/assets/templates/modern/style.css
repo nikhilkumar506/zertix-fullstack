@@ -1,0 +1,56 @@
+.modern-template{
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:24px;
+
+  color:#111827;
+
+  font-family:Inter,sans-serif;
+}
+
+.modern-template .template-header{
+
+  border-bottom:2px solid #2563eb;
+
+  padding-bottom:20px;
+
+  margin-bottom:30px;
+}
+
+.modern-template h1{
+
+  font-size:42px;
+}
+
+.modern-template p{
+
+  color:#4b5563;
+}
+
+.modern-template .template-section{
+
+  margin-top:30px;
+}
+
+.modern-template .skill-row{
+
+  display:flex;
+
+  gap:10px;
+
+  flex-wrap:wrap;
+}
+
+.modern-template .skill-row span{
+
+  background:#2563eb;
+
+  color:white;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+}
