@@ -739,3 +739,15 @@ textarea{
     flex-direction:column;
   }
 }
+.hero-icon-link {
+  text-decoration: none;
+}
+
+.hero-icon {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-icon:hover {
+  transform: scale(1.08);
+}
