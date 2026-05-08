@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Zertix AI Resume Builder
+  </title>
+
+  <!-- GOOGLE FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ICONS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- MAIN CSS -->
+  <link
+    rel="stylesheet"
+    href="../../assets/css/resume-builder.css"
+  />
+
+</head>
+
+<body>
+
+  <!-- ================= BACKGROUND ================= -->
+
+  <div class="bg-gradient"></div>
+
+  <div class="noise-layer"></div>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="top-navbar">
+
+    <div class="logo-area">
+
+      <div class="logo-icon">
+        Z
+      </div>
+
+      <div>
+        <h2>Zertix AI</h2>
+        <p>Resume Intelligence</p>
+      </div>
+
+    </div>
+
+    <div class="nav-actions">
+
+      <button class="glass-btn">
+        Templates
+      </button>
+
+      <button class="primary-btn">
+        Upgrade Pro
+      </button>
+
+    </div>
+
+  </nav>
+
+  <!-- ================= MAIN APP ================= -->
+
+  <main class="resume-app">
+
+    <!-- ================= LEFT PANEL ================= -->
+
+    <section class="editor-panel">
+
+      <!-- HERO -->
+
+      <div class="hero-card glass-card">
+
+        <div class="hero-top">
+
+          <div>
+            <span class="badge">
+              AI Powered
+            </span>
+
+            <h1>
+              Create Stunning ATS-Friendly Resumes
+            </h1>
+
+            <p>
+              Build professional resumes with AI analysis,
+              ATS optimization, modern templates and instant export.
+            </p>
+          </div>
+
+          <div class="hero-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ATS SCORE -->
+
+      <div class="score-grid">
+
+        <div class="score-card glass-card">
+
+          <div class="score-header">
+            <h3>ATS Score</h3>
+
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+
+          <div class="score-value">
+            82%
+          </div>
+
+          <p>
+            Your resume is optimized for most ATS systems.
+          </p>
+
+        </div>
+
+        <div class="score-card glass-card">
+
+          <div class="score-header">
+            <h3>AI Analysis</h3>
+
+            <i class="fa-solid fa-brain"></i>
+          </div>
+
+          <div class="score-value">
+            Strong
+          </div>
+
+          <p>
+            AI detected high-quality structure and formatting.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- PERSONAL INFO -->
+
+      <div class="form-card glass-card">
+
+        <div class="section-title">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h2>Personal Information</h2>
+
+        </div>
+
+        <div class="form-grid">
+
+          <div class="input-group">
+            <label>Full Name</label>
+
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Nikhil Kumar"
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="nikhil@gmail.com"
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Phone</label>
+
+            <input
+              type="text"
+              id="phone"
+              placeholder="+91 9876543210"
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Location</label>
+
+            <input
+              type="text"
+              id="location"
+              placeholder="Delhi, India"
+            />
+          </div>
+
+          <div class="input-group">
+            <label>LinkedIn</label>
+
+            <input
+              type="text"
+              id="linkedin"
+              placeholder="linkedin.com/in/..."
+            />
+          </div>
+
+          <div class="input-group">
+            <label>GitHub</label>
+
+            <input
+              type="text"
+              id="github"
+              placeholder="github.com/..."
+            />
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROFESSIONAL SUMMARY -->
+
+      <div class="form-card glass-card">
+
+        <div class="section-title">
+
+          <i class="fa-solid fa-pen-nib"></i>
+
+          <h2>Professional Summary</h2>
+
+        </div>
+
+        <textarea
+          id="summary"
+          rows="6"
+          placeholder="Write your professional summary..."
+        ></textarea>
+
+      </div>
+
+      <!-- SKILLS -->
+
+      <div class="form-card glass-card">
+
+        <div class="section-title">
+
+          <i class="fa-solid fa-code"></i>
+
+          <h2>Skills</h2>
+
+        </div>
+
+        <textarea
+          id="skills"
+          rows="5"
+          placeholder="HTML, CSS, JavaScript, React, Node.js..."
+        ></textarea>
+
+      </div>
+
+      <!-- PROJECTS -->
+
+      <div class="form-card glass-card">
+
+        <div class="section-title">
+
+          <i class="fa-solid fa-laptop-code"></i>
+
+          <h2>Projects</h2>
+
+        </div>
+
+        <div class="form-grid">
+
+          <div class="input-group">
+            <label>Project Name</label>
+
+            <input
+              type="text"
+              placeholder="AI Resume Builder"
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Tech Stack</label>
+
+            <input
+              type="text"
+              placeholder="React, Node.js, MongoDB"
+            />
+          </div>
+
+        </div>
+
+        <textarea
+          rows="5"
+          placeholder="Project Description..."
+        ></textarea>
+
+      </div>
+
+      <!-- TEMPLATE GALLERY -->
+
+      <div class="form-card glass-card">
+
+        <div class="section-title">
+
+          <i class="fa-solid fa-layer-group"></i>
+
+          <h2>Templates</h2>
+
+        </div>
+
+        <div class="template-grid">
+
+          <div class="template-card active-template">
+
+            <div class="template-preview modern-preview"></div>
+
+            <h3>Modern</h3>
+
+          </div>
+
+          <div class="template-card">
+
+            <div class="template-preview dark-preview"></div>
+
+            <h3>Dark Pro</h3>
+
+          </div>
+
+          <div class="template-card">
+
+            <div class="template-preview minimal-preview"></div>
+
+            <h3>Minimal</h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ACTION BUTTONS -->
+
+      <div class="action-bar">
+
+        <button class="primary-btn large-btn">
+
+          <i class="fa-solid fa-download"></i>
+
+          Download Resume
+
+        </button>
+
+        <button class="glass-btn large-btn">
+
+          <i class="fa-solid fa-brain"></i>
+
+          AI Improve Resume
+
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- ================= RIGHT PANEL ================= -->
+
+    <section class="preview-panel">
+
+      <div class="preview-header glass-card">
+
+        <div>
+          <h2>Live Resume Preview</h2>
+
+          <p>
+            Real-time ATS optimized rendering
+          </p>
+        </div>
+
+        <div class="live-indicator">
+
+          <span></span>
+
+          Live
+
+        </div>
+
+      </div>
+
+      <!-- RESUME PREVIEW -->
+
+      <div class="resume-preview glass-card">
+
+        <div class="resume-top">
+
+          <h1 id="previewName">
+            Your Name
+          </h1>
+
+          <p id="previewRole">
+            Full Stack Developer
+          </p>
+
+          <div class="preview-contact">
+
+            <span>Email</span>
+
+            <span>Phone</span>
+
+            <span>Location</span>
+
+          </div>
+
+        </div>
+
+        <div class="preview-section">
+
+          <h3>Professional Summary</h3>
+
+          <p id="previewSummary">
+
+            Your professional summary will appear here.
+
+          </p>
+
+        </div>
+
+        <div class="preview-section">
+
+          <h3>Skills</h3>
+
+          <p id="previewSkills">
+
+            Skills will appear here.
+
+          </p>
+
+        </div>
+
+        <div class="preview-section">
+
+          <h3>Projects</h3>
+
+          <div class="project-preview">
+
+            <h4>
+              AI Resume Builder
+            </h4>
+
+            <p>
+              Modern AI-powered ATS resume platform.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- JS -->
+
+  <script
+    type="module"
+    src="../../js/resume/resume-builder.js"
+  ></script>
+
+</body>
+
+</html>
