@@ -33,8 +33,7 @@ const templateRoutes = require("./src/routes/templateRoutes");
 
 /* ================= FRONTEND ================= */
 
-const FRONTEND_PATH = path.resolve(__dirname, "backend/frontend");
-// Static frontend
+const FRONTEND_PATH = path.resolve(__dirname, "frontend");// Static frontend
 app.use(express.static(FRONTEND_PATH));
 
 // Uploads static
