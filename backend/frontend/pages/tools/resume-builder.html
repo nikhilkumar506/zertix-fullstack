@@ -15,18 +15,21 @@
   </title>
 
   <!-- GOOGLE FONT -->
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
-  <!-- ICONS -->
+  <!-- FONT AWESOME -->
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
 
-  <!-- MAIN CSS -->
+  <!-- CSS -->
+
   <link
     rel="stylesheet"
     href="../../assets/css/resume-builder.css"
@@ -40,8 +43,6 @@
 
   <div class="bg-gradient"></div>
 
-  <div class="noise-layer"></div>
-
   <!-- ================= NAVBAR ================= -->
 
   <nav class="top-navbar">
@@ -53,8 +54,13 @@
       </div>
 
       <div>
+
         <h2>Zertix AI</h2>
-        <p>Resume Intelligence</p>
+
+        <p>
+          Resume Intelligence
+        </p>
+
       </div>
 
     </div>
@@ -62,318 +68,404 @@
     <div class="nav-actions">
 
       <button class="glass-btn">
+
         Templates
+
       </button>
 
       <button class="primary-btn">
+
         Upgrade Pro
+
       </button>
 
     </div>
 
   </nav>
 
-  <!-- ================= MAIN APP ================= -->
+  <!-- ================= MAIN ================= -->
 
   <main class="resume-app">
 
-    <!-- ================= LEFT PANEL ================= -->
+    <!-- ================= LEFT ================= -->
 
     <section class="editor-panel">
 
-      <!-- HERO -->
+      <!-- ================= HERO ================= -->
 
       <div class="hero-card glass-card">
 
         <div class="hero-top">
 
           <div>
+
             <span class="badge">
-              AI Powered
+              AI Powered Resume Builder
             </span>
 
             <h1>
-              Create Stunning ATS-Friendly Resumes
+              Build Modern
+              ATS-Friendly
+              Resumes
             </h1>
 
             <p>
-              Build professional resumes with AI analysis,
-              ATS optimization, modern templates and instant export.
+
+              Upload your resume,
+              improve ATS score,
+              optimize keywords
+              and create stunning
+              professional resumes
+              instantly.
+
             </p>
+
           </div>
 
-       <a href="./template-gallery.html"  class="hero-icon-link">
+          <!-- MAGIC ICON -->
 
-  <div class="hero-icon">
-    <i class="fa-solid fa-wand-magic-sparkles"></i>
-  </div>
+          <a
+            href="./template-gallery.html"
+            class="hero-icon-link"
+          >
 
-</a>
+            <div class="hero-icon">
+
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            </div>
+
+          </a>
+
+        </div>
 
       </div>
 
-      <!-- ATS SCORE -->
+      <!-- ================= WELCOME DASHBOARD ================= -->
 
-      <div class="score-grid">
+      <div class="welcome-dashboard glass-card">
+
+        <!-- LEFT -->
+
+        <div class="dashboard-left">
+
+          <span class="badge">
+            Smart Resume Tools
+          </span>
+
+          <h1>
+
+            Your Career
+            Starts Here
+
+          </h1>
+
+          <p>
+
+            Create a brand new resume,
+            upload your old CV for ATS analysis
+            or improve your existing resume
+            using AI-powered optimization.
+
+          </p>
+
+          <!-- ACTION BUTTONS -->
+
+          <div class="dashboard-actions">
+
+            <!-- CREATE -->
+
+            <button
+              class="primary-btn dashboard-btn"
+              id="showBuilderBtn"
+            >
+
+              <i class="fa-solid fa-file-circle-plus"></i>
+
+              Create New Resume
+
+            </button>
+
+            <!-- UPLOAD -->
+
+            <label
+              for="resumeUpload"
+              class="glass-btn dashboard-btn"
+            >
+
+              <i class="fa-solid fa-upload"></i>
+
+              Upload Resume
+
+            </label>
+
+            <input
+              type="file"
+              id="resumeUpload"
+              hidden
+              accept=".pdf,.doc,.docx"
+            />
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="dashboard-right">
+
+          <div class="resume-illustration">
+
+            <div class="floating-card card1">
+
+              ATS +98
+
+            </div>
+
+            <div class="floating-card card2">
+
+              AI Optimized
+
+            </div>
+
+            <!-- RESUME MOCKUP -->
+
+            <div class="resume-sheet">
+
+              <div class="sheet-line"></div>
+
+              <div class="sheet-line short"></div>
+
+              <div class="sheet-line"></div>
+
+              <div class="sheet-line short"></div>
+
+              <div class="sheet-line"></div>
+
+              <div class="sheet-line short"></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= ATS RESULT ================= -->
+
+      <div
+        class="score-grid"
+        id="scoreSection"
+        style="display:none;"
+      >
+
+        <!-- ATS -->
 
         <div class="score-card glass-card">
 
           <div class="score-header">
-            <h3>ATS Score</h3>
+
+            <h3>
+              ATS Score
+            </h3>
 
             <i class="fa-solid fa-chart-line"></i>
+
           </div>
 
-          <div class="score-value">
-            82%
+          <div
+            class="score-value"
+            id="atsScore"
+          >
+            92%
           </div>
 
           <p>
-            Your resume is optimized for most ATS systems.
+
+            Your resume performs strongly
+            across modern ATS systems.
+
           </p>
 
         </div>
+
+        <!-- AI -->
 
         <div class="score-card glass-card">
 
           <div class="score-header">
-            <h3>AI Analysis</h3>
+
+            <h3>
+              AI Analysis
+            </h3>
 
             <i class="fa-solid fa-brain"></i>
+
           </div>
 
-          <div class="score-value">
-            Strong
+          <div
+            class="score-value"
+            id="aiStrength"
+          >
+            Excellent
           </div>
 
           <p>
-            AI detected high-quality structure and formatting.
+
+            AI detected strong keyword
+            optimization and formatting.
+
           </p>
 
         </div>
 
       </div>
 
-      <!-- PERSONAL INFO -->
+      <!-- ================= FORM ================= -->
 
-      <div class="form-card glass-card">
+      <div
+        class="resume-form-area"
+        id="resumeBuilder"
+        style="display:none;"
+      >
 
-        <div class="section-title">
+        <!-- PERSONAL INFO -->
 
-          <i class="fa-solid fa-user"></i>
+        <div class="form-card glass-card">
 
-          <h2>Personal Information</h2>
+          <div class="section-title">
 
-        </div>
+            <i class="fa-solid fa-user"></i>
 
-        <div class="form-grid">
-
-          <div class="input-group">
-            <label>Full Name</label>
-
-            <input
-              type="text"
-              id="fullName"
-              placeholder="Nikhil Kumar"
-            />
-          </div>
-
-          <div class="input-group">
-            <label>Email</label>
-
-            <input
-              type="email"
-              id="email"
-              placeholder="nikhil@gmail.com"
-            />
-          </div>
-
-          <div class="input-group">
-            <label>Phone</label>
-
-            <input
-              type="text"
-              id="phone"
-              placeholder="+91 9876543210"
-            />
-          </div>
-
-          <div class="input-group">
-            <label>Location</label>
-
-            <input
-              type="text"
-              id="location"
-              placeholder="Delhi, India"
-            />
-          </div>
-
-          <div class="input-group">
-            <label>LinkedIn</label>
-
-            <input
-              type="text"
-              id="linkedin"
-              placeholder="linkedin.com/in/..."
-            />
-          </div>
-
-          <div class="input-group">
-            <label>GitHub</label>
-
-            <input
-              type="text"
-              id="github"
-              placeholder="github.com/..."
-            />
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- PROFESSIONAL SUMMARY -->
-
-      <div class="form-card glass-card">
-
-        <div class="section-title">
-
-          <i class="fa-solid fa-pen-nib"></i>
-
-          <h2>Professional Summary</h2>
-
-        </div>
-
-        <textarea
-          id="summary"
-          rows="6"
-          placeholder="Write your professional summary..."
-        ></textarea>
-
-      </div>
-
-      <!-- SKILLS -->
-
-      <div class="form-card glass-card">
-
-        <div class="section-title">
-
-          <i class="fa-solid fa-code"></i>
-
-          <h2>Skills</h2>
-
-        </div>
-
-        <textarea
-          id="skills"
-          rows="5"
-          placeholder="HTML, CSS, JavaScript, React, Node.js..."
-        ></textarea>
-
-      </div>
-
-      <!-- PROJECTS -->
-
-      <div class="form-card glass-card">
-
-        <div class="section-title">
-
-          <i class="fa-solid fa-laptop-code"></i>
-
-          <h2>Projects</h2>
-
-        </div>
-
-        <div class="form-grid">
-
-          <div class="input-group">
-            <label>Project Name</label>
-
-            <input
-              type="text"
-              placeholder="AI Resume Builder"
-            />
-          </div>
-
-          <div class="input-group">
-            <label>Tech Stack</label>
-
-            <input
-              type="text"
-              placeholder="React, Node.js, MongoDB"
-            />
-          </div>
-
-        </div>
-
-        <textarea
-          rows="5"
-          placeholder="Project Description..."
-        ></textarea>
-
-      </div>
-
-      <!-- TEMPLATE GALLERY -->
-
-      <div class="form-card glass-card">
-
-        <div class="section-title">
-
-          <i class="fa-solid fa-layer-group"></i>
-
-          <h2>Templates</h2>
-
-        </div>
-
-        <div class="template-grid">
-
-          <div class="template-card active-template">
-
-            <div class="template-preview modern-preview"></div>
-
-            <h3>Modern</h3>
+            <h2>
+              Personal Information
+            </h2>
 
           </div>
 
-          <div class="template-card">
+          <div class="form-grid">
 
-            <div class="template-preview dark-preview"></div>
+            <div class="input-group">
 
-            <h3>Dark Pro</h3>
+              <label>
+                Full Name
+              </label>
 
-          </div>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Nikhil Kumar"
+              />
 
-          <div class="template-card">
+            </div>
 
-            <div class="template-preview minimal-preview"></div>
+            <div class="input-group">
 
-            <h3>Minimal</h3>
+              <label>
+                Email
+              </label>
+
+              <input
+                type="email"
+                placeholder="nikhil@gmail.com"
+              />
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                Phone
+              </label>
+
+              <input
+                type="text"
+                placeholder="+91 9876543210"
+              />
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                Location
+              </label>
+
+              <input
+                type="text"
+                placeholder="Delhi, India"
+              />
+
+            </div>
 
           </div>
 
         </div>
 
-      </div>
+        <!-- SUMMARY -->
 
-      <!-- ACTION BUTTONS -->
+        <div class="form-card glass-card">
 
-      <div class="action-bar">
+          <div class="section-title">
 
-        <button class="primary-btn large-btn">
+            <i class="fa-solid fa-pen-nib"></i>
 
-          <i class="fa-solid fa-download"></i>
+            <h2>
+              Professional Summary
+            </h2>
 
-          Download Resume
+          </div>
 
-        </button>
+          <textarea
+            rows="6"
+            placeholder="Write your professional summary..."
+          ></textarea>
 
-        <button class="glass-btn large-btn">
+        </div>
 
-          <i class="fa-solid fa-brain"></i>
+        <!-- SKILLS -->
 
-          AI Improve Resume
+        <div class="form-card glass-card">
 
-        </button>
+          <div class="section-title">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h2>
+              Skills
+            </h2>
+
+          </div>
+
+          <textarea
+            rows="5"
+            placeholder="HTML, CSS, JavaScript..."
+          ></textarea>
+
+        </div>
+
+        <!-- ACTION BUTTONS -->
+
+        <div class="action-bar">
+
+          <button class="primary-btn large-btn">
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Resume
+
+          </button>
+
+          <button class="glass-btn large-btn">
+
+            <i class="fa-solid fa-brain"></i>
+
+            AI Improve Resume
+
+          </button>
+
+        </div>
 
       </div>
 
@@ -386,11 +478,17 @@
       <div class="preview-header glass-card">
 
         <div>
-          <h2>Live Resume Preview</h2>
+
+          <h2>
+            Live Resume Preview
+          </h2>
 
           <p>
+
             Real-time ATS optimized rendering
+
           </p>
+
         </div>
 
         <div class="live-indicator">
@@ -409,11 +507,11 @@
 
         <div class="resume-top">
 
-          <h1 id="previewName">
+          <h1>
             Your Name
           </h1>
 
-          <p id="previewRole">
+          <p>
             Full Stack Developer
           </p>
 
@@ -431,11 +529,14 @@
 
         <div class="preview-section">
 
-          <h3>Professional Summary</h3>
+          <h3>
+            Professional Summary
+          </h3>
 
-          <p id="previewSummary">
+          <p>
 
-            Your professional summary will appear here.
+            Your professional summary
+            will appear here.
 
           </p>
 
@@ -443,31 +544,15 @@
 
         <div class="preview-section">
 
-          <h3>Skills</h3>
+          <h3>
+            Skills
+          </h3>
 
-          <p id="previewSkills">
+          <p>
 
             Skills will appear here.
 
           </p>
-
-        </div>
-
-        <div class="preview-section">
-
-          <h3>Projects</h3>
-
-          <div class="project-preview">
-
-            <h4>
-              AI Resume Builder
-            </h4>
-
-            <p>
-              Modern AI-powered ATS resume platform.
-            </p>
-
-          </div>
 
         </div>
 
@@ -477,11 +562,63 @@
 
   </main>
 
-  <!-- JS -->
+  <!-- ================= SCRIPT ================= -->
 
-  <script
-    type="module"
-<script src="../../js/resume/template-switcher.js"></script>  ></script>
+  <script>
+
+    const resumeUpload =
+      document.getElementById(
+        "resumeUpload"
+      );
+
+    const scoreSection =
+      document.getElementById(
+        "scoreSection"
+      );
+
+    const showBuilderBtn =
+      document.getElementById(
+        "showBuilderBtn"
+      );
+
+    const resumeBuilder =
+      document.getElementById(
+        "resumeBuilder"
+      );
+
+    /* ================= UPLOAD ================= */
+
+    resumeUpload.addEventListener(
+      "change",
+      () => {
+
+        scoreSection.style.display =
+          "grid";
+
+        scoreSection.scrollIntoView({
+          behavior:"smooth"
+        });
+
+      }
+    );
+
+    /* ================= CREATE ================= */
+
+    showBuilderBtn.addEventListener(
+      "click",
+      () => {
+
+        resumeBuilder.style.display =
+          "block";
+
+        resumeBuilder.scrollIntoView({
+          behavior:"smooth"
+        });
+
+      }
+    );
+
+  </script>
 
 </body>
 
