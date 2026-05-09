@@ -14,21 +14,15 @@
     Zertix AI Resume Builder
   </title>
 
-  <!-- GOOGLE FONT -->
-
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
-  <!-- FONT AWESOME -->
-
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
-
-  <!-- CSS -->
 
   <link
     rel="stylesheet"
@@ -39,587 +33,447 @@
 
 <body>
 
-  <!-- ================= BACKGROUND ================= -->
+<div class="bg-gradient"></div>
 
-  <div class="bg-gradient"></div>
+<nav class="top-navbar">
 
-  <!-- ================= NAVBAR ================= -->
+  <div class="logo-area">
 
-  <nav class="top-navbar">
+    <div class="logo-icon">
+      Z
+    </div>
 
-    <div class="logo-area">
+    <div>
 
-      <div class="logo-icon">
-        Z
-      </div>
+      <h2>Zertix AI</h2>
 
-      <div>
-
-        <h2>Zertix AI</h2>
-
-        <p>
-          Resume Intelligence
-        </p>
-
-      </div>
+      <p>
+        Resume Intelligence
+      </p>
 
     </div>
 
-    <div class="nav-actions">
+  </div>
 
-      <button class="glass-btn">
+</nav>
 
-        Templates
+<main class="resume-app">
 
-      </button>
+<section class="editor-panel">
 
-      <button class="primary-btn">
+<!-- HERO -->
 
-        Upgrade Pro
+<div class="hero-card glass-card">
 
-      </button>
+  <h1>
+    Upload & Edit Resume
+  </h1>
+
+  <p>
+    Upload your resume and instantly
+    edit all sections professionally.
+  </p>
+
+  <label
+    for="resumeUpload"
+    class="primary-btn"
+  >
+
+    <i class="fa-solid fa-upload"></i>
+
+    Upload Resume
+
+  </label>
+
+  <input
+    type="file"
+    id="resumeUpload"
+    hidden
+    accept=".pdf,.doc,.docx"
+  />
+
+</div>
+
+<!-- ATS SCORE -->
+
+<div
+  class="score-grid"
+  id="scoreSection"
+  style="display:none;"
+>
+
+  <div class="score-card glass-card">
+
+    <h2>
+      ATS Score
+    </h2>
+
+    <div
+      class="score-value"
+      id="atsScore"
+    >
+      87%
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FORM -->
+
+<div
+  class="resume-form-area"
+  id="resumeBuilder"
+  style="display:none;"
+>
+
+<!-- PERSONAL -->
+
+<div class="form-card glass-card">
+
+  <div class="section-title">
+
+    <i class="fa-solid fa-user"></i>
+
+    <h2>
+      Personal Information
+    </h2>
+
+  </div>
+
+  <div class="form-grid">
+
+    <div class="input-group">
+
+      <label>
+        Full Name
+      </label>
+
+      <input
+        type="text"
+        id="fullName"
+        placeholder="Your Name"
+      />
 
     </div>
 
-  </nav>
+    <div class="input-group">
 
-  <!-- ================= MAIN ================= -->
+      <label>
+        Email
+      </label>
 
-  <main class="resume-app">
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+      />
 
-    <!-- ================= LEFT ================= -->
+    </div>
 
-    <section class="editor-panel">
+    <div class="input-group">
 
-      <!-- ================= HERO ================= -->
+      <label>
+        Phone
+      </label>
 
-      <div class="hero-card glass-card">
+      <input
+        type="text"
+        id="phone"
+        placeholder="Phone"
+      />
 
-        <div class="hero-top">
+    </div>
 
-          <div>
+    <div class="input-group">
 
-            <span class="badge">
-              AI Powered Resume Builder
-            </span>
+      <label>
+        Location
+      </label>
 
-            <h1>
-              Build Modern
-              ATS-Friendly
-              Resumes
-            </h1>
+      <input
+        type="text"
+        id="location"
+        placeholder="Location"
+      />
 
-            <p>
+    </div>
 
-              Upload your resume,
-              improve ATS score,
-              optimize keywords
-              and create stunning
-              professional resumes
-              instantly.
+  </div>
 
-            </p>
+</div>
 
-          </div>
+<!-- SUMMARY -->
 
-          <!-- MAGIC ICON -->
+<div class="form-card glass-card">
 
-          <a
-            href="./template-gallery.html"
-            class="hero-icon-link"
-          >
+  <div class="section-title">
 
-            <div class="hero-icon">
+    <i class="fa-solid fa-pen"></i>
 
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+    <h2>
+      Professional Summary
+    </h2>
 
-            </div>
+  </div>
 
-          </a>
+  <textarea
+    id="summary"
+    rows="5"
+    placeholder="Professional Summary"
+  ></textarea>
 
-        </div>
+</div>
 
-      </div>
+<!-- SKILLS -->
 
-      <!-- ================= WELCOME DASHBOARD ================= -->
+<div class="form-card glass-card">
 
-      <div class="welcome-dashboard glass-card">
+  <div class="section-title">
 
-        <!-- LEFT -->
+    <i class="fa-solid fa-code"></i>
 
-        <div class="dashboard-left">
+    <h2>
+      Skills
+    </h2>
 
-          <span class="badge">
-            Smart Resume Tools
-          </span>
+  </div>
 
-          <h1>
+  <textarea
+    id="skills"
+    rows="5"
+    placeholder="HTML, CSS, JavaScript"
+  ></textarea>
 
-            Your Career
-            Starts Here
+</div>
 
-          </h1>
+<!-- EXPERIENCE -->
 
-          <p>
+<div class="form-card glass-card">
 
-            Create a brand new resume,
-            upload your old CV for ATS analysis
-            or improve your existing resume
-            using AI-powered optimization.
+  <div class="section-title">
 
-          </p>
+    <i class="fa-solid fa-briefcase"></i>
 
-          <!-- ACTION BUTTONS -->
+    <h2>
+      Experience
+    </h2>
 
-          <div class="dashboard-actions">
+  </div>
 
-            <!-- CREATE -->
+  <textarea
+    id="experience"
+    rows="6"
+    placeholder="Work Experience"
+  ></textarea>
 
-            <button
-              class="primary-btn dashboard-btn"
-              id="showBuilderBtn"
-            >
+</div>
 
-              <i class="fa-solid fa-file-circle-plus"></i>
+<!-- PROJECTS -->
 
-              Create New Resume
+<div class="form-card glass-card">
 
-            </button>
+  <div class="section-title">
 
-            <!-- UPLOAD -->
+    <i class="fa-solid fa-diagram-project"></i>
 
-            <label
-              for="resumeUpload"
-              class="glass-btn dashboard-btn"
-            >
+    <h2>
+      Projects
+    </h2>
 
-              <i class="fa-solid fa-upload"></i>
+  </div>
 
-              Upload Resume
+  <textarea
+    id="projects"
+    rows="6"
+    placeholder="Projects"
+  ></textarea>
 
-            </label>
+</div>
 
-            <input
-              type="file"
-              id="resumeUpload"
-              hidden
-              accept=".pdf,.doc,.docx"
-            />
+<!-- EDUCATION -->
 
-          </div>
+<div class="form-card glass-card">
 
-        </div>
+  <div class="section-title">
 
-        <!-- RIGHT -->
+    <i class="fa-solid fa-graduation-cap"></i>
 
-        <div class="dashboard-right">
+    <h2>
+      Education
+    </h2>
 
-          <div class="resume-illustration">
+  </div>
 
-            <div class="floating-card card1">
+  <textarea
+    id="education"
+    rows="5"
+    placeholder="Education"
+  ></textarea>
 
-              ATS +98
+</div>
 
-            </div>
+<!-- BUTTONS -->
 
-            <div class="floating-card card2">
+<div class="action-bar">
 
-              AI Optimized
+  <button
+    class="primary-btn large-btn"
+    id="saveResume"
+  >
 
-            </div>
+    <i class="fa-solid fa-floppy-disk"></i>
 
-            <!-- RESUME MOCKUP -->
+    Save Resume
 
-            <div class="resume-sheet">
+  </button>
 
-              <div class="sheet-line"></div>
+  <button class="glass-btn large-btn">
 
-              <div class="sheet-line short"></div>
+    <i class="fa-solid fa-download"></i>
 
-              <div class="sheet-line"></div>
+    Download Resume
 
-              <div class="sheet-line short"></div>
+  </button>
 
-              <div class="sheet-line"></div>
+</div>
 
-              <div class="sheet-line short"></div>
+</div>
 
-            </div>
+</section>
 
-          </div>
+</main>
 
-        </div>
+<!-- SCRIPT -->
 
-      </div>
+<script>
 
-      <!-- ================= ATS RESULT ================= -->
+const resumeUpload =
+document.getElementById(
+  "resumeUpload"
+);
 
-      <div
-        class="score-grid"
-        id="scoreSection"
-        style="display:none;"
-      >
+const scoreSection =
+document.getElementById(
+  "scoreSection"
+);
 
-        <!-- ATS -->
+const resumeBuilder =
+document.getElementById(
+  "resumeBuilder"
+);
 
-        <div class="score-card glass-card">
+/* ================= UPLOAD ================= */
 
-          <div class="score-header">
+resumeUpload.addEventListener(
+  "change",
+  async (e) => {
 
-            <h3>
-              ATS Score
-            </h3>
+    const file =
+    e.target.files[0];
 
-            <i class="fa-solid fa-chart-line"></i>
+    if(!file) return;
 
-          </div>
+    const formData =
+    new FormData();
 
-          <div
-            class="score-value"
-            id="atsScore"
-          >
-            92%
-          </div>
+    formData.append(
+      "resume",
+      file
+    );
 
-          <p>
+    try {
 
-            Your resume performs strongly
-            across modern ATS systems.
-
-          </p>
-
-        </div>
-
-        <!-- AI -->
-
-        <div class="score-card glass-card">
-
-          <div class="score-header">
-
-            <h3>
-              AI Analysis
-            </h3>
-
-            <i class="fa-solid fa-brain"></i>
-
-          </div>
-
-          <div
-            class="score-value"
-            id="aiStrength"
-          >
-            Excellent
-          </div>
-
-          <p>
-
-            AI detected strong keyword
-            optimization and formatting.
-
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- ================= FORM ================= -->
-
-      <div
-        class="resume-form-area"
-        id="resumeBuilder"
-        style="display:none;"
-      >
-
-        <!-- PERSONAL INFO -->
-
-        <div class="form-card glass-card">
-
-          <div class="section-title">
-
-            <i class="fa-solid fa-user"></i>
-
-            <h2>
-              Personal Information
-            </h2>
-
-          </div>
-
-          <div class="form-grid">
-
-            <div class="input-group">
-
-              <label>
-                Full Name
-              </label>
-
-              <input
-                type="text"
-                id="fullName"
-                placeholder="Nikhil Kumar"
-              />
-
-            </div>
-
-            <div class="input-group">
-
-              <label>
-                Email
-              </label>
-
-              <input
-                type="email"
-                placeholder="nikhil@gmail.com"
-              />
-
-            </div>
-
-            <div class="input-group">
-
-              <label>
-                Phone
-              </label>
-
-              <input
-                type="text"
-                placeholder="+91 9876543210"
-              />
-
-            </div>
-
-            <div class="input-group">
-
-              <label>
-                Location
-              </label>
-
-              <input
-                type="text"
-                placeholder="Delhi, India"
-              />
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- SUMMARY -->
-
-        <div class="form-card glass-card">
-
-          <div class="section-title">
-
-            <i class="fa-solid fa-pen-nib"></i>
-
-            <h2>
-              Professional Summary
-            </h2>
-
-          </div>
-
-          <textarea
-            rows="6"
-            placeholder="Write your professional summary..."
-          ></textarea>
-
-        </div>
-
-        <!-- SKILLS -->
-
-        <div class="form-card glass-card">
-
-          <div class="section-title">
-
-            <i class="fa-solid fa-code"></i>
-
-            <h2>
-              Skills
-            </h2>
-
-          </div>
-
-          <textarea
-            rows="5"
-            placeholder="HTML, CSS, JavaScript..."
-          ></textarea>
-
-        </div>
-
-        <!-- ACTION BUTTONS -->
-
-        <div class="action-bar">
-
-          <button class="primary-btn large-btn">
-
-            <i class="fa-solid fa-download"></i>
-
-            Download Resume
-
-          </button>
-
-          <button class="glass-btn large-btn">
-
-            <i class="fa-solid fa-brain"></i>
-
-            AI Improve Resume
-
-          </button>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ================= RIGHT PANEL ================= -->
-
-    <section class="preview-panel">
-
-      <div class="preview-header glass-card">
-
-        <div>
-
-          <h2>
-            Live Resume Preview
-          </h2>
-
-          <p>
-
-            Real-time ATS optimized rendering
-
-          </p>
-
-        </div>
-
-        <div class="live-indicator">
-
-          <span></span>
-
-          Live
-
-        </div>
-
-      </div>
-
-      <!-- RESUME PREVIEW -->
-
-      <div class="resume-preview glass-card">
-
-        <div class="resume-top">
-
-          <h1>
-            Your Name
-          </h1>
-
-          <p>
-            Full Stack Developer
-          </p>
-
-          <div class="preview-contact">
-
-            <span>Email</span>
-
-            <span>Phone</span>
-
-            <span>Location</span>
-
-          </div>
-
-        </div>
-
-        <div class="preview-section">
-
-          <h3>
-            Professional Summary
-          </h3>
-
-          <p>
-
-            Your professional summary
-            will appear here.
-
-          </p>
-
-        </div>
-
-        <div class="preview-section">
-
-          <h3>
-            Skills
-          </h3>
-
-          <p>
-
-            Skills will appear here.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- ================= SCRIPT ================= -->
-
-  <script>
-
-    const resumeUpload =
-      document.getElementById(
-        "resumeUpload"
+      const response =
+      await fetch(
+        "/api/resume/upload",
+        {
+          method:"POST",
+          body:formData
+        }
       );
 
-    const scoreSection =
-      document.getElementById(
-        "scoreSection"
-      );
+      const data =
+      await response.json();
 
-    const showBuilderBtn =
-      document.getElementById(
-        "showBuilderBtn"
-      );
-
-    const resumeBuilder =
-      document.getElementById(
-        "resumeBuilder"
-      );
-
-    /* ================= UPLOAD ================= */
-
-    resumeUpload.addEventListener(
-      "change",
-      () => {
+      if(data.success){
 
         scoreSection.style.display =
-          "grid";
-
-        scoreSection.scrollIntoView({
-          behavior:"smooth"
-        });
-
-      }
-    );
-
-    /* ================= CREATE ================= */
-
-    showBuilderBtn.addEventListener(
-      "click",
-      () => {
+        "grid";
 
         resumeBuilder.style.display =
-          "block";
+        "block";
 
-        resumeBuilder.scrollIntoView({
-          behavior:"smooth"
-        });
+        /* AUTO FILL */
+
+        document.getElementById(
+          "fullName"
+        ).value =
+        data.parsedData.name || "";
+
+        document.getElementById(
+          "email"
+        ).value =
+        data.parsedData.email || "";
+
+        document.getElementById(
+          "phone"
+        ).value =
+        data.parsedData.phone || "";
+
+        document.getElementById(
+          "skills"
+        ).value =
+        data.parsedData.skills || "";
+
+        document.getElementById(
+          "experience"
+        ).value =
+        data.parsedData.experience || "";
+
+        document.getElementById(
+          "projects"
+        ).value =
+        data.parsedData.projects || "";
+
+        alert(
+          "Resume Parsed Successfully"
+        );
 
       }
+
+    }
+
+    catch(err){
+
+      console.log(err);
+
+      alert(
+        "Resume Upload Failed"
+      );
+
+    }
+
+});
+
+/* ================= SAVE ================= */
+
+document.getElementById(
+  "saveResume"
+)
+
+.addEventListener(
+  "click",
+  () => {
+
+    alert(
+      "Resume Saved Successfully"
     );
 
-  </script>
+  }
+);
+
+</script>
 
 </body>
-
 </html>

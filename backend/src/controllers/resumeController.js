@@ -122,3 +122,86 @@ exports.deleteResume = async (req, res) => {
     });
   }
 };
+const fs = require("fs");
+
+const pdfParse = require("pdf-parse");
+
+/* ================= UPLOAD RESUME ================= */
+
+exports.uploadResume = async (req, res) => {
+
+  try {
+
+    const pdfBuffer =
+      fs.readFileSync(req.file.path);
+
+    const data =
+      await pdfParse(pdfBuffer);
+
+    const text = data.text;
+
+    /* ================= EXTRACT ================= */
+
+    const phoneMatch =
+      text.match(/(\+91)?[6-9]\d{9}/);
+
+    const emailMatch =
+      text.match(
+        /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}/
+      );
+
+    const lines =
+      text.split("\n");
+
+    const name =
+      lines[0];
+
+    /* ================= RESPONSE ================= */
+
+    res.json({
+
+      success: true,
+
+      parsedData: {
+
+        name:
+          name || "",
+
+        phone:
+          phoneMatch
+          ? phoneMatch[0]
+          : "",
+
+        email:
+          emailMatch
+          ? emailMatch[0]
+          : "",
+
+        skills: "",
+
+        projects: "",
+
+        experience: ""
+
+      }
+
+    });
+
+  }
+
+  catch (err) {
+
+    console.log(err);
+
+    res.status(500).json({
+
+      success: false,
+
+      message:
+        "Resume parsing failed"
+
+    });
+
+  }
+
+};
