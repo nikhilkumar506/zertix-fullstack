@@ -1,478 +1,1192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zertix Resume Builder — Create ATS-friendly professional resumes with AI assistance." />
+  <meta name="robots" content="index, follow" />
+  <title>Resume Builder | Zertix</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <!-- Reuse existing Zertix assets -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-  <title>
-    Zertix AI Resume Builder
-  </title>
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    :root {
+      --zx-primary:     #6c63ff;
+      --zx-primary-dk:  #574fd6;
+      --zx-accent:      #00d4aa;
+      --zx-dark:        #0f0f1a;
+      --zx-card:        #1a1a2e;
+      --zx-card2:       #16213e;
+      --zx-border:      #2a2a4a;
+      --zx-text:        #e2e8f0;
+      --zx-muted:       #8892a4;
+      --zx-danger:      #ff4757;
+      --zx-success:     #00d4aa;
+      --zx-warning:     #ffa502;
+      --radius:         12px;
+      --radius-sm:      8px;
+      --shadow:         0 4px 24px rgba(0,0,0,0.3);
+      --transition:     0.2s ease;
+    }
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--zx-dark);
+      color: var(--zx-text);
+      min-height: 100vh;
+    }
 
-  <link
-    rel="stylesheet"
-    href="../../assets/css/resume-builder.css"
-  />
+    /* ── Page Header ────────────────────────────────────────────── */
+    .rb-header {
+      background: var(--zx-card);
+      border-bottom: 1px solid var(--zx-border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 12px;
+    }
+    .rb-header-left { display: flex; align-items: center; gap: 16px; }
+    .rb-logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--zx-primary), var(--zx-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .rb-header h1 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--zx-text);
+    }
+    .rb-header-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
+    /* ── Buttons ────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn-primary   { background: var(--zx-primary); color: #fff; }
+    .btn-primary:hover { background: var(--zx-primary-dk); transform: translateY(-1px); }
+    .btn-accent    { background: var(--zx-accent); color: #0f0f1a; font-weight: 600; }
+    .btn-accent:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-ghost     { background: transparent; color: var(--zx-text); border: 1px solid var(--zx-border); }
+    .btn-ghost:hover { background: var(--zx-border); }
+    .btn-danger    { background: transparent; color: var(--zx-danger); border: 1px solid var(--zx-danger); }
+    .btn-danger:hover { background: var(--zx-danger); color: #fff; }
+    .btn-sm        { padding: 5px 10px; font-size: 0.78rem; }
+    .btn:disabled  { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    /* ── Main Layout ────────────────────────────────────────────── */
+    .rb-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: calc(100vh - 65px);
+      overflow: hidden;
+    }
+
+    /* ── Left Panel (Builder) ───────────────────────────────────── */
+    .rb-panel {
+      overflow-y: auto;
+      background: var(--zx-dark);
+      border-right: 1px solid var(--zx-border);
+    }
+    .rb-panel::-webkit-scrollbar { width: 4px; }
+    .rb-panel::-webkit-scrollbar-track { background: transparent; }
+    .rb-panel::-webkit-scrollbar-thumb { background: var(--zx-border); border-radius: 4px; }
+
+    /* ── Page Tabs (My Resumes / Builder) ───────────────────────── */
+    .rb-page-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--zx-border);
+      background: var(--zx-card);
+      padding: 0 24px;
+    }
+    .rb-page-tab {
+      padding: 14px 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--zx-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .rb-page-tab:hover { color: var(--zx-text); }
+    .rb-page-tab.active {
+      color: var(--zx-primary);
+      border-bottom-color: var(--zx-primary);
+    }
+
+    /* ── Resume List View ───────────────────────────────────────── */
+    #view-list { padding: 24px; }
+    .resume-list-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .resume-list-header h2 { font-size: 1.2rem; font-weight: 600; }
+    .resume-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .resume-card {
+      background: var(--zx-card);
+      border: 1px solid var(--zx-border);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: all var(--transition);
+      cursor: pointer;
+      position: relative;
+    }
+    .resume-card:hover {
+      border-color: var(--zx-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .resume-card-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--zx-text);
+    }
+    .resume-card-meta {
+      font-size: 0.78rem;
+      color: var(--zx-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 14px;
+    }
+    .resume-card-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 500;
+    }
+    .badge-primary { background: rgba(108,99,255,0.15); color: var(--zx-primary); }
+    .badge-success { background: rgba(0,212,170,0.15); color: var(--zx-accent); }
+    .badge-warning { background: rgba(255,165,2,0.15);  color: var(--zx-warning); }
+
+    .completeness-bar {
+      height: 4px;
+      background: var(--zx-border);
+      border-radius: 4px;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+    .completeness-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--zx-primary), var(--zx-accent));
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--zx-muted);
+    }
+    .empty-state i { font-size: 3rem; margin-bottom: 16px; opacity: 0.4; }
+    .empty-state p { font-size: 0.95rem; margin-bottom: 16px; }
+
+    /* ── Builder View ───────────────────────────────────────────── */
+    #view-builder { display: none; }
+    .rb-builder-tabs {
+      display: flex;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--zx-border);
+      background: var(--zx-card2);
+      padding: 0 16px;
+      gap: 4px;
+      scrollbar-width: none;
+    }
+    .rb-builder-tabs::-webkit-scrollbar { display: none; }
+    .rb-tab {
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--zx-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .rb-tab:hover { color: var(--zx-text); }
+    .rb-tab.active { color: var(--zx-primary); border-bottom-color: var(--zx-primary); }
+    .rb-tab-content { display: none; padding: 24px; }
+    .rb-tab-content.active { display: block; }
+
+    /* ── Form Elements ──────────────────────────────────────────── */
+    .form-group { margin-bottom: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--zx-muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    input, textarea, select {
+      width: 100%;
+      background: var(--zx-card);
+      border: 1px solid var(--zx-border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      color: var(--zx-text);
+      font-size: 0.88rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color var(--transition);
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--zx-primary);
+      box-shadow: 0 0 0 3px rgba(108,99,255,0.15);
+    }
+    textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
+    select option { background: var(--zx-card); }
+
+    /* ── Section Cards (Education / Experience / etc.) ───────────── */
+    .section-card {
+      background: var(--zx-card);
+      border: 1px solid var(--zx-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .section-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .section-card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--zx-text);
+    }
+    .add-section-btn {
+      width: 100%;
+      padding: 10px;
+      background: transparent;
+      border: 1px dashed var(--zx-border);
+      border-radius: var(--radius-sm);
+      color: var(--zx-muted);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 8px;
+      font-family: 'Inter', sans-serif;
+    }
+    .add-section-btn:hover {
+      border-color: var(--zx-primary);
+      color: var(--zx-primary);
+      background: rgba(108,99,255,0.05);
+    }
+
+    /* ── Skills Input ───────────────────────────────────────────── */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 8px;
+      background: var(--zx-card);
+      border: 1px solid var(--zx-border);
+      border-radius: var(--radius-sm);
+      min-height: 44px;
+    }
+    .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(108,99,255,0.15);
+      color: var(--zx-primary);
+      border: 1px solid rgba(108,99,255,0.3);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .skill-tag button {
+      background: none;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      padding: 0;
+      width: auto;
+      font-size: 0.75rem;
+      opacity: 0.7;
+      line-height: 1;
+    }
+    .skill-tag button:hover { opacity: 1; }
+    .skill-input-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .skill-input-row input { flex: 1; }
+
+    /* ── AI Buttons ─────────────────────────────────────────────── */
+    .ai-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      background: linear-gradient(135deg, rgba(108,99,255,0.2), rgba(0,212,170,0.2));
+      border: 1px solid rgba(108,99,255,0.4);
+      border-radius: var(--radius-sm);
+      color: var(--zx-primary);
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: 'Inter', sans-serif;
+    }
+    .ai-btn:hover {
+      background: linear-gradient(135deg, rgba(108,99,255,0.35), rgba(0,212,170,0.35));
+      transform: translateY(-1px);
+    }
+    .ai-btn i { font-size: 0.7rem; }
+    .ai-toolbar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+
+    /* ── Template Switcher ──────────────────────────────────────── */
+    .template-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .template-card {
+      border: 2px solid var(--zx-border);
+      border-radius: var(--radius);
+      padding: 12px;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-align: center;
+    }
+    .template-card:hover { border-color: var(--zx-primary); }
+    .template-card.active {
+      border-color: var(--zx-primary);
+      background: rgba(108,99,255,0.08);
+    }
+    .template-card.active::after {
+      content: '✓ Active';
+      display: block;
+      font-size: 0.72rem;
+      color: var(--zx-primary);
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .template-preview {
+      width: 100%;
+      height: 90px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+      gap: 3px;
+      overflow: hidden;
+    }
+    .tpv-line {
+      height: 5px;
+      border-radius: 3px;
+      background: currentColor;
+      opacity: 0.3;
+    }
+    .template-name { font-size: 0.82rem; font-weight: 600; }
+
+    /* ── Right Panel (Preview) ──────────────────────────────────── */
+    .rb-preview-panel {
+      overflow-y: auto;
+      background: #e8e8e8;
+      display: flex;
+      flex-direction: column;
+    }
+    .rb-preview-panel::-webkit-scrollbar { width: 4px; }
+    .rb-preview-panel::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+    .preview-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: var(--zx-card2);
+      border-bottom: 1px solid var(--zx-border);
+      flex-shrink: 0;
+    }
+    .preview-toolbar span {
+      font-size: 0.8rem;
+      color: var(--zx-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .preview-scale {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .preview-scale button {
+      background: var(--zx-border);
+      border: none;
+      color: var(--zx-text);
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #preview-zoom-label { font-size: 0.78rem; color: var(--zx-muted); min-width: 36px; text-align: center; }
+
+    /* ── Resume Preview Container ───────────────────────────────── */
+    .preview-wrapper {
+      flex: 1;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .preview-scale-wrap {
+      transform-origin: top center;
+      transition: transform 0.2s ease;
+    }
+
+    /* ─────────────────────────────────────────────────────────────
+       RESUME TEMPLATES
+    ───────────────────────────────────────────────────────────── */
+    #resume-preview {
+      width: 794px;
+      min-height: 1123px;
+      background: #fff;
+      color: #1a1a1a;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ── Template: Modern ───────────────────────────────────────── */
+    #resume-preview.tpl-modern { font-family: 'Inter', sans-serif; }
+    .tpl-modern .rv-header {
+      background: linear-gradient(135deg, #6c63ff, #574fd6);
+      color: #fff;
+      padding: 36px 40px 28px;
+    }
+    .tpl-modern .rv-name {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+    .tpl-modern .rv-title {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-bottom: 12px;
+    }
+    .tpl-modern .rv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.78rem;
+      opacity: 0.9;
+    }
+    .tpl-modern .rv-contact span { display: flex; align-items: center; gap: 4px; }
+    .tpl-modern .rv-body { display: grid; grid-template-columns: 1fr 280px; }
+    .tpl-modern .rv-main { padding: 28px 32px; }
+    .tpl-modern .rv-sidebar {
+      background: #f8f7ff;
+      padding: 28px 20px;
+      border-left: 1px solid #e8e6ff;
+    }
+    .tpl-modern .rv-section { margin-bottom: 24px; }
+    .tpl-modern .rv-section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #6c63ff;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #6c63ff;
+    }
+    .tpl-modern .rv-item { margin-bottom: 14px; }
+    .tpl-modern .rv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2px;
+    }
+    .tpl-modern .rv-item-title { font-weight: 600; font-size: 0.9rem; color: #1a1a1a; }
+    .tpl-modern .rv-item-sub { font-size: 0.82rem; color: #555; }
+    .tpl-modern .rv-item-date { font-size: 0.75rem; color: #888; white-space: nowrap; }
+    .tpl-modern .rv-item-desc { font-size: 0.8rem; color: #444; line-height: 1.6; margin-top: 4px; }
+    .tpl-modern .rv-skill-tag {
+      display: inline-block;
+      background: rgba(108,99,255,0.1);
+      color: #6c63ff;
+      border: 1px solid rgba(108,99,255,0.25);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      margin: 2px;
+    }
+    .tpl-modern .rv-summary { font-size: 0.85rem; color: #444; line-height: 1.7; }
+
+    /* ── Template: Classic ──────────────────────────────────────── */
+    #resume-preview.tpl-classic { font-family: 'Merriweather', serif; }
+    .tpl-classic .rv-header {
+      text-align: center;
+      padding: 32px 40px 20px;
+      border-bottom: 2px solid #1a1a1a;
+    }
+    .tpl-classic .rv-name { font-size: 1.9rem; font-weight: 700; color: #1a1a1a; }
+    .tpl-classic .rv-title { font-size: 0.95rem; color: #555; margin: 6px 0; font-family: 'Inter', sans-serif; }
+    .tpl-classic .rv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: #555;
+      margin-top: 8px;
+      font-family: 'Inter', sans-serif;
+    }
+    .tpl-classic .rv-body { padding: 24px 40px; }
+    .tpl-classic .rv-section { margin-bottom: 22px; }
+    .tpl-classic .rv-section-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .tpl-classic .rv-item { margin-bottom: 14px; }
+    .tpl-classic .rv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .tpl-classic .rv-item-title { font-weight: 700; font-size: 0.88rem; }
+    .tpl-classic .rv-item-sub { font-size: 0.82rem; color: #555; font-style: italic; }
+    .tpl-classic .rv-item-date { font-size: 0.75rem; color: #777; font-family: 'Inter', sans-serif; }
+    .tpl-classic .rv-item-desc { font-size: 0.8rem; color: #444; line-height: 1.7; margin-top: 4px; font-family: 'Inter', sans-serif; }
+    .tpl-classic .rv-skill-tag { font-size: 0.8rem; color: #333; font-family: 'Inter', sans-serif; }
+    .tpl-classic .rv-skill-tag::after { content: ' •'; color: #999; }
+    .tpl-classic .rv-skill-tag:last-child::after { content: ''; }
+    .tpl-classic .rv-summary { font-size: 0.85rem; color: #444; line-height: 1.8; font-family: 'Inter', sans-serif; }
+
+    /* ── Template: Minimal ──────────────────────────────────────── */
+    #resume-preview.tpl-minimal { font-family: 'Inter', sans-serif; }
+    .tpl-minimal .rv-header { padding: 40px 48px 24px; }
+    .tpl-minimal .rv-name { font-size: 2.2rem; font-weight: 300; color: #111; letter-spacing: -1px; }
+    .tpl-minimal .rv-title { font-size: 1rem; color: #888; margin: 4px 0 12px; font-weight: 400; }
+    .tpl-minimal .rv-contact {
+      display: flex; gap: 20px; font-size: 0.78rem; color: #888;
+    }
+    .tpl-minimal .rv-body { padding: 0 48px 40px; }
+    .tpl-minimal .rv-section { margin-bottom: 28px; }
+    .tpl-minimal .rv-section-title {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #999;
+      margin-bottom: 14px;
+    }
+    .tpl-minimal .rv-item { margin-bottom: 16px; display: grid; grid-template-columns: 120px 1fr; gap: 12px; }
+    .tpl-minimal .rv-item-date { font-size: 0.75rem; color: #aaa; padding-top: 2px; }
+    .tpl-minimal .rv-item-title { font-weight: 600; font-size: 0.88rem; color: #111; }
+    .tpl-minimal .rv-item-sub { font-size: 0.8rem; color: #777; }
+    .tpl-minimal .rv-item-desc { font-size: 0.8rem; color: #555; line-height: 1.6; margin-top: 4px; }
+    .tpl-minimal .rv-skill-tag { font-size: 0.8rem; color: #555; margin-right: 14px; }
+    .tpl-minimal .rv-summary { font-size: 0.85rem; color: #555; line-height: 1.8; }
+
+    /* ── Template: Executive ────────────────────────────────────── */
+    #resume-preview.tpl-executive { font-family: 'Inter', sans-serif; }
+    .tpl-executive .rv-header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+    }
+    .tpl-executive .rv-name { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; }
+    .tpl-executive .rv-title { font-size: 0.9rem; color: #00d4aa; margin: 4px 0; }
+    .tpl-executive .rv-contact {
+      text-align: right;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .tpl-executive .rv-body { padding: 28px 40px; }
+    .tpl-executive .rv-section { margin-bottom: 22px; }
+    .tpl-executive .rv-section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a1a2e;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #00d4aa;
+    }
+    .tpl-executive .rv-item { margin-bottom: 14px; }
+    .tpl-executive .rv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .tpl-executive .rv-item-title { font-weight: 600; font-size: 0.9rem; color: #1a1a2e; }
+    .tpl-executive .rv-item-sub { font-size: 0.82rem; color: #555; }
+    .tpl-executive .rv-item-date { font-size: 0.75rem; color: #888; white-space: nowrap; }
+    .tpl-executive .rv-item-desc { font-size: 0.8rem; color: #444; line-height: 1.6; margin-top: 4px; }
+    .tpl-executive .rv-skill-tag {
+      display: inline-block;
+      background: #f0faf8;
+      color: #00a887;
+      border: 1px solid #b2e8de;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      margin: 2px;
+    }
+    .tpl-executive .rv-summary { font-size: 0.85rem; color: #444; line-height: 1.7; }
+
+    /* ── ATS Panel ──────────────────────────────────────────────── */
+    .ats-panel {
+      background: var(--zx-card);
+      border: 1px solid var(--zx-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .ats-score-ring {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .ats-score-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: conic-gradient(var(--zx-primary) calc(var(--pct) * 3.6deg), var(--zx-border) 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .ats-score-circle::before {
+      content: '';
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      background: var(--zx-card);
+      border-radius: 50%;
+    }
+    .ats-score-circle span { position: relative; z-index: 1; font-size: 0.85rem; }
+    .ats-suggestions li {
+      font-size: 0.8rem;
+      color: var(--zx-muted);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--zx-border);
+      list-style: none;
+      display: flex;
+      gap: 6px;
+    }
+    .ats-suggestions li::before { content: '→'; color: var(--zx-warning); flex-shrink: 0; }
+
+    /* ── Toast ──────────────────────────────────────────────────── */
+    #toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .toast {
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #fff;
+      box-shadow: var(--shadow);
+      animation: slideIn 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toast.success { background: var(--zx-success); color: #0f0f1a; }
+    .toast.error   { background: var(--zx-danger); }
+    .toast.info    { background: var(--zx-primary); }
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to   { transform: translateX(0);    opacity: 1; }
+    }
+
+    /* ── Loading Spinner ────────────────────────────────────────── */
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Confirm Modal ──────────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--zx-card);
+      border: 1px solid var(--zx-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+    }
+    .modal-box h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .modal-box p  { font-size: 0.88rem; color: var(--zx-muted); margin-bottom: 20px; }
+    .modal-actions { display: flex; gap: 10px; justify-content: center; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .rb-layout { grid-template-columns: 1fr; height: auto; }
+      .rb-preview-panel { display: none; }
+      .rb-preview-panel.show-mobile { display: flex; height: 600px; }
+      .rb-header-actions .btn-ghost.preview-toggle { display: inline-flex; }
+    }
+    @media (min-width: 1025px) {
+      .btn-ghost.preview-toggle { display: none; }
+    }
+    @media (max-width: 640px) {
+      .form-row, .form-row-3 { grid-template-columns: 1fr; }
+      .rb-header h1 { display: none; }
+      .template-grid { grid-template-columns: repeat(2, 1fr); }
+      .rb-page-tab span { display: none; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="bg-gradient"></div>
+<!-- ── Header ─────────────────────────────────────────────────────────── -->
+<header class="rb-header">
+  <div class="rb-header-left">
+    <a href="/dashboard" class="rb-logo">Zertix</a>
+    <h1><i class="fas fa-file-alt" style="color:var(--zx-primary)"></i> Resume Builder</h1>
+  </div>
+  <div class="rb-header-actions">
+    <button class="btn btn-ghost btn-sm preview-toggle" onclick="toggleMobilePreview()">
+      <i class="fas fa-eye"></i> Preview
+    </button>
+    <button class="btn btn-ghost btn-sm" onclick="showView('list')" id="btn-back-list" style="display:none">
+      <i class="fas fa-arrow-left"></i> My Resumes
+    </button>
+    <button class="btn btn-ghost btn-sm" id="btn-analyze-ats" onclick="analyzeATS()" style="display:none">
+      <i class="fas fa-chart-bar"></i> ATS Score
+    </button>
+    <button class="btn btn-primary btn-sm" id="btn-save-resume" onclick="saveResume()" style="display:none">
+      <i class="fas fa-save"></i> Save
+    </button>
+    <button class="btn btn-accent btn-sm" id="btn-download-pdf" onclick="downloadPDF()" style="display:none">
+      <i class="fas fa-download"></i> Download PDF
+    </button>
+  </div>
+</header>
 
-<nav class="top-navbar">
+<!-- ── Main Layout ─────────────────────────────────────────────────────── -->
+<div class="rb-layout">
 
-  <div class="logo-area">
+  <!-- LEFT PANEL -->
+  <div class="rb-panel" id="left-panel">
 
-    <div class="logo-icon">
-      Z
+    <!-- Page Tabs: My Resumes | Builder -->
+    <div class="rb-page-tabs">
+      <div class="rb-page-tab active" id="ptab-list" onclick="showView('list')">
+        <i class="fas fa-th-large"></i>
+        <span>My Resumes</span>
+      </div>
+      <div class="rb-page-tab" id="ptab-builder" onclick="showView('builder')">
+        <i class="fas fa-pencil-alt"></i>
+        <span>Builder</span>
+      </div>
     </div>
 
-    <div>
+    <!-- ═══════════════════════════════════════════════════════════
+         VIEW: MY RESUMES LIST
+    ═══════════════════════════════════════════════════════════ -->
+    <div id="view-list">
+      <div class="resume-list-header">
+        <h2>My Resumes</h2>
+        <button class="btn btn-primary btn-sm" onclick="newResume()">
+          <i class="fas fa-plus"></i> New Resume
+        </button>
+      </div>
 
-      <h2>Zertix AI</h2>
-
-      <p>
-        Resume Intelligence
-      </p>
-
+      <div id="resume-grid" class="resume-grid">
+        <!-- Populated by JS -->
+        <div class="empty-state" id="resume-empty">
+          <i class="fas fa-file-circle-plus"></i>
+          <p>No resumes yet. Create your first one!</p>
+          <button class="btn btn-primary" onclick="newResume()">
+            <i class="fas fa-plus"></i> Create Resume
+          </button>
+        </div>
+      </div>
     </div>
 
-  </div>
+    <!-- ═══════════════════════════════════════════════════════════
+         VIEW: BUILDER
+    ═══════════════════════════════════════════════════════════ -->
+    <div id="view-builder">
 
-</nav>
+      <!-- Resume Title + Target Role Row -->
+      <div style="padding:16px 24px 0; display:flex; gap:12px; flex-wrap:wrap;">
+        <div class="form-group" style="flex:1;min-width:160px;margin-bottom:0">
+          <label>Resume Title</label>
+          <input type="text" id="resume-title" placeholder="e.g. Software Engineer Resume" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:160px;margin-bottom:0">
+          <label>Target Job Role</label>
+          <input type="text" id="target-job-role" placeholder="e.g. Full Stack Developer" />
+        </div>
+      </div>
 
-<main class="resume-app">
+      <!-- Builder Section Tabs -->
+      <div class="rb-builder-tabs" style="margin-top:12px">
+        <div class="rb-tab active" onclick="switchTab('personal')" id="tab-personal">
+          <i class="fas fa-user"></i> Personal
+        </div>
+        <div class="rb-tab" onclick="switchTab('experience')" id="tab-experience">
+          <i class="fas fa-briefcase"></i> Experience
+        </div>
+        <div class="rb-tab" onclick="switchTab('education')" id="tab-education">
+          <i class="fas fa-graduation-cap"></i> Education
+        </div>
+        <div class="rb-tab" onclick="switchTab('skills')" id="tab-skills">
+          <i class="fas fa-code"></i> Skills
+        </div>
+        <div class="rb-tab" onclick="switchTab('projects')" id="tab-projects">
+          <i class="fas fa-rocket"></i> Projects
+        </div>
+        <div class="rb-tab" onclick="switchTab('certifications')" id="tab-certifications">
+          <i class="fas fa-certificate"></i> Certs
+        </div>
+        <div class="rb-tab" onclick="switchTab('template')" id="tab-template">
+          <i class="fas fa-palette"></i> Template
+        </div>
+      </div>
 
-<section class="editor-panel">
+      <!-- ── TAB: Personal Info ──────────────────────────────── -->
+      <div class="rb-tab-content active" id="content-personal">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="pi-fullName" placeholder="John Doe" oninput="updatePreview()" />
+          </div>
+          <div class="form-group">
+            <label>Job Title</label>
+            <input type="text" id="pi-jobTitle" placeholder="Senior Developer" oninput="updatePreview()" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" id="pi-email" placeholder="john@example.com" oninput="updatePreview()" />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" id="pi-phone" placeholder="+91 98765 43210" oninput="updatePreview()" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Location</label>
+            <input type="text" id="pi-location" placeholder="Mumbai, India" oninput="updatePreview()" />
+          </div>
+          <div class="form-group">
+            <label>LinkedIn</label>
+            <input type="text" id="pi-linkedin" placeholder="linkedin.com/in/johndoe" oninput="updatePreview()" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>GitHub</label>
+            <input type="text" id="pi-github" placeholder="github.com/johndoe" oninput="updatePreview()" />
+          </div>
+          <div class="form-group">
+            <label>Portfolio</label>
+            <input type="text" id="pi-portfolio" placeholder="johndoe.dev" oninput="updatePreview()" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Professional Summary</label>
+          <div class="ai-toolbar">
+            <button class="ai-btn" onclick="aiGenerateSummary()">
+              <i class="fas fa-magic"></i> AI Generate
+            </button>
+            <button class="ai-btn" onclick="aiImproveField('pi-summary', 'professional summary')">
+              <i class="fas fa-wand-sparkles"></i> AI Improve
+            </button>
+          </div>
+          <textarea id="pi-summary" rows="4" placeholder="Results-driven software engineer with 5+ years of experience..." oninput="updatePreview()"></textarea>
+        </div>
+      </div>
 
-<!-- HERO -->
+      <!-- ── TAB: Experience ────────────────────────────────── -->
+      <div class="rb-tab-content" id="content-experience">
+        <div id="experience-list"></div>
+        <button class="add-section-btn" onclick="addExperience()">
+          <i class="fas fa-plus"></i> Add Experience
+        </button>
+      </div>
 
-<div class="hero-card glass-card">
+      <!-- ── TAB: Education ─────────────────────────────────── -->
+      <div class="rb-tab-content" id="content-education">
+        <div id="education-list"></div>
+        <button class="add-section-btn" onclick="addEducation()">
+          <i class="fas fa-plus"></i> Add Education
+        </button>
+      </div>
 
-  <h1>
-    Upload & Edit Resume
-  </h1>
+      <!-- ── TAB: Skills ────────────────────────────────────── -->
+      <div class="rb-tab-content" id="content-skills">
+        <div class="ai-toolbar" style="margin-bottom:16px">
+          <button class="ai-btn" onclick="aiSuggestSkills()">
+            <i class="fas fa-magic"></i> AI Suggest Skills for Role
+          </button>
+        </div>
 
-  <p>
-    Upload your resume and instantly
-    edit all sections professionally.
-  </p>
+        <div class="form-group">
+          <label>Technical Skills</label>
+          <div class="skills-container" id="skills-technical"></div>
+          <div class="skill-input-row">
+            <input type="text" id="input-technical" placeholder="e.g. JavaScript" onkeydown="handleSkillInput(event,'technical')" />
+            <button class="btn btn-ghost btn-sm" onclick="addSkillFromInput('technical')">Add</button>
+          </div>
+        </div>
 
-  <label
-    for="resumeUpload"
-    class="primary-btn"
-  >
+        <div class="form-group">
+          <label>Tools & Platforms</label>
+          <div class="skills-container" id="skills-tools"></div>
+          <div class="skill-input-row">
+            <input type="text" id="input-tools" placeholder="e.g. Docker" onkeydown="handleSkillInput(event,'tools')" />
+            <button class="btn btn-ghost btn-sm" onclick="addSkillFromInput('tools')">Add</button>
+          </div>
+        </div>
 
-    <i class="fa-solid fa-upload"></i>
+        <div class="form-group">
+          <label>Soft Skills</label>
+          <div class="skills-container" id="skills-soft"></div>
+          <div class="skill-input-row">
+            <input type="text" id="input-soft" placeholder="e.g. Leadership" onkeydown="handleSkillInput(event,'soft')" />
+            <button class="btn btn-ghost btn-sm" onclick="addSkillFromInput('soft')">Add</button>
+          </div>
+        </div>
 
-    Upload Resume
+        <div class="form-group">
+          <label>Languages</label>
+          <div class="skills-container" id="skills-languages"></div>
+          <div class="skill-input-row">
+            <input type="text" id="input-languages" placeholder="e.g. English" onkeydown="handleSkillInput(event,'languages')" />
+            <button class="btn btn-ghost btn-sm" onclick="addSkillFromInput('languages')">Add</button>
+          </div>
+        </div>
+      </div>
 
-  </label>
+      <!-- ── TAB: Projects ──────────────────────────────────── -->
+      <div class="rb-tab-content" id="content-projects">
+        <div id="projects-list"></div>
+        <button class="add-section-btn" onclick="addProject()">
+          <i class="fas fa-plus"></i> Add Project
+        </button>
+      </div>
 
-  <input
-    type="file"
-    id="resumeUpload"
-    hidden
-    accept=".pdf,.doc,.docx"
-  />
+      <!-- ── TAB: Certifications ────────────────────────────── -->
+      <div class="rb-tab-content" id="content-certifications">
+        <div id="certifications-list"></div>
+        <button class="add-section-btn" onclick="addCertification()">
+          <i class="fas fa-plus"></i> Add Certification
+        </button>
+      </div>
 
-</div>
+      <!-- ── TAB: Template ──────────────────────────────────── -->
+      <div class="rb-tab-content" id="content-template">
+        <p style="font-size:0.85rem;color:var(--zx-muted);margin-bottom:16px">
+          Choose a template. The preview updates instantly.
+        </p>
+        <div class="template-grid">
+          <div class="template-card active" onclick="setTemplate('modern')" id="tcard-modern">
+            <div class="template-preview" style="background:linear-gradient(135deg,#6c63ff22,#00d4aa11)">
+              <div class="tpv-line" style="width:60%;color:#6c63ff;opacity:1;height:7px"></div>
+              <div class="tpv-line" style="width:40%"></div>
+              <div class="tpv-line" style="width:90%"></div>
+              <div class="tpv-line" style="width:80%"></div>
+              <div class="tpv-line" style="width:70%"></div>
+            </div>
+            <div class="template-name">Modern</div>
+          </div>
+          <div class="template-card" onclick="setTemplate('classic')" id="tcard-classic">
+            <div class="template-preview" style="background:#f9f9f9">
+              <div class="tpv-line" style="width:50%;margin:0 auto;color:#1a1a1a;opacity:1;height:7px"></div>
+              <div class="tpv-line" style="width:30%;margin:2px auto"></div>
+              <div style="border-bottom:1px solid #ccc;margin:4px 0"></div>
+              <div class="tpv-line" style="width:90%;color:#1a1a1a"></div>
+              <div class="tpv-line" style="width:75%;color:#1a1a1a"></div>
+            </div>
+            <div class="template-name">Classic</div>
+          </div>
+          <div class="template-card" onclick="setTemplate('minimal')" id="tcard-minimal">
+            <div class="template-preview" style="background:#fff">
+              <div class="tpv-line" style="width:55%;color:#111;opacity:1;height:9px;font-weight:300"></div>
+              <div class="tpv-line" style="width:35%;color:#888"></div>
+              <div class="tpv-line" style="width:85%;color:#555;margin-top:6px"></div>
+              <div class="tpv-line" style="width:70%;color:#555"></div>
+            </div>
+            <div class="template-name">Minimal</div>
+          </div>
+          <div class="template-card" onclick="setTemplate('executive')" id="tcard-executive">
+            <div class="template-preview" style="background:#1a1a2e">
+              <div class="tpv-line" style="width:60%;color:#fff;opacity:1;height:7px"></div>
+              <div class="tpv-line" style="width:40%;color:#00d4aa;opacity:1"></div>
+              <div class="tpv-line" style="width:85%;color:#fff;margin-top:6px"></div>
+              <div class="tpv-line" style="width:70%;color:#fff"></div>
+            </div>
+            <div class="template-name">Executive</div>
+          </div>
+        </div>
 
-<!-- ATS SCORE -->
+        <!-- ATS Panel -->
+        <div class="ats-panel" id="ats-panel" style="display:none">
+          <div class="ats-score-ring">
+            <div class="ats-score-circle" id="ats-circle" style="--pct:0">
+              <span id="ats-score-val">—</span>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem">ATS Compatibility</div>
+              <div style="font-size:0.78rem;color:var(--zx-muted)" id="ats-score-label">Run analysis to see your score</div>
+            </div>
+          </div>
+          <ul class="ats-suggestions" id="ats-suggestions-list"></ul>
+        </div>
+      </div>
 
-<div
-  class="score-grid"
-  id="scoreSection"
-  style="display:none;"
->
+    </div><!-- /view-builder -->
+  </div><!-- /left-panel -->
 
-  <div class="score-card glass-card">
-
-    <h2>
-      ATS Score
-    </h2>
-
-    <div
-      class="score-value"
-      id="atsScore"
-    >
-      87%
+  <!-- RIGHT PANEL: PREVIEW -->
+  <div class="rb-preview-panel" id="preview-panel">
+    <div class="preview-toolbar">
+      <span><i class="fas fa-eye"></i> Live Preview</span>
+      <div class="preview-scale">
+        <button onclick="adjustZoom(-10)">−</button>
+        <span id="preview-zoom-label">75%</span>
+        <button onclick="adjustZoom(10)">+</button>
+      </div>
     </div>
-
-  </div>
-
-</div>
-
-<!-- FORM -->
-
-<div
-  class="resume-form-area"
-  id="resumeBuilder"
->
-
-<!-- PERSONAL -->
-
-<div class="form-card glass-card">
-
-  <div class="section-title">
-
-    <i class="fa-solid fa-user"></i>
-
-    <h2>
-      Personal Information
-    </h2>
-
-  </div>
-
-  <div class="form-grid">
-
-    <div class="input-group">
-
-      <label>
-        Full Name
-      </label>
-
-      <input
-        type="text"
-        id="fullName"
-        placeholder="Your Name"
-      />
-
+    <div class="preview-wrapper" id="preview-wrapper">
+      <div class="preview-scale-wrap" id="preview-scale-wrap" style="transform:scale(0.75)">
+        <div id="resume-preview" class="tpl-modern">
+          <!-- Rendered by JS -->
+          <div style="display:flex;align-items:center;justify-content:center;height:400px;color:#ccc;font-size:0.9rem">
+            <div style="text-align:center">
+              <i class="fas fa-file-alt" style="font-size:2.5rem;margin-bottom:12px;opacity:0.3"></i>
+              <p>Start filling the form to see your resume</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="input-group">
+</div><!-- /rb-layout -->
 
-      <label>
-        Email
-      </label>
+<!-- ── Toast Container ──────────────────────────────────────────────────── -->
+<div id="toast-container"></div>
 
-      <input
-        type="email"
-        id="email"
-        placeholder="Email"
-      />
-
+<!-- ── Confirm Delete Modal ─────────────────────────────────────────────── -->
+<div class="modal-overlay" id="delete-modal">
+  <div class="modal-box">
+    <h3>Delete Resume?</h3>
+    <p>This action cannot be undone. The resume will be permanently deleted.</p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeDeleteModal()">Cancel</button>
+      <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
     </div>
-
-    <div class="input-group">
-
-      <label>
-        Phone
-      </label>
-
-      <input
-        type="text"
-        id="phone"
-        placeholder="Phone"
-      />
-
-    </div>
-
-    <div class="input-group">
-
-      <label>
-        Location
-      </label>
-
-      <input
-        type="text"
-        id="location"
-        placeholder="Location"
-      />
-
-    </div>
-
   </div>
-
 </div>
 
-<!-- SUMMARY -->
-
-<div class="form-card glass-card">
-
-  <div class="section-title">
-
-    <i class="fa-solid fa-pen"></i>
-
-    <h2>
-      Professional Summary
-    </h2>
-
-  </div>
-
-  <textarea
-    id="summary"
-    rows="5"
-    placeholder="Professional Summary"
-  ></textarea>
-
-</div>
-
-<!-- SKILLS -->
-
-<div class="form-card glass-card">
-
-  <div class="section-title">
-
-    <i class="fa-solid fa-code"></i>
-
-    <h2>
-      Skills
-    </h2>
-
-  </div>
-
-  <textarea
-    id="skills"
-    rows="5"
-    placeholder="HTML, CSS, JavaScript"
-  ></textarea>
-
-</div>
-
-<!-- EXPERIENCE -->
-
-<div class="form-card glass-card">
-
-  <div class="section-title">
-
-    <i class="fa-solid fa-briefcase"></i>
-
-    <h2>
-      Experience
-    </h2>
-
-  </div>
-
-  <textarea
-    id="experience"
-    rows="6"
-    placeholder="Work Experience"
-  ></textarea>
-
-</div>
-
-<!-- PROJECTS -->
-
-<div class="form-card glass-card">
-
-  <div class="section-title">
-
-    <i class="fa-solid fa-diagram-project"></i>
-
-    <h2>
-      Projects
-    </h2>
-
-  </div>
-
-  <textarea
-    id="projects"
-    rows="6"
-    placeholder="Projects"
-  ></textarea>
-
-</div>
-
-<!-- EDUCATION -->
-
-<div class="form-card glass-card">
-
-  <div class="section-title">
-
-    <i class="fa-solid fa-graduation-cap"></i>
-
-    <h2>
-      Education
-    </h2>
-
-  </div>
-
-  <textarea
-    id="education"
-    rows="5"
-    placeholder="Education"
-  ></textarea>
-
-</div>
-
-<!-- BUTTONS -->
-
-<div class="action-bar">
-
-  <button
-    class="primary-btn large-btn"
-    id="saveResume"
-  >
-
-    <i class="fa-solid fa-floppy-disk"></i>
-
-    Save Resume
-
-  </button>
-
-  <button class="glass-btn large-btn">
-
-    <i class="fa-solid fa-download"></i>
-
-    Download Resume
-
-  </button>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-<!-- SCRIPT -->
-
-<script>
-
-const resumeUpload =
-document.getElementById(
-  "resumeUpload"
-);
-
-const scoreSection =
-document.getElementById(
-  "scoreSection"
-);
-
-const resumeBuilder =
-document.getElementById(
-  "resumeBuilder"
-);
-
-/* ================= UPLOAD ================= */
-
-resumeUpload.addEventListener(
-  "change",
-  async (e) => {
-
-    const file =
-    e.target.files[0];
-
-    if(!file) return;
-
-    const formData =
-    new FormData();
-
-    formData.append(
-      "resume",
-      file
-    );
-
-    try {
-
-      const response =
-      await fetch(
-        "/api/resumes/upload",
-        {
-          method:"POST",
-          body:formData
-        }
-      );
-
-      const data =
-      await response.json();
-
-      if(data.success){
-
-        scoreSection.style.display =
-        "grid";
-
-        resumeBuilder.style.display =
-        "block";
-
-        /* AUTO FILL */
-
-        document.getElementById(
-          "fullName"
-        ).value =
-        data.parsedData.name || "";
-
-        document.getElementById(
-          "email"
-        ).value =
-        data.parsedData.email || "";
-
-        document.getElementById(
-          "phone"
-        ).value =
-        data.parsedData.phone || "";
-
-        document.getElementById(
-          "skills"
-        ).value =
-        data.parsedData.skills || "";
-
-        document.getElementById(
-          "experience"
-        ).value =
-        data.parsedData.experience || "";
-
-        document.getElementById(
-          "projects"
-        ).value =
-        data.parsedData.projects || "";
-
-        alert(
-          "Resume Parsed Successfully"
-        );
-
-      }
-
-    }
-
-    catch(err){
-
-      console.log(err);
-
-      alert(
-        "Resume Upload Failed"
-      );
-
-    }
-
-});
-
-/* ================= SAVE ================= */
-
-document.getElementById(
-  "saveResume"
-)
-
-.addEventListener(
-  "click",
-  () => {
-
-    alert(
-      "Resume Saved Successfully"
-    );
-
-  }
-);
-
-</script>
-
+<script src="/js/resume-builder.js"></script>
 </body>
 </html>
