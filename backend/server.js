@@ -27,13 +27,12 @@ app.use(express.urlencoded({
 /* ================= ROUTES ================= */
 
 const resumeRoutes = require("./src/routes/resumeRoutes");
-const atsRoutes = require("./src/routes/atsRoutes");
-const aiRoutes = require("./src/routes/aiRoutes");
-const templateRoutes = require("./src/routes/templateRoutes");
 
 /* ================= FRONTEND ================= */
 
-const FRONTEND_PATH = path.resolve(__dirname, "frontend");// Static frontend
+const FRONTEND_PATH = path.resolve(__dirname, "frontend");
+
+// Static frontend
 app.use(express.static(FRONTEND_PATH));
 
 // Uploads static
@@ -51,7 +50,7 @@ app.get("/", (req, res) => {
   );
 });
 
-// ================= MCQ ROUTES =================
+/* ================= MCQ ROUTES ================= */
 
 // MCQs main page
 app.get("/mcqs", (req, res) => {
@@ -75,33 +74,37 @@ app.get("/mcq.html", (req, res) => {
 
 // Smart redirect
 app.get("/mcq", (req, res) => {
-
   res.redirect(
     "/mcq.html?" +
     (req.url.split("?")[1] || "")
   );
 });
-// RESUME BUILDER PAGE
-app.get("/resume-builder.html", (req, res) => {
 
+/* ================= RESUME BUILDER ================= */
+
+// Resume Builder page
+app.get("/resume-builder", (req, res) => {
   res.sendFile(
     path.join(
       FRONTEND_PATH,
       "pages/tools/resume-builder.html"
     )
   );
+});
 
+// Resume Builder page (with .html extension)
+app.get("/resume-builder.html", (req, res) => {
+  res.sendFile(
+    path.join(
+      FRONTEND_PATH,
+      "pages/tools/resume-builder.html"
+    )
+  );
 });
 
 /* ================= RESUME BUILDER APIs ================= */
 
 app.use("/api/resumes", resumeRoutes);
-
-app.use("/api/ats", atsRoutes);
-
-app.use("/api/ai", aiRoutes);
-
-app.use("/api/templates", templateRoutes);
 
 /* ================= SEO ROUTE ================= */
 
@@ -183,7 +186,8 @@ app.get("/sitemap.xml", (req, res) => {
     "mcqs/cyber",
     "mcqs/datascience",
     "mcqs/ecommerce",
-    "mcqs/iot"
+    "mcqs/iot",
+    "resume-builder"
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -212,7 +216,6 @@ ${urls.map(url => `
 /* ================= 404 ================= */
 
 app.use((req, res) => {
-
   res.status(404).send(
     "❌ Route Not Found"
   );
@@ -223,7 +226,6 @@ app.use((req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-
   console.log(
     `🚀 Server running on port ${PORT}`
   );
